@@ -1,0 +1,2 @@
+# Preserve input archives and manifest digests across checkouts/platforms.
+* -text

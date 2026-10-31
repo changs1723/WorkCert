@@ -1,4 +1,4 @@
-"""Offline, analytic error certificates relative to a supplied PL reference.
+"""Analytical reconstruction error metadata for a supplied PL reference.
 
 All calculations use NumPy float64. Bounds concern the supplied numerical
 reference; they do not include measurement error or outward-rounded arithmetic.
@@ -15,7 +15,7 @@ from typing import Any, Dict, Optional
 import numpy as np
 
 SCHEMA = "workcert.response/1.0"
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 BOUND_NAMES = ("eta", "xi", "prefix", "window")
 
 
@@ -75,6 +75,109 @@ def _absolute_area(x, r):
     return float(np.sum(area))
 
 
+_ZERO = (0.0, 0.0, 0.0, 0.0, 0.0)
+
+
+def _summary(x, r):
+    """Area, terminal primitive, minimum, maximum and force residual."""
+    d = _primitive_at_nodes(x, r)
+    lo, hi = float(np.min(d)), float(np.max(d))
+    crosses = np.flatnonzero(((r[:-1] < 0) & (r[1:] > 0)) |
+                            ((r[:-1] > 0) & (r[1:] < 0)))
+    if len(crosses):
+        t = -r[crosses] / (r[crosses + 1] - r[crosses])
+        stationary = d[crosses] + (x[crosses + 1] - x[crosses]) * t * r[crosses] * 0.5
+        lo, hi = min(lo, float(np.min(stationary))), max(hi, float(np.max(stationary)))
+    return (_absolute_area(x, r), float(d[-1]), lo, hi, float(np.max(np.abs(r))))
+
+
+def _concatenate(a, b):
+    return (a[0] + b[0], a[1] + b[1], min(a[2], a[1] + b[2]),
+            max(a[3], a[1] + b[3]), max(a[4], b[4]))
+
+
+class _Node:
+    __slots__ = ("key", "value", "left", "right", "height", "total")
+
+    def __init__(self, key, value):
+        self.key, self.value = key, value
+        self.left = self.right = None
+        self.height, self.total = 1, value
+
+
+def _height(node):
+    return node.height if node is not None else 0
+
+
+def _refresh(node):
+    node.height = 1 + max(_height(node.left), _height(node.right))
+    node.total = _concatenate(_concatenate(node.left.total if node.left else _ZERO,
+                                          node.value), node.right.total if node.right else _ZERO)
+    return node
+
+
+def _rotate(node, left):
+    child = node.right if left else node.left
+    if left:
+        node.right, child.left = child.left, node
+    else:
+        node.left, child.right = child.right, node
+    _refresh(node)
+    return _refresh(child)
+
+
+def _balance(node):
+    _refresh(node)
+    gap = _height(node.left) - _height(node.right)
+    if gap > 1:
+        if _height(node.left.left) < _height(node.left.right):
+            node.left = _rotate(node.left, True)
+        return _rotate(node, False)
+    if gap < -1:
+        if _height(node.right.right) < _height(node.right.left):
+            node.right = _rotate(node.right, False)
+        return _rotate(node, True)
+    return node
+
+
+def _put(node, key, value):
+    if node is None:
+        return _Node(key, value)
+    if key < node.key:
+        node.left = _put(node.left, key, value)
+    elif key > node.key:
+        node.right = _put(node.right, key, value)
+    else:
+        node.value = value
+    return _balance(node)
+
+
+def _delete(node, key):
+    if node is None:
+        raise RuntimeError("Missing active segment")
+    if key < node.key:
+        node.left = _delete(node.left, key)
+    elif key > node.key:
+        node.right = _delete(node.right, key)
+    else:
+        if node.left is None:
+            return node.right
+        if node.right is None:
+            return node.left
+        following = node.right
+        while following.left is not None:
+            following = following.left
+        node.key, node.value = following.key, following.value
+        node.right = _delete(node.right, following.key)
+    return _balance(node)
+
+
+def _certificate(summary, reference_work, n, digest):
+    eta, terminal, lo, hi, delta = summary
+    return Certificate(eta, (eta + abs(terminal)) * .5, max(abs(lo), abs(hi)),
+                       hi - lo, delta, terminal, reference_work, lo, hi, n, digest)
+
+
 @dataclass(frozen=True)
 class Certificate:
     """Native-product-unit work bounds and force residual maximum.
@@ -120,18 +223,10 @@ def certify(x, force, indices):
     try:
         with np.errstate(over="raise", invalid="raise", divide="raise"):
             r = f - np.interp(x, x[ids], f[ids])
-            eta = _absolute_area(x, r)
-            d = _primitive_at_nodes(x, r)
-            extrema = [float(np.min(d)), float(np.max(d))]
-            crosses = np.flatnonzero(((r[:-1] < 0) & (r[1:] > 0)) | ((r[:-1] > 0) & (r[1:] < 0)))
-            for i in crosses:
-                t = -r[i] / (r[i + 1] - r[i])
-                extrema.append(float(d[i] + (x[i + 1] - x[i]) * t * r[i] * 0.5))
-            lo, hi = min(extrema), max(extrema)
-            terminal = float(d[-1])
+            eta, terminal, lo, hi, delta = _summary(x, r)
             work = float(_primitive_at_nodes(x, f)[-1])
             values = [eta, (eta + abs(terminal)) * 0.5, max(abs(lo), abs(hi)),
-                      hi - lo, float(np.max(np.abs(r))), terminal, work, lo, hi]
+                      hi - lo, delta, terminal, work, lo, hi]
     except FloatingPointError as error:
         raise ValueError("The response exceeds finite float64 calculation limits") from error
     if not np.all(np.isfinite(values)):
@@ -145,7 +240,7 @@ def _canonical(value):
 
 class ReducedResponse:
     """Retained response table, query primitives, provenance and certificates."""
-    def __init__(self, x, force, indices, certificate, *, x_unit="mm", force_unit="kN", metadata=None):
+    def __init__(self, x, force, indices, certificate, *, x_unit="unspecified", force_unit="unspecified", metadata=None):
         self._x, self._f = _aligned(x, force)
         if not isinstance(certificate, Certificate):
             raise ValueError("certificate must be a Certificate")
@@ -336,10 +431,10 @@ class ReducedResponse:
 
 def _segment(x, f, a, b):
     if b - a < 2:
-        return 0.0, 0.0, None
+        return _ZERO, None
     r = f[a:b + 1] - np.interp(x[a:b + 1], [x[a], x[b]], [f[a], f[b]])
     split = a + 1 + int(np.argmax(np.abs(r[1:-1])))
-    return _absolute_area(x[a:b + 1], r), float(np.max(np.abs(r))), split
+    return _summary(x[a:b + 1], r), split
 
 
 def _uniform(x, budget):
@@ -355,7 +450,7 @@ def _uniform(x, budget):
 
 
 def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="prefix", relative=False,
-                    method="work", preserve_peak=True, x_unit="mm", force_unit="kN", provenance=None):
+                    method=None, preserve_peak=True, peak_mode="absolute", x_unit="unspecified", force_unit="unspecified", provenance=None):
     """Construct an endpoint-preserving response table and evaluate work bounds.
 
     Adaptive ``work`` and ``vertical`` modes share the maximum vertical-residual
@@ -370,7 +465,9 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
     if certificate not in BOUND_NAMES:
         raise ValueError("Unknown certificate")
     if method not in ("work", "vertical", "uniform", "uniform_peak"):
-        raise ValueError("Unknown selection method")
+        raise ValueError("Choose method explicitly: work, vertical, uniform or uniform_peak")
+    if peak_mode not in ("absolute", "positive", "negative"):
+        raise ValueError("peak_mode must be absolute, positive or negative")
     if not isinstance(preserve_peak, (bool, np.bool_)) or not isinstance(relative, (bool, np.bool_)):
         raise ValueError("preserve_peak and relative must be boolean")
     if tolerance is not None:
@@ -389,7 +486,8 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
     limit = min(int(max_points), len(x))
     retain_peak = preserve_peak or method == "uniform_peak"
     selected = {0, len(x) - 1}
-    peak = int(np.argmax(f))
+    peak = int(np.argmax(np.abs(f)) if peak_mode == "absolute" else
+               np.argmax(f) if peak_mode == "positive" else np.argmin(f))
     if retain_peak:
         selected.add(peak)
     if len(selected) > limit:
@@ -405,29 +503,41 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
         cert = certify(x, f, np.asarray(sorted(selected)))
     else:
         heap, segments = [], {}
+        tree = None
+        reference_work = float(_primitive_at_nodes(x, f)[-1])
+        digest = _reference_hash(x, f)
+        global_evaluations = 0
         def add(a, b):
+            nonlocal tree
             info = _segment(x, f, a, b)
             segments[a, b] = info
-            if info[2] is not None:
-                score = info[0] if method == "work" else info[1]
+            tree = _put(tree, a, info[0])
+            if info[1] is not None:
+                score = info[0][0] if method == "work" else info[0][4]
                 heapq.heappush(heap, (-score, a, b))
         initial = sorted(selected)
         for a, b in zip(initial[:-1], initial[1:]):
             add(a, b)
         while True:
-            if tolerance is not None or len(selected) >= limit or not heap:
+            candidate = _certificate(tree.total, reference_work, len(x), digest)
+            met = tolerance is not None and candidate.bound(certificate, relative) <= tolerance
+            if met or len(selected) >= limit or not heap:
                 cert = certify(x, f, np.asarray(sorted(selected)))
+                global_evaluations += 1
                 if tolerance is not None and cert.bound(certificate, relative) <= tolerance:
                     break
             if len(selected) >= limit or not heap:
                 break
             _, a, b = heapq.heappop(heap)
-            split = segments.pop((a, b))[2]
+            split = segments.pop((a, b))[1]
+            tree = _delete(tree, a)
             selected.add(split)
             add(a, split)
             add(split, b)
     ids = np.asarray(sorted(selected), dtype=np.int64)
-    metadata = {"selection_method": method, "preserve_peak": bool(retain_peak),
+    metadata = {"selection_method": method, "preserve_peak": bool(retain_peak), "peak_mode": peak_mode,
+                "error_evaluation": "incremental_segment_avl_then_global" if method in ("work", "vertical") else "global",
+                "global_error_evaluations": global_evaluations if method in ("work", "vertical") else 1,
                 "requested_max_points": int(max_points), "certificate_for_stopping": certificate,
                 "requested_tolerance": None if tolerance is None else float(tolerance),
                 "relative_tolerance": bool(relative),

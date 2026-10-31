@@ -1,0 +1,71 @@
+{
+  "version": "0.2.0",
+  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "runtimes": [
+    {
+      "isolation": "fresh venv with independently installed dependencies",
+      "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+      "numpy": "2.2.6",
+      "wheel": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "5dd0a637c5f88d7bde5750d2a4d07fe592d0a2ae7aeaae23319c0e4c8191f6f4"
+      },
+      "sdist": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "0ba9f3505016b4d8a299366df73e18c7e90b34212b9b1a6fcf2affb73223e877"
+      }
+    },
+    {
+      "isolation": "fresh venv with system-site-packages for preinstalled NumPy",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.3.5",
+      "wheel": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "5dd0a637c5f88d7bde5750d2a4d07fe592d0a2ae7aeaae23319c0e4c8191f6f4"
+      },
+      "sdist": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "0ba9f3505016b4d8a299366df73e18c7e90b34212b9b1a6fcf2affb73223e877"
+      }
+    },
+    {
+      "isolation": "fresh venv with independently installed dependencies",
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.4",
+      "wheel": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "5dd0a637c5f88d7bde5750d2a4d07fe592d0a2ae7aeaae23319c0e4c8191f6f4"
+      },
+      "sdist": {
+        "installed": true,
+        "tests_passed": 31,
+        "artifact_sha256": "0ba9f3505016b4d8a299366df73e18c7e90b34212b9b1a6fcf2affb73223e877"
+      }
+    }
+  ],
+  "archives": [
+    {
+      "file": "dist/workcert-0.2.0-py3-none-any.whl",
+      "bytes": 18682,
+      "sha256": "5dd0a637c5f88d7bde5750d2a4d07fe592d0a2ae7aeaae23319c0e4c8191f6f4"
+    },
+    {
+      "file": "dist/workcert-0.2.0.tar.gz",
+      "bytes": 27723,
+      "sha256": "0ba9f3505016b4d8a299366df73e18c7e90b34212b9b1a6fcf2affb73223e877"
+    }
+  ],
+  "embedded_readme_matches_source": true,
+  "ci_status": "workflow supplied; no completed remote runs asserted",
+  "all_checks_passed": true,
+  "citation_metadata_matches_manuscript": true,
+  "legacy_json_compatibility": {
+    "sampled_original_v0_1_tables_loaded_and_verified": 15,
+    "reference_format": "schema workcert.response/1.0; original prepared numerical inputs"
+  }
+}

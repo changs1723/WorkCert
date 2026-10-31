@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools>=50", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "workcert"
-version = "0.1.0"
-description = "Certified piecewise-linear reduction and work queries for force-displacement responses"
+version = "0.2.0"
+description = "Reconstruction error metadata and reusable queries for tabulated structural responses"
 readme = "README.md"
-requires-python = ">=3.8"
-license = {file = "LICENSE"}
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "Licence.txt"]
 authors = [
   {name = "Saisai Hou"},
   {name = "Yunzhi Zhu"},
@@ -18,7 +19,6 @@ dependencies = ["numpy>=1.24"]
 keywords = ["force-displacement", "piecewise-linear", "compression", "work", "error-bound"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Topic :: Scientific/Engineering",
 ]
