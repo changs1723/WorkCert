@@ -1,0 +1,12 @@
+{
+  "doi": "10.5281/zenodo.10829958",
+  "source_filename": "Experimental data of a stainless steel specimen under cylic bending.xlsx",
+  "local_file": "cyclic_RHS.xlsx",
+  "source_url": "https://zenodo.org/api/records/10829958/files/Experimental%20data%20of%20a%20stainless%20steel%20specimen%20under%20cylic%20bending.xlsx/content",
+  "repository_checksum": "md5:1f7f3a346f3d91245fabb1e3f563fc71",
+  "sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
+  "bytes": 2681619,
+  "license": {
+    "id": "cc-by-4.0"
+  }
+}

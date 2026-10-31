@@ -1,0 +1,35 @@
+WorkCert v0.2 comparative protocol — fixed before extended results
+31 October 2026
+
+Use all 70 unchanged original prepared PL numerical references. Keep archive-
+specific summaries and pooled descriptive results. No curve is screened by error.
+Force-table budgets: 9,17,33,65,129. Compare work priority, vertical priority,
+uniform with peak, uniform without peak, fixed-budget RDP refinement, and VW
+effective-area removal. Adaptive/geometric selectors and uniform-with-peak
+retain endpoints and the first absolute maximum. Plain uniform is a separately
+labelled non-peak-preserving control. RDP and VW normalize both axes to unit
+range; report that geometric error depends on this normalization. Fixed-budget
+RDP is a best-first adaptation, not a claim of equivalence with tolerance RDP.
+
+Report continuous eta,xi,prefix,window,force maximum error, terminal error,
+retained size and actual JSON bytes. Validate reference hash and bounds against
+501 equally spaced prefix queries and 1000 seed741 arbitrary interval queries.
+Compare 1% tolerance counts for eta and exact window under the same interval-
+work task; report prefix stopping as a distinct query task, not a like-for-like
+improvement over all-interval eta stopping.
+
+Exact DP uses every original reference with n<=1000 (58 records: 46 PLA+,
+12 steel); 12 larger originals are excluded by this predefined computational
+ceiling and listed individually. Do not downsample an original and call its
+solution optimal for the original reference. Objectives are additive continuous
+absolute-area residual eta and maximum vertical residual delta, at budgets
+9,17,33,65, with the same endpoint/absolute-peak constraints. Report greedy eta
+over optimal eta and greedy delta over optimal delta; evaluate prefix/window
+errors at those selected paths separately. No prefix/window global-optimality
+claim. Verify DP independently by exhaustive vertex-subset enumeration at n=8.
+
+Third-party checks compare tolerance-mode selectors with native rdp and
+simplification VW on normalized synthetic inputs, separately from fixed-budget
+adaptations and mandatory-peak benchmarks. Record installed versions and failures.
+Do not retune method parameters from the benchmark outcome. Selection method
+is an explicit user choice in the package, not a universal work-priority default.

@@ -1,0 +1,61 @@
+Extended benchmark findings — 31 October 2026
+
+Scope and counts
+The same70original PL references are evaluated; no new specimen count is inferred
+from sample nodes.2100force-table cases (6methods x5budgets x70),350work-only
+tables,560stopping cases (2adaptive hierarchies x4measures x70),70terminal scalar
+controls and464exact-objective DP tables form3544actual JSON records.
+
+33-point pooled prefix error percentages
+Work priority:0.16773010265800664
+Vertical priority:0.2044078683680262
+Normalized fixed-budget RDP:0.2430272916777002
+Visvalingam--Whyatt:0.15493721730602955
+Uniform with peak:0.22894518815131032
+Plain uniform:0.2311564459559292
+Work-only:0.36359302768899526
+Work priority improves on VW on33/70references, vertical priority on45/70,
+RDP on49/70, and uniform-with-peak on53/70. VW has lower pooled median prefix
+and window errors than work priority. These outcomes support explicit method
+choice rather than an implicit universal default.
+
+Matched query task
+At1%tolerance for arbitrary-window work, the work-priority hierarchy needs
+median27points under eta stopping and14under direct window stopping. The
+vertical hierarchy needs28and15. Prefix stopping needs12.5and14respectively,
+but serves the narrower prefix-query task and is reported separately.
+
+DP population and objectives
+Every original reference with n<=1000 is included:58references (46PLA+,12steel).
+The12excluded originals are11longer steel references and the7817-node EDAH
+record. Four budgets9,17,33,65 and two objectives produce464DP solutions.
+All paths retain the endpoints and first absolute-force maximum. There is no
+downsampling and no claim of prefix/window global optimality.
+
+At33points, greedy eta divided by exact minimum eta has pooled median1.3190
+for work priority (maximum1.5637),1.3695for vertical,1.3962for VW,1.5766for
+RDP and2.6566for uniform-with-peak. For the maximum vertical residual objective,
+the corresponding median ratios are1.6629for vertical,2.6154for work,3.0956for
+VW,5.6316for RDP and10.3513for uniform-with-peak. The objective must accompany
+any reported optimality gap. Cohort-specific values are in dp_cohort_summary.json.
+
+Independent checks
+The unanchored epsilon algorithms agree80/80 with native rdp0.8 and80/80 with
+native simplification2.0.0 VW;200fixed-budget anchor/endpoints/count checks pass.
+All3544tables and reference hashes pass.224edge-cost pairs agree with the
+separately implemented global error evaluator. Exhaustive enumeration evaluates
+478full-certificate candidates and confirms66small-n optimal objectives.
+All464DP path objective values agree with WorkCert's global evaluator.
+
+Core SHA256
+9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8
+
+Reproduction and timing scope
+The tested locked benchmark environment is Python3.12.14/NumPy2.3.5/
+Numba0.68.1; it does not change the package's NumPy-only runtime requirements.
+Numba compiles candidate-edge and DP loops, not WorkCert's public implementation.
+Candidate-edge computation is O(n^3); DP is O(K n^2), memory O(n^2+K n).
+Per-case construction samples are descriptive and are not used for speedup
+claims. The separate controlled scaling experiment evaluates implementation
+cost. All local dependency environments and JIT caches must be excluded from
+public source and submission archives.

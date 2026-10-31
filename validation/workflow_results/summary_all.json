@@ -1,0 +1,1562 @@
+{
+  "software_version": "0.2.0",
+  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "pla_exchange": {
+    "software_version": "0.2.0",
+    "records": 46,
+    "reference_nodes": 46000,
+    "scenario": "Public compression-database exchange and variable-stroke crashworthiness screening",
+    "strokes_mm": [
+      10.0,
+      20.0,
+      30.0,
+      40.0
+    ],
+    "window_requests_mm": [
+      [
+        10.0,
+        20.0
+      ],
+      [
+        20.0,
+        30.0
+      ],
+      [
+        30.0,
+        40.0
+      ]
+    ],
+    "mass_source": "data/raw/pla_v7p6y654ft_v4/Mass_and_Crash_Indicators.xlsx",
+    "mass_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+    "source_reported_EA_comparison": {
+      "query_window": "Reported delta_max, not entire archived curve",
+      "median_absolute_difference_J": 4.831690603168681e-13,
+      "max_absolute_difference_J": 0.11781600389974756
+    },
+    "stages": [
+      {
+        "stage": 0,
+        "budget_for_refined_curves_J": 1.0,
+        "rebuilt_curves": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "N-SCMC-1",
+          "N-SCMC-2",
+          "N-SCMC-3",
+          "STWC-1",
+          "STWC-2",
+          "STWC-3"
+        ],
+        "curves_rebuilt": 46,
+        "total_retained_points": 1520,
+        "median_retained_points": 30.0,
+        "resolved_pairs": 4001,
+        "total_pairs": 4140,
+        "unresolved_pairs": 139,
+        "unresolved_curves": [
+          "01",
+          "02",
+          "04",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "N-SCMC-1",
+          "N-SCMC-2",
+          "N-SCMC-3",
+          "STWC-1",
+          "STWC-2",
+          "STWC-3"
+        ],
+        "EA_maximum_absolute_error_J": 0.8101881965314419,
+        "window_maximum_absolute_error_J": 0.6306643460456911,
+        "maximum_CFE_absolute_error": 0.006534441907304456,
+        "finite_CFE_intervals": 184,
+        "current_tables_with_unmet_tolerance": 0,
+        "all_interval_checks_pass": true
+      },
+      {
+        "stage": 1,
+        "budget_for_refined_curves_J": 0.25,
+        "rebuilt_curves": [
+          "01",
+          "02",
+          "04",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "N-SCMC-1",
+          "N-SCMC-2",
+          "N-SCMC-3",
+          "STWC-1",
+          "STWC-2",
+          "STWC-3"
+        ],
+        "curves_rebuilt": 43,
+        "total_retained_points": 2893,
+        "median_retained_points": 57.5,
+        "resolved_pairs": 4107,
+        "total_pairs": 4140,
+        "unresolved_pairs": 33,
+        "unresolved_curves": [
+          "01",
+          "02",
+          "04",
+          "06",
+          "09",
+          "12",
+          "13",
+          "14",
+          "15",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "33",
+          "37",
+          "38",
+          "39",
+          "40",
+          "N-SCMC-1",
+          "N-SCMC-2",
+          "N-SCMC-3",
+          "STWC-1",
+          "STWC-2",
+          "STWC-3"
+        ],
+        "EA_maximum_absolute_error_J": 0.30477154809995,
+        "window_maximum_absolute_error_J": 0.327772490610414,
+        "maximum_CFE_absolute_error": 0.0028928222808199955,
+        "finite_CFE_intervals": 184,
+        "current_tables_with_unmet_tolerance": 0,
+        "all_interval_checks_pass": true
+      },
+      {
+        "stage": 2,
+        "budget_for_refined_curves_J": 0.0625,
+        "rebuilt_curves": [
+          "01",
+          "02",
+          "04",
+          "06",
+          "09",
+          "12",
+          "13",
+          "14",
+          "15",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "33",
+          "37",
+          "38",
+          "39",
+          "40",
+          "N-SCMC-1",
+          "N-SCMC-2",
+          "N-SCMC-3",
+          "STWC-1",
+          "STWC-2",
+          "STWC-3"
+        ],
+        "curves_rebuilt": 34,
+        "total_retained_points": 4333,
+        "median_retained_points": 100.5,
+        "resolved_pairs": 4129,
+        "total_pairs": 4140,
+        "unresolved_pairs": 11,
+        "unresolved_curves": [
+          "04",
+          "09",
+          "12",
+          "13",
+          "15",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "27",
+          "28",
+          "29",
+          "33",
+          "39",
+          "STWC-1",
+          "STWC-3"
+        ],
+        "EA_maximum_absolute_error_J": 0.30477154809995,
+        "window_maximum_absolute_error_J": 0.327772490610414,
+        "maximum_CFE_absolute_error": 0.0023136498555064167,
+        "finite_CFE_intervals": 184,
+        "current_tables_with_unmet_tolerance": 14,
+        "all_interval_checks_pass": true
+      }
+    ],
+    "total_tables_saved": 123,
+    "table_manifest": [
+      {
+        "stage": 0,
+        "curve": "01",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/01.json",
+        "sha256": "4ca4707d8800d02ab605307dbb164b89adf4317d58ffe994f0c494cab575a2b9",
+        "points": 46,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "02",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/02.json",
+        "sha256": "6b06972f1cdfeae643bf2f14a71e44ade218369806ca29eba9f4de2d81b5a67f",
+        "points": 27,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "03",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/03.json",
+        "sha256": "2f25edcda3dfa66f30777b3abedeec7d8c4e9a5d64db434867b1f6c8bf4670a7",
+        "points": 20,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "04",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/04.json",
+        "sha256": "77e1e7b25437ab383bb05d50afbfaea16e113d6edebaa21b02c32c35276d3a8f",
+        "points": 49,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "05",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/05.json",
+        "sha256": "56eb79b14f270474e52084490f6a79ee093926031542539fd89c61db5b24061c",
+        "points": 25,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "06",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/06.json",
+        "sha256": "632097df9f7676517917794b96a12b82f8c713f26d5bbc4ccaf4c38d0fcbe6b6",
+        "points": 27,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "07",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/07.json",
+        "sha256": "846ac395e802c8e96895e7acf2c05c5fb8aa80836786e42478caa85e59581a67",
+        "points": 33,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "08",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/08.json",
+        "sha256": "9f93d9a3f41c95c786cb4a876c4a97e6ceb5ec272b34a108c844c28dfc3873d2",
+        "points": 29,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "09",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/09.json",
+        "sha256": "c90dae43b6e6f351b967d427180538a763c23e50dc983e51f44c61c17e3b68f9",
+        "points": 44,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "10",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/10.json",
+        "sha256": "77cc15a1e7f277cfba817e872459a2a8599b5638ced40a8a9598216083c5898e",
+        "points": 45,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "11",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/11.json",
+        "sha256": "07c2533e12dcb185948b01d882f3c0545b6c54bbd5936d8400169244a2073fe9",
+        "points": 31,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "12",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/12.json",
+        "sha256": "104dcafc06d65c2c0be99c5cc1c1e2e400611aa0f062c4599642fa71fb96960e",
+        "points": 35,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "13",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/13.json",
+        "sha256": "ef9986a57c372594743fc1cc3db84ffbe5f719a719787c182fce10ea27b7b493",
+        "points": 61,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "14",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/14.json",
+        "sha256": "01544b4af7ae4a35b45802f1f8f6779100f30ca6318d399fd5977e46cb4b1db4",
+        "points": 21,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "15",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/15.json",
+        "sha256": "000196b0d189638b9a05288ff5485daa446d02d6b4590187e1c7b5d31fabb23b",
+        "points": 33,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "16",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/16.json",
+        "sha256": "ce90bc07066616b7136638aebe79c31f78f08269c19c3141e2c049664179019b",
+        "points": 33,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "17",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/17.json",
+        "sha256": "3d66f8edc604a578eb52fbb3299ba39e9d269ee505b82612ca0ec72c51237237",
+        "points": 25,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "18",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/18.json",
+        "sha256": "5dac69359f83de697fe154e4064002c8ff9d81c970cd734d89f894c61c509dc3",
+        "points": 24,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "19",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/19.json",
+        "sha256": "55f6e9670b2e7431b1de498e0e4e59fa95c916c9049b2d06b3d4aef872454e8b",
+        "points": 55,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "20",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/20.json",
+        "sha256": "1974333b795e1a0453cc99ed4c72e4c1cf35184e6a283bfededebceeffd0ed25",
+        "points": 40,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "21",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/21.json",
+        "sha256": "961f73aa382fbd5f2e2f8c6131fe2a3f947be951c6141013c84b85540fd71f19",
+        "points": 44,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "22",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/22.json",
+        "sha256": "39a7013678f73808eb7ceb11fc151dfc68ec27fa6c6b1d127a0cdf0162b539b6",
+        "points": 17,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "23",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/23.json",
+        "sha256": "1ca7ef3a99c806008046f89084490c831c50b1f03eceedc8267d3d44f1362b0f",
+        "points": 59,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "24",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/24.json",
+        "sha256": "0e40ba1c6024806c8be5b792ed50bba867d87f8e619022c5ded4b04d8edbc2cb",
+        "points": 51,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "25",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/25.json",
+        "sha256": "d763341ff739f38884b5604145ac45551ee43382f0d622c022a08f2be7558b02",
+        "points": 27,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "26",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/26.json",
+        "sha256": "1ef96e4b08aaa3d86d909435514f11d4b9faab94ea33be859d87208daa20f568",
+        "points": 42,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "27",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/27.json",
+        "sha256": "14d2f3469f327c5ffc9818ed546dab8e471d16e8b8d584d5e5c553d257457be4",
+        "points": 51,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "28",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/28.json",
+        "sha256": "e8b84a0beab9319428e83b4f7d7fe74d1ca201bca8bc97ebde211dc349b40cf8",
+        "points": 24,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "29",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/29.json",
+        "sha256": "6b97ff72142b8931b0bd7c9aeac35ac0e1f984012182c332bc423fef380d3839",
+        "points": 22,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "30",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/30.json",
+        "sha256": "e305106a8dd1436924c0602bfc7418a9f382b11f81e7575c1942760798198cf9",
+        "points": 21,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "31",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/31.json",
+        "sha256": "15925902bf29f8be98adc5b6bb46ea26917673b25f36a4b6a582fcf4c2615e11",
+        "points": 28,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "32",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/32.json",
+        "sha256": "658ff4975264b0def5185aa3cbda26cad5ae1c60bbdf28050ae56026ded53dc6",
+        "points": 23,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "33",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/33.json",
+        "sha256": "687fa108ad0965124b2db4192f9a9131add0ddf7670d82a6b228e00350ba48a2",
+        "points": 33,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "34",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/34.json",
+        "sha256": "cfc0d5b3e0dea2655ca881de49b871f97310217bbfe0b4d3b1261fc911feac9c",
+        "points": 21,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "35",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/35.json",
+        "sha256": "a23329967d78f55168560e2373ba0beab68fd5d9bc2734a7fced0c3bc1549425",
+        "points": 21,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "36",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/36.json",
+        "sha256": "32393efcda3a1d3ad349cdd589032a948e375aa254bc2ddc508be2afc458868a",
+        "points": 31,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "37",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/37.json",
+        "sha256": "2708c0d522e585edb0ed57928380d597e4bf047b77a7dc37f12fa56dd7220ec9",
+        "points": 43,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "38",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/38.json",
+        "sha256": "7912cb5a772aae19f8604d37565bcfe273b1433dca3be1ffb1ea056274052531",
+        "points": 24,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "39",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/39.json",
+        "sha256": "3533d27becae84593a9b6f8faf217a5e77d8e39db9d738847afcf9d51e76feac",
+        "points": 47,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "40",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/40.json",
+        "sha256": "762b78e3f983c8e8877fd2bd44c6a35f537c2b6b7a29e6eacb37f21a0fd3dfc6",
+        "points": 19,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "N-SCMC-1",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-1.json",
+        "sha256": "55f400348c9d818095cdac9a5b852f2cba48e892b4e118e7f575b6f5e6140e6b",
+        "points": 40,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "N-SCMC-2",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-2.json",
+        "sha256": "51e3136c6d4e4714b1592552ad527c2456a388cdb1378b62aa74b9a43cb90b66",
+        "points": 23,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "N-SCMC-3",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-3.json",
+        "sha256": "5c17253b5a7a42663e9c7b7752ddd800f4eeeddd1ff016c6ca523eea297cbe73",
+        "points": 45,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "STWC-1",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-1.json",
+        "sha256": "0f722f2825569a9c151d13abb03808dd45bd2ebeab6f78f15d011f734d967d6d",
+        "points": 20,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "STWC-2",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-2.json",
+        "sha256": "83155c5ea0f6eb39a53cefceee4339efcd345f3514a4c931f70f1612960aa364",
+        "points": 19,
+        "tolerance_met": true
+      },
+      {
+        "stage": 0,
+        "curve": "STWC-3",
+        "absolute_window_budget_J": 1.0,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-3.json",
+        "sha256": "2dd28f8d3e8afce860d05ca8e31f85c2885722a09b89266633dd87a51a41ed61",
+        "points": 22,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "01",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/01.json",
+        "sha256": "705fc2d1c360d221e4ab83e99e5255b632afbb027e5dcb777ee2f98485af7393",
+        "points": 81,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "02",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/02.json",
+        "sha256": "0b3bd20f18c61d004a9f2ad305d11992d686bf4c133f0679b95bd6e9f69ee52e",
+        "points": 59,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "04",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/04.json",
+        "sha256": "9716f001a67f76e107f77f728ba26b2f97b0cb6c9d82a1210956e221351e53f2",
+        "points": 104,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "06",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/06.json",
+        "sha256": "44363bc3eda19a32fb9df0876e55fa763c3260d6ebc4e54e3094daddc245ccf6",
+        "points": 57,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "07",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/07.json",
+        "sha256": "0fa40a8b2c0e2a8c887afe40413dc2b0350166874be2d0ab92d1948c80f9fa23",
+        "points": 67,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "08",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/08.json",
+        "sha256": "1c042dad3f90653c9c1e86104e33a645248c83d891d32da3bd4aff08e3d6d32b",
+        "points": 46,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "09",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/09.json",
+        "sha256": "f564149bfbb9b406d291d8c6723710e270ecd256b3feafea3c77f13005b79220",
+        "points": 77,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "10",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/10.json",
+        "sha256": "be50b2a25307a0fb13ec56cee6b5b47b8fa1965c32544f19a3967e008732ffb2",
+        "points": 94,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "11",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/11.json",
+        "sha256": "8106c749176f93658b4081a979172b667c65de996a02fd1eb0694cafa70ddab9",
+        "points": 55,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "12",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/12.json",
+        "sha256": "7e5b27829d8e71b67861e3c48bf295558a3de2389135123d318faa5ed71bdd5e",
+        "points": 96,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "13",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/13.json",
+        "sha256": "dd479f5ea451d0405bca3992a26af687f35e141079283e862f3a7627920e4cc0",
+        "points": 117,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "14",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/14.json",
+        "sha256": "7e76cb03f2dac98cf99378b6011571fc164f97c34b154c1061705e3a59b22978",
+        "points": 46,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "15",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/15.json",
+        "sha256": "4380721d2561547fac5acf45ed242d5b748898a759d79fb2190a3b62752a53c1",
+        "points": 54,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "16",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/16.json",
+        "sha256": "670d28c5d5f91dc6b18ac74f79ef1b3dc18584dc730336ba5ea72d915bd7d96a",
+        "points": 61,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "17",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/17.json",
+        "sha256": "ba08fab5aa589480eb478b45af2ff68b7e6068cf6dc56692fd5a14cc108b540a",
+        "points": 47,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "18",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/18.json",
+        "sha256": "b0c29e9aa53c4d27c29dd63b935ad9417cd73017f2ac1e8bdeb96ece663b27bf",
+        "points": 55,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "19",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/19.json",
+        "sha256": "e9b63288cb40167e29a65a7dd86808947665de07cfe9e1ae849f38cdda7f5414",
+        "points": 100,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "20",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/20.json",
+        "sha256": "8715cc9c3ce7b05e048b543178a12f5e5abf3a466cfd9c2140a611f229a179fa",
+        "points": 70,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "21",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/21.json",
+        "sha256": "1fc1b1d6be2441751ecd8c1d33abe4e7604c81a46cae231a132b0d402ae7f4f4",
+        "points": 77,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "22",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/22.json",
+        "sha256": "4cb28d6285f64c7015f3692e6f3d0fe20e9c6a6cc575a23aa13eb7719f89627d",
+        "points": 41,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "23",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/23.json",
+        "sha256": "02862b485b819accf9c0476b6573fb43f94b7fa6a066bacadceda06aa49c356e",
+        "points": 97,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "24",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/24.json",
+        "sha256": "4537ac270778f96876c0fd1364c3de4e5d14506a91793adfc54d5578c31f79a9",
+        "points": 99,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "25",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/25.json",
+        "sha256": "8f1df801b62fc86d0289a9831d3e0b50ba0052053dd72ee95629f62db619918b",
+        "points": 56,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "26",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/26.json",
+        "sha256": "a3ca6a7c6f121f3da1698357a73f08fd674d3ecc96ec306a46b8a2eacaf60395",
+        "points": 54,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "27",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/27.json",
+        "sha256": "f1758bf88764f4d808fe0ed06314459758ffbb49aa3bff72cf3954b0de7057bd",
+        "points": 95,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "28",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/28.json",
+        "sha256": "ffdad183ed0f3e4c3130afdf375e3d4b13ceb345c14785ba71b7d15b7aae6c1c",
+        "points": 50,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "29",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/29.json",
+        "sha256": "0864728eb5d37989af571f8e84fe95b1aa0de39f83c78d7733907f8cc8dd5601",
+        "points": 47,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "30",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/30.json",
+        "sha256": "f391861da8d2615f3ca70551839a4a1af34bd5a5315316be7f253d2c6e508243",
+        "points": 53,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "31",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/31.json",
+        "sha256": "6fafc10fdcfbcb5c0b0b7f6ace8c8a28a5ff5bbe9fb6ce421e9e6587eb16eca7",
+        "points": 60,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "33",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/33.json",
+        "sha256": "89587be15716fe9b5a549e7f3a075a94df528a4e426e29a7ac334d8efd6b72b3",
+        "points": 66,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "34",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/34.json",
+        "sha256": "30d2fd9da0b6c71c59073f973b3e64fa9a4c17532db3d4720df325d0054620ee",
+        "points": 41,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "35",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/35.json",
+        "sha256": "216ebc4eed7d6c8b7d3d4d72473ef40f33506dcdd789a5d988d69a88b53c72fb",
+        "points": 45,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "36",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/36.json",
+        "sha256": "a371c1b15398af8947295da840bf40cf9ece769c0621f1cc129b9fe064c088d0",
+        "points": 58,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "37",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/37.json",
+        "sha256": "1a6d4ba9150bc47ec025e883ce368ae5d0beaefbf23a59fcb938b77ce9ce4f8c",
+        "points": 71,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "38",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/38.json",
+        "sha256": "2099ddb5eedfc5838eea0b7a3673f4300260710278163cccbc5248808157b504",
+        "points": 48,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "39",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/39.json",
+        "sha256": "0be31e615354c63b8f42c11e33d086ca3edc8b3a5ed2d499aa7e9c9f27ea18a8",
+        "points": 100,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "40",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/40.json",
+        "sha256": "87b165a18afee795dbcb75e83fa0af44bd615a0736c1eb19acc1cf8f04eedc3d",
+        "points": 42,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "N-SCMC-1",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-1.json",
+        "sha256": "b0ae28cd12eb51eae59e86cbc240b2f2abaaf98a9a65fb8aafcfd07c0033dea0",
+        "points": 65,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "N-SCMC-2",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-2.json",
+        "sha256": "bee8f8c347819592eaa43089824fd32e702638231e10becbe2be7ec5ef44ef80",
+        "points": 71,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "N-SCMC-3",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-3.json",
+        "sha256": "a83754a5d320c02c1892705a53d65f167ae6b601ee56b0e97aa7db385cbd04d9",
+        "points": 65,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "STWC-1",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-1.json",
+        "sha256": "3ea96824b30973f9dea88552128437b2389a8e4a13e586b9942c9055f5ce351a",
+        "points": 53,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "STWC-2",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-2.json",
+        "sha256": "d1b69e7d0b41fd1b90f67a4f318c1d0e913bdd1f12344f3087b668839eb5e2f8",
+        "points": 45,
+        "tolerance_met": true
+      },
+      {
+        "stage": 1,
+        "curve": "STWC-3",
+        "absolute_window_budget_J": 0.25,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-3.json",
+        "sha256": "5d13f27bd3c6f7ec31f8a98e84728cd2318ef86a3cfd3dbc6899757a3d2f39a9",
+        "points": 40,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "01",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/01.json",
+        "sha256": "a78f4f96034f7d39e0202a10912be52ade35513878da2a90bbc90875550baf2f",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "02",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/02.json",
+        "sha256": "f8fb47a4954123f81559157a943597beda051e8438178b7ecf374d9942342520",
+        "points": 114,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "04",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/04.json",
+        "sha256": "edc6bf41d483f74ee7c07be479aefecaf83174168dfcd1346d08533475ba5972",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "06",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/06.json",
+        "sha256": "7ef0f34450fff23057ef59157b028c322e31966be8ae577fe4798a882e515fae",
+        "points": 101,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "09",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/09.json",
+        "sha256": "796b288b3cd6d0f41b3edd642ea3b411586fcfe1fe74f6fc46c163d73c38ff5a",
+        "points": 123,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "12",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/12.json",
+        "sha256": "f3b38b4192fdd03adcc03cb36deaebe2ad4022bea3a5f40201cc0f7972f2dfe9",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "13",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/13.json",
+        "sha256": "35c5e7d97e282487648872fc13c3cd4395d414b541285f73c7d888f45a265a5a",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "14",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/14.json",
+        "sha256": "2aca216ed7496c3a95a362b972e33342ae5cb0e1ff5487f84d640e6f035a5e5c",
+        "points": 82,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "15",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/15.json",
+        "sha256": "2dc61c0e65063b929ba27e572004e1b0c00b59ebf1ed142c212bd6dd3b46bd63",
+        "points": 127,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "18",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/18.json",
+        "sha256": "c2b4fb97f26b028b6e1fbcc36ebea2eb702f702cfa0a450d738149a613dbedf9",
+        "points": 108,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "19",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/19.json",
+        "sha256": "30406aadee6ae891adb0b41cfd4cf82fc01b05c49bc740604bae4ed8edb95923",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "20",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/20.json",
+        "sha256": "bfd206f952578b17c436ed786f4be629526f868a7a0e2056df9b2a781cbc4957",
+        "points": 110,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "21",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/21.json",
+        "sha256": "6bc3a401378124f27d231b239d47c3156281bef124078ead985ac5971a9ab894",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "22",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/22.json",
+        "sha256": "14e828df43c0e5287b41a6f8566594c8d9af0dfa17267166cc5e8387824b20cb",
+        "points": 66,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "23",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/23.json",
+        "sha256": "ac0afbeb1ea5a901c1f1d22da96f672ad804720b67d9c3a55daae3289057238d",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "24",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/24.json",
+        "sha256": "8dcb9f7b3ea870afaaa42caf42c786200b6c6eb002e923ad0a16b69207e29d3f",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "25",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/25.json",
+        "sha256": "7f764b5df9378dea9d14a22a307be5172faab641609478486e62b31be788b923",
+        "points": 102,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "26",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/26.json",
+        "sha256": "61e8c1e55323a2be376dbc928efb82cbc4203da383ec3c2c86b68d4e61710e9a",
+        "points": 100,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "27",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/27.json",
+        "sha256": "bf520fcf1e8dbbb484eadabc59e0930b95282b478b52874b5b3650b8e2ba44ae",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "28",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/28.json",
+        "sha256": "f28f5d749109662f75df98bc6a127600a9d422608070b1a87311d5e085e43002",
+        "points": 80,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "29",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/29.json",
+        "sha256": "63c49982fd569c3a27d2894c6e6c5f0aae6eaba779a25106b66d5fab98ebb160",
+        "points": 90,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "30",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/30.json",
+        "sha256": "f7ec223cb6524949804994c9329d9f8a8165675a573dbef233ae9a94257341d9",
+        "points": 94,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "31",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/31.json",
+        "sha256": "c7d67751bacbb3dc9863881f4fee986a40c5f95ece3837750448484bce9a63ec",
+        "points": 102,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "33",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/33.json",
+        "sha256": "b8e23a6ca246426089162bc8c067beecd1e166e0c3b75cb8502fc13bbebb320b",
+        "points": 95,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "37",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/37.json",
+        "sha256": "2c52fe6130a75e44e2d98c5ab81e5640b51d3f3c258c5bafb11d3be4f1b8bbb2",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "38",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/38.json",
+        "sha256": "bb81467f8a67a3fb32862530ccc340512b0850bf18d428b58917e881c73a81d3",
+        "points": 93,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "39",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/39.json",
+        "sha256": "f9a49ccec626579faa83b1a5506eba704c24269d1813dd7543e7b6ad62777e72",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "40",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/40.json",
+        "sha256": "9de73a0fba1bfcdcc62c84117fbbedd7c035d9ab13c48026eaa8b77022dce495",
+        "points": 75,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "N-SCMC-1",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-1.json",
+        "sha256": "2b49be4f85e29c08a1071ec4adca5e35d987b6d9f270a50070ef3a6c69d99dc9",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "N-SCMC-2",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-2.json",
+        "sha256": "231b6f5f91e29953ea64f06a1e41ba3d7ebd4a64b4639d3c536bb5e06537bb0f",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "N-SCMC-3",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-3.json",
+        "sha256": "465fdb2e79c5c253d6ee08d2b35ecbed06ae555da696a8cbb7586fcf49c0cf6d",
+        "points": 129,
+        "tolerance_met": false
+      },
+      {
+        "stage": 2,
+        "curve": "STWC-1",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-1.json",
+        "sha256": "da7372f7e3e3d97e718357ade83416de049eede5c8288796e5f1e59f2804f59a",
+        "points": 81,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "STWC-2",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-2.json",
+        "sha256": "1b3d99b1487f0929a33b568b0c3a0118b6dc873863bb550c70bc122153ac1b3b",
+        "points": 126,
+        "tolerance_met": true
+      },
+      {
+        "stage": 2,
+        "curve": "STWC-3",
+        "absolute_window_budget_J": 0.0625,
+        "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-3.json",
+        "sha256": "83d1998d8b6f3ab39a6aed24d8ee7d4dfdccdc20e896f436d3fc681faa6aff4f",
+        "points": 76,
+        "tolerance_met": true
+      }
+    ],
+    "query_specific_followup": {
+      "scalar_responses": 22,
+      "requested_curve_stroke_pairs": [
+        [
+          "04",
+          10.0
+        ],
+        [
+          "09",
+          40.0
+        ],
+        [
+          "12",
+          20.0
+        ],
+        [
+          "13",
+          10.0
+        ],
+        [
+          "13",
+          20.0
+        ],
+        [
+          "13",
+          40.0
+        ],
+        [
+          "15",
+          20.0
+        ],
+        [
+          "20",
+          30.0
+        ],
+        [
+          "21",
+          30.0
+        ],
+        [
+          "22",
+          30.0
+        ],
+        [
+          "23",
+          10.0
+        ],
+        [
+          "23",
+          30.0
+        ],
+        [
+          "24",
+          10.0
+        ],
+        [
+          "27",
+          40.0
+        ],
+        [
+          "28",
+          30.0
+        ],
+        [
+          "29",
+          30.0
+        ],
+        [
+          "33",
+          10.0
+        ],
+        [
+          "33",
+          20.0
+        ],
+        [
+          "39",
+          40.0
+        ],
+        [
+          "STWC-1",
+          30.0
+        ],
+        [
+          "STWC-3",
+          10.0
+        ],
+        [
+          "STWC-3",
+          30.0
+        ]
+      ],
+      "resolved_pairs": 4140,
+      "total_pairs": 4140,
+      "unresolved_pairs": 0,
+      "false_resolved_orderings": 0,
+      "definition": "Exact source-reference EA scalar at a requested stroke; not an additional reduced response table"
+    },
+    "engineering_metrics": [
+      "EA_J",
+      "SEA_kJ_per_kg",
+      "MCF_kN",
+      "prefix_PCF_kN",
+      "CFE"
+    ],
+    "interpretation": "Ordering intervals concern reconstruction of the supplied numerical records and fixed source masses."
+  },
+  "cyclic_path": {
+    "software_version": "0.2.0",
+    "dataset_doi": "10.5281/zenodo.10829958",
+    "license": "CC BY 4.0",
+    "source_xlsx_sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
+    "source_points": 125157,
+    "negative_force_observations": 63063,
+    "branches": 2971,
+    "zero_displacement_events": 1984,
+    "ascending_branches": 1532,
+    "descending_branches": 1439,
+    "longest_branch": {
+      "index": 2696,
+      "source_points": 2555
+    },
+    "sum_retained_branch_nodes": 13886,
+    "point_cap_per_branch": 129,
+    "branches_unmet_cap": 1,
+    "reference_signed_path_work_J": 92033.957666125,
+    "reference_sum_of_branch_work_J": 92033.95766612502,
+    "reduced_signed_path_work_J": 91965.42908509009,
+    "signed_terminal_error_J": 68.52858103491599,
+    "maximum_continuous_chronological_work_error_J": 68.7197146269448,
+    "sum_branch_window_bounds_J": 104.47783323401313,
+    "requested_aggregate_error_budget_J": 152.336218511145,
+    "allocation_scale_sum_abs_branch_work_J": 152336.218511145,
+    "all_global_error_checks_pass": true,
+    "all_chronological_intervals_covered_once": true,
+    "interpretation": "Signed chronological path integral F dx; not interpreted as crash energy or closed-cycle dissipation. No smoothing, contact alignment or reversal threshold is applied."
+  }
+}

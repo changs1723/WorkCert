@@ -1,0 +1,403 @@
+{
+  "files": [
+    {
+      "file": "steel/A_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_X_0.1.csv",
+      "repository_file_id": "0583932c-0547-447e-99ae-6558bfb9e5c2",
+      "bytes": 235216,
+      "sha256": "a624ef23b12d20fa93e150ba26e95eae86b9d8e153bbeebd8dc8af9a8e3177d0",
+      "expected_repository_sha256": "a624ef23b12d20fa93e150ba26e95eae86b9d8e153bbeebd8dc8af9a8e3177d0",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/A_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_X_1.8.csv",
+      "repository_file_id": "97bf3c77-a8ea-4156-a96c-6d6e6ce1554a",
+      "bytes": 145870,
+      "sha256": "b9dec87b0debc12fc330f426889331fc16749ad0d41815e216f27c1c5321cd42",
+      "expected_repository_sha256": "b9dec87b0debc12fc330f426889331fc16749ad0d41815e216f27c1c5321cd42",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/A_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_Y_0.1.csv",
+      "repository_file_id": "e5f24580-1a18-48e3-827d-58d447b5eef1",
+      "bytes": 133053,
+      "sha256": "1fdf8e39cfd92626d0e9d4b63491b83c677ff4cc0d943c4eea333cf0cf6258ae",
+      "expected_repository_sha256": "1fdf8e39cfd92626d0e9d4b63491b83c677ff4cc0d943c4eea333cf0cf6258ae",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/A_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_Y_1.8.csv",
+      "repository_file_id": "59f49dca-bfaa-4b58-98d1-9bb63bc59335",
+      "bytes": 137393,
+      "sha256": "b31b497e66ea1d30ae8cdf23c2a5ab27ca542667d02e8c0106a088ec39b42740",
+      "expected_repository_sha256": "b31b497e66ea1d30ae8cdf23c2a5ab27ca542667d02e8c0106a088ec39b42740",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/A_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_Z_0.1.csv",
+      "repository_file_id": "dee90362-2614-4f0f-87aa-845b37723398",
+      "bytes": 56137,
+      "sha256": "fce593406289b21f2f8c7b124f38f6652e652141f5f7e46cc8476ca71de4b20d",
+      "expected_repository_sha256": "fce593406289b21f2f8c7b124f38f6652e652141f5f7e46cc8476ca71de4b20d",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/A_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "A_Z_1.8.csv",
+      "repository_file_id": "a170a46d-a4bc-4d0f-a978-082a583e2faf",
+      "bytes": 12474,
+      "sha256": "c47329fd004b71d164fd5f0ae747eaa4e8a157359cafa20a570221cb1e06bf23",
+      "expected_repository_sha256": "c47329fd004b71d164fd5f0ae747eaa4e8a157359cafa20a570221cb1e06bf23",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_X_0.1.csv",
+      "repository_file_id": "e68c5ca6-77a6-4f32-bc5c-52385b97e957",
+      "bytes": 239550,
+      "sha256": "fdf3052251bbac1869395544c62765f5b84bc7c0f56e6b2b5f333f02f8d54cd2",
+      "expected_repository_sha256": "fdf3052251bbac1869395544c62765f5b84bc7c0f56e6b2b5f333f02f8d54cd2",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_X_1.8.csv",
+      "repository_file_id": "7863ea42-a05a-4569-8e11-eda4d1ff032f",
+      "bytes": 133879,
+      "sha256": "8981c8e539932ffdd0ec9e9bc57c2bca8ceba4584e9bbcbea33b2ba849571144",
+      "expected_repository_sha256": "8981c8e539932ffdd0ec9e9bc57c2bca8ceba4584e9bbcbea33b2ba849571144",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_Y_0.1.csv",
+      "repository_file_id": "8bcb9ec5-11c4-415c-9680-f0cac4384eff",
+      "bytes": 122684,
+      "sha256": "69fe0b1bae25ba8af2c36dc760013041ad52115223ce4a2483933daa815de589",
+      "expected_repository_sha256": "69fe0b1bae25ba8af2c36dc760013041ad52115223ce4a2483933daa815de589",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_Y_1.8.csv",
+      "repository_file_id": "0487e6ec-dab1-412f-a72c-ffec62b543fe",
+      "bytes": 184702,
+      "sha256": "ebe3f392908c9e88aa19503241d1f45f344fbc8c1262dafdbf7258bac36bd11d",
+      "expected_repository_sha256": "ebe3f392908c9e88aa19503241d1f45f344fbc8c1262dafdbf7258bac36bd11d",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_Z_0.1.csv",
+      "repository_file_id": "f3c9ae0c-047c-4a38-af98-c1a5674092dd",
+      "bytes": 54993,
+      "sha256": "e70cde95ad26279b99ec6e025ca421f398cba6073116375128ddc1a9c4ee4850",
+      "expected_repository_sha256": "e70cde95ad26279b99ec6e025ca421f398cba6073116375128ddc1a9c4ee4850",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/B_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "B_Z_1.8.csv",
+      "repository_file_id": "272eef99-cc07-45cf-9c8b-4976e5f1cfaf",
+      "bytes": 284821,
+      "sha256": "43666a671a004b75758e9504b0555b9df9f2bfb6bacd95ee148e52acd01988a7",
+      "expected_repository_sha256": "43666a671a004b75758e9504b0555b9df9f2bfb6bacd95ee148e52acd01988a7",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_X_0.1.csv",
+      "repository_file_id": "fe97a121-6634-44ec-943c-5fcd6fb658c6",
+      "bytes": 234489,
+      "sha256": "58fd233ec2e5c1ec8bbfd80c9e45bc126f85012efa27c07b42100b784ff4fa23",
+      "expected_repository_sha256": "58fd233ec2e5c1ec8bbfd80c9e45bc126f85012efa27c07b42100b784ff4fa23",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_X_1.8.csv",
+      "repository_file_id": "f5db72d8-f21c-4846-8d0d-709a7d403656",
+      "bytes": 136048,
+      "sha256": "7283feb0765ed87511f77dc60c1fc324bc4e052220b0113069bba7f6c3eb1d38",
+      "expected_repository_sha256": "7283feb0765ed87511f77dc60c1fc324bc4e052220b0113069bba7f6c3eb1d38",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_Y_0.1.csv",
+      "repository_file_id": "d7048b99-6286-4eb4-a1c4-de6aef91c84c",
+      "bytes": 122256,
+      "sha256": "adf7769e28ac862a6a4a6d5de347e614788c9339a43d5a805003ea53e136ed81",
+      "expected_repository_sha256": "adf7769e28ac862a6a4a6d5de347e614788c9339a43d5a805003ea53e136ed81",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_Y_1.8.csv",
+      "repository_file_id": "2995282c-850a-4a06-97a4-8b15dfad4617",
+      "bytes": 152645,
+      "sha256": "bd5bcd86c94e2ab7e660442495e2709ca393509c7c15476bddea56423e644e6b",
+      "expected_repository_sha256": "bd5bcd86c94e2ab7e660442495e2709ca393509c7c15476bddea56423e644e6b",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_Z_0.1.csv",
+      "repository_file_id": "ca599f39-d708-4149-87df-1ffa588d25f6",
+      "bytes": 62675,
+      "sha256": "10eb7287894f308581a26940c647706321314deb1479ee6ed4ffb974633d2a62",
+      "expected_repository_sha256": "10eb7287894f308581a26940c647706321314deb1479ee6ed4ffb974633d2a62",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/C_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "C_Z_1.8.csv",
+      "repository_file_id": "46d9a754-4042-4b00-b16e-2372b3fccb26",
+      "bytes": 205953,
+      "sha256": "bf8a40847d3662de68f483abde67d20d78234eddb29d9b98c6f27a4b8ea05443",
+      "expected_repository_sha256": "bf8a40847d3662de68f483abde67d20d78234eddb29d9b98c6f27a4b8ea05443",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/CX_Tensile.xlsx",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "CX_Tensile.xlsx",
+      "repository_file_id": "93ac42de-031f-4b6a-92c8-395de54eff3d",
+      "bytes": 105669,
+      "sha256": "33ff3ce7fbe9735376cad525696ed4d6676df87db62dab2c845207ecf3254f98",
+      "expected_repository_sha256": "33ff3ce7fbe9735376cad525696ed4d6676df87db62dab2c845207ecf3254f98",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_X_0.1.csv",
+      "repository_file_id": "9bab806e-af9f-4f63-8e71-fa26a261d796",
+      "bytes": 163786,
+      "sha256": "9cc58ce39937922216c65e429ee7d7610ca60a1f8bd543970bbb050531a8c9bc",
+      "expected_repository_sha256": "9cc58ce39937922216c65e429ee7d7610ca60a1f8bd543970bbb050531a8c9bc",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_X_1.8.csv",
+      "repository_file_id": "35ea458c-df7f-4d25-9687-378a2563bdbf",
+      "bytes": 120511,
+      "sha256": "330fb117992314712423ee169f2dae9675f2946ca6372debce7dda810a3eb6e4",
+      "expected_repository_sha256": "330fb117992314712423ee169f2dae9675f2946ca6372debce7dda810a3eb6e4",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_Y_0.1.csv",
+      "repository_file_id": "fba31917-d3b2-44af-a956-460daeb0accc",
+      "bytes": 99125,
+      "sha256": "ba0a19245679318ab5fba9ce0d07f75c01981effccd9f5c662d702a0587d2925",
+      "expected_repository_sha256": "ba0a19245679318ab5fba9ce0d07f75c01981effccd9f5c662d702a0587d2925",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_Y_1.8.csv",
+      "repository_file_id": "9ed6e03e-1730-4fb7-912c-7d971e14fe80",
+      "bytes": 148461,
+      "sha256": "fd175bc0c23282e760d487c2d417272a9a0683ba3b32056c1569581b533dcc79",
+      "expected_repository_sha256": "fd175bc0c23282e760d487c2d417272a9a0683ba3b32056c1569581b533dcc79",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_Z_0.1.csv",
+      "repository_file_id": "ef14e80e-21b8-46f3-b7f6-196d9d98a6c2",
+      "bytes": 59854,
+      "sha256": "b17082dcafc29f5d6e72a887e7b39678adef08e725e2ad4138fbfb2ae4acf979",
+      "expected_repository_sha256": "b17082dcafc29f5d6e72a887e7b39678adef08e725e2ad4138fbfb2ae4acf979",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/D_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "D_Z_1.8.csv",
+      "repository_file_id": "524c7646-19e7-4067-97a6-2a34bc0e23e8",
+      "bytes": 351298,
+      "sha256": "a94f8b5c940b57b35139ad1cd97852dd525672a35794fc42e743f11f3fa2fe15",
+      "expected_repository_sha256": "a94f8b5c940b57b35139ad1cd97852dd525672a35794fc42e743f11f3fa2fe15",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_X_0.1.csv",
+      "repository_file_id": "5f2b1168-564d-4f46-813d-771ac7af3ab6",
+      "bytes": 180355,
+      "sha256": "44910737b113b4cb2d802995b5475f2099d08a1476e1fbb8a85fc9fda594619e",
+      "expected_repository_sha256": "44910737b113b4cb2d802995b5475f2099d08a1476e1fbb8a85fc9fda594619e",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_X_1.8.csv",
+      "repository_file_id": "09c5bdf0-037c-4fac-9c51-bf15fb03716d",
+      "bytes": 135725,
+      "sha256": "69e1f3f613bfe3643a8893554d46dddba3cddb3e6c3ed0531056b8e4af372d0a",
+      "expected_repository_sha256": "69e1f3f613bfe3643a8893554d46dddba3cddb3e6c3ed0531056b8e4af372d0a",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_Y_0.1.csv",
+      "repository_file_id": "9f04035a-cbeb-4e40-b09c-0ad8b5ad95d0",
+      "bytes": 73102,
+      "sha256": "07fd20e569d432235880d024f9a306088d74a68c226e2e0446469cf38b655fdf",
+      "expected_repository_sha256": "07fd20e569d432235880d024f9a306088d74a68c226e2e0446469cf38b655fdf",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_Y_1.8.csv",
+      "repository_file_id": "405f4ccd-80f9-40b0-a463-2534fdf2305b",
+      "bytes": 133433,
+      "sha256": "81325ba9dde4dcec1b087971aa5b6f2e1769160ac4c8acc69a6f4b69ebaf668d",
+      "expected_repository_sha256": "81325ba9dde4dcec1b087971aa5b6f2e1769160ac4c8acc69a6f4b69ebaf668d",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_Z_0.1.csv",
+      "repository_file_id": "64f3d9b4-2d34-4886-9d90-e5f34dad60a5",
+      "bytes": 68141,
+      "sha256": "5591be56dde5f9b1b33930e479bda6f634f9e742bc7e2d4e39ef56a0592dc657",
+      "expected_repository_sha256": "5591be56dde5f9b1b33930e479bda6f634f9e742bc7e2d4e39ef56a0592dc657",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/E_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "E_Z_1.8.csv",
+      "repository_file_id": "f0be0ecd-03e6-4265-9627-357c781e505b",
+      "bytes": 228064,
+      "sha256": "46128098cfca60d37fac4bac30e1e15a3dc26b40095aeeacbeac4f2bb7dcfc5c",
+      "expected_repository_sha256": "46128098cfca60d37fac4bac30e1e15a3dc26b40095aeeacbeac4f2bb7dcfc5c",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_X_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_X_0.1.csv",
+      "repository_file_id": "d460e362-5242-49ac-aae2-8b857c7cc0a8",
+      "bytes": 168363,
+      "sha256": "b3b8a1321db2efda36c714da3f12326d43af0f6011c54770fd71fca9c77bc056",
+      "expected_repository_sha256": "b3b8a1321db2efda36c714da3f12326d43af0f6011c54770fd71fca9c77bc056",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_X_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_X_1.8.csv",
+      "repository_file_id": "741b45d1-d740-41b3-9278-24b020ec3ffb",
+      "bytes": 124884,
+      "sha256": "cb0ec90eb17af5c38db23a2b537d91be74e4e002e838d2ae7141620bb68b883b",
+      "expected_repository_sha256": "cb0ec90eb17af5c38db23a2b537d91be74e4e002e838d2ae7141620bb68b883b",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_Y_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_Y_0.1.csv",
+      "repository_file_id": "e61aad8d-c272-45ff-8f67-6013185a9541",
+      "bytes": 97095,
+      "sha256": "52e1be5e6b0e62a1fe470e283f1a6b9cd5cdd33f40ede5f2a44fdc88695c275c",
+      "expected_repository_sha256": "52e1be5e6b0e62a1fe470e283f1a6b9cd5cdd33f40ede5f2a44fdc88695c275c",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_Y_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_Y_1.8.csv",
+      "repository_file_id": "c568727e-2f2a-423f-b7aa-9c46e1e8032f",
+      "bytes": 125416,
+      "sha256": "fa96246006689d386dc05901d5e2f6e0e7da1248b76d2650ec04e8f96dacc366",
+      "expected_repository_sha256": "fa96246006689d386dc05901d5e2f6e0e7da1248b76d2650ec04e8f96dacc366",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_Z_0.1.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_Z_0.1.csv",
+      "repository_file_id": "7598ad27-f88f-401e-aff7-f21183cfb776",
+      "bytes": 72856,
+      "sha256": "b0d5c8b352446982175e7898035abc3c1e2686039ce17920d09c2f9d473c977d",
+      "expected_repository_sha256": "b0d5c8b352446982175e7898035abc3c1e2686039ce17920d09c2f9d473c977d",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel/F_Z_1.8.csv",
+      "dataset_doi": "10.17632/8bxkdw4nfw.1",
+      "repository_filename": "F_Z_1.8.csv",
+      "repository_file_id": "22f980e0-6217-4713-9950-67ee913c7bd3",
+      "bytes": 240300,
+      "sha256": "84819389ca009c11116cd60718c0725caeba0f87424d18387f0f8154557ec3c6",
+      "expected_repository_sha256": "84819389ca009c11116cd60718c0725caeba0f87424d18387f0f8154557ec3c6",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "EDAH/EDAH4_52_35(3.3).csv",
+      "dataset_doi": "10.5281/zenodo.16399749",
+      "repository_filename": "EDAH4_52_35(3.3).csv",
+      "bytes": 240723,
+      "sha256": "385bcd9ab0c419452202871bbe657cd7c028b4f31c18f8617691b08fb8fd0646",
+      "expected_repository_md5": "c62ef0b9561304aa8331d4d257dcb3b6",
+      "verified_md5": "c62ef0b9561304aa8331d4d257dcb3b6",
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "steel_repository_metadata.json",
+      "bytes": 80294,
+      "sha256": "2d675ae3791c8f0e1ea0311d504f4a2f88da9e65df213307cebb4e9b304c25fd",
+      "role": "Unmodified official repository metadata"
+    },
+    {
+      "file": "EDAH_repository_metadata.json",
+      "bytes": 9488,
+      "sha256": "431dbc05d0fc743afda74bae1d049160e70f20c6213b29e15190205e9adc3dac",
+      "role": "Unmodified official repository metadata"
+    }
+  ],
+  "numeric_source_files": 38,
+  "repository_metadata_files": 2,
+  "copy_policy": "All source bytes unchanged; numeric subset only, without photographs, movies or STL geometries.",
+  "licenses": {
+    "data": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

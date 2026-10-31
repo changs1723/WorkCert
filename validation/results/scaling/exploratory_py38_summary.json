@@ -1,0 +1,132 @@
+{
+  "signal": "synthetic analytic compression-like function; not experimental observations",
+  "python": "3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)]",
+  "numpy": "1.24.4",
+  "platform": "Windows-10-10.0.19041-SP0",
+  "timing": "one measured construction after a separate small warm-up per independent process; native allocations/hash/final global evaluation included",
+  "point_cap": 1025,
+  "timeout_seconds_per_case": 120.0,
+  "pairs": [
+    {
+      "n": 1000,
+      "tolerance_fraction": 0.01,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 0.5173856883245014,
+      "same_reference": true,
+      "old_points": 39,
+      "new_points": 39
+    },
+    {
+      "n": 10000,
+      "tolerance_fraction": 0.01,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 2.8562745129513982,
+      "same_reference": true,
+      "old_points": 39,
+      "new_points": 39
+    },
+    {
+      "n": 100000,
+      "tolerance_fraction": 0.01,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 4.553525523557169,
+      "same_reference": true,
+      "old_points": 39,
+      "new_points": 39
+    },
+    {
+      "n": 1000000,
+      "tolerance_fraction": 0.01,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 7.994799948313936,
+      "same_reference": true,
+      "old_points": 39,
+      "new_points": 39
+    },
+    {
+      "n": 1000,
+      "tolerance_fraction": 0.001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 1.4213161588061083,
+      "same_reference": true,
+      "old_points": 109,
+      "new_points": 109
+    },
+    {
+      "n": 10000,
+      "tolerance_fraction": 0.001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 3.40673578195547,
+      "same_reference": true,
+      "old_points": 107,
+      "new_points": 107
+    },
+    {
+      "n": 100000,
+      "tolerance_fraction": 0.001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 10.647678874370238,
+      "same_reference": true,
+      "old_points": 107,
+      "new_points": 107
+    },
+    {
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 14.79222160520372,
+      "same_reference": true,
+      "old_points": 107,
+      "new_points": 107
+    },
+    {
+      "n": 1000,
+      "tolerance_fraction": 0.0001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 1.9754499102012237,
+      "same_reference": true,
+      "old_points": 375,
+      "new_points": 375
+    },
+    {
+      "n": 10000,
+      "tolerance_fraction": 0.0001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 3.898877461111828,
+      "same_reference": true,
+      "old_points": 335,
+      "new_points": 335
+    },
+    {
+      "n": 100000,
+      "tolerance_fraction": 0.0001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 16.74801871724019,
+      "same_reference": true,
+      "old_points": 342,
+      "new_points": 342
+    },
+    {
+      "n": 1000000,
+      "tolerance_fraction": 0.0001,
+      "old_status": "PASS",
+      "new_status": "PASS",
+      "speed_ratio": 39.04474499903129,
+      "same_reference": true,
+      "old_points": 342,
+      "new_points": 342
+    }
+  ],
+  "worst_case_complexity": "Segment rescanning can still cost O(nK); AVL summary updates cost O(log K) and use O(K) nodes. The incremental implementation removes full-reference certificate scans at each insertion."
+}

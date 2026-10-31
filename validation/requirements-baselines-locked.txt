@@ -1,0 +1,7 @@
+# Tested comparative/DP environment: CPython 3.12.14 (research dependencies).
+# These are not WorkCert runtime requirements.
+numpy==2.3.5
+numba==0.68.1
+llvmlite==0.50.0
+rdp==0.8
+simplification==2.0.0

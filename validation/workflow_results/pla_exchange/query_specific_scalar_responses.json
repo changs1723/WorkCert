@@ -1,0 +1,200 @@
+[
+  {
+    "curve": "04",
+    "stroke_mm": 10.0,
+    "EA_J": 82.20386088286891,
+    "SEA_kJ_kg": 2.7865715553514887,
+    "prepared_reference_sha256": "2c199a0de4fb0de2629e5e80fbe37c69ea7115379317df18b2128234de3d2118",
+    "mass_g": 29.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "09",
+    "stroke_mm": 40.0,
+    "EA_J": 386.47181779259967,
+    "SEA_kJ_kg": 13.05648033083107,
+    "prepared_reference_sha256": "5f373666a0de036898d033488d78e36705590865ae25a8ebd7c89f360d817d4f",
+    "mass_g": 29.6,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "12",
+    "stroke_mm": 20.0,
+    "EA_J": 157.45983904362572,
+    "SEA_kJ_kg": 5.283887216229051,
+    "prepared_reference_sha256": "58e64bdc19e5471d6ae13e7750531a83ad1c0d314fa6f8c26436e52ed2e9b0a6",
+    "mass_g": 29.8,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "13",
+    "stroke_mm": 10.0,
+    "EA_J": 92.54640477500135,
+    "SEA_kJ_kg": 3.137166263559368,
+    "prepared_reference_sha256": "133985a946e8829371f81dd5ac825132342a316cfb6dd0c132c7e4434f386185",
+    "mass_g": 29.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "13",
+    "stroke_mm": 20.0,
+    "EA_J": 191.181842504871,
+    "SEA_kJ_kg": 6.480740423893933,
+    "prepared_reference_sha256": "133985a946e8829371f81dd5ac825132342a316cfb6dd0c132c7e4434f386185",
+    "mass_g": 29.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "13",
+    "stroke_mm": 40.0,
+    "EA_J": 406.3316496689312,
+    "SEA_kJ_kg": 13.773954226065465,
+    "prepared_reference_sha256": "133985a946e8829371f81dd5ac825132342a316cfb6dd0c132c7e4434f386185",
+    "mass_g": 29.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "15",
+    "stroke_mm": 20.0,
+    "EA_J": 139.63168849306786,
+    "SEA_kJ_kg": 5.289079109585904,
+    "prepared_reference_sha256": "b7cc1b40271db579dd1a1570f475a800935e3c07d4ce56d201bc82b657e5bf67",
+    "mass_g": 26.4,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "20",
+    "stroke_mm": 30.0,
+    "EA_J": 255.20950793950414,
+    "SEA_kJ_kg": 9.082188894644275,
+    "prepared_reference_sha256": "23ac19d5bc9be270a9b5ef496548f854dfb4c071ac1aa30e0399c13ab1928d9a",
+    "mass_g": 28.1,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "21",
+    "stroke_mm": 30.0,
+    "EA_J": 266.60811528990234,
+    "SEA_kJ_kg": 9.257226225343832,
+    "prepared_reference_sha256": "6c91137f7174ce962e0cc17f150b32bf42c090936d2c0fcb7aaa5098bf9f3552",
+    "mass_g": 28.8,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "22",
+    "stroke_mm": 30.0,
+    "EA_J": 216.16884327872026,
+    "SEA_kJ_kg": 8.510584381051979,
+    "prepared_reference_sha256": "3c46cb2aee69f5d96a42033e1a11f89b48bdad6eedecdefed0885fc160db561b",
+    "mass_g": 25.4,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "23",
+    "stroke_mm": 10.0,
+    "EA_J": 86.30555079065367,
+    "SEA_kJ_kg": 3.049666105676808,
+    "prepared_reference_sha256": "7163dd44830abd0238567047cdd39e14295e44d5daf5581f2359cd57b1dea3e6",
+    "mass_g": 28.3,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "23",
+    "stroke_mm": 30.0,
+    "EA_J": 261.995184752488,
+    "SEA_kJ_kg": 9.25778037994657,
+    "prepared_reference_sha256": "7163dd44830abd0238567047cdd39e14295e44d5daf5581f2359cd57b1dea3e6",
+    "mass_g": 28.3,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "24",
+    "stroke_mm": 10.0,
+    "EA_J": 82.25276944585437,
+    "SEA_kJ_kg": 2.7882294727408263,
+    "prepared_reference_sha256": "803b94973a8b200ad06ce805f3713c237e480bea7d880bf782e408b8d918325c",
+    "mass_g": 29.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "27",
+    "stroke_mm": 40.0,
+    "EA_J": 387.15403669040626,
+    "SEA_kJ_kg": 13.777723725637234,
+    "prepared_reference_sha256": "bc906fd1bb63992ea1a451968802e36d7fac886ec2e0189fc69305b9966cdfd4",
+    "mass_g": 28.1,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "28",
+    "stroke_mm": 30.0,
+    "EA_J": 227.9090903686335,
+    "SEA_kJ_kg": 9.080043440981415,
+    "prepared_reference_sha256": "12851f270d949877e1bf9701bfd0ab3f046c843b984ab43f9d2db6e59a9dde14",
+    "mass_g": 25.1,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "29",
+    "stroke_mm": 30.0,
+    "EA_J": 214.55007236753238,
+    "SEA_kJ_kg": 8.413728328138525,
+    "prepared_reference_sha256": "d4cbaa104b59818f5bf72c6fc132c3afb3e4531a0a4b0ad55118f743b1fb08ef",
+    "mass_g": 25.5,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "33",
+    "stroke_mm": 10.0,
+    "EA_J": 89.99469189399872,
+    "SEA_kJ_kg": 3.146667548741214,
+    "prepared_reference_sha256": "e0c8828d5e40bd7d082c76ee423438e243da8dbf358c132f7dfd94a796d06777",
+    "mass_g": 28.6,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "33",
+    "stroke_mm": 20.0,
+    "EA_J": 185.31407158826488,
+    "SEA_kJ_kg": 6.479512992596674,
+    "prepared_reference_sha256": "e0c8828d5e40bd7d082c76ee423438e243da8dbf358c132f7dfd94a796d06777",
+    "mass_g": 28.6,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "39",
+    "stroke_mm": 40.0,
+    "EA_J": 376.0119558338714,
+    "SEA_kJ_kg": 13.05597068867609,
+    "prepared_reference_sha256": "3ea4335ff6aae41d8abd36ce839c9906c9b1c1536d7b78004dc632f358541af1",
+    "mass_g": 28.8,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "STWC-1",
+    "stroke_mm": 30.0,
+    "EA_J": 137.88265750021552,
+    "SEA_kJ_kg": 8.51127515433429,
+    "prepared_reference_sha256": "02db23d79dc95f8511446e424a89d5918c05207f3cb6302aefff77ac997b4464",
+    "mass_g": 16.2,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "STWC-3",
+    "stroke_mm": 10.0,
+    "EA_J": 49.32623578380668,
+    "SEA_kJ_kg": 3.044829369370783,
+    "prepared_reference_sha256": "bfa2c58e807bf047a2cb4df509f1d9500e589cf3478545e955dee7985da2cada",
+    "mass_g": 16.2,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  },
+  {
+    "curve": "STWC-3",
+    "stroke_mm": 30.0,
+    "EA_J": 136.2427626305255,
+    "SEA_kJ_kg": 8.410047075958364,
+    "prepared_reference_sha256": "bfa2c58e807bf047a2cb4df509f1d9500e589cf3478545e955dee7985da2cada",
+    "mass_g": 16.2,
+    "purpose": "Query-specific exact scalar response after overlapping table-error intervals"
+  }
+]
