@@ -41,10 +41,10 @@ def prefix_peak(x,f,q):
 
 def metrics(x,f,table,mass_g,stroke):
     work=float(primitive(x,f,stroke));approx=float(table.work(stroke))
-    peak=prefix_peak(x,f,stroke);p_hat=prefix_peak(table.x,table.force,stroke)
+    peak=prefix_peak(x,f,stroke);p_hat=float(table.peak_force(stroke))
     e=table.certificate.prefix;delta=table.certificate.delta
     mass_kg=mass_g/1000.
-    plo,phi=max(0.,p_hat-delta),p_hat+delta
+    plo,phi=map(float,table.peak_bounds(stroke))
     wlo,whi=approx-e,approx+e
     cfe=work/(stroke*peak);cfe_hat=approx/(stroke*p_hat)
     cfe_lo=wlo/(stroke*phi) if phi>0 else None
@@ -58,7 +58,9 @@ def metrics(x,f,table,mass_g,stroke):
             'reference_SEA_kJ_kg':work/mass_kg/1000.,'reduced_SEA_kJ_kg':approx/mass_kg/1000.,
             'SEA_lower_kJ_kg':wlo/mass_kg/1000.,'SEA_upper_kJ_kg':whi/mass_kg/1000.,
             'reference_MCF_kN':work/stroke,'reduced_MCF_kN':approx/stroke,'MCF_bound_kN':e/stroke,
-            'reference_PCF_kN':peak,'reduced_PCF_kN':p_hat,'PCF_bound_kN':delta,
+            'reference_PCF_kN':peak,'reduced_PCF_kN':p_hat,
+            'PCF_bound_kN':max(p_hat-plo,phi-p_hat),'PCF_lower_kN':plo,'PCF_upper_kN':phi,
+            'peak_exact':plo==phi,
             'reference_CFE':cfe,'reduced_CFE':cfe_hat,'CFE_lower':cfe_lo,'CFE_upper':cfe_hi}
 
 def pair_comparisons(all_metrics):

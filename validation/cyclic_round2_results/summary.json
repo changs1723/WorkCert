@@ -1,0 +1,162 @@
+{
+  "source_doi": "10.5281/zenodo.10829958",
+  "source_xlsx_sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
+  "workflow_branch_metrics_sha256": "b6392754cf40d4590bcb738b103f29954bd0f413b94d9788ffc42ab55b681942",
+  "source_points": 125157,
+  "exact_monotone_branches": 2971,
+  "exact_zero_displacement_events": 1984,
+  "adjacent_nonzero_step_sign_changes": 1113,
+  "direction_changes_after_omitting_zero_steps": 1242,
+  "source_point_quantiles": {
+    "0": 2.0,
+    "0.25": 2.0,
+    "0.5": 9.0,
+    "0.75": 26.0,
+    "0.9": 52.0,
+    "0.95": 86.0,
+    "0.99": 947.3000000000002,
+    "1.0": 2555.0
+  },
+  "all_quantiles": {
+    "source_points": {
+      "0": 2.0,
+      "0.25": 2.0,
+      "0.5": 9.0,
+      "0.75": 26.0,
+      "0.9": 52.0,
+      "0.95": 86.0,
+      "0.99": 947.3000000000002,
+      "1.0": 2555.0
+    },
+    "retained_points": {
+      "0": 2.0,
+      "0.25": 2.0,
+      "0.5": 2.0,
+      "0.75": 5.0,
+      "0.9": 9.0,
+      "0.95": 14.0,
+      "0.99": 33.30000000000018,
+      "1.0": 129.0
+    },
+    "excursion_mm": {
+      "0": 0.015799999999984493,
+      "0.25": 0.03160000000000007,
+      "0.5": 0.4427999999999983,
+      "0.75": 1.2968000000000002,
+      "0.9": 2.6092999999999975,
+      "0.95": 4.696799999999999,
+      "0.99": 92.60454000000001,
+      "1.0": 418.0154
+    },
+    "absolute_nonzero_step_mm": {
+      "0": 0.015799999999984493,
+      "0.25": 0.04750000000000032,
+      "0.5": 0.07910000000000039,
+      "0.75": 0.12650000000000006,
+      "0.9": 0.18969999999999487,
+      "0.95": 0.205600000000004,
+      "0.99": 0.2530999999999892,
+      "1.0": 0.3954000000000093
+    }
+  },
+  "direction_runs_ignoring_zero_steps": {
+    "count": 1243,
+    "excursion_quantiles_mm": {
+      "0": 0.015799999999984493,
+      "0.25": 0.01580000000000048,
+      "0.5": 0.03160000000000007,
+      "0.75": 1.889800000000001,
+      "0.9": 9.213339999999992,
+      "0.95": 17.395539999999915,
+      "0.99": 298.8494259999989,
+      "1.0": 418.0154
+    },
+    "runs_with_excursion_at_most_0_1_mm": 838,
+    "fraction_with_excursion_at_most_0_1_mm": 0.674175382139984,
+    "sum_absolute_work_of_runs_at_most_0_1_mm_J": 232.4747340549967,
+    "interpretation": "Runs ignore zero steps for diagnostic counting; they are not replacements for strict F(x) branches."
+  },
+  "sum_retained_branch_nodes": 13886,
+  "reference_signed_path_work_J": 92033.957666125,
+  "reconstructed_signed_path_work_J": 91965.42908509,
+  "signed_terminal_reference_minus_reconstruction_J": 68.5285810350001,
+  "maximum_continuous_chronological_error_J": 68.7197146269448,
+  "sum_branch_window_errors_J": 104.47783323401322,
+  "composed_chronological_error_metadata": {
+    "signed_terminal_error_J": 68.52858103500027,
+    "minimum_error_J": -0.22595376891982144,
+    "maximum_error_J": 68.71971462694495,
+    "prefix_error_J": 68.71971462694495,
+    "window_error_J": 68.94566839586477,
+    "reads_reference_values": false,
+    "source_fields": [
+      "signed_terminal_error",
+      "min_cumulative_error",
+      "max_cumulative_error"
+    ],
+    "direction_transform": "ascending: (d,l,h); descending: (-d,l-d,h-d)",
+    "composition": "(dA+dB,min(lA,dA+lB),max(hA,dA+hB))",
+    "zero_displacement_events": "zero-work contribution",
+    "independently_matches_full_reference_residual_extrema": true
+  },
+  "terminal_error_percent_of_absolute_net_reference_work": 0.0744601044797006,
+  "maximum_error_percent_of_absolute_net_reference_work": 0.0746677817292633,
+  "bound_percent_of_absolute_net_reference_work": 0.11352096104899816,
+  "sum_absolute_directed_reference_branch_work_J": 152336.218511145,
+  "allocated_sum_branch_tolerances_J": 152.336218511145,
+  "branches_unmet_tolerance_at_cap": 1,
+  "monotonicity": {
+    "tolerance_J": 1e-12,
+    "positive_error_increments": 64112,
+    "negative_error_increments": 54868,
+    "near_zero_error_increments": 6176,
+    "sum_positive_increments_J": 142.110031826303,
+    "sum_negative_increments_J": -73.58145079130287,
+    "positive_terminal_branch_errors": 1014,
+    "negative_terminal_branch_errors": 899,
+    "chronological_error_is_monotone": false
+  },
+  "deadband_diagnostic": {
+    "thresholds_mm": [
+      0.001,
+      0.01,
+      0.0158,
+      0.025,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "stable_extrema_range_mm": [
+      0.1,
+      5.0
+    ],
+    "stable_extrema_count": 94,
+    "stable_extrema_indices_identical": true,
+    "data_modified": false,
+    "reconstruction_threshold_mm": null,
+    "purpose": "Scale diagnostic only; no branch merging or coordinate/force filtering is applied.",
+    "not_a_sensor_uncertainty_estimate": true
+  },
+  "protocol_context": {
+    "source_paper_doi": "10.1016/j.tws.2022.109969",
+    "loading_protocol_section": "2.4; adapted ANSI/AISC 341 stepped cyclic displacement protocol",
+    "S1_L1_corner_crack_cycle_table_3": 43,
+    "S1_L1_failure_cycle_table_3": 47,
+    "reported_cycle_count_twice": 94,
+    "interpretation": "The stable count of 94 detected extrema is consistent with 47 reported cycles; command histories are not provided, so individual extrema are not assigned ground-truth loading events."
+  },
+  "independent_checks": {
+    "source_table_node_identity_checks": 2971,
+    "source_hash_checks": 2971,
+    "saved_payload_checks": 2971,
+    "every_nonzero_chronological_edge_covered_once": true,
+    "all_zero_steps_remain_zero_work_events": true,
+    "max_independent_prefix_window_difference_J": 0.0,
+    "archived_chronological_arrays_reproduced": true
+  },
+  "interpretation": "A signed reference-relative F dx path integral. The positive net reconstruction deficit is observed in this record, not asserted for every curve or interpreted as measurement uncertainty."
+}

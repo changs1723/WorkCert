@@ -34,7 +34,7 @@ dependencies; WorkCert's runtime dependency is NumPy.
 python validation/reproduce_v02.py --verify-only
 ```
 
-The verification checks source preparation, the 3544 comparative/optimal-path
+The verification checks source preparation, the 3660 comparative/optimal-path
 tables and their source hashes, exhaustive small-reference controls, and the
 database-exchange and chronological-branch outputs. The figure programs use the
 archived numerical results directly.
@@ -79,12 +79,12 @@ experimental validation.
 
 ```text
 python authoring/build_v02_figures.py
-python examples/query_exchange.py validation/workflow_results/pla_exchange/tables/stage_0/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
+python examples/query_exchange.py validation/workflow_results_round2/tables/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
 ```
 
 The five figures are exported as vector PDF, preview PNG and 600 dpi TIFF.
 `examples/query_exchange.py` reads only the JSON response and measured mass; it
-does not read the dense source curve. `validation/verify_workflow.py` compares
+does not read the dense source curve. `validation/review_round2_verify_workflow.py` compares
 all 46 initial client responses with the corresponding producer outputs.
 
 Optional manuscript generation uses `authoring/collect_v02_values.py` and
@@ -98,7 +98,10 @@ archive contains the class and bibliography style used for typesetting.
 |---|---|
 | `data/raw`, `data/reference_inputs`, `data/source_context`, `data/extended` | Original numeric sources, credited metadata, archived prepared inputs and preparation checks |
 | `data/prepared` | 70 unchanged numerical compression references |
-| `validation/results_v02` | 3080 comparison/stopping/scalar tables, 464 optimal-path tables, per-case CSVs, summaries and independent checks |
+| `validation/results_v02` | 3080 comparison/stopping/scalar tables, 580 optimal-path tables, per-case CSVs, summaries and independent checks |
+| `validation/workflow_results_round2` | 46 current exchange tables, 42 configuration summaries, replicate scatter and source-workbook checks |
+| `validation/cyclic_round2_results` | Branch-size and deadband diagnostics; exact chronological metadata and verifiers |
+| `validation/connector_results` | 33-point connector-format round trip on a loading branch |
 | `validation/workflow_results` | 123 exchanged compression tables, 2971 cyclic branch tables, client queries, scalar responses, source links and checks |
 | `validation/results/scaling` | Recorded construction timings and paired repeats |
 | `validation/scaling` | Archived 0.1 implementation used as the full-scan control |

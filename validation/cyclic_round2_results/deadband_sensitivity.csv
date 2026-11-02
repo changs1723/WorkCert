@@ -1,0 +1,12 @@
+deadband_mm,confirmed_reversals,data_modified,used_for_reconstruction
+0.001,1242,False,False
+0.01,1242,False,False
+0.0158,952,False,False
+0.025,409,False,False
+0.05,110,False,False
+0.1,94,False,False
+0.25,94,False,False
+0.5,94,False,False
+1.0,94,False,False
+2.0,94,False,False
+5.0,94,False,False

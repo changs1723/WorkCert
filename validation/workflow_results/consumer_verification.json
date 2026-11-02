@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "queries": 4,
-  "quantities_checked": 28,
-  "maximum_absolute_difference": 1.7763568394002505e-15,
-  "inputs": "One reduced JSON table and mass only; no dense source read"
-}

@@ -27,6 +27,9 @@ def main():
         run('validation/optimal_dp.py')
         run('validation/extended_benchmark.py','--finish-dp')
         run('validation/user_workflow.py','--case','all')
+        run('validation/review_round2_workflow.py')
+        run('validation/cyclic_round2.py')
+        run('validation/connector_exchange.py')
         if a.include_scaling:
             run('validation/benchmark_scaling.py')
             run('validation/benchmark_scaling.py','--headline')
@@ -34,6 +37,11 @@ def main():
     run('validation/verify_extended_benchmark.py')
     run('validation/verify_exact_errors.py')
     run('validation/verify_workflow.py')
+    run('validation/review_round2_verify_workflow.py')
+    run('validation/core_round2_verify.py')
+    run('validation/cyclic_round2.py')
+    run('validation/verify_cyclic_round2.py')
+    run('validation/connector_exchange.py')
     if a.figures:run('authoring/build_v02_figures.py')
     print('Completed. Recomputed host timings may differ from the archived runs.',flush=True)
 

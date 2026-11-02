@@ -9,7 +9,7 @@ reduce_response(x, force, *, max_points=33, tolerance=None,
     provenance=None)
 ```
 
-Supply `method` explicitly: `work`, `vertical`, `uniform`, or `uniform_peak`.
+Supply `method` explicitly: `work`, `vertical`, `uniform`, `uniform_peak`, or `vw`.
 Inputs are aligned finite one-dimensional real arrays, length at least two,
 with strictly increasing x. Signed forces are retained. Endpoints are forced;
 `peak_mode` selects the first maximum absolute force (`absolute`), maximum
@@ -17,11 +17,17 @@ signed force (`positive`) or minimum signed force (`negative`). Set
 `preserve_peak=False` to disable a peak except for `uniform_peak`.
 
 `max_points` is an integer cap, limited to the reference size; required nodes
-must fit. A finite nonnegative `tolerance` is supported by adaptive selectors.
+must fit. `vw` removes the smallest current triangle in normalized coordinates,
+protecting endpoints and the selected peak; equal areas are ordered by source
+index. It provides fixed-count Visvalingam–Whyatt simplification. A finite
+nonnegative `tolerance` is supported only by `work` and `vertical`.
 `certificate` selects `eta`, `xi`, `prefix`, or `window`. Relative bounds divide
 by absolute reference terminal work; exactly zero net work requires absolute
 units. A capped unmet tolerance returns a valid response with
 `metadata["tolerance_met"] == False`.
+
+The parameter name `certificate` and the `Certificate` type are retained for
+API compatibility. They select or store numerical reconstruction-error metadata.
 
 Native unit labels describe values without conversion; defaults are unassigned.
 Products mm/kN and m/N give J, mm/N gives mJ, and m/kN gives kJ.
@@ -52,6 +58,9 @@ Read-only `x`, `force` and `indices` arrays have immutable backing storage.
 `force_unit`, and `work_unit`.
 
 - `force_at(q)` returns PL force at scalar or array coordinates.
+- `peak_force(q)` returns the maximum signed retained force from the origin
+  through q, including the interpolated force at q.
+- `peak_bounds(q)` returns `(lower, upper)` for the corresponding source peak.
 - `work(q)` integrates from the first reference x to q using cached primitives.
 - `window_work(a,b)` broadcasts endpoints and requires a <= b.
 - Nonfinite and out-of-domain queries raise `ValueError`; no extrapolation.
@@ -61,6 +70,17 @@ Read-only `x`, `force` and `indices` arrays have immutable backing storage.
 
 The schema remains `workcert.response/1.0`; version-0.1.0 files can be loaded.
 Payload checksums detect accidental corruption and do not authenticate a source.
+
+New tables carry a `retained_global_maximum` summary only when the first global
+signed maximum of the supplied source is retained. Its reference index,
+coordinate and force are checked against the retained table on load and against
+the complete source by `verify_reference`. At and after this coordinate the
+source and retained prefix peaks coincide, so `peak_bounds` returns identical
+limits. Before it, or for old files without a summary, the bounds use `delta`
+and already retained source values. This tightens CFE denominators after a
+retained global maximum without treating the force-error bound as measurement
+uncertainty. Like stored work-error values, this source summary must be verified
+against the numerical source when its provenance is being checked.
 
 ## Chronological branches
 
@@ -98,3 +118,10 @@ return exit code 2 with a concise diagnostic.
 creates a response for an external algorithm's endpoint-preserving vertex subset.
 It validates integer indices, evaluates complete error metadata, and enables the
 same queries, persistence and reference verification as built-in selectors.
+
+`indices_from_coordinates(x, force, coordinates)` maps external `(x, force)`
+vertices (for example `np.asarray(shapely.simplify(line, tolerance).coords)`)
+to source indices. Every pair must match a source vertex exactly, both endpoints
+must be present, and source order must be increasing. Changed coordinates,
+rounding, repeated or reversed vertices are rejected; the adapter never silently
+projects or snaps geometric output onto the reference.

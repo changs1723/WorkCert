@@ -21,13 +21,15 @@ def query_metrics(table, mass_g, strokes):
         if q<=table.x[0]:raise ValueError('Stroke must exceed the response origin')
         ea=table.work(q);span=q-table.x[0]
         if ea<=0:raise ValueError('Use the positive-compression convention for these crashworthiness metrics')
-        peak=float(max(np.max(table.force[table.x<=q]),table.force_at(q)))
-        e=table.certificate.prefix;d=table.certificate.delta
-        elo,ehi=ea-e,ea+e;plo,phi=peak-d,peak+d
+        peak=float(table.peak_force(q))
+        plo,phi=map(float,table.peak_bounds(q))
+        e=table.certificate.prefix
+        elo,ehi=ea-e,ea+e
         rows.append({'stroke_mm':float(q),'EA_J':ea,'EA_lower_J':elo,'EA_upper_J':ehi,
                      'SEA_kJ_kg':ea/mass_g,'SEA_lower_kJ_kg':elo/mass_g,'SEA_upper_kJ_kg':ehi/mass_g,
                      'MCF_kN':ea/span,'MCF_lower_kN':elo/span,'MCF_upper_kN':ehi/span,
-                     'PCF_kN':peak,'CFE':ea/span/peak,
+                     'PCF_kN':peak,'PCF_lower_kN':plo,'PCF_upper_kN':phi,
+                     'peak_exact':plo==phi,'CFE':ea/span/peak,
                      'CFE_lower':elo/span/phi if plo>0 and elo>=0 else None,
                      'CFE_upper':ehi/span/plo if plo>0 and elo>=0 else None})
     return rows

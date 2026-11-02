@@ -1,13 +1,14 @@
 {
   "status": "PASS",
-  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+  "preprocessing_sha256": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb",
   "PLA_tables_hashed_and_source_verified": 123,
   "cyclic_tables_hashed_and_source_verified": 2971,
   "cyclic_samples_linked_to_original_XLSX": 125157,
   "all_metric_intervals_and_resolved_orderings_verified": true,
   "source_license": "CC BY 4.0",
-  "independent_client_quantities_checked": 1288,
+  "client_contract_quantities_checked": 1288,
   "maximum_client_producer_difference": 5.684341886080802e-14,
-  "output_policy": "Read-only numerical audit; only this verification record is written",
-  "preprocessing_sha256": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb"
+  "client_check_scope": "Deterministic client/producer consistency check; published-workbook comparison is reported separately in workflow_results_round2.",
+  "output_policy": "Read-only numerical audit; only this verification record is written"
 }

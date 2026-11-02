@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+  "tables_hashed_and_source_verified": 46,
+  "client_contract_quantities_checked": 3128,
+  "exact_peak_query_checks": 61,
+  "source_curve_metric_intervals": 920,
+  "configuration_records": 42,
+  "repeat_groups": 2,
+  "repeat_scatter_rows_independently_calculated": 8,
+  "comparison_counts": {
+    "specimen_pairs.csv": 4001,
+    "configuration_pairs.csv": 3345,
+    "rounding_sensitivity_pairs.csv": 3937
+  },
+  "published_workbook_comparison": {
+    "EA_J": {
+      "covered": 45,
+      "cases": 46,
+      "uncovered_specimens": [
+        "05"
+      ]
+    },
+    "SEA_kJ_kg": {
+      "covered": 45,
+      "cases": 46,
+      "uncovered_specimens": [
+        "05"
+      ]
+    },
+    "PCF_kN": {
+      "covered": 46,
+      "cases": 46,
+      "uncovered_specimens": []
+    },
+    "MCF_kN": {
+      "covered": 45,
+      "cases": 46,
+      "uncovered_specimens": [
+        "05"
+      ]
+    },
+    "CFE": {
+      "covered": 45,
+      "cases": 46,
+      "uncovered_specimens": [
+        "05"
+      ]
+    }
+  },
+  "source_endpoint_diagnostic": {
+    "nominal_50mm_EA_discrepancies": 13,
+    "all_reproduced_at_archived_endpoint": true,
+    "endpoint_range_mm": [
+      50.004,
+      50.009
+    ]
+  },
+  "external_comparison_scope": "Independent published crash-indicator workbook at its stated delta_max, from the same experimental dataset; not independent software adoption.",
+  "outcome": "All source-reference bounds pass. The uncovered published indicator for specimen05 is retained as a source-derived-value discrepancy, not repaired by widening reconstruction bounds."
+}

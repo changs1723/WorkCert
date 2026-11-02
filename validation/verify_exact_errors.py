@@ -127,10 +127,11 @@ def main():
     counts['signed_peak_modes']=3
     env=os.environ.copy();env['PYTHONPATH']=str(ROOT/'software/src')
     tests=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=ROOT/'software',env=env,capture_output=True,text=True)
-    assert tests.returncode==0 and 'Ran 31 tests' in tests.stderr
+    expected_tests=json.loads((ROOT/'software/release_validation.json').read_text(encoding='utf8'))['runtimes'][0]['wheel']['tests_passed']
+    assert tests.returncode==0 and ('Ran %d tests'%expected_tests) in tests.stderr
     (ROOT/'validation/results_v02/independent_package_tests.log').write_text(tests.stdout+'\n'+tests.stderr,encoding='utf8')
     report={'status':'PASS','python':sys.version,'numpy':np.__version__,'reviewed_core_sha256':hashlib.sha256((ROOT/'software/src/workcert/core.py').read_bytes()).hexdigest(),
-            'counts':counts,'package_tests_passed':31,'maximum_rational_oracle_absolute_difference':maxdiff,
+            'counts':counts,'package_tests_passed':expected_tests,'maximum_rational_oracle_absolute_difference':maxdiff,
             'maximum_integer_path_work_difference':max_pathdiff,
             'scope':'Independent rational integration, AVL structural/aggregate checks, full-sequence stopping and directed chronological path coverage; source files not altered.'}
     (ROOT/'validation/results_v02/reconstruction_verification.json').write_text(json.dumps(report,indent=2),encoding='utf8')

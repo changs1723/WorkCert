@@ -108,6 +108,33 @@
           "median_ratio": 3.0669544564596194,
           "maximum_ratio": 4.3930856019025715
         }
+      },
+      "129": {
+        "work": {
+          "records": 12,
+          "median_ratio": 1.3790722065618668,
+          "maximum_ratio": 1.572715660048992
+        },
+        "vertical": {
+          "records": 12,
+          "median_ratio": 1.4390471306789503,
+          "maximum_ratio": 1.695621173395763
+        },
+        "rdp": {
+          "records": 12,
+          "median_ratio": 2.1774598979326227,
+          "maximum_ratio": 2.845930548660243
+        },
+        "vw": {
+          "records": 12,
+          "median_ratio": 1.393818913247763,
+          "maximum_ratio": 1.5367807570801115
+        },
+        "uniform_peak": {
+          "records": 12,
+          "median_ratio": 2.7788321697594824,
+          "maximum_ratio": 4.5977919023576925
+        }
       }
     },
     "vertical": {
@@ -217,6 +244,33 @@
           "records": 12,
           "median_ratio": 10.353888429272525,
           "maximum_ratio": 19.773057799947306
+        }
+      },
+      "129": {
+        "work": {
+          "records": 12,
+          "median_ratio": 2.869787615000221,
+          "maximum_ratio": 4.1184485000581255
+        },
+        "vertical": {
+          "records": 12,
+          "median_ratio": 1.4597280767041623,
+          "maximum_ratio": 1.9368756207633326
+        },
+        "rdp": {
+          "records": 12,
+          "median_ratio": 8.537132774945094,
+          "maximum_ratio": 13.912342218077294
+        },
+        "vw": {
+          "records": 12,
+          "median_ratio": 2.933036593701971,
+          "maximum_ratio": 4.116043062837282
+        },
+        "uniform_peak": {
+          "records": 12,
+          "median_ratio": 9.293396054707642,
+          "maximum_ratio": 47.09385934562615
         }
       }
     }
@@ -330,6 +384,33 @@
           "median_ratio": 2.611555914484252,
           "maximum_ratio": 4.364727958290727
         }
+      },
+      "129": {
+        "work": {
+          "records": 46,
+          "median_ratio": 1.2885589926188308,
+          "maximum_ratio": 1.4389008361719313
+        },
+        "vertical": {
+          "records": 46,
+          "median_ratio": 1.3790933222596513,
+          "maximum_ratio": 1.5828035979547699
+        },
+        "rdp": {
+          "records": 46,
+          "median_ratio": 1.8676434855229833,
+          "maximum_ratio": 3.273308307035575
+        },
+        "vw": {
+          "records": 46,
+          "median_ratio": 1.3011540034491924,
+          "maximum_ratio": 1.5240739980106384
+        },
+        "uniform_peak": {
+          "records": 46,
+          "median_ratio": 2.677979114585918,
+          "maximum_ratio": 4.057775099174036
+        }
       }
     },
     "vertical": {
@@ -439,6 +520,33 @@
           "records": 46,
           "median_ratio": 18.43075888247364,
           "maximum_ratio": 44.86133405749723
+        }
+      },
+      "129": {
+        "work": {
+          "records": 46,
+          "median_ratio": 3.5839041662034328,
+          "maximum_ratio": 5.402834927749224
+        },
+        "vertical": {
+          "records": 46,
+          "median_ratio": 1.5835644932048691,
+          "maximum_ratio": 1.8919339443939232
+        },
+        "rdp": {
+          "records": 46,
+          "median_ratio": 8.035593710763466,
+          "maximum_ratio": 14.388375769441895
+        },
+        "vw": {
+          "records": 46,
+          "median_ratio": 3.484493284219073,
+          "maximum_ratio": 5.229225642594184
+        },
+        "uniform_peak": {
+          "records": 46,
+          "median_ratio": 22.25348390039933,
+          "maximum_ratio": 52.89567410529355
         }
       }
     }

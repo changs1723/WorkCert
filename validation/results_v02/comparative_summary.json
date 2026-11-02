@@ -5,25 +5,25 @@
       "work": {
         "prefix_error_percent": 0.16773010265800664,
         "window_error_percent": 0.20653947040489334,
-        "serialized_bytes": 1634.5,
+        "serialized_bytes": 1712.0,
         "eta_percent": 0.7049462861460388
       },
       "vertical": {
         "prefix_error_percent": 0.2044078683680262,
         "window_error_percent": 0.23877854145220484,
-        "serialized_bytes": 1637.0,
+        "serialized_bytes": 1714.5,
         "eta_percent": 0.7375544338650466
       },
       "uniform_peak": {
         "prefix_error_percent": 0.22894518815131032,
         "window_error_percent": 0.3435878495380287,
-        "serialized_bytes": 1611.0,
+        "serialized_bytes": 1689.0,
         "eta_percent": 1.3894766819960367
       },
       "uniform": {
         "prefix_error_percent": 0.2311564459559292,
         "window_error_percent": 0.36366227345354146,
-        "serialized_bytes": 1608.0,
+        "serialized_bytes": 1680.0,
         "eta_percent": 1.4732057861940135
       },
       "rdp": {
@@ -135,25 +135,25 @@
       "work": {
         "prefix_error_percent": 0.09417683857158259,
         "window_error_percent": 0.13841299703580656,
-        "serialized_bytes": 1890.0,
+        "serialized_bytes": 1975.0,
         "eta_percent": 0.4977438591277403
       },
       "vertical": {
         "prefix_error_percent": 0.09919487999569858,
         "window_error_percent": 0.1325890694534061,
-        "serialized_bytes": 1897.0,
+        "serialized_bytes": 1981.0,
         "eta_percent": 0.5586618516241855
       },
       "uniform_peak": {
         "prefix_error_percent": 0.20588572826049803,
         "window_error_percent": 0.2801415250525834,
-        "serialized_bytes": 1866.0,
+        "serialized_bytes": 1948.0,
         "eta_percent": 1.231228961623943
       },
       "uniform": {
         "prefix_error_percent": 0.20588572826049803,
         "window_error_percent": 0.2801415250525834,
-        "serialized_bytes": 1862.0,
+        "serialized_bytes": 1900.0,
         "eta_percent": 1.092352499614481
       },
       "rdp": {
@@ -265,25 +265,25 @@
       "work": {
         "prefix_error_percent": 0.4044658951202327,
         "window_error_percent": 0.4834545672980567,
-        "serialized_bytes": 1920.0,
+        "serialized_bytes": 2003.0,
         "eta_percent": 1.766796612708998
       },
       "vertical": {
         "prefix_error_percent": 0.7175645257422195,
         "window_error_percent": 1.1461073671628086,
-        "serialized_bytes": 1913.0,
+        "serialized_bytes": 1996.0,
         "eta_percent": 2.9174912045624533
       },
       "uniform_peak": {
         "prefix_error_percent": 0.45938503078033116,
         "window_error_percent": 0.8859269027563141,
-        "serialized_bytes": 1895.0,
+        "serialized_bytes": 1978.0,
         "eta_percent": 4.0585073150332445
       },
       "uniform": {
         "prefix_error_percent": 0.45938503078033116,
         "window_error_percent": 0.8859269027563141,
-        "serialized_bytes": 1891.0,
+        "serialized_bytes": 1974.0,
         "eta_percent": 4.0585073150332445
       },
       "rdp": {
@@ -395,25 +395,25 @@
       "work": {
         "prefix_error_percent": 0.20934083164707418,
         "window_error_percent": 0.27546490519015027,
-        "serialized_bytes": 1632.0,
+        "serialized_bytes": 1709.5,
         "eta_percent": 0.8339254165253005
       },
       "vertical": {
         "prefix_error_percent": 0.25807894037840967,
         "window_error_percent": 0.32168372564647435,
-        "serialized_bytes": 1635.0,
+        "serialized_bytes": 1712.0,
         "eta_percent": 0.9112682038692694
       },
       "uniform_peak": {
         "prefix_error_percent": 0.24334207737037783,
         "window_error_percent": 0.35733320293099236,
-        "serialized_bytes": 1608.5,
+        "serialized_bytes": 1685.0,
         "eta_percent": 1.4934525638908043
       },
       "uniform": {
         "prefix_error_percent": 0.24581653977286197,
         "window_error_percent": 0.3824222236382406,
-        "serialized_bytes": 1604.5,
+        "serialized_bytes": 1637.5,
         "eta_percent": 1.5319925569672568
       },
       "rdp": {
@@ -519,7 +519,7 @@
       }
     }
   },
-  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
   "protocol_sha256": "4a007dcc22492ed92761857a1af073d8e647edccb109b6a0bed993d91165c4ed",
   "python": "3.12.14",
   "numpy": "2.3.5",

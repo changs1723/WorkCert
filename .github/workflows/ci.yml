@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python: ['3.10', '3.11', '3.12', '3.13']
+        python: ['3.10', '3.11', '3.12', '3.13', '3.14']
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -61,7 +61,10 @@ jobs:
           expected_counts = {runtime[kind]["tests_passed"]
                              for runtime in local["runtimes"]
                              for kind in ("wheel", "sdist")}
-          if expected_counts != {31}:
+          if len(expected_counts) != 1:
+              raise RuntimeError("Inconsistent frozen test counts")
+          expected_tests = expected_counts.pop()
+          if expected_tests < 31:
               raise RuntimeError("Update the frozen validation evidence for this release")
           source_core_hash = hashlib.sha256(
               (root / "software/src/workcert/core.py").read_bytes()).hexdigest()
@@ -93,12 +96,12 @@ jobs:
                   raise RuntimeError("Tests must import the installed distribution")
               test_code = """import sys, unittest
           suite = unittest.TestLoader().discover('software/tests')
-          if suite.countTestCases() != 31:
-              raise RuntimeError('Expected the frozen 31-test suite')
+          if suite.countTestCases() != EXPECTED_TESTS:
+              raise RuntimeError('Unexpected test suite count')
           result = unittest.TextTestRunner(verbosity=2).run(suite)
           sys.exit(0 if result.wasSuccessful() else 1)
           """
-              subprocess.run([str(python), "-c", test_code], cwd=root, check=True)
+              subprocess.run([str(python), "-c", test_code.replace("EXPECTED_TESTS", str(expected_tests))], cwd=root, check=True)
               cli = subprocess.check_output(
                   [str(python), "-m", "workcert", "--version"], text=True).strip()
               if version not in cli:
@@ -106,7 +109,7 @@ jobs:
               checks.append({"artifact": artifact.name, "kind": kind,
                              "bytes": artifact.stat().st_size,
                              "sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(),
-                             "tests_passed": 31, "cli_version": cli, **probe})
+                             "tests_passed": expected_tests, "cli_version": cli, **probe})
           record = {"status": "PASS", "tag": os.environ["GITHUB_REF_NAME"],
                     "source_commit": os.environ["GITHUB_SHA"],
                     "core_sha256": source_core_hash,

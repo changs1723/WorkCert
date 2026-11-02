@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rational_signed_path_cases": 256,
+  "maximum_rational_oracle_difference_J": 1.1368683772161603e-13,
+  "deadband_hand_cases": 5,
+  "invalid_deadband_controls": 4,
+  "all_branch_errors_match_frozen_reference": true,
+  "stable_deadband_runs": 6,
+  "stable_extrema": 94,
+  "rational_directed_metadata_fold_cases": 128,
+  "maximum_rational_directed_fold_difference_J": 5.684341886080802e-14,
+  "standalone_consumer_rational_directed_cases": 128,
+  "standalone_consumer_full_source_edges": 125156,
+  "invalid_consumer_metadata_or_coverage_controls": 6,
+  "scale_diagnostic_does_not_modify_or_reconstruct_the_path": true,
+  "physical_event_assignment_claimed": false
+}

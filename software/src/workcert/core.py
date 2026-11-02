@@ -238,6 +238,14 @@ def _canonical(value):
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False).encode("utf8")
 
 
+def _retained_global_maximum(x, force, indices):
+    """Source-derived peak summary, present only if its first maximum is kept."""
+    peak = int(np.argmax(force))
+    if peak not in indices:
+        return None
+    return {"reference_index": peak, "x": float(x[peak]), "force": float(force[peak])}
+
+
 class ReducedResponse:
     """Retained response table, query primitives, provenance and certificates."""
     def __init__(self, x, force, indices, certificate, *, x_unit="unspecified", force_unit="unspecified", metadata=None):
@@ -259,6 +267,7 @@ class ReducedResponse:
             raise ValueError("metadata must contain finite JSON-serializable values") from error
         if not isinstance(self._metadata, dict):
             raise ValueError("metadata must be a JSON object")
+        self._validate_peak_summary()
         try:
             self._slope = np.diff(self._f) / np.diff(self._x)
             self._primitive = _primitive_at_nodes(self._x, self._f)
@@ -278,6 +287,26 @@ class ReducedResponse:
         self._x = np.frombuffer(self._x.tobytes(), dtype=np.float64)
         self._f = np.frombuffer(self._f.tobytes(), dtype=np.float64)
         self._indices = np.frombuffer(self._indices.tobytes(), dtype=np.int64)
+        self._prefix_maximum = np.maximum.accumulate(self._f)
+
+    def _validate_peak_summary(self):
+        peak = self._metadata.get("retained_global_maximum")
+        if peak is None:
+            return
+        if not isinstance(peak, dict) or set(peak) != {"reference_index", "x", "force"}:
+            raise ValueError("Invalid retained-global-maximum summary")
+        index = peak["reference_index"]
+        if not isinstance(index, int) or isinstance(index, bool):
+            raise ValueError("Peak reference index must be an integer")
+        positions = np.flatnonzero(self._indices == index)
+        if len(positions) != 1:
+            raise ValueError("The global-maximum summary must identify a retained node")
+        i = int(positions[0])
+        if (any(not isinstance(peak[k], (int, float)) or isinstance(peak[k], bool) or
+                not np.isfinite(peak[k]) for k in ("x", "force")) or
+                peak["x"] != self._x[i] or peak["force"] != self._f[i] or
+                peak["force"] != float(np.max(self._f))):
+            raise ValueError("The global-maximum summary is inconsistent with the table")
 
     def _validate_certificate(self):
         c = self._certificate
@@ -353,6 +382,39 @@ class ReducedResponse:
         answer = np.interp(values.ravel(), self._x, self._f).reshape(values.shape)
         return float(answer) if answer.ndim == 0 else answer
 
+    def peak_force(self, q):
+        """Maximum signed retained PL force from the first x through q."""
+        values = self._query(q)
+        i = np.searchsorted(self._x, values, side="right") - 1
+        result = np.maximum(self._prefix_maximum[i], self.force_at(values))
+        return float(result) if result.ndim == 0 else result
+
+    def peak_bounds(self, q):
+        """Bounds on the source's maximum signed force up to each query.
+
+        A source-derived, retained global maximum makes the interval exact at
+        and after that node. Older files without this summary use force-error
+        bounds. As with work errors, verify_reference checks the source facts;
+        a payload digest alone is not source authentication.
+        """
+        values = self._query(q)
+        i = np.searchsorted(self._x, values, side="right") - 1
+        estimate = np.asarray(self.peak_force(values))
+        with np.errstate(over="ignore", invalid="ignore"):
+            lower = np.maximum(estimate - self.certificate.delta, self._prefix_maximum[i])
+            upper = estimate + self.certificate.delta
+        peak = self._metadata.get("retained_global_maximum")
+        if peak is not None:
+            upper = np.minimum(upper, peak["force"])
+            exact = values >= peak["x"]
+            lower = np.where(exact, peak["force"], lower)
+            upper = np.where(exact, peak["force"], upper)
+        if not np.all(np.isfinite(lower)) or not np.all(np.isfinite(upper)):
+            raise ValueError("The peak bound exceeds finite float64 calculation limits")
+        if values.ndim == 0:
+            return float(lower), float(upper)
+        return lower, upper
+
     def work(self, q):
         """Integrate the retained PL force exactly from x[0] to q."""
         values = self._query(q)
@@ -426,6 +488,9 @@ class ReducedResponse:
             raise ValueError("Retained coordinates do not match their reference indices")
         if certify(x, f, self.indices) != self.certificate:
             raise ValueError("Certificate does not match the supplied reference")
+        if (self._metadata.get("retained_global_maximum") is not None and
+                self._metadata["retained_global_maximum"] != _retained_global_maximum(x, f, self.indices)):
+            raise ValueError("Global-maximum summary does not match the supplied reference")
         return True
 
 
@@ -464,8 +529,8 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
         raise ValueError("max_points must be an integer of at least two")
     if certificate not in BOUND_NAMES:
         raise ValueError("Unknown certificate")
-    if method not in ("work", "vertical", "uniform", "uniform_peak"):
-        raise ValueError("Choose method explicitly: work, vertical, uniform or uniform_peak")
+    if method not in ("work", "vertical", "uniform", "uniform_peak", "vw"):
+        raise ValueError("Choose method explicitly: work, vertical, uniform, uniform_peak or vw")
     if peak_mode not in ("absolute", "positive", "negative"):
         raise ValueError("peak_mode must be absolute, positive or negative")
     if not isinstance(preserve_peak, (bool, np.bool_)) or not isinstance(relative, (bool, np.bool_)):
@@ -481,7 +546,7 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
             raise ValueError("tolerance must be a finite nonnegative real number")
     if provenance is not None and not isinstance(provenance, dict):
         raise ValueError("provenance must be a JSON object")
-    if tolerance is not None and method in ("uniform", "uniform_peak"):
+    if tolerance is not None and method in ("uniform", "uniform_peak", "vw"):
         raise ValueError("Tolerance stopping is available for adaptive work and vertical methods")
     limit = min(int(max_points), len(x))
     retain_peak = preserve_peak or method == "uniform_peak"
@@ -494,7 +559,11 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
         raise ValueError("The point budget cannot retain both endpoints and the interior peak")
     if relative and tolerance is not None and float(_primitive_at_nodes(x, f)[-1]) == 0:
         raise ValueError("Relative tolerance requires nonzero reference terminal work; use an absolute tolerance")
-    if method in ("uniform", "uniform_peak"):
+    if method == "vw":
+        from .selectors import _vw_indices
+        selected = set(_vw_indices(x, f, limit, selected).tolist())
+        cert = certify(x, f, np.asarray(sorted(selected)))
+    elif method in ("uniform", "uniform_peak"):
         selected = _uniform(x, limit)
         if retain_peak and peak not in selected:
             drop = min(selected - {0, len(x) - 1}, key=lambda j: (abs(x[j] - x[peak]), j))
@@ -542,5 +611,6 @@ def reduce_response(x, force, *, max_points=33, tolerance=None, certificate="pre
                 "requested_tolerance": None if tolerance is None else float(tolerance),
                 "relative_tolerance": bool(relative),
                 "tolerance_met": None if tolerance is None else cert.bound(certificate, relative) <= tolerance,
-                "provenance": provenance or {}}
+                "provenance": provenance or {},
+                "retained_global_maximum": _retained_global_maximum(x, f, ids)}
     return ReducedResponse(x[ids], f[ids], ids, cert, x_unit=x_unit, force_unit=force_unit, metadata=metadata)

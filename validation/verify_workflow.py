@@ -82,7 +82,8 @@ def main():
             'PLA_tables_hashed_and_source_verified':len(pla['table_manifest']),
             'cyclic_tables_hashed_and_source_verified':len(branches),'cyclic_samples_linked_to_original_XLSX':len(values),
             'all_metric_intervals_and_resolved_orderings_verified':True,'source_license':'CC BY 4.0',
-            'independent_client_quantities_checked':checked,'maximum_client_producer_difference':client_maximum_difference,
+            'client_contract_quantities_checked':checked,'maximum_client_producer_difference':client_maximum_difference,
+            'client_check_scope':'Deterministic client/producer consistency check; published-workbook comparison is reported separately in workflow_results_round2.',
             'output_policy':'Read-only numerical audit; only this verification record is written'}
     (out/'verification.json').write_text(json.dumps(result,indent=2),encoding='utf8')
     print(json.dumps(result,indent=2))

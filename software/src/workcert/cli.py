@@ -30,7 +30,7 @@ def main(argv=None):
     reduce.add_argument("--x-column", default="stroke_mm")
     reduce.add_argument("--force-column", default="force_kN")
     reduce.add_argument("--max-points", type=int, default=33)
-    reduce.add_argument("--method", choices=("work", "vertical", "uniform", "uniform_peak"), required=True)
+    reduce.add_argument("--method", choices=("work", "vertical", "uniform", "uniform_peak", "vw"), required=True)
     reduce.add_argument("--no-peak", action="store_true")
     reduce.add_argument("--peak-mode", choices=("absolute", "positive", "negative"), default="absolute")
     reduce.add_argument("--tolerance", type=float)

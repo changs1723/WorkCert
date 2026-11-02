@@ -19,7 +19,7 @@ def main():
             assert row['table'] not in paths;paths.add(row['table'])
             assert hashlib.sha256((ROOT/row['table']).read_bytes()).hexdigest()==row['sha256']
             assert hashlib.sha256((ROOT/row['reference']).read_bytes()).hexdigest()==row['reference_sha256']
-    assert len(paths)==3544
+    assert len(paths)==3660
     rng=np.random.RandomState(741);edge_checks=0;objective_checks=0;candidate_checks=0
     for trial in range(8):
         x=np.r_[0.,np.cumsum(rng.uniform(.1,2.,7))];f=rng.normal(size=8)

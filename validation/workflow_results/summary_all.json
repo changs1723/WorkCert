@@ -1,6 +1,6 @@
 {
   "software_version": "0.2.0",
-  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
   "pla_exchange": {
     "software_version": "0.2.0",
     "records": 46,
@@ -319,7 +319,7 @@
         "curve": "01",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/01.json",
-        "sha256": "4ca4707d8800d02ab605307dbb164b89adf4317d58ffe994f0c494cab575a2b9",
+        "sha256": "2beef74d29d5207034626f605dcca6c2da9f1e882651ab40dd153be32a03bdc2",
         "points": 46,
         "tolerance_met": true
       },
@@ -328,7 +328,7 @@
         "curve": "02",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/02.json",
-        "sha256": "6b06972f1cdfeae643bf2f14a71e44ade218369806ca29eba9f4de2d81b5a67f",
+        "sha256": "387783d57ef3d9ac88b51d8669bacc9ef48daad6c4f1bb4d6cbf9348838b95ba",
         "points": 27,
         "tolerance_met": true
       },
@@ -337,7 +337,7 @@
         "curve": "03",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/03.json",
-        "sha256": "2f25edcda3dfa66f30777b3abedeec7d8c4e9a5d64db434867b1f6c8bf4670a7",
+        "sha256": "a2b3d20069cc685682068f1f7273b954a0cb4b603e1b8bc4706e53dc7567e6a7",
         "points": 20,
         "tolerance_met": true
       },
@@ -346,7 +346,7 @@
         "curve": "04",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/04.json",
-        "sha256": "77e1e7b25437ab383bb05d50afbfaea16e113d6edebaa21b02c32c35276d3a8f",
+        "sha256": "e1638fe17f5c45773569b71b465343edd7e84ce98969992e1293b47ae85bf62a",
         "points": 49,
         "tolerance_met": true
       },
@@ -355,7 +355,7 @@
         "curve": "05",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/05.json",
-        "sha256": "56eb79b14f270474e52084490f6a79ee093926031542539fd89c61db5b24061c",
+        "sha256": "7abae40ad387013d1eac8b52c412a923c558c9af253dcf267e4e84dafa3568b2",
         "points": 25,
         "tolerance_met": true
       },
@@ -364,7 +364,7 @@
         "curve": "06",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/06.json",
-        "sha256": "632097df9f7676517917794b96a12b82f8c713f26d5bbc4ccaf4c38d0fcbe6b6",
+        "sha256": "8ba46b1644080327fba0660014ecc6c3ef623aea3b048bc0941b069bd375168e",
         "points": 27,
         "tolerance_met": true
       },
@@ -373,7 +373,7 @@
         "curve": "07",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/07.json",
-        "sha256": "846ac395e802c8e96895e7acf2c05c5fb8aa80836786e42478caa85e59581a67",
+        "sha256": "478e2fad641a81603ffeb8baae31c738db9831e280097714abe42b39d3a3b4a1",
         "points": 33,
         "tolerance_met": true
       },
@@ -382,7 +382,7 @@
         "curve": "08",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/08.json",
-        "sha256": "9f93d9a3f41c95c786cb4a876c4a97e6ceb5ec272b34a108c844c28dfc3873d2",
+        "sha256": "a4b238add6246661d368519f887e4aeadbdb671137b58e54b52fe19b58280c25",
         "points": 29,
         "tolerance_met": true
       },
@@ -391,7 +391,7 @@
         "curve": "09",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/09.json",
-        "sha256": "c90dae43b6e6f351b967d427180538a763c23e50dc983e51f44c61c17e3b68f9",
+        "sha256": "2b70e6bf6b3f9b872b178c32155f962cb98ef55f695343273c213019ac5b923b",
         "points": 44,
         "tolerance_met": true
       },
@@ -400,7 +400,7 @@
         "curve": "10",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/10.json",
-        "sha256": "77cc15a1e7f277cfba817e872459a2a8599b5638ced40a8a9598216083c5898e",
+        "sha256": "9603ed568bf538c9c770e958d07bea05f8d3b02c7f53c3ffe41a859b0de6ed03",
         "points": 45,
         "tolerance_met": true
       },
@@ -409,7 +409,7 @@
         "curve": "11",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/11.json",
-        "sha256": "07c2533e12dcb185948b01d882f3c0545b6c54bbd5936d8400169244a2073fe9",
+        "sha256": "743e82bd02e910d61354c2481e3e9ab4dff333f630e657dc78ae66cc19b7a89b",
         "points": 31,
         "tolerance_met": true
       },
@@ -418,7 +418,7 @@
         "curve": "12",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/12.json",
-        "sha256": "104dcafc06d65c2c0be99c5cc1c1e2e400611aa0f062c4599642fa71fb96960e",
+        "sha256": "8fe3b7fe474872eb024b890f15855d91314df5bc9511d6169f4480b2d835f49b",
         "points": 35,
         "tolerance_met": true
       },
@@ -427,7 +427,7 @@
         "curve": "13",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/13.json",
-        "sha256": "ef9986a57c372594743fc1cc3db84ffbe5f719a719787c182fce10ea27b7b493",
+        "sha256": "3889b19cefc2b1473dd78d968b90480f0c65a32e1c3f04328e86b5d9d342ac0b",
         "points": 61,
         "tolerance_met": true
       },
@@ -436,7 +436,7 @@
         "curve": "14",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/14.json",
-        "sha256": "01544b4af7ae4a35b45802f1f8f6779100f30ca6318d399fd5977e46cb4b1db4",
+        "sha256": "854d49c85477bbd9f8b899020a864e80c4138eb1ed89a0e9e7ce62a1e5197e54",
         "points": 21,
         "tolerance_met": true
       },
@@ -445,7 +445,7 @@
         "curve": "15",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/15.json",
-        "sha256": "000196b0d189638b9a05288ff5485daa446d02d6b4590187e1c7b5d31fabb23b",
+        "sha256": "41210ce245cc4636024a7d5a7fa1d4c159eb4e9c138a5fa58b49f3ff66e18dd2",
         "points": 33,
         "tolerance_met": true
       },
@@ -454,7 +454,7 @@
         "curve": "16",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/16.json",
-        "sha256": "ce90bc07066616b7136638aebe79c31f78f08269c19c3141e2c049664179019b",
+        "sha256": "928400ecceae6571d7f4f3d81f8bcba71e2f226d4781fbf64a99099ad5f7ecfa",
         "points": 33,
         "tolerance_met": true
       },
@@ -463,7 +463,7 @@
         "curve": "17",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/17.json",
-        "sha256": "3d66f8edc604a578eb52fbb3299ba39e9d269ee505b82612ca0ec72c51237237",
+        "sha256": "314ea9cfb76830c3483bfd7802e3831a96077867a5717be7612a1ab7b21a82cf",
         "points": 25,
         "tolerance_met": true
       },
@@ -472,7 +472,7 @@
         "curve": "18",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/18.json",
-        "sha256": "5dac69359f83de697fe154e4064002c8ff9d81c970cd734d89f894c61c509dc3",
+        "sha256": "7ef7a5c0e9eb26edef68609de0a2ae2ed4b1a6d2e5a94c273393820e2908045b",
         "points": 24,
         "tolerance_met": true
       },
@@ -481,7 +481,7 @@
         "curve": "19",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/19.json",
-        "sha256": "55f6e9670b2e7431b1de498e0e4e59fa95c916c9049b2d06b3d4aef872454e8b",
+        "sha256": "8afab4ee9f9389f95071abf82345b50ef206d10c2d184770e4d8cfd5821d137d",
         "points": 55,
         "tolerance_met": true
       },
@@ -490,7 +490,7 @@
         "curve": "20",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/20.json",
-        "sha256": "1974333b795e1a0453cc99ed4c72e4c1cf35184e6a283bfededebceeffd0ed25",
+        "sha256": "7d1110c626099c81ac7fed73995802c63a475e3bfba2c6d93b72b57e4c09c3b8",
         "points": 40,
         "tolerance_met": true
       },
@@ -499,7 +499,7 @@
         "curve": "21",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/21.json",
-        "sha256": "961f73aa382fbd5f2e2f8c6131fe2a3f947be951c6141013c84b85540fd71f19",
+        "sha256": "b8f90b98c3c5e4d545046aeacc1faec31af09389d4ae3f4f5499d170f2cb15de",
         "points": 44,
         "tolerance_met": true
       },
@@ -508,7 +508,7 @@
         "curve": "22",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/22.json",
-        "sha256": "39a7013678f73808eb7ceb11fc151dfc68ec27fa6c6b1d127a0cdf0162b539b6",
+        "sha256": "17f4170596fe16c6f8b6cac064d143e2d6b487e5d4e3654e27a9d81b8d967eba",
         "points": 17,
         "tolerance_met": true
       },
@@ -517,7 +517,7 @@
         "curve": "23",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/23.json",
-        "sha256": "1ca7ef3a99c806008046f89084490c831c50b1f03eceedc8267d3d44f1362b0f",
+        "sha256": "cefec4009978e848cbf9566ae2534bc42edc71da16d546d31ef69bba3def5c3b",
         "points": 59,
         "tolerance_met": true
       },
@@ -526,7 +526,7 @@
         "curve": "24",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/24.json",
-        "sha256": "0e40ba1c6024806c8be5b792ed50bba867d87f8e619022c5ded4b04d8edbc2cb",
+        "sha256": "3ebf08c8ebd7b5716c6d7dd4539249e41e84b44a2ea20d376bd1156b34758f95",
         "points": 51,
         "tolerance_met": true
       },
@@ -535,7 +535,7 @@
         "curve": "25",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/25.json",
-        "sha256": "d763341ff739f38884b5604145ac45551ee43382f0d622c022a08f2be7558b02",
+        "sha256": "03ed49d434bf9a07805ee8b823c579df026b0750ec0cc3847bfe166034780ff6",
         "points": 27,
         "tolerance_met": true
       },
@@ -544,7 +544,7 @@
         "curve": "26",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/26.json",
-        "sha256": "1ef96e4b08aaa3d86d909435514f11d4b9faab94ea33be859d87208daa20f568",
+        "sha256": "70d612f30674edd755ce75f69f1ed54aa45f98c7c65442c6cb6a52c8653db161",
         "points": 42,
         "tolerance_met": true
       },
@@ -553,7 +553,7 @@
         "curve": "27",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/27.json",
-        "sha256": "14d2f3469f327c5ffc9818ed546dab8e471d16e8b8d584d5e5c553d257457be4",
+        "sha256": "fd2c16b7500b8cfcae124062e4acffe5acbdb42b72eabdf266dc5169feca9686",
         "points": 51,
         "tolerance_met": true
       },
@@ -562,7 +562,7 @@
         "curve": "28",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/28.json",
-        "sha256": "e8b84a0beab9319428e83b4f7d7fe74d1ca201bca8bc97ebde211dc349b40cf8",
+        "sha256": "55cab35c2251314d89fe2c65cf64fd571f1b086b5d458e138eaf3ae43416eb8c",
         "points": 24,
         "tolerance_met": true
       },
@@ -571,7 +571,7 @@
         "curve": "29",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/29.json",
-        "sha256": "6b97ff72142b8931b0bd7c9aeac35ac0e1f984012182c332bc423fef380d3839",
+        "sha256": "923b145d41f2bfdb98b8fd8c9b57062e58cda45726f76e78d3e7d80b56c4cbdc",
         "points": 22,
         "tolerance_met": true
       },
@@ -580,7 +580,7 @@
         "curve": "30",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/30.json",
-        "sha256": "e305106a8dd1436924c0602bfc7418a9f382b11f81e7575c1942760798198cf9",
+        "sha256": "321ac95670c31185f2b9b8d6330868b4e257705662ad57a94ff972432622bc95",
         "points": 21,
         "tolerance_met": true
       },
@@ -589,7 +589,7 @@
         "curve": "31",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/31.json",
-        "sha256": "15925902bf29f8be98adc5b6bb46ea26917673b25f36a4b6a582fcf4c2615e11",
+        "sha256": "d84caa9f6707f45482720e0af3d3247debe0d6100a525b6a222b7c808f6e4d92",
         "points": 28,
         "tolerance_met": true
       },
@@ -598,7 +598,7 @@
         "curve": "32",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/32.json",
-        "sha256": "658ff4975264b0def5185aa3cbda26cad5ae1c60bbdf28050ae56026ded53dc6",
+        "sha256": "e595f72da17516b5cfae583c1f1f27b17318df8de097cb5ca67d4cccb6ef3565",
         "points": 23,
         "tolerance_met": true
       },
@@ -607,7 +607,7 @@
         "curve": "33",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/33.json",
-        "sha256": "687fa108ad0965124b2db4192f9a9131add0ddf7670d82a6b228e00350ba48a2",
+        "sha256": "6286cf233554373dfadbbf7876fdc781a8fa51d25418f1e62371ca995e617e1d",
         "points": 33,
         "tolerance_met": true
       },
@@ -616,7 +616,7 @@
         "curve": "34",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/34.json",
-        "sha256": "cfc0d5b3e0dea2655ca881de49b871f97310217bbfe0b4d3b1261fc911feac9c",
+        "sha256": "77728145af80ebe9e9c04485e5876d79fa7509504e9688d3c893ce2bf28f7029",
         "points": 21,
         "tolerance_met": true
       },
@@ -625,7 +625,7 @@
         "curve": "35",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/35.json",
-        "sha256": "a23329967d78f55168560e2373ba0beab68fd5d9bc2734a7fced0c3bc1549425",
+        "sha256": "0091a5082bfbee40074eed8ec1e3feee5a7c245effaa3ac87eada93f020cc52f",
         "points": 21,
         "tolerance_met": true
       },
@@ -634,7 +634,7 @@
         "curve": "36",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/36.json",
-        "sha256": "32393efcda3a1d3ad349cdd589032a948e375aa254bc2ddc508be2afc458868a",
+        "sha256": "721fbff14a83981b71d61fa4eb3c71ba9508e287de2011fd92a0cc404f231f0e",
         "points": 31,
         "tolerance_met": true
       },
@@ -643,7 +643,7 @@
         "curve": "37",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/37.json",
-        "sha256": "2708c0d522e585edb0ed57928380d597e4bf047b77a7dc37f12fa56dd7220ec9",
+        "sha256": "d09a1eff7b6896f75928aef8a68919d3fe2cbb37e064bdc7ead89f51b26f52a7",
         "points": 43,
         "tolerance_met": true
       },
@@ -652,7 +652,7 @@
         "curve": "38",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/38.json",
-        "sha256": "7912cb5a772aae19f8604d37565bcfe273b1433dca3be1ffb1ea056274052531",
+        "sha256": "aee75ec2dadf6f14ddb7a57d9786f78e90980b46412b1b175b1c663c79cbf570",
         "points": 24,
         "tolerance_met": true
       },
@@ -661,7 +661,7 @@
         "curve": "39",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/39.json",
-        "sha256": "3533d27becae84593a9b6f8faf217a5e77d8e39db9d738847afcf9d51e76feac",
+        "sha256": "c084d2d92753037a3d5e1bb00cddcd206b808aaf1f671b4611533951b65aadc8",
         "points": 47,
         "tolerance_met": true
       },
@@ -670,7 +670,7 @@
         "curve": "40",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/40.json",
-        "sha256": "762b78e3f983c8e8877fd2bd44c6a35f537c2b6b7a29e6eacb37f21a0fd3dfc6",
+        "sha256": "8028eae051f7cb4ccb065ae33d5dc0940f5237659e0adb1b98278a77116f4e02",
         "points": 19,
         "tolerance_met": true
       },
@@ -679,7 +679,7 @@
         "curve": "N-SCMC-1",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-1.json",
-        "sha256": "55f400348c9d818095cdac9a5b852f2cba48e892b4e118e7f575b6f5e6140e6b",
+        "sha256": "38451449949d4489605667046839348b92c83813719bcf596de346edc17c3798",
         "points": 40,
         "tolerance_met": true
       },
@@ -688,7 +688,7 @@
         "curve": "N-SCMC-2",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-2.json",
-        "sha256": "51e3136c6d4e4714b1592552ad527c2456a388cdb1378b62aa74b9a43cb90b66",
+        "sha256": "ca7f7c45bf0c30690202f5e21e52c0b6d0fd38e5af586a53411f90a09083b007",
         "points": 23,
         "tolerance_met": true
       },
@@ -697,7 +697,7 @@
         "curve": "N-SCMC-3",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/N-SCMC-3.json",
-        "sha256": "5c17253b5a7a42663e9c7b7752ddd800f4eeeddd1ff016c6ca523eea297cbe73",
+        "sha256": "6dedb46af4ea338e1bcab0c48937570f52a4f068912f020027c67714a612f920",
         "points": 45,
         "tolerance_met": true
       },
@@ -706,7 +706,7 @@
         "curve": "STWC-1",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-1.json",
-        "sha256": "0f722f2825569a9c151d13abb03808dd45bd2ebeab6f78f15d011f734d967d6d",
+        "sha256": "d41b3a2639a97d34e7c1212d67f5bec2fa64615cfab4861ab6e3500e8405fae3",
         "points": 20,
         "tolerance_met": true
       },
@@ -715,7 +715,7 @@
         "curve": "STWC-2",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-2.json",
-        "sha256": "83155c5ea0f6eb39a53cefceee4339efcd345f3514a4c931f70f1612960aa364",
+        "sha256": "9a9ea60b48a6434bc7397aed805a31e310749e703b90349958d09c29cfbea969",
         "points": 19,
         "tolerance_met": true
       },
@@ -724,7 +724,7 @@
         "curve": "STWC-3",
         "absolute_window_budget_J": 1.0,
         "table": "validation/workflow_results/pla_exchange/tables/stage_0/STWC-3.json",
-        "sha256": "2dd28f8d3e8afce860d05ca8e31f85c2885722a09b89266633dd87a51a41ed61",
+        "sha256": "52efa41e0a2dd5f435bf0c2cc707af919aed97293cfeccada77d18fefa44420c",
         "points": 22,
         "tolerance_met": true
       },
@@ -733,7 +733,7 @@
         "curve": "01",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/01.json",
-        "sha256": "705fc2d1c360d221e4ab83e99e5255b632afbb027e5dcb777ee2f98485af7393",
+        "sha256": "d9f7cfc57e38660db69d35b1de02d2b7faaa7424731f50912ffa5ed3bd9bc64c",
         "points": 81,
         "tolerance_met": true
       },
@@ -742,7 +742,7 @@
         "curve": "02",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/02.json",
-        "sha256": "0b3bd20f18c61d004a9f2ad305d11992d686bf4c133f0679b95bd6e9f69ee52e",
+        "sha256": "832b248ca03232984cb857a27562e1d468160216d08a432ff3b0923e33d87503",
         "points": 59,
         "tolerance_met": true
       },
@@ -751,7 +751,7 @@
         "curve": "04",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/04.json",
-        "sha256": "9716f001a67f76e107f77f728ba26b2f97b0cb6c9d82a1210956e221351e53f2",
+        "sha256": "70ff41f32cf694bc16708d6a2657ae5394c6a323e14c2abba341f306bcbe7192",
         "points": 104,
         "tolerance_met": true
       },
@@ -760,7 +760,7 @@
         "curve": "06",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/06.json",
-        "sha256": "44363bc3eda19a32fb9df0876e55fa763c3260d6ebc4e54e3094daddc245ccf6",
+        "sha256": "c85a89f9473cb45ee1e28b81bee1ea61d431380a77131ec55e65c9e0e4b0a637",
         "points": 57,
         "tolerance_met": true
       },
@@ -769,7 +769,7 @@
         "curve": "07",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/07.json",
-        "sha256": "0fa40a8b2c0e2a8c887afe40413dc2b0350166874be2d0ab92d1948c80f9fa23",
+        "sha256": "9509f1158dfc36572e59b9fb999304eaac4b45b0784735506c1f09d3a60e9717",
         "points": 67,
         "tolerance_met": true
       },
@@ -778,7 +778,7 @@
         "curve": "08",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/08.json",
-        "sha256": "1c042dad3f90653c9c1e86104e33a645248c83d891d32da3bd4aff08e3d6d32b",
+        "sha256": "333ee31c75ba3d2aeb45d66e396ffd9fd5887eb1d8f9b93d2b82722d2b4bd449",
         "points": 46,
         "tolerance_met": true
       },
@@ -787,7 +787,7 @@
         "curve": "09",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/09.json",
-        "sha256": "f564149bfbb9b406d291d8c6723710e270ecd256b3feafea3c77f13005b79220",
+        "sha256": "846d3080b4596493582fc47f2fd94cf69469083d62d0ade3938275ee4b57f219",
         "points": 77,
         "tolerance_met": true
       },
@@ -796,7 +796,7 @@
         "curve": "10",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/10.json",
-        "sha256": "be50b2a25307a0fb13ec56cee6b5b47b8fa1965c32544f19a3967e008732ffb2",
+        "sha256": "f69d36ac0ab182eb962205650dd892e5d46185ba0caf78763e186c2538f7f5c1",
         "points": 94,
         "tolerance_met": true
       },
@@ -805,7 +805,7 @@
         "curve": "11",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/11.json",
-        "sha256": "8106c749176f93658b4081a979172b667c65de996a02fd1eb0694cafa70ddab9",
+        "sha256": "7054003b50282112ab0a9e7ce960ef2aeae6bd6747b094c474884d924f17d3a1",
         "points": 55,
         "tolerance_met": true
       },
@@ -814,7 +814,7 @@
         "curve": "12",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/12.json",
-        "sha256": "7e5b27829d8e71b67861e3c48bf295558a3de2389135123d318faa5ed71bdd5e",
+        "sha256": "35ec0bd27c0b9ea74b6dbfd61238322b547305bcee5159d8968847eaa4eece4b",
         "points": 96,
         "tolerance_met": true
       },
@@ -823,7 +823,7 @@
         "curve": "13",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/13.json",
-        "sha256": "dd479f5ea451d0405bca3992a26af687f35e141079283e862f3a7627920e4cc0",
+        "sha256": "e1a06fdac1865921b82ba98aed58ee4fdfb5ee8e89053af4f1f651bb7f1b2c64",
         "points": 117,
         "tolerance_met": true
       },
@@ -832,7 +832,7 @@
         "curve": "14",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/14.json",
-        "sha256": "7e76cb03f2dac98cf99378b6011571fc164f97c34b154c1061705e3a59b22978",
+        "sha256": "ae3c2abad2b37c3c80fa5cd52bb10644edf428500fbe38152aab4588067c471e",
         "points": 46,
         "tolerance_met": true
       },
@@ -841,7 +841,7 @@
         "curve": "15",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/15.json",
-        "sha256": "4380721d2561547fac5acf45ed242d5b748898a759d79fb2190a3b62752a53c1",
+        "sha256": "884e9dc9ced86a38b9ba2c7ea564b0bcc08c4f3201377b25770db172346846b5",
         "points": 54,
         "tolerance_met": true
       },
@@ -850,7 +850,7 @@
         "curve": "16",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/16.json",
-        "sha256": "670d28c5d5f91dc6b18ac74f79ef1b3dc18584dc730336ba5ea72d915bd7d96a",
+        "sha256": "d9e26f8b6220b7cbf8d3f994ccb2ed0463ae0151d104a4c747ff3f20c2a084ab",
         "points": 61,
         "tolerance_met": true
       },
@@ -859,7 +859,7 @@
         "curve": "17",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/17.json",
-        "sha256": "ba08fab5aa589480eb478b45af2ff68b7e6068cf6dc56692fd5a14cc108b540a",
+        "sha256": "96fb807670caf8453d7106b3e9f66f2dd430439562f565c179d2d51089036bd6",
         "points": 47,
         "tolerance_met": true
       },
@@ -868,7 +868,7 @@
         "curve": "18",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/18.json",
-        "sha256": "b0c29e9aa53c4d27c29dd63b935ad9417cd73017f2ac1e8bdeb96ece663b27bf",
+        "sha256": "d6f43fef6ece165179d445d52fbb15377ba55007f95884b70ba3a5825d81cef1",
         "points": 55,
         "tolerance_met": true
       },
@@ -877,7 +877,7 @@
         "curve": "19",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/19.json",
-        "sha256": "e9b63288cb40167e29a65a7dd86808947665de07cfe9e1ae849f38cdda7f5414",
+        "sha256": "ad6bf815714d369d754cb0f096146c94dacd39d6639c728f6d9233ca8860ed14",
         "points": 100,
         "tolerance_met": true
       },
@@ -886,7 +886,7 @@
         "curve": "20",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/20.json",
-        "sha256": "8715cc9c3ce7b05e048b543178a12f5e5abf3a466cfd9c2140a611f229a179fa",
+        "sha256": "fc1a5a8250fa1c4f7cbc911f4c1aca220055de9f12255b8d299b0c28aae8919b",
         "points": 70,
         "tolerance_met": true
       },
@@ -895,7 +895,7 @@
         "curve": "21",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/21.json",
-        "sha256": "1fc1b1d6be2441751ecd8c1d33abe4e7604c81a46cae231a132b0d402ae7f4f4",
+        "sha256": "920d7df1209cde2d585c22264b483f32a1528843ec905e15795c7ec6349475b1",
         "points": 77,
         "tolerance_met": true
       },
@@ -904,7 +904,7 @@
         "curve": "22",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/22.json",
-        "sha256": "4cb28d6285f64c7015f3692e6f3d0fe20e9c6a6cc575a23aa13eb7719f89627d",
+        "sha256": "05433b1ca1350104065e4d514f31d5f1d5a519ccc5447703cfb3df95f25368ee",
         "points": 41,
         "tolerance_met": true
       },
@@ -913,7 +913,7 @@
         "curve": "23",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/23.json",
-        "sha256": "02862b485b819accf9c0476b6573fb43f94b7fa6a066bacadceda06aa49c356e",
+        "sha256": "c754c259daef1660683f8bc3212325ce14a6823d8fe9e12c5b417d66acb9a47e",
         "points": 97,
         "tolerance_met": true
       },
@@ -922,7 +922,7 @@
         "curve": "24",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/24.json",
-        "sha256": "4537ac270778f96876c0fd1364c3de4e5d14506a91793adfc54d5578c31f79a9",
+        "sha256": "98b6d6a7148f09defd16f717193136c0875d77eec9ea82c5036dcf5ad1d71ff9",
         "points": 99,
         "tolerance_met": true
       },
@@ -931,7 +931,7 @@
         "curve": "25",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/25.json",
-        "sha256": "8f1df801b62fc86d0289a9831d3e0b50ba0052053dd72ee95629f62db619918b",
+        "sha256": "c80cd0ea88f83bd4c968b129e62bfb5a9d816eec51313c455e93af1b6145fbff",
         "points": 56,
         "tolerance_met": true
       },
@@ -940,7 +940,7 @@
         "curve": "26",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/26.json",
-        "sha256": "a3ca6a7c6f121f3da1698357a73f08fd674d3ecc96ec306a46b8a2eacaf60395",
+        "sha256": "5ec418b3f3c99a8348f65f01f99c32e74c7ac9685b3b58ddc042e77e0a34653f",
         "points": 54,
         "tolerance_met": true
       },
@@ -949,7 +949,7 @@
         "curve": "27",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/27.json",
-        "sha256": "f1758bf88764f4d808fe0ed06314459758ffbb49aa3bff72cf3954b0de7057bd",
+        "sha256": "5319580c2764ac26e18920846dbdfeb58b1ff756c91ef88051f7ffca209ab122",
         "points": 95,
         "tolerance_met": true
       },
@@ -958,7 +958,7 @@
         "curve": "28",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/28.json",
-        "sha256": "ffdad183ed0f3e4c3130afdf375e3d4b13ceb345c14785ba71b7d15b7aae6c1c",
+        "sha256": "c14c7286da8a0eaef865ebdff222f0df99e07f92db1e686b7d466be3b94908e5",
         "points": 50,
         "tolerance_met": true
       },
@@ -967,7 +967,7 @@
         "curve": "29",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/29.json",
-        "sha256": "0864728eb5d37989af571f8e84fe95b1aa0de39f83c78d7733907f8cc8dd5601",
+        "sha256": "add3d7f3d86f81ce0aa345df2e60579938c97de2a8c1a2e6e15e94492f8b3357",
         "points": 47,
         "tolerance_met": true
       },
@@ -976,7 +976,7 @@
         "curve": "30",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/30.json",
-        "sha256": "f391861da8d2615f3ca70551839a4a1af34bd5a5315316be7f253d2c6e508243",
+        "sha256": "9b082532f3ced4ad50db62da4068b81921d7d35dfe3d3d48d76afd53bdc6e460",
         "points": 53,
         "tolerance_met": true
       },
@@ -985,7 +985,7 @@
         "curve": "31",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/31.json",
-        "sha256": "6fafc10fdcfbcb5c0b0b7f6ace8c8a28a5ff5bbe9fb6ce421e9e6587eb16eca7",
+        "sha256": "ac3689f0a2b19e3d24d2984cac3667878d10aae77bf6ffa486288c2583270fd6",
         "points": 60,
         "tolerance_met": true
       },
@@ -994,7 +994,7 @@
         "curve": "33",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/33.json",
-        "sha256": "89587be15716fe9b5a549e7f3a075a94df528a4e426e29a7ac334d8efd6b72b3",
+        "sha256": "aaaa6f94b0940c84d8724229cb4628634661aea64cc6bd04565f7bd847bf8670",
         "points": 66,
         "tolerance_met": true
       },
@@ -1003,7 +1003,7 @@
         "curve": "34",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/34.json",
-        "sha256": "30d2fd9da0b6c71c59073f973b3e64fa9a4c17532db3d4720df325d0054620ee",
+        "sha256": "66198053b7ec52b46c97c4488867ed536ad2bc6be562ac9c87382ab0cc8f992b",
         "points": 41,
         "tolerance_met": true
       },
@@ -1012,7 +1012,7 @@
         "curve": "35",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/35.json",
-        "sha256": "216ebc4eed7d6c8b7d3d4d72473ef40f33506dcdd789a5d988d69a88b53c72fb",
+        "sha256": "b900dfd85a70cfdf2041f4614ac312dbb2eb932710d8b090fb33154584a26c18",
         "points": 45,
         "tolerance_met": true
       },
@@ -1021,7 +1021,7 @@
         "curve": "36",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/36.json",
-        "sha256": "a371c1b15398af8947295da840bf40cf9ece769c0621f1cc129b9fe064c088d0",
+        "sha256": "9dbf0cf8bdecb006d766e6aadeb264a5cb0f6838969a5e3f3788b1e2df004a57",
         "points": 58,
         "tolerance_met": true
       },
@@ -1030,7 +1030,7 @@
         "curve": "37",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/37.json",
-        "sha256": "1a6d4ba9150bc47ec025e883ce368ae5d0beaefbf23a59fcb938b77ce9ce4f8c",
+        "sha256": "418a0162920a739cd6f810d2bc0de1e9cb642b0a9240f11c81b0ec7412b31353",
         "points": 71,
         "tolerance_met": true
       },
@@ -1039,7 +1039,7 @@
         "curve": "38",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/38.json",
-        "sha256": "2099ddb5eedfc5838eea0b7a3673f4300260710278163cccbc5248808157b504",
+        "sha256": "61195638e8fea9b726e7f2cdd6e6b1c32432406e3790d5c7333081b06e3f1706",
         "points": 48,
         "tolerance_met": true
       },
@@ -1048,7 +1048,7 @@
         "curve": "39",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/39.json",
-        "sha256": "0be31e615354c63b8f42c11e33d086ca3edc8b3a5ed2d499aa7e9c9f27ea18a8",
+        "sha256": "09b47812eeb06a64666ff379dbcf8c65b0931e5873d839be6c4daa2e6de726a7",
         "points": 100,
         "tolerance_met": true
       },
@@ -1057,7 +1057,7 @@
         "curve": "40",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/40.json",
-        "sha256": "87b165a18afee795dbcb75e83fa0af44bd615a0736c1eb19acc1cf8f04eedc3d",
+        "sha256": "2adab078dfbfb19525ef1e022d9d1e48bedd7c8f23970dc4d5e89b0726a5aed7",
         "points": 42,
         "tolerance_met": true
       },
@@ -1066,7 +1066,7 @@
         "curve": "N-SCMC-1",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-1.json",
-        "sha256": "b0ae28cd12eb51eae59e86cbc240b2f2abaaf98a9a65fb8aafcfd07c0033dea0",
+        "sha256": "65d2c1421cb541e918579e9e74ddd4d43c8edef69b16fcd5ee7494462e34a4cd",
         "points": 65,
         "tolerance_met": true
       },
@@ -1075,7 +1075,7 @@
         "curve": "N-SCMC-2",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-2.json",
-        "sha256": "bee8f8c347819592eaa43089824fd32e702638231e10becbe2be7ec5ef44ef80",
+        "sha256": "50ce5cc52e8c196499c3e32e44145533bdad7933938863b54e4f2c603ec93cc9",
         "points": 71,
         "tolerance_met": true
       },
@@ -1084,7 +1084,7 @@
         "curve": "N-SCMC-3",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/N-SCMC-3.json",
-        "sha256": "a83754a5d320c02c1892705a53d65f167ae6b601ee56b0e97aa7db385cbd04d9",
+        "sha256": "5c47496cacce92e9a2dc06288c979820b17b4771eb2b9960d64888aaec46658b",
         "points": 65,
         "tolerance_met": true
       },
@@ -1093,7 +1093,7 @@
         "curve": "STWC-1",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-1.json",
-        "sha256": "3ea96824b30973f9dea88552128437b2389a8e4a13e586b9942c9055f5ce351a",
+        "sha256": "15610e63a70280734155a0c8d10c49f30fc301d1e50ee35257bad46afed99695",
         "points": 53,
         "tolerance_met": true
       },
@@ -1102,7 +1102,7 @@
         "curve": "STWC-2",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-2.json",
-        "sha256": "d1b69e7d0b41fd1b90f67a4f318c1d0e913bdd1f12344f3087b668839eb5e2f8",
+        "sha256": "66ab1ae95bcd3e1f18356579c55e7237ae0b6f05bc798f257927c94daa870cc1",
         "points": 45,
         "tolerance_met": true
       },
@@ -1111,7 +1111,7 @@
         "curve": "STWC-3",
         "absolute_window_budget_J": 0.25,
         "table": "validation/workflow_results/pla_exchange/tables/stage_1/STWC-3.json",
-        "sha256": "5d13f27bd3c6f7ec31f8a98e84728cd2318ef86a3cfd3dbc6899757a3d2f39a9",
+        "sha256": "c0f515bfd2ca42cb050044bde7e0540c2479fb556c19009e3e936c5edf7709cf",
         "points": 40,
         "tolerance_met": true
       },
@@ -1120,7 +1120,7 @@
         "curve": "01",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/01.json",
-        "sha256": "a78f4f96034f7d39e0202a10912be52ade35513878da2a90bbc90875550baf2f",
+        "sha256": "7445e8f3ade4faead6c703d755ad456cc4082ff18c28ba512cf11c7cb6d9bb08",
         "points": 129,
         "tolerance_met": false
       },
@@ -1129,7 +1129,7 @@
         "curve": "02",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/02.json",
-        "sha256": "f8fb47a4954123f81559157a943597beda051e8438178b7ecf374d9942342520",
+        "sha256": "013ed37cb18962c2a4e0eec46ec746b80e9f67b4707bae038da769cd33a96c17",
         "points": 114,
         "tolerance_met": true
       },
@@ -1138,7 +1138,7 @@
         "curve": "04",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/04.json",
-        "sha256": "edc6bf41d483f74ee7c07be479aefecaf83174168dfcd1346d08533475ba5972",
+        "sha256": "a3985320e0111b55bb99eaedbc314e6334154427dfd22ed0590e2a68c6caca30",
         "points": 129,
         "tolerance_met": false
       },
@@ -1147,7 +1147,7 @@
         "curve": "06",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/06.json",
-        "sha256": "7ef0f34450fff23057ef59157b028c322e31966be8ae577fe4798a882e515fae",
+        "sha256": "0a6a8612455b5229b553e6bbe72c85e06589f56540c9726e7822a111dfdbe893",
         "points": 101,
         "tolerance_met": true
       },
@@ -1156,7 +1156,7 @@
         "curve": "09",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/09.json",
-        "sha256": "796b288b3cd6d0f41b3edd642ea3b411586fcfe1fe74f6fc46c163d73c38ff5a",
+        "sha256": "7013f5af93a5309e41ffd93beb873deb6b0b1934989b529cc77bf23370e3d8ed",
         "points": 123,
         "tolerance_met": true
       },
@@ -1165,7 +1165,7 @@
         "curve": "12",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/12.json",
-        "sha256": "f3b38b4192fdd03adcc03cb36deaebe2ad4022bea3a5f40201cc0f7972f2dfe9",
+        "sha256": "447962312040337a45492e908e4e902d00488200a1d15d612ed99bcdb6a313d5",
         "points": 129,
         "tolerance_met": false
       },
@@ -1174,7 +1174,7 @@
         "curve": "13",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/13.json",
-        "sha256": "35c5e7d97e282487648872fc13c3cd4395d414b541285f73c7d888f45a265a5a",
+        "sha256": "6336db812d3a315ec8a04bc9f90aa5c87a2b142b6c55d69fece74078e9c5f462",
         "points": 129,
         "tolerance_met": false
       },
@@ -1183,7 +1183,7 @@
         "curve": "14",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/14.json",
-        "sha256": "2aca216ed7496c3a95a362b972e33342ae5cb0e1ff5487f84d640e6f035a5e5c",
+        "sha256": "53b98d51374252c5143e24d88d4f93af9fdc3e9f56fa8206e064f771d1c9e01e",
         "points": 82,
         "tolerance_met": true
       },
@@ -1192,7 +1192,7 @@
         "curve": "15",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/15.json",
-        "sha256": "2dc61c0e65063b929ba27e572004e1b0c00b59ebf1ed142c212bd6dd3b46bd63",
+        "sha256": "9b55cee07a71b314128f914cf0a23664ee33289a55b5a115305e9fa362319b5c",
         "points": 127,
         "tolerance_met": true
       },
@@ -1201,7 +1201,7 @@
         "curve": "18",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/18.json",
-        "sha256": "c2b4fb97f26b028b6e1fbcc36ebea2eb702f702cfa0a450d738149a613dbedf9",
+        "sha256": "3237d5b611a43993b18d51558658199d8f48eadc8c68ac5fecbd1845506543c2",
         "points": 108,
         "tolerance_met": true
       },
@@ -1210,7 +1210,7 @@
         "curve": "19",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/19.json",
-        "sha256": "30406aadee6ae891adb0b41cfd4cf82fc01b05c49bc740604bae4ed8edb95923",
+        "sha256": "d47cbc2c274e7b6d2613478d1dd5bf278ca07f80ea3a1b828a4f467cda1c0338",
         "points": 129,
         "tolerance_met": false
       },
@@ -1219,7 +1219,7 @@
         "curve": "20",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/20.json",
-        "sha256": "bfd206f952578b17c436ed786f4be629526f868a7a0e2056df9b2a781cbc4957",
+        "sha256": "6e776c61ef2aaf21b864bb603d4d7ce81b50d98254f0746ea6a91f8e2998ba7c",
         "points": 110,
         "tolerance_met": true
       },
@@ -1228,7 +1228,7 @@
         "curve": "21",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/21.json",
-        "sha256": "6bc3a401378124f27d231b239d47c3156281bef124078ead985ac5971a9ab894",
+        "sha256": "46aa6d9886286cf739b8939a22a5540543e4649d080fe8e7c7561387b114b614",
         "points": 129,
         "tolerance_met": false
       },
@@ -1237,7 +1237,7 @@
         "curve": "22",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/22.json",
-        "sha256": "14e828df43c0e5287b41a6f8566594c8d9af0dfa17267166cc5e8387824b20cb",
+        "sha256": "33c62250483086a9b5c848b51b020f6098c28bb10c61222427c71d0ac57ed2c7",
         "points": 66,
         "tolerance_met": true
       },
@@ -1246,7 +1246,7 @@
         "curve": "23",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/23.json",
-        "sha256": "ac0afbeb1ea5a901c1f1d22da96f672ad804720b67d9c3a55daae3289057238d",
+        "sha256": "29f74763769227ccaf8bc439010bcf80541644e62d339cee15f9a722e87dc98e",
         "points": 129,
         "tolerance_met": false
       },
@@ -1255,7 +1255,7 @@
         "curve": "24",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/24.json",
-        "sha256": "8dcb9f7b3ea870afaaa42caf42c786200b6c6eb002e923ad0a16b69207e29d3f",
+        "sha256": "9d4f1cbd09996e5e57524df2e5d25c386de35c778c5c65a35027e08c2e7ccf28",
         "points": 129,
         "tolerance_met": false
       },
@@ -1264,7 +1264,7 @@
         "curve": "25",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/25.json",
-        "sha256": "7f764b5df9378dea9d14a22a307be5172faab641609478486e62b31be788b923",
+        "sha256": "73ddbb24b91db5768ea2f6fe48c6199335bd00abfb54b6034ab1632aa6fba745",
         "points": 102,
         "tolerance_met": true
       },
@@ -1273,7 +1273,7 @@
         "curve": "26",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/26.json",
-        "sha256": "61e8c1e55323a2be376dbc928efb82cbc4203da383ec3c2c86b68d4e61710e9a",
+        "sha256": "74ced3b9ff2e90a023a9edfb1dc8d3207f631e7fbcd2cb7f27d85d32c1697d53",
         "points": 100,
         "tolerance_met": true
       },
@@ -1282,7 +1282,7 @@
         "curve": "27",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/27.json",
-        "sha256": "bf520fcf1e8dbbb484eadabc59e0930b95282b478b52874b5b3650b8e2ba44ae",
+        "sha256": "15e6ac3dbc2cc18f3c7def70aac02e203023f011108699c05d96c764d6a60a54",
         "points": 129,
         "tolerance_met": false
       },
@@ -1291,7 +1291,7 @@
         "curve": "28",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/28.json",
-        "sha256": "f28f5d749109662f75df98bc6a127600a9d422608070b1a87311d5e085e43002",
+        "sha256": "abb58b2aa3eaf60fcb903962f7355a0e58ca42ac5b1943ae73dedee4ff788cd2",
         "points": 80,
         "tolerance_met": true
       },
@@ -1300,7 +1300,7 @@
         "curve": "29",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/29.json",
-        "sha256": "63c49982fd569c3a27d2894c6e6c5f0aae6eaba779a25106b66d5fab98ebb160",
+        "sha256": "ad9dce3ee29672500e3d442c04d2e1b821246c4f9c212cd32f9d67e0efa940d9",
         "points": 90,
         "tolerance_met": true
       },
@@ -1309,7 +1309,7 @@
         "curve": "30",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/30.json",
-        "sha256": "f7ec223cb6524949804994c9329d9f8a8165675a573dbef233ae9a94257341d9",
+        "sha256": "7b454800a1dd4b4064ffa6caa1773d106d7cf89431287f8c57b017f6f08d9d03",
         "points": 94,
         "tolerance_met": true
       },
@@ -1318,7 +1318,7 @@
         "curve": "31",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/31.json",
-        "sha256": "c7d67751bacbb3dc9863881f4fee986a40c5f95ece3837750448484bce9a63ec",
+        "sha256": "501045fcc71c8659e7d6c878ce297dc8cc983ec1be52c581a38acae82ed7db40",
         "points": 102,
         "tolerance_met": true
       },
@@ -1327,7 +1327,7 @@
         "curve": "33",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/33.json",
-        "sha256": "b8e23a6ca246426089162bc8c067beecd1e166e0c3b75cb8502fc13bbebb320b",
+        "sha256": "2d4fcc64140732e5cd01ddaf16bb31992812f069f0f4e00ecd83d56e5f7c2717",
         "points": 95,
         "tolerance_met": true
       },
@@ -1336,7 +1336,7 @@
         "curve": "37",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/37.json",
-        "sha256": "2c52fe6130a75e44e2d98c5ab81e5640b51d3f3c258c5bafb11d3be4f1b8bbb2",
+        "sha256": "4dfc59cd6c9dbe3d7c9615c88ce61283250f2aa27f19c78e06b79ba746f473a3",
         "points": 129,
         "tolerance_met": false
       },
@@ -1345,7 +1345,7 @@
         "curve": "38",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/38.json",
-        "sha256": "bb81467f8a67a3fb32862530ccc340512b0850bf18d428b58917e881c73a81d3",
+        "sha256": "32ce4be194e21a240e5502bb6e48522afc2449d6446031727d0aeb54ddb960fd",
         "points": 93,
         "tolerance_met": true
       },
@@ -1354,7 +1354,7 @@
         "curve": "39",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/39.json",
-        "sha256": "f9a49ccec626579faa83b1a5506eba704c24269d1813dd7543e7b6ad62777e72",
+        "sha256": "9614d06391f9af8b8271cd68562926e43599c3b7ff36bb46a3675ba3d8b3f617",
         "points": 129,
         "tolerance_met": false
       },
@@ -1363,7 +1363,7 @@
         "curve": "40",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/40.json",
-        "sha256": "9de73a0fba1bfcdcc62c84117fbbedd7c035d9ab13c48026eaa8b77022dce495",
+        "sha256": "6d40e425c1d3055d42ae2aac5bb863f6f039718d5450998afd37733ab05b0d08",
         "points": 75,
         "tolerance_met": true
       },
@@ -1372,7 +1372,7 @@
         "curve": "N-SCMC-1",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-1.json",
-        "sha256": "2b49be4f85e29c08a1071ec4adca5e35d987b6d9f270a50070ef3a6c69d99dc9",
+        "sha256": "e7532bfd4d9b9c94b156f05855671454d4fef78a0bd9019b7b38f1c3dba7b62b",
         "points": 129,
         "tolerance_met": false
       },
@@ -1381,7 +1381,7 @@
         "curve": "N-SCMC-2",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-2.json",
-        "sha256": "231b6f5f91e29953ea64f06a1e41ba3d7ebd4a64b4639d3c536bb5e06537bb0f",
+        "sha256": "b2a3cf10181a02406835761a311aeeb976cd90581a6cb6a926c948475ee03e06",
         "points": 129,
         "tolerance_met": false
       },
@@ -1390,7 +1390,7 @@
         "curve": "N-SCMC-3",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/N-SCMC-3.json",
-        "sha256": "465fdb2e79c5c253d6ee08d2b35ecbed06ae555da696a8cbb7586fcf49c0cf6d",
+        "sha256": "ee2bb372c7602fa812655bca73f0027065bc5aaa0ab1e4546e493fb81dbd5f2b",
         "points": 129,
         "tolerance_met": false
       },
@@ -1399,7 +1399,7 @@
         "curve": "STWC-1",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-1.json",
-        "sha256": "da7372f7e3e3d97e718357ade83416de049eede5c8288796e5f1e59f2804f59a",
+        "sha256": "1e097f1a35816efba37b497713b6fc19dda875fe11d5c84a3c794bb0fc1cfd01",
         "points": 81,
         "tolerance_met": true
       },
@@ -1408,7 +1408,7 @@
         "curve": "STWC-2",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-2.json",
-        "sha256": "1b3d99b1487f0929a33b568b0c3a0118b6dc873863bb550c70bc122153ac1b3b",
+        "sha256": "714b81cdc65ab0bfd5b01ca33be1b86d9f4f96e812a8ceadf1c49b4a396a88e7",
         "points": 126,
         "tolerance_met": true
       },
@@ -1417,7 +1417,7 @@
         "curve": "STWC-3",
         "absolute_window_budget_J": 0.0625,
         "table": "validation/workflow_results/pla_exchange/tables/stage_2/STWC-3.json",
-        "sha256": "83d1998d8b6f3ab39a6aed24d8ee7d4dfdccdc20e896f436d3fc681faa6aff4f",
+        "sha256": "b8f5b420daa412bade4ade2f09465c32ee284e24d7c65a3df5294f064582233c",
         "points": 76,
         "tolerance_met": true
       }

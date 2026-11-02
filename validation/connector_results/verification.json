@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "source_nodes": 1000,
+  "point_budget": 33,
+  "retained_points": 33,
+  "strokes_mm": [
+    10.0,
+    20.0,
+    30.0,
+    40.0
+  ],
+  "consumer_EA_J": [
+    50.24783714887331,
+    92.76382919014661,
+    137.7301959039682,
+    182.87843529742932
+  ],
+  "actual_EA_errors_J": [
+    -0.049612343052586994,
+    -0.09955928729550578,
+    -0.15246159624732059,
+    -0.41025717672627593
+  ],
+  "stored_prefix_bound_J": 0.5754417434316244,
+  "domain_mm": [
+    0.0,
+    50.005
+  ],
+  "scope": "Documented connector input format; numerical loading-domain round trip only. No solver run, vendor point limit or irreversible constitutive validation is claimed.",
+  "format_documentation": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEELMRefMap/simaelm-c-connelastbehav.htm"
+}

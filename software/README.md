@@ -43,7 +43,7 @@ print(s.window_work(1.5, 3.5), s.certificate.window)
 assert s.verify_reference(x, force)
 ```
 
-Choose `method` explicitly: `work`, `vertical`, `uniform`, or `uniform_peak`.
+Choose `method` explicitly: `work`, `vertical`, `uniform`, `uniform_peak`, or `vw`.
 The adaptive selectors share the largest-vertical-residual split location and
 prioritize a segment by absolute area or vertical deviation. Method choice is
 application dependent. Plain uniform selection requires `preserve_peak=False`;
@@ -53,9 +53,14 @@ maximum absolute force and supports either compression sign convention.
 Endpoints are always retained. A point budget too small for required nodes is
 rejected.
 
+`vw` provides fixed-count Visvalingam–Whyatt reduction with the same endpoint
+and peak rules. It removes vertices by their current triangle area in normalized
+coordinates, using source index to break ties. Tolerance stopping remains
+available for `work` and `vertical`.
+
 ## Using another simplifier
 
-External RDP, Visvalingam-Whyatt or other selectors can supply reference indices:
+External RDP, Shapely or other selectors can supply reference indices:
 
 ```python
 from workcert import from_indices
@@ -66,6 +71,21 @@ print(r.certificate.window, r.window_work(1.5, 3.5))
 
 Indices must refer to original nodes, be strictly increasing, and include both
 endpoints. This separates point selection from querying and error evaluation.
+If a simplifier returns unchanged coordinates instead of indices, use
+`indices_from_coordinates(x, force, coordinates)`. Every coordinate pair must
+match a source vertex exactly; altered, reversed or duplicate vertices are
+rejected rather than snapped to the source.
+
+## Peak-dependent indicators
+
+`r.peak_force(q)` evaluates the maximum signed force in the retained table up to
+q. `r.peak_bounds(q)` returns limits for the source peak. A source-derived global
+maximum retained in the table gives identical limits at and after that node;
+before it, force-error bounds remain available. This avoids unnecessarily wide
+CFE intervals when the denominator is preserved exactly. The saved summary is
+checked against retained values when loading, and `verify_reference` recomputes
+it against the complete numerical source. A checksum does not authenticate
+source facts. Files without this summary retain conservative peak bounds.
 
 ## Error measures and incremental construction
 
@@ -84,6 +104,8 @@ Extrema include residual zeros inside cells. `Certificate` and `certify` remain
 API names for compatibility; `ErrorMetadata` is an alias. Evaluation uses
 float64 analytical formulas relative to the numerical reference, not measurement
 uncertainty or outward-rounded arithmetic.
+The `certificate=` stopping parameter is likewise a compatibility name for the
+selected numerical reconstruction-error measure.
 
 Tolerance stopping checks the current representation after every insertion;
 intermediate greedy error need not decrease. The adaptive implementation caches
@@ -149,8 +171,8 @@ python -m unittest discover -s tests -v
 
 The repository's `validation/`, `data/` and `authoring/` folders contain source
 preparation, credited public inputs, benchmark scripts, per-case results and
-scientific plotting code. The 12-job GitHub Actions matrix targets Windows,
-Linux and macOS with Python 3.10-3.13. A workflow file is a test specification;
+scientific plotting code. The 15-job GitHub Actions matrix targets Windows,
+Linux and macOS with Python 3.10-3.14. A workflow file is a test specification;
 completed runs and local installation evidence are recorded separately.
 
 ## License, citation and migration
@@ -166,6 +188,6 @@ force_unit="kN"`. Stored schema-1.0 responses remain readable.
 
 ## Use of AI
 
-OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.
+OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.
 
 Detailed signatures are in [the API reference](docs/API.md).

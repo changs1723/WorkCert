@@ -21,7 +21,7 @@ except ImportError:
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'validation/results_v02'
-BUDGETS=(9,17,33,65)
+BUDGETS=(9,17,33,65,129)
 
 
 @njit(cache=True)

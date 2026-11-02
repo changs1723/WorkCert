@@ -12,7 +12,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 1.6050870796163916,
+      "speed_ratio": 1.44939118944026,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -22,7 +22,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 3.493261557987505,
+      "speed_ratio": 3.176844294522995,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -32,7 +32,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 5.742811397121151,
+      "speed_ratio": 3.715386066947247,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -42,7 +42,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 4.500988587191209,
+      "speed_ratio": 5.216703479755324,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -52,7 +52,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 1.2758275411385536,
+      "speed_ratio": 1.91799941940022,
       "same_reference": true,
       "old_points": 109,
       "new_points": 109
@@ -62,7 +62,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 3.5420416968174093,
+      "speed_ratio": 3.5581030131536093,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -72,7 +72,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 12.517499150343621,
+      "speed_ratio": 11.127157731352732,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -82,7 +82,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 14.47608519939806,
+      "speed_ratio": 12.550814044191043,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -92,7 +92,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 1.9737328728671875,
+      "speed_ratio": 2.1082437731186783,
       "same_reference": true,
       "old_points": 375,
       "new_points": 375
@@ -102,7 +102,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 5.749421883660136,
+      "speed_ratio": 4.62714991374024,
       "same_reference": true,
       "old_points": 335,
       "new_points": 335
@@ -112,7 +112,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 21.725632323039058,
+      "speed_ratio": 24.783599252724276,
       "same_reference": true,
       "old_points": 342,
       "new_points": 342
@@ -122,7 +122,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 39.461689606401585,
+      "speed_ratio": 40.037239573154814,
       "same_reference": true,
       "old_points": 342,
       "new_points": 342

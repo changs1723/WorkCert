@@ -20,11 +20,11 @@ python -m workcert --help
 python -m unittest discover -s software/tests -v
 ```
 
-The 31 package tests passed for both wheel and source-distribution installations
+The 39 package tests passed for both wheel and source-distribution installations
 on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4.
 The recorded installation checks are in
 [`software/release_validation.json`](software/release_validation.json).
-The CI workflow targets Linux, macOS and Windows with Python 3.10–3.13; completed
+The CI workflow targets Linux, macOS and Windows with Python 3.10–3.14; completed
 run status is shown in the repository's Actions tab.
 
 ## Construct and reuse a response
@@ -45,8 +45,8 @@ print(received.window_work(1.0, 2.5))
 print(received.certificate.prefix, received.certificate.window)
 ```
 
-The selector is explicit. `work`, `vertical`, `uniform` and `uniform_peak` are
-available, and `from_indices` accepts nodes selected by another library. Peak
+The selector is explicit. `work`, `vertical`, `vw`, `uniform` and `uniform_peak` are
+available. `from_indices` accepts external nodes; `indices_from_coordinates` maps exact returned coordinates back to reference indices. Peak
 retention can use absolute, positive or negative force. Omitted unit labels
 remain `unspecified`; labels do not rescale the supplied numbers. Use
 `tolerance=...`, `certificate="window"` or `certificate="prefix"` for a query
@@ -62,53 +62,56 @@ See the [package README](software/README.md) and
 [API reference](software/docs/API.md) for complete signatures, units, branch
 orientation, validation and persistence behavior.
 
-## A complete response-table exchange
+## Public-data reuse and source-indicator checks
 
-The worked example uses public PLA+ compression responses and measured specimen
-masses. A producer saves tables, a consumer requests changing stroke limits and
-work windows, and unresolved specific-energy comparisons trigger selective
-refinement or targeted source queries. It computes EA, SEA, MCF, prefix peak
-force and CFE, including their reconstruction intervals.
+The worked example uses 46 PLA+ specimens representing 42 configurations:
+40 singletons and two triplicate controls. It evaluates EA, SEA, MCF, peak force
+and CFE at changing strokes. Post-global-peak queries use exact retained-peak
+summaries; reconstruction errors are compared with the actual control-specimen
+scatter. Configuration comparisons use the control means and singleton values.
+They describe numerical resolution, not experimental significance.
 
-The worked examples and scientific verification use a separate research
-environment. With Python 3.12, install these dependencies before running the
-following commands:
+With Python 3.12, prepare the research environment before running examples:
 
 ```text
 python -m pip install -r validation/requirements-reproduce.txt
+python validation/review_round2_workflow.py
+python validation/review_round2_verify_workflow.py
+python examples/query_exchange.py validation/workflow_results_round2/tables/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
+python validation/connector_exchange.py
 ```
 
-```text
-python validation/user_workflow.py --case pla
-python examples/query_exchange.py validation/workflow_results/pla_exchange/tables/stage_0/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
-python validation/verify_workflow.py
-```
+The client reads the received JSON and reported mass, without the full curve.
+All eight repeated-control/stroke cases have stored work errors below their
+observed sample EA standard deviations. Source-workbook checks cover 45/46
+nominal-stroke EA/SEA/MCF/CFE values and all 46 peaks. The separate endpoint audit
+explains all 13 source-EA discrepancies: workbook 50 mm labels accompany
+actual endpoints of 50.004–50.009 mm. Both conventions and all residuals are saved.
+The connector example exports a 33-point loading-branch input table and checks
+it with an independent reader; it does not run a finite-element solver.
 
-The client program reads only a received table, its mass and requested strokes.
-The 46-record example includes four stroke requests per record and three work
-windows. Its initial 1 J tables resolve 4001 of 4140 SEA comparisons; selective
-refinement resolves 4129, and 22 explicit source-work scalar responses resolve
-the remaining comparisons. The per-case outputs retain unresolved decisions
-and point-cap failures.
-
-A separate cyclic-bending example preserves the full chronological path,
-including reversals, negative forces and equal-displacement events:
+A cyclic example preserves negative forces, reversals and dwells:
 
 ```text
 python validation/user_workflow.py --case cyclic
+python validation/cyclic_round2.py
+python validation/verify_cyclic_round2.py
+python examples/compose_branch_errors.py validation/cyclic_round2_results/branch_error_manifest.json
 ```
 
-The cyclic record is partitioned into 2971 monotone branches and 1984 dwell
-events. Directed branch work is summed as physical `F dx`; the record is not
-treated as a closed cycle. Details, source transformations and outputs are in
-[`validation/WORKFLOW_README.txt`](validation/WORKFLOW_README.txt).
+The 2,971 exact branches are not 2,971 physical loading reversals. A deadband
+sweep is diagnostic only and leaves the reference path unchanged. The last
+command uses only saved branch metadata to compose chronological work-error
+extrema; it needs neither WorkCert nor the dense reference. Legacy selective
+refinement files remain numerical controls, with no claim of experimental
+significance for arbitrarily close specimens.
 
 ## Comparative validation and reproduction
 
 The compression comparison contains 70 numerical references, six force
 selectors, work-only and scalar controls, and separate stopping requirements.
-It saves 3544 actual JSON results, including 464 fixed-count dynamic-programming
-paths on all 58 eligible original references with at most 1000 nodes. Area and
+It saves 3660 actual JSON results, including 580 fixed-count dynamic-programming
+paths at all five budgets on the 58 eligible original references with at most 1000 nodes. Area and
 vertical-error optima are compared only with their matching objectives.
 
 ```text
@@ -151,4 +154,4 @@ independent adoption and commercial use have not been documented.
 
 ## Use of AI
 
-OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.
+OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.

@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0 — prepared 31 October 2026
+## 0.2.0 — prepared 31 October 2026; revised 2 November 2026
 
 - Require an explicit selection method and label unassigned units explicitly.
 - Add absolute, positive and negative peak rules.
@@ -8,10 +8,14 @@
   augmented AVL tree, with a complete error evaluation before stopping.
 - Preserve chronological loading and unloading branches and zero-displacement
   force transitions through a new preprocessing interface.
-- Add regression tests, a 12-job cross-platform CI specification and Python
+- Add regression tests, a 15-job cross-platform CI specification and Python
   3.10 minimum metadata. Completed test runs are reported separately.
 - Keep schema-1.0 responses readable and expose `ErrorMetadata` as an alias for
   the existing `Certificate` class.
+- Add fixed-count Visvalingam–Whyatt selection and an exact coordinate-to-index
+  adapter for external simplifiers.
+- Store a retained-source-global-maximum summary and expose query-specific
+  peak bounds, with full-source verification and conservative old-file fallback.
 
 ## 0.1.0 — 30 October 2026
 

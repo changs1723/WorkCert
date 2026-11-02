@@ -18,8 +18,8 @@ from workcert import ReducedResponse
 OUT=ROOT/'figures';OUT.mkdir(exist_ok=True)
 plt.rcParams.update({'font.family':'Arial','font.size':9,'axes.labelsize':9,'legend.fontsize':8,
                      'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42})
-COL={'work':'#0072b2','vertical':'#009e73','rdp':'#cc79a7','vw':'#d55e00','uniform_peak':'#777777'}
-LABEL={'work':'Work','vertical':'Vertical','rdp':'RDP','vw':'VW','uniform_peak':'Uniform + peak'}
+COL={'work':'#0072b2','vertical':'#009e73','rdp':'#cc79a7','vw':'#d55e00','uniform_peak':'#777777','uniform':'#b3b3b3'}
+LABEL={'work':'Work','vertical':'Vertical','rdp':'RDP','vw':'VW','uniform_peak':'Uniform + peak','uniform':'Uniform'}
 manifest=[]
 def read(p):return json.loads((ROOT/p).read_text(encoding='utf8'))
 def export(fig,name):
@@ -41,7 +41,7 @@ def architecture():
            (.03,.06,'Save exchange JSON\nForce table, cached work primitives\nUnit labels and error metadata'),
            (.54,.06,'Load received response\nJSON plus reported specimen mass\nClient queries use the table only'),
            (.54,.37,'Evaluate requested strokes\nEA / SEA / MCF / CFE intervals\nArbitrary work-window requests'),
-           (.54,.68,'Resolve design comparisons\nSeparate intervals give an ordering\nOverlaps trigger a source request')]
+           (.54,.68,'Audit indicators and comparisons\nReconstruction versus repeat scatter\nPublished-workbook cross-check')]
     for x,y,text in boxes:
         ax.add_patch(FancyBboxPatch((x,y),.43,.23,boxstyle='round,pad=.008',facecolor='#eef4f8' if x<.5 else '#fff4e6',edgecolor='#7090a4',lw=.8))
         ax.text(x+.215,y+.115,text,ha='center',va='center',fontsize=8.6,linespacing=1.3)
@@ -51,44 +51,46 @@ def architecture():
     export(fig,'fig01_architecture')
 
 def workflow():
-    folder=ROOT/'validation/workflow_results/pla_exchange'
+    folder=ROOT/'validation/workflow_results_round2'
     raw=pd.read_csv(ROOT/'data/prepared/PLA_STWC-1.csv',float_precision='round_trip')
-    tab=ReducedResponse.load(folder/'tables/stage_0/STWC-1.json')
-    q=pd.read_csv(folder/'queries_stage_0.csv');q=q[q.curve=='STWC-1'].sort_values('stroke_mm')
-    summary=read('validation/workflow_results/summary_all.json')['pla_exchange']
+    tab=ReducedResponse.load(folder/'tables/STWC-1.json')
+    q=pd.read_csv(folder/'queries.csv');q=q[q.specimen=='STWC-1'].sort_values('stroke_mm')
+    summary=read('validation/workflow_results_round2/summary.json')
     fig,axes=plt.subplots(2,2,figsize=(7,4.9),constrained_layout=True)
     a=axes[0,0];a.plot(raw.x_mm,raw.force_kN,color='#333333',lw=1.45,label='Reference')
     a.plot(tab.x,tab.force,color='#d55e00',ls='--',marker='o',ms=3,mfc='white',mew=.8,lw=1,label='Exchanged table')
     a.set(xlabel='Travel (mm)',ylabel='Force (kN)',title='(a) STWC-1 response');a.legend(frameon=False,loc='upper right')
     a=axes[0,1];a.axhspan(0,tab.certificate.prefix,color='#d7e9f5',label='Stored prefix-error bound')
-    a.plot(q.stroke_mm,q.EA_absolute_error_J,'o-',color='#0072b2',label='Actual EA error')
+    a.plot(q.stroke_mm,q.EA_error_J,'o-',color='#0072b2',label='Actual EA error')
     a.set(xlabel='Requested stroke (mm)',ylabel='Absolute EA error (J)',title='(b) Client work queries',xticks=[10,20,30,40],ylim=(0,tab.certificate.prefix*1.25))
     a.legend(frameon=False,fontsize=7.5,loc='upper right')
-    a=axes[1,0];counts=[v['unresolved_pairs'] for v in summary['stages']]+[0]
-    a.bar(range(4),counts,color=['#88b9d6','#4d96bf','#0072b2','#d55e00'],width=.58)
-    for i,v in enumerate(counts):a.text(i,v+3,str(v),ha='center')
-    a.set(ylabel='Unresolved SEA comparisons',title='(c) Selective follow-up',xticks=range(4),xticklabels=['1 J','0.25 J','0.0625 J','22 source\nqueries'],ylim=(0,165))
-    a=axes[1,1]
-    initial={r['curve']:r['points'] for r in summary['table_manifest'] if r['stage']==0}
-    final=initial.copy()
-    for r in summary['table_manifest']:final[r['curve']]=r['points']
-    names=sorted(initial,key=initial.get);positions=np.arange(len(names))
-    a.plot(positions,[initial[n] for n in names],color='#0072b2',marker='.',ms=3,label='Initial exchange')
-    a.plot(positions,[final[n] for n in names],color='#d55e00',marker='.',ms=3,ls='--',label='After refinement')
-    a.set(xlabel='Records ordered by initial count',ylabel='Retained nodes',title='(d) Table allocation',ylim=(0,140))
-    a.legend(frameon=False,loc='lower right')
+    scatter=pd.read_csv(folder/'repeat_scatter.csv').sort_values(['configuration','stroke_mm'])
+    a=axes[1,0];pos=np.arange(len(scatter))
+    a.bar(pos-.16,scatter.EA_sample_SD_J,width=.32,color='#88b9d6',label='Observed SD (n=3)')
+    a.bar(pos+.16,scatter.maximum_prefix_bound_J,width=.32,color='#d55e00',label='Largest prefix bound')
+    labs=[('N' if r.configuration=='N-SCMC' else 'S')+str(int(r.stroke_mm)) for r in scatter.itertuples()]
+    a.set(ylabel='Energy (J)',title='(c) Repeat scatter and table error',xticks=pos,xticklabels=labs,xlabel='N: nominal; S: STWC; stroke in mm')
+    a.legend(frameon=False,fontsize=7,loc='upper left')
+    pub=pd.read_csv(folder/'published_indicator_comparison.csv')
+    a=axes[1,1];pos=np.arange(len(pub));center=pub.reduced_EA_J-pub.published_EA_J
+    a.axhline(0,color='#555555',lw=.8)
+    a.errorbar(pos,center,yerr=pub.prefix_bound_J,fmt='.',ms=3,capsize=0,lw=.6,color='#0072b2')
+    bad=~pub.EA_J_published_in_interval.astype(bool)
+    a.plot(pos[bad],center[bad],'o',mfc='white',ms=6,color='#d55e00',label='Specimen 05 (outside)')
+    a.set(xlabel='Source workbook specimen order',ylabel='Table EA minus workbook EA (J)',title='(d) Published values: 45/46 covered')
+    a.legend(frameon=False,fontsize=7,loc='lower right')
     export(fig,'fig02_workflow')
 
 def selectors():
     summary=read('validation/results_v02/comparative_summary.json')
-    keys=['work','vertical','rdp','vw','uniform_peak'];cohorts=['CX_steel','EDAH','PLA_plus']
+    keys=['work','vertical','rdp','vw','uniform_peak','uniform'];cohorts=['CX_steel','EDAH','PLA_plus']
     matrix=np.asarray([[summary[c]['at33'][m]['window_error_percent'] for m in keys] for c in cohorts])
     gaps=pd.read_csv(ROOT/'validation/results_v02/optimality_gaps.csv')
     fig,axes=plt.subplots(1,2,figsize=(7,3.35),constrained_layout=True)
     ax=axes[0];im=ax.imshow(matrix,cmap='Blues',norm=LogNorm(vmin=matrix.min()*.85,vmax=matrix.max()*1.2),aspect='auto')
     for i in range(3):
-        for j in range(5):ax.text(j,i,'%.3f'%matrix[i,j],ha='center',va='center',fontsize=8,color='white' if matrix[i,j]>np.sqrt(matrix.min()*matrix.max()) else '#102a3a')
-    ax.set(xticks=range(5),xticklabels=[LABEL[k] for k in keys],yticks=range(3),yticklabels=['CX steel (23)','EDAH (1)','PLA+ (46)'],title='(a) Median interval-work error (%)')
+        for j in range(6):ax.text(j,i,'%.3f'%matrix[i,j],ha='center',va='center',fontsize=8,color='white' if matrix[i,j]>np.sqrt(matrix.min()*matrix.max()) else '#102a3a')
+    ax.set(xticks=range(6),xticklabels=[LABEL[k] for k in keys],yticks=range(3),yticklabels=['CX steel (23)','EDAH (1)','PLA+ (46)'],title='(a) Median interval-work error (%)')
     ax.tick_params(axis='x',rotation=35)
     bar=fig.colorbar(im,ax=ax,fraction=.045,pad=.03,label='Error (%)')
     bar.set_ticks([.15,.3,.6,1.2]);bar.ax.yaxis.set_major_formatter(FuncFormatter(lambda v,p:'%g'%v))
@@ -97,6 +99,7 @@ def selectors():
     methodcol='method' if 'method' in gaps else 'greedy_method'
     objcol='objective';ratiocol='cost_ratio' if 'cost_ratio' in gaps else 'ratio'
     subset=gaps[(gaps.budget==33)&(gaps[objcol]=='eta')]
+    keys=keys[:-1]
     data=[subset[subset[methodcol]==k][ratiocol].to_numpy() for k in keys]
     bp=ax.boxplot(data,positions=np.arange(1,6),widths=.55,patch_artist=True,showfliers=True)
     for patch,k in zip(bp['boxes'],keys):patch.set(facecolor=COL[k],alpha=.6)
@@ -131,26 +134,22 @@ def stopping_scaling():
 def cyclic():
     folder=ROOT/'validation/workflow_results/cyclic_path'
     trace=np.load(folder/'chronological_path.npz')
-    print('Cyclic plot arrays:',trace.files)
-    reference=pd.read_csv(folder/'longest_branch_reference.csv',float_precision='round_trip')
-    reduced=pd.read_csv(folder/'longest_branch_reduced.csv',float_precision='round_trip')
-    info=read('validation/workflow_results/summary_all.json')['cyclic_path']
-    fig,axes=plt.subplots(1,3,figsize=(7,2.9),constrained_layout=True)
-    def arr(*names):
-        for name in names:
-            if name in trace:return trace[name]
-        raise KeyError(names)
-    x=arr('displacement_mm','x_mm','x');f=arr('reference_force_kN','force_kN','force')
-    axes[0].plot(x,f,color='#406780',lw=.5)
-    axes[0].set(xlabel='Displacement (mm)',ylabel='Force (kN)',title='(a) Complete cyclic path')
-    axes[1].plot(reference.iloc[:,0],reference.iloc[:,1],color='#333333',lw=1.4,label='Reference')
-    axes[1].plot(reduced.iloc[:,0],reduced.iloc[:,1],color='#d55e00',ls='--',marker='o',ms=2.5,mfc='white',lw=.9,label='Reduced branch')
-    axes[1].set(xlabel='Displacement (mm)',ylabel='Force (kN)',title='(b) Longest directed branch');axes[1].legend(frameon=False,fontsize=7)
-    e=arr('work_error_J','cumulative_error_J','error_J')
-    bound=info['sum_branch_window_bounds_J'];axes[2].axhspan(-bound,bound,color='#e4eff6')
-    axes[2].plot(np.arange(len(e)),e,color='#0072b2',lw=.8)
-    axes[2].set(xlabel='Chronological sample',ylabel='Signed work error (J)',title='(c) Chronological integral')
-    axes[2].ticklabel_format(axis='x',style='sci',scilimits=(3,3));axes[2].axhline(0,color='#777777',lw=.5)
+    info=read('validation/cyclic_round2_results/summary.json')
+    branches=pd.read_csv(ROOT/'validation/cyclic_round2_results/branch_diagnostics.csv')
+    dead=pd.read_csv(ROOT/'validation/cyclic_round2_results/deadband_sensitivity.csv')
+    fig,axes=plt.subplots(2,2,figsize=(7,4.7),constrained_layout=True)
+    axes[0,0].plot(trace['displacement_mm'],trace['reference_force_kN'],color='#406780',lw=.5)
+    axes[0,0].set(xlabel='Displacement (mm)',ylabel='Force (kN)',title='(a) Complete cyclic path')
+    vals=np.sort(branches.source_points.to_numpy());pct=100*np.arange(1,len(vals)+1)/len(vals)
+    a=axes[0,1];a.step(vals,pct,color='#0072b2',where='post');a.axvline(9,color='#d55e00',ls='--',lw=.8,label='Median: 9 source nodes')
+    a.set(xscale='log',xlabel='Source nodes per branch',ylabel='Cumulative branches (%)',title='(b) Exact branch-size distribution',ylim=(0,102));a.legend(frameon=False,fontsize=7)
+    a=axes[1,0];a.plot(dead.deadband_mm,dead.confirmed_reversals,'o-',ms=3,color='#0072b2')
+    a.axhline(94,color='#d55e00',ls='--',lw=.8,label='94 extrema at 0.1–5 mm')
+    a.set(xscale='log',xlabel='Diagnostic deadband (mm)',ylabel='Detected reversals',title='(c) Reversal-scale sensitivity');a.legend(frameon=False,fontsize=7)
+    e=trace['cumulative_error_J'];a=axes[1,1];bound=info['sum_branch_window_errors_J']
+    a.axhspan(-bound,bound,color='#e4eff6');a.plot(np.arange(len(e))/1000,e,color='#0072b2',lw=.8)
+    a.axhline(0,color='#777777',lw=.5)
+    a.set(xlabel=r'Chronological sample ($\times10^3$)',ylabel='Signed work error (J)',title='(d) Chronological integral')
     export(fig,'fig05_cyclic')
 
 def main():

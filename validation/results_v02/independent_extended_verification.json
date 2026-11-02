@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "actual_tables_hashed": 3544,
-  "reference_hashes_checked": 3544,
+  "actual_tables_hashed": 3660,
+  "reference_hashes_checked": 3660,
   "edge_cost_pairs_checked_against_global_certificate": 224,
   "brute_force_full_certificate_candidates": 478,
   "optimal_objectives_checked_against_full_certificate_enumeration": 66,
@@ -10,6 +10,6 @@
     "maximum vertical residual"
   ],
   "prefix_or_window_optimality_claimed": false,
-  "core_sha256": "9592a0057231849ff21dbae2db0fb2d3e1bdb529005c0c3a60089711a80589c8",
+  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
   "baseline_selector_sha256": "8772abb6605661e3a47a6c963fad26af5893ccacb5a701209ed1e110398bd28e"
 }

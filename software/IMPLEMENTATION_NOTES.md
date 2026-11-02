@@ -24,7 +24,7 @@ which prevents mixing loading and unloading tables with the same domain.
 external selector's indices. No universal preference among selectors is built
 into the API; choosing a method is explicit.
 
-The 31 numerical/CLI/persistence/branch tests pass for installed wheel and source
+The 39 numerical/CLI/persistence/branch/peak/geometric tests pass for installed wheel and source
 distributions on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and
 3.14.7/2.5.4. The 3.10 and 3.14 virtual environments use independently installed
 dependencies; the 3.12 environment shares a preinstalled NumPy. Package imports
@@ -32,14 +32,28 @@ are checked to resolve to the installed environment. Fifteen original v0.1.0
 JSON responses were additionally loaded and verified against their references.
 Artifact hashes and precise runtime evidence are in `release_validation.json`.
 
-The supplied CI workflow targets Python 3.10-3.13 on Linux, macOS and Windows.
+The supplied CI workflow targets Python 3.10-3.14 on Linux, macOS and Windows.
 A workflow specification alone is not evidence of a completed remote run.
 The README and this file do not claim cross-platform results before execution.
 
 Scaling measurements are in `validation/results/scaling/` at the repository
-root. Final measurements use supported Python 3.12.14/NumPy 2.3.5. The three-pair
-million-node test reaches 0.1% window error at 107 points in both versions, with
-median construction times 14.275704 s (0.1.0) and 1.052961 s (0.2.0). These
-include construction, source hashing and final complete error evaluation. The
-full-reference error-pass count falls from 105 to one. The waveform is synthetic;
-the timing comparison concerns these implementations and this recorded host.
+root, with implementation hashes, runtime versions and independent paired
+measurements. Construction includes source hashing and final complete error
+evaluation. The waveform is synthetic; timings concern the recorded
+implementations and host. The results files are the source of the numerical
+timing values, avoiding a second set of copied measurements in this document.
+
+The revised API also exposes fixed-count effective-area VW removal. The package
+implementation agrees with the scientific benchmark's VW ordering on the
+recorded reference cases; a separate small-reference oracle repeatedly enumerates
+all surviving triangles. A strict coordinate adapter supports external geometric
+output without silently changing its points.
+The VW heap uses O(n log n) time and O(n) memory, separately from the adaptive
+segment-tree costs above.
+
+Peak bounds use the force residual and retained source values. When the first
+source global signed maximum is retained, the producer records its index and
+coordinates. Load validates that this is a retained maximum, and source
+verification recomputes the summary. For queries at/after its coordinate both
+peak bounds equal its force. This uses the same source-relative trust model as
+the work metadata, not a cryptographic proof of unknown source values.

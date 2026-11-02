@@ -191,7 +191,7 @@ def finish_dp(fixed=None,manifest=None):
     summary={}
     for objective in ('eta','vertical'):
         summary[objective]={}
-        for budget in (9,17,33,65):
+        for budget in BUDGETS:
             summary[objective][str(budget)]={}
             for method in ('work','vertical','rdp','vw','uniform_peak'):
                 a=[r['ratio'] for r in gaps if r['objective']==objective and r['budget']==budget and r['method']==method and r['ratio'] is not None]
@@ -202,7 +202,7 @@ def finish_dp(fixed=None,manifest=None):
         cohorts[dataset]={}
         for objective in ('eta','vertical'):
             cohorts[dataset][objective]={}
-            for budget in (9,17,33,65):
+            for budget in BUDGETS:
                 cohorts[dataset][objective][str(budget)]={}
                 for method in ('work','vertical','rdp','vw','uniform_peak'):
                     a=[r['ratio'] for r in gaps if r['dataset']==dataset and r['objective']==objective and r['budget']==budget and r['method']==method and r['ratio'] is not None]
