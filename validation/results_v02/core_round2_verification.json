@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "core_sha256": "3b4e3c8a3b75a28eddba1d19a6f7343ecf0d92e7eb28e5894a9ec22d2fdd00db",
+  "vw_reference_budget_cases_matching_benchmark": 350,
+  "coordinate_adapter_exact_roundtrip_cases": 350,
+  "work_vertical_frozen_selection_and_error_cases": 420,
+  "signed_prefix_peak_bound_queries": 1120416,
+  "old_v01_JSON_files_loaded": 15,
+  "compatibility_fixture_directory": "validation/compatibility/v01",
+  "note": "No random measurement uncertainty, author manual review or remote CI is inferred from these automated controls."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source_and_metadata_files_hashed": 40,
+  "steel_reference_windows_reextracted": 23,
+  "EDAH_records_reextracted": 1,
+  "reextracted_nodes": 47403,
+  "maximum_absolute_difference": {
+    "displacement_mm": 0.0,
+    "force_kN": 0.0
+  },
+  "comparison_tolerance": "512 * float64 epsilon * max(1, maximum absolute reference value)",
+  "output_policy": "Read-only audit; no benchmark reference or table overwritten"
+}

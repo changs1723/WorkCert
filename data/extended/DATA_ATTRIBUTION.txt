@@ -1,0 +1,43 @@
+Additional cyclic response source — WorkCert 0.2 validation
+
+González-de-León, Isabel; Nastri, Elide; Arrayago, Itsaso; Montuori, Rosario;
+Piluso, Vincenzo; Real, Esther (2024).
+Experimental load-displacement response of a stainless steel specimen under cyclic loading.
+Zenodo, version v1, DOI 10.5281/zenodo.10829958.
+Public record: https://zenodo.org/records/10829958
+License: Creative Commons Attribution 4.0 International.
+https://creativecommons.org/licenses/by/4.0/
+
+Associated primary experimental paper:
+González-de-León I., Nastri E., Arrayago I., Montuori R., Piluso V., Real E.
+Experimental study on stainless steel tubular members under cyclic loading.
+Thin-Walled Structures 181 (2022), 109969.
+DOI 10.1016/j.tws.2022.109969.
+
+The original XLSX, official repository metadata and download checksum are retained
+under cyclic_RHS_10829958/. The repository MD5 is independently matched, and a
+SHA-256 is recorded. The workbook describes austenitic stainless steel RHS specimen
+S1-L1, section 120 x 80 x 6 mm, effective length 1,650 mm, in major-axis cyclic
+bending. Horizontal displacement was measured by a string potentiometer and
+horizontal force by the actuator. The workbook explicitly labels mm and kN.
+
+Transformation: numerical rows from worksheet S1_L1, columns B (displacement)
+and C (force), starting at row 4, are extracted in their original order. There
+are 125,157 finite numerical pairs. No scaling, force-sign change, smoothing,
+contact threshold, reversal threshold, or loading-envelope extraction is applied.
+The original sheet has two labelled header rows and an initial blank row.
+The optional derived cyclic_RHS_raw.csv records the same numerical values in
+17-digit text form; validation reconstructs them from the original XLSX.
+
+Chronological direction, exact reversals and equal-displacement force changes
+are preserved through branch/event metadata. The resulting signed F dx total
+is not interpreted as closed-cycle dissipation. The original experiments and
+data remain credited to the source authors.
+
+PLA+ masses used by the separate exchange example are original data from
+Ahmed Saber (2026), Mendeley Data version 4, DOI 10.17632/v7p6y654ft.4,
+CC BY 4.0. The original Mass_and_Crash_Indicators.xlsx is already retained
+under ../raw/pla_v7p6y654ft_v4/. Numeric m(g) values are matched by specimen ID
+to all 46 force curves. Derived indicators are recomputed from the archived
+force histories at the explicitly requested travel limits. The source-reported
+delta_max convention is retained in a separate source audit.

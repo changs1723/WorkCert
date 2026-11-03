@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "authorship": "Codex acting in the Hou acceptance role; human sign-off not asserted",
+  "remote_ci": "NOT_RUN_LOCALLY",
+  "tests_run": 67,
+  "total_checks": 759,
+  "failed_checks": 0,
+  "baseline": {
+    "tests_run": 39,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "independent": {
+    "tests_run": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "PASS"
+  }
+}

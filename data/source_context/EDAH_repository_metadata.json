@@ -1,0 +1,243 @@
+{
+  "created": "2025-07-24T05:07:33.428925+00:00",
+  "modified": "2025-07-24T05:07:34.608869+00:00",
+  "id": 16399749,
+  "conceptrecid": "16399748",
+  "doi": "10.5281/zenodo.16399749",
+  "conceptdoi": "10.5281/zenodo.16399748",
+  "doi_url": "https://doi.org/10.5281/zenodo.16399749",
+  "metadata": {
+    "title": "Supplementary date and code files for Multi-objective optimization of a bi-material enhanced double-arrow honeycomb for improving load-bearing capacity and energy absorption",
+    "doi": "10.5281/zenodo.16399749",
+    "publication_date": "2025-07-24",
+    "description": "<p>This repository contains the supplementary materials for the paper entitled \"Multi-objective optimization of a bi-material enhanced double-arrow honeycomb for improving load-bearing capacity and energy absorption\" submitted to Composite Structures.</p>\n<p>Contents:<br>- Experimental data(CSV)<br>- Matlab scripts used for multi-objective optimization<br>- Parameter table (XLSX) and result data</p>\n<p>All data are provided to ensure reproducibility and transparency of the research.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "wuqiang, Wu",
+        "affiliation": null,
+        "orcid": "0009-0007-6579-8921"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "16399748"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Supplementary date and code files for Multi-objective optimization of a bi-material enhanced double-arrow honeycomb for improving load-bearing capacity and energy absorption",
+  "links": {
+    "self": "https://zenodo.org/api/records/16399749",
+    "self_html": "https://zenodo.org/records/16399749",
+    "preview_html": "https://zenodo.org/records/16399749?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.16399749",
+    "self_doi": "https://doi.org/10.5281/zenodo.16399749",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16399749",
+    "reserve_doi": "https://zenodo.org/api/records/16399749/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/16399748",
+    "parent_html": "https://zenodo.org/records/16399748",
+    "parent_doi": "https://doi.org/10.5281/zenodo.16399748",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16399748",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:16399749/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:16399749/sequence/default",
+    "files": "https://zenodo.org/api/records/16399749/files",
+    "media_files": "https://zenodo.org/api/records/16399749/media-files",
+    "latest": "https://zenodo.org/api/records/16399749/versions/latest",
+    "latest_html": "https://zenodo.org/records/16399749/latest",
+    "versions": "https://zenodo.org/api/records/16399749/versions",
+    "draft": "https://zenodo.org/api/records/16399749/draft",
+    "access_links": "https://zenodo.org/api/records/16399749/access/links",
+    "access_grants": "https://zenodo.org/api/records/16399749/access/grants",
+    "access_users": "https://zenodo.org/api/records/16399749/access/users",
+    "access_request": "https://zenodo.org/api/records/16399749/access/request",
+    "access": "https://zenodo.org/api/records/16399749/access",
+    "communities": "https://zenodo.org/api/records/16399749/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/16399749/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/16399749/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/16399749/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/16399749/quota-increase",
+    "requests": "https://zenodo.org/api/records/16399749/requests"
+  },
+  "updated": "2025-07-24T05:07:34.608869+00:00",
+  "recid": "16399749",
+  "revision": 4,
+  "files": [
+    {
+      "id": "dd4d09bc-46f2-45ed-b816-b7b30824baaf",
+      "key": "cycle1.csv",
+      "size": 213818,
+      "checksum": "md5:6fbfcf0ea1a7381e4682b7df6c455003",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle1.csv/content"
+      }
+    },
+    {
+      "id": "489b4a38-08e7-4fdd-aad7-99da89e34dbf",
+      "key": "gougutou(PLA).xlsx",
+      "size": 3519519,
+      "checksum": "md5:c565e63c8fb5de6b1794cb633368029a",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/gougutou(PLA).xlsx/content"
+      }
+    },
+    {
+      "id": "494355ac-2790-467c-9bde-55d8a04752ed",
+      "key": "cycle3.csv",
+      "size": 248269,
+      "checksum": "md5:c3ea12ca3cfdaddb85bd9fb7945c18cb",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle3.csv/content"
+      }
+    },
+    {
+      "id": "fcc0d160-cbe0-45f9-bcbc-52bfa041f5d7",
+      "key": "EDAH4_52_35(3.3).csv",
+      "size": 240723,
+      "checksum": "md5:c62ef0b9561304aa8331d4d257dcb3b6",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/EDAH4_52_35(3.3).csv/content"
+      }
+    },
+    {
+      "id": "e41c214b-71d8-4e62-9e4d-6cc07522e094",
+      "key": "EDAH_PLA_TPU(EXP).xlsx",
+      "size": 4228682,
+      "checksum": "md5:8a69c22a695dd1cea7a37199e36bf528",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/EDAH_PLA_TPU(EXP).xlsx/content"
+      }
+    },
+    {
+      "id": "d6548e17-e467-4761-abd9-78c532291bb9",
+      "key": "KRI_EDAH4.xlsx",
+      "size": 397080,
+      "checksum": "md5:86d9c14186d696d51e0e1ef3d3842e2f",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/KRI_EDAH4.xlsx/content"
+      }
+    },
+    {
+      "id": "94e63491-0d4a-462d-ad94-eea3e26fc73a",
+      "key": "KRI_EDAH_CODE.zip",
+      "size": 73892,
+      "checksum": "md5:7a0405944d3c41edf3df5e6fde54dd20",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/KRI_EDAH_CODE.zip/content"
+      }
+    },
+    {
+      "id": "3bc33bac-55f9-4b60-bb5a-6f8cce2e9e82",
+      "key": "cycle2.csv",
+      "size": 247807,
+      "checksum": "md5:fe54e993762e6e9e67f88df7e8910cd1",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle2.csv/content"
+      }
+    },
+    {
+      "id": "c43363c0-c86d-4ef1-ae37-79bf6654a462",
+      "key": "2mm每min自测狗骨头.csv",
+      "size": 1828739,
+      "checksum": "md5:b3687ae85200bacfbe3579ce63dd6c6d",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/2mm%E6%AF%8Fmin%E8%87%AA%E6%B5%8B%E7%8B%97%E9%AA%A8%E5%A4%B4.csv/content"
+      }
+    },
+    {
+      "id": "c4a1f9ae-839d-4569-b5dd-4596ac209016",
+      "key": "cycle_load.xlsx",
+      "size": 1798454,
+      "checksum": "md5:cef0d7df966dc5c9ed3e6fee13856e9e",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle_load.xlsx/content"
+      }
+    },
+    {
+      "id": "3c7e0420-eac7-4fe2-ae89-5b6d1265ac22",
+      "key": "cycle4.csv",
+      "size": 248120,
+      "checksum": "md5:7da1ac7c50ab744d4af5ac15587080bb",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle4.csv/content"
+      }
+    },
+    {
+      "id": "bb4424eb-dae9-427b-96d6-7e4416f0f45d",
+      "key": "cycle5.csv",
+      "size": 244866,
+      "checksum": "md5:a2b2e089e4df8d541986beed4c155675",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle5.csv/content"
+      }
+    },
+    {
+      "id": "9da55b22-26bf-4afd-9073-0fb462660a6a",
+      "key": "cycle6.csv",
+      "size": 251298,
+      "checksum": "md5:2cde166915e3c05361b7e5ec39a83d9f",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/cycle6.csv/content"
+      }
+    },
+    {
+      "id": "2aad65c2-9a87-45b2-9911-86d24c13c24e",
+      "key": "EDAH_PLA_TPU_1027.csv",
+      "size": 322282,
+      "checksum": "md5:0179173afcc740abfc07030cf63fe238",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/EDAH_PLA_TPU_1027.csv/content"
+      }
+    },
+    {
+      "id": "465a85e0-a5ca-457d-8eb2-687f1927e975",
+      "key": "参数化分析表格数据.xlsx",
+      "size": 265433,
+      "checksum": "md5:6d725d2a42edebc1a28e1e9987c6a0ea",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/%E5%8F%82%E6%95%B0%E5%8C%96%E5%88%86%E6%9E%90%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE.xlsx/content"
+      }
+    },
+    {
+      "id": "8505a784-8687-4e64-bc66-7a55720675ab",
+      "key": "综合_对比数据.xlsx",
+      "size": 1279425,
+      "checksum": "md5:38dc52f3fee8282ed8e75d2c7a66ea6e",
+      "links": {
+        "self": "https://zenodo.org/api/records/16399749/files/%E7%BB%BC%E5%90%88_%E5%AF%B9%E6%AF%94%E6%95%B0%E6%8D%AE.xlsx/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1371975"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 312,
+    "unique_downloads": 256,
+    "views": 55,
+    "unique_views": 43,
+    "version_downloads": 312,
+    "version_unique_downloads": 256,
+    "version_unique_views": 43,
+    "version_views": 55
+  },
+  "state": "done",
+  "submitted": true
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "source_nodes": 1000,
+  "point_budget": 33,
+  "selector": "vertical",
+  "retained_points": 33,
+  "strokes_mm": [
+    10.0,
+    20.0,
+    30.0,
+    40.0
+  ],
+  "consumer_EA_J": [
+    50.23330015117332,
+    93.0096822304466,
+    138.39559565926817,
+    183.5438350527293
+  ],
+  "actual_EA_errors_J": [
+    -0.06414934075257861,
+    0.14629375300448544,
+    0.512938159052652,
+    0.2551425785736967
+  ],
+  "stored_prefix_bound_J": 0.6649651190841596,
+  "stored_window_bound_J": 0.8146199648866272,
+  "maximum_force_error_kN": 0.20406742789968657,
+  "independent_export_checks": {
+    "delta": 0.20406742789968657,
+    "prefix": 0.6649651190842576,
+    "window": 0.8146199648866883
+  },
+  "domain_mm": [
+    0.0,
+    50.005
+  ],
+  "scope": "Independent write/read check of a 33-point force-displacement input table over the measured monotone loading branch. The domain is the source displacement interval, not an unloading law or a solver-specific point limit.",
+  "format_documentation": "https://help.3ds.com/2025/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-connelastbehav.htm"
+}

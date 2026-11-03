@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "PLA_specimens": "All 46 curves with numeric masses in the source workbook",
+  "PLA_query_strokes_mm": [
+    10.0,
+    20.0,
+    30.0,
+    40.0
+  ],
+  "PLA_interval_queries_mm": [
+    [
+      10.0,
+      20.0
+    ],
+    [
+      20.0,
+      30.0
+    ],
+    [
+      30.0,
+      40.0
+    ]
+  ],
+  "initial_window_tolerance_J": 1.0,
+  "selective_levels_J": [
+    1.0,
+    0.25,
+    0.0625
+  ],
+  "selection_rule": "Refine every response incident to any unresolved SEA interval pair across the four query strokes",
+  "remaining_overlap_rule": "After the three table budgets, request exact query-specific EA scalars for both participants in each unresolved curve-stroke comparison",
+  "maximum_points_per_table": 129,
+  "cyclic_record": "Complete S1-L1 numerical record in Zenodo10829958",
+  "cyclic_branch_rule": "Every exact reversal/dwell, no smoothing; direction and zero-work events retained",
+  "cyclic_error_budget": "0.001 times sum of absolute directed branch work, allocated in proportion to each absolute branch work"
+}

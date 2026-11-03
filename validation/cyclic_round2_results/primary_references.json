@@ -1,0 +1,68 @@
+{
+  "checked_on": "2026-11-02",
+  "Bose2006": {
+    "authors": [
+      "Prosenjit Bose",
+      "Sergio Cabello",
+      "Otfried Cheong",
+      "Joachim Gudmundsson",
+      "Marc van Kreveld",
+      "Bettina Speckmann"
+    ],
+    "title": "Area-preserving approximations of polygonal paths",
+    "journal": "Journal of Discrete Algorithms",
+    "year": 2006,
+    "volume": "4",
+    "issue": "4",
+    "pages": "554-566",
+    "doi": "10.1016/j.jda.2005.06.008",
+    "primary_publisher": "https://www.sciencedirect.com/science/article/pii/S157086670500050X",
+    "primary_author_text": "https://papers.otfried.org/pp942.pdf",
+    "verified_content": "For vertex-subset x-monotone paths, treats sum-area, max-area and difference-area objectives. These correspond to eta, xi and absolute terminal signed error. This is established area-measure literature; WorkCert does not introduce these geometric objectives."
+  },
+  "Daneshpajouh2012": {
+    "authors": [
+      "Shervin Daneshpajouh",
+      "Mohammad Ghodsi",
+      "Alireza Zarei"
+    ],
+    "title": "Computing polygonal path simplification under area measures",
+    "journal": "Graphical Models",
+    "year": 2012,
+    "volume": "74",
+    "issue": "5",
+    "pages": "283-289",
+    "doi": "10.1016/j.gmod.2012.04.006",
+    "primary_publisher": "https://www.sciencedirect.com/science/article/pii/S1524070312000264",
+    "verified_content": "Studies restricted simplifications of general simple paths under area measures; distinguishes sum-area and difference-area and uses maximum shortcut cost. It is related literature, not a directly applicable solver for the self-intersecting cyclic record or the global prefix objective."
+  },
+  "CyclicPaper2022": {
+    "authors": [
+      "Isabel González-de-León",
+      "Elide Nastri",
+      "Itsaso Arrayago",
+      "Rosario Montuori",
+      "Vincenzo Piluso",
+      "Esther Real"
+    ],
+    "title": "Experimental study on stainless steel tubular members under cyclic loading",
+    "journal": "Thin-Walled Structures",
+    "year": 2022,
+    "volume": "181",
+    "article_number": "109969",
+    "doi": "10.1016/j.tws.2022.109969",
+    "primary_author_manuscript": "https://upcommons.upc.edu/server/api/core/bitstreams/5b018c01-3dd3-4f30-9cf7-98a91b3eb37f/content",
+    "verified_content": "Section 2.4 uses stepped displacement control adapted from ANSI/AISC 341. Initial amplitude groups have six, six, six, four, two and two cycles, then two cycles per increment. Table 3 reports S1-L1 initial corner cracking at cycle 43 and failure at cycle 47. The string potentiometer measures top-end horizontal displacement; the deposited record is not a synchronized command history."
+  },
+  "CyclicDataset2024": {
+    "doi": "10.5281/zenodo.10829958",
+    "primary_repository": "https://zenodo.org/records/10829958",
+    "verified_content": "S1-L1, austenitic stainless steel 120x80x6 mm RHS, effective length 1650 mm; horizontal force from actuator and displacement from a string potentiometer at the free end."
+  },
+  "EDAH_paper": {
+    "doi": "10.1088/1361-665x/aeae7c",
+    "publisher_metadata_file": "EDAH_publisher_metadata.json",
+    "primary_metadata": "https://api.crossref.org/works/10.1088/1361-665x/aeae7c",
+    "link_evidence": "The deposited dataset title exactly names this article, and the creator ORCID matches the publisher-authenticated Wuqiang Wu ORCID. The old dataset description names its historical submission journal; cite the actual published journal from the Crossref record."
+  }
+}

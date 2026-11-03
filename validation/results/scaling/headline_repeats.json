@@ -1,0 +1,130 @@
+{
+  "signal": "synthetic analytic compression-like function; not experimental observations",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "hardware": {
+    "captured_utc": "2026-11-03T04:17:30.369397+00:00",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
+    "logical_processors": 8,
+    "physical_memory_bytes": 16843448320,
+    "physical_memory_GiB": 15.686683654785156,
+    "memory_source": "Windows GlobalMemoryStatusEx: total physical memory available to OS",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5"
+  },
+  "hardware_record": "hardware.json",
+  "method": "three independent process pairs; alternating implementation order; separate small warm-up; all construction/hash/final global check included",
+  "measurements": [
+    {
+      "implementation": "v0_1_full_scan",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 13.95474399998784,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 105,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "ae7c858069b6641b034ce8844ae8cbdef24548fd0f96f89f34b5e20de50b14c7",
+      "status": "PASS",
+      "repeat": 1
+    },
+    {
+      "implementation": "v0_2_incremental",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 0.9478996000252664,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 1,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "status": "PASS",
+      "repeat": 1
+    },
+    {
+      "implementation": "v0_2_incremental",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 1.0328165999380872,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 1,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "status": "PASS",
+      "repeat": 2
+    },
+    {
+      "implementation": "v0_1_full_scan",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 13.969629999948665,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 105,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "ae7c858069b6641b034ce8844ae8cbdef24548fd0f96f89f34b5e20de50b14c7",
+      "status": "PASS",
+      "repeat": 2
+    },
+    {
+      "implementation": "v0_1_full_scan",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 14.338092499994673,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 105,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "ae7c858069b6641b034ce8844ae8cbdef24548fd0f96f89f34b5e20de50b14c7",
+      "status": "PASS",
+      "repeat": 3
+    },
+    {
+      "implementation": "v0_2_incremental",
+      "n": 1000000,
+      "tolerance_fraction": 0.001,
+      "tolerance_kind": "window",
+      "max_points": 1025,
+      "seconds": 1.0638731999788433,
+      "retained_points": 107,
+      "tolerance_met": true,
+      "actual_window_relative": 0.0009998229113517291,
+      "global_error_evaluations": 1,
+      "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
+      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "status": "PASS",
+      "repeat": 3
+    }
+  ],
+  "summary": {
+    "v0_1_full_scan": {
+      "median_seconds": 13.969629999948665,
+      "minimum_seconds": 13.95474399998784,
+      "maximum_seconds": 14.338092499994673
+    },
+    "v0_2_incremental": {
+      "median_seconds": 1.0328165999380872,
+      "minimum_seconds": 0.9478996000252664,
+      "maximum_seconds": 1.0638731999788433
+    }
+  },
+  "median_speed_ratio": 13.52576052784791
+}

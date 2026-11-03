@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "reviewed_core_sha256": "3b4e3c8a3b75a28eddba1d19a6f7343ecf0d92e7eb28e5894a9ec22d2fdd00db",
+  "counts": {
+    "exact_rational_vertex_subsets": 1280,
+    "AVL_insert_delete_and_flat_fold_checks": 1000,
+    "independent_full_sequence_stopping_checks": 128,
+    "random_chronological_paths": 100,
+    "chronological_edges_checked": 6000,
+    "signed_peak_modes": 3
+  },
+  "package_tests_passed": 39,
+  "maximum_rational_oracle_absolute_difference": 5.684341886080802e-14,
+  "maximum_integer_path_work_difference": 0.0,
+  "scope": "Independent rational integration, AVL structural/aggregate checks, full-sequence stopping and directed chronological path coverage; source files not altered."
+}

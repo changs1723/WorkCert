@@ -1,0 +1,433 @@
+{
+  "status": "PASS",
+  "objective_scope": [
+    "minimum continuous absolute-area residual eta",
+    "minimum maximum vertical residual"
+  ],
+  "prefix_or_window_global_optimality_claimed": false,
+  "budgets": [
+    9,
+    17,
+    33,
+    65,
+    129
+  ],
+  "eligibility_ceiling": 1000,
+  "eligible_records": [
+    {
+      "curve": "metal_A_X_1.8",
+      "dataset": "CX_steel",
+      "points": 904,
+      "edge_cost_seconds": 0.36428139999043196
+    },
+    {
+      "curve": "metal_A_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 958,
+      "edge_cost_seconds": 0.4563859000336379
+    },
+    {
+      "curve": "metal_B_X_1.8",
+      "dataset": "CX_steel",
+      "points": 892,
+      "edge_cost_seconds": 0.3622533999150619
+    },
+    {
+      "curve": "metal_B_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 925,
+      "edge_cost_seconds": 0.39735640003345907
+    },
+    {
+      "curve": "metal_C_X_1.8",
+      "dataset": "CX_steel",
+      "points": 926,
+      "edge_cost_seconds": 0.40487839991692454
+    },
+    {
+      "curve": "metal_C_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 947,
+      "edge_cost_seconds": 0.4436686000553891
+    },
+    {
+      "curve": "metal_D_X_1.8",
+      "dataset": "CX_steel",
+      "points": 927,
+      "edge_cost_seconds": 0.4040442999685183
+    },
+    {
+      "curve": "metal_D_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 948,
+      "edge_cost_seconds": 0.44224150001537055
+    },
+    {
+      "curve": "metal_E_X_1.8",
+      "dataset": "CX_steel",
+      "points": 927,
+      "edge_cost_seconds": 0.4028728000121191
+    },
+    {
+      "curve": "metal_E_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 945,
+      "edge_cost_seconds": 0.4262334000086412
+    },
+    {
+      "curve": "metal_F_X_1.8",
+      "dataset": "CX_steel",
+      "points": 927,
+      "edge_cost_seconds": 0.3907749999780208
+    },
+    {
+      "curve": "metal_F_Y_1.8",
+      "dataset": "CX_steel",
+      "points": 946,
+      "edge_cost_seconds": 0.41887579998001456
+    },
+    {
+      "curve": "PLA_01",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48235760000534356
+    },
+    {
+      "curve": "PLA_02",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4974285999778658
+    },
+    {
+      "curve": "PLA_03",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48272610001731664
+    },
+    {
+      "curve": "PLA_04",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5076576999854296
+    },
+    {
+      "curve": "PLA_05",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49530339997727424
+    },
+    {
+      "curve": "PLA_06",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4842198999831453
+    },
+    {
+      "curve": "PLA_07",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49345459998585284
+    },
+    {
+      "curve": "PLA_08",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4888515999773517
+    },
+    {
+      "curve": "PLA_09",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5478084000060335
+    },
+    {
+      "curve": "PLA_10",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.6005144000519067
+    },
+    {
+      "curve": "PLA_11",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5433934000320733
+    },
+    {
+      "curve": "PLA_12",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5540786000201479
+    },
+    {
+      "curve": "PLA_13",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49674139998387545
+    },
+    {
+      "curve": "PLA_14",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4888771999394521
+    },
+    {
+      "curve": "PLA_15",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48576160008087754
+    },
+    {
+      "curve": "PLA_16",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.486146799987182
+    },
+    {
+      "curve": "PLA_17",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5016981000080705
+    },
+    {
+      "curve": "PLA_18",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4921262999996543
+    },
+    {
+      "curve": "PLA_19",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5006437000120059
+    },
+    {
+      "curve": "PLA_20",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4888011000584811
+    },
+    {
+      "curve": "PLA_21",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.495575699955225
+    },
+    {
+      "curve": "PLA_22",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4965941000264138
+    },
+    {
+      "curve": "PLA_23",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4937719999579713
+    },
+    {
+      "curve": "PLA_24",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5064262000378221
+    },
+    {
+      "curve": "PLA_25",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48856689990498126
+    },
+    {
+      "curve": "PLA_26",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5117931000422686
+    },
+    {
+      "curve": "PLA_27",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48358540004119277
+    },
+    {
+      "curve": "PLA_28",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4937591999769211
+    },
+    {
+      "curve": "PLA_29",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4931728000519797
+    },
+    {
+      "curve": "PLA_30",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4957810000050813
+    },
+    {
+      "curve": "PLA_31",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4899077999871224
+    },
+    {
+      "curve": "PLA_32",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4925914000486955
+    },
+    {
+      "curve": "PLA_33",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48865180008579046
+    },
+    {
+      "curve": "PLA_34",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4839875000761822
+    },
+    {
+      "curve": "PLA_35",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4957554000429809
+    },
+    {
+      "curve": "PLA_36",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.48472369997762144
+    },
+    {
+      "curve": "PLA_37",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5151655999943614
+    },
+    {
+      "curve": "PLA_38",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5771577000850812
+    },
+    {
+      "curve": "PLA_39",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5597365000285208
+    },
+    {
+      "curve": "PLA_40",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49819439998827875
+    },
+    {
+      "curve": "PLA_N-SCMC-1",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49464719998650253
+    },
+    {
+      "curve": "PLA_N-SCMC-2",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.4900146999862045
+    },
+    {
+      "curve": "PLA_N-SCMC-3",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49391950003337115
+    },
+    {
+      "curve": "PLA_STWC-1",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49715099995955825
+    },
+    {
+      "curve": "PLA_STWC-2",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.49385099997743964
+    },
+    {
+      "curve": "PLA_STWC-3",
+      "dataset": "PLA_plus",
+      "points": 1000,
+      "edge_cost_seconds": 0.5060149000491947
+    }
+  ],
+  "excluded_records": [
+    {
+      "curve": "metal_A_X_0.1",
+      "points": 3263,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_A_Y_0.1",
+      "points": 1732,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_B_X_0.1",
+      "points": 3223,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_B_Y_0.1",
+      "points": 1672,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_C_X_0.1",
+      "points": 3350,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_C_Y_0.1",
+      "points": 1712,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_D_X_0.1",
+      "points": 3346,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_D_Y_0.1",
+      "points": 1712,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_E_X_0.1",
+      "points": 3347,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_F_X_0.1",
+      "points": 3348,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "metal_F_Y_0.1",
+      "points": 1709,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    },
+    {
+      "curve": "EDAH",
+      "points": 7817,
+      "reason": "Original reference exceeds predefined n<=1000 exact-DP ceiling"
+    }
+  ],
+  "brute_force_comparisons": 66,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "numba": "0.68.1",
+  "script_sha256": "26f144f29478dd6e32cac42024efa9e6c7ff961605699ebba7bcdbf3523cc15c"
+}

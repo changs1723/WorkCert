@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "actual_tables_hashed": 3660,
+  "reference_hashes_checked": 3660,
+  "edge_cost_pairs_checked_against_global_certificate": 224,
+  "brute_force_full_certificate_candidates": 478,
+  "optimal_objectives_checked_against_full_certificate_enumeration": 66,
+  "objective_scope": [
+    "eta",
+    "maximum vertical residual"
+  ],
+  "prefix_or_window_optimality_claimed": false,
+  "core_sha256": "3b4e3c8a3b75a28eddba1d19a6f7343ecf0d92e7eb28e5894a9ec22d2fdd00db",
+  "baseline_selector_sha256": "8772abb6605661e3a47a6c963fad26af5893ccacb5a701209ed1e110398bd28e"
+}

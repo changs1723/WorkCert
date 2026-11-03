@@ -1,0 +1,512 @@
+{
+  "doi": "10.17632/v7p6y654ft.4",
+  "version": 4,
+  "metadata_sha256": "9a501223d82207e7317d386074b9a0418cc150dcf16f819c497c033edb0e3af9",
+  "license": {
+    "id": "01d9c749-3c4d-4431-9df3-620b2dcfe144",
+    "description": "You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "category": "Creative",
+    "short_name": "CC BY 4.0",
+    "full_name": "Creative Commons Attribution 4.0 International"
+  },
+  "downloaded": [
+    {
+      "filename": "01.xlsx",
+      "source_id": "1a73ed96-1581-4634-8152-f441f3863093",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/1a73ed96-1581-4634-8152-f441f3863093/file_downloaded",
+      "bytes": 39758,
+      "sha256": "1c97b78a12125c656757f7d59c1bd220b38dd0b8f8c8c4c271e13a6fb3ef42bc",
+      "expected_sha256": "1c97b78a12125c656757f7d59c1bd220b38dd0b8f8c8c4c271e13a6fb3ef42bc",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/01.xlsx"
+    },
+    {
+      "filename": "02.xlsx",
+      "source_id": "2df4e764-d80f-4f22-a175-037361170e69",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/2df4e764-d80f-4f22-a175-037361170e69/file_downloaded",
+      "bytes": 32478,
+      "sha256": "f0d682aa2dbaa947ae48f2b687d745c254cab5358df7977909a4801d4c9070fc",
+      "expected_sha256": "f0d682aa2dbaa947ae48f2b687d745c254cab5358df7977909a4801d4c9070fc",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/02.xlsx"
+    },
+    {
+      "filename": "03.xlsx",
+      "source_id": "b387e7c6-bb8e-4585-ae72-cac8defe512b",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/b387e7c6-bb8e-4585-ae72-cac8defe512b/file_downloaded",
+      "bytes": 31482,
+      "sha256": "f960b66aff972a9e14df720440051dec71e15a1b9d07e30ced7f77518e0ce351",
+      "expected_sha256": "f960b66aff972a9e14df720440051dec71e15a1b9d07e30ced7f77518e0ce351",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/03.xlsx"
+    },
+    {
+      "filename": "04.xlsx",
+      "source_id": "a2499a12-805e-4454-9149-ebf00f2f9d91",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/a2499a12-805e-4454-9149-ebf00f2f9d91/file_downloaded",
+      "bytes": 32355,
+      "sha256": "8752b9c86288beec33bf53c2d8dcb77d8c5b2dff0e47089414165661944bb25b",
+      "expected_sha256": "8752b9c86288beec33bf53c2d8dcb77d8c5b2dff0e47089414165661944bb25b",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/04.xlsx"
+    },
+    {
+      "filename": "05.xlsx",
+      "source_id": "71082dcd-212d-4e1e-9a52-faa612f41e87",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/71082dcd-212d-4e1e-9a52-faa612f41e87/file_downloaded",
+      "bytes": 32484,
+      "sha256": "c798be9cd10c2e81bf4c6b72c467c0da066b96f4d972fbc6cd6639d4144cd31b",
+      "expected_sha256": "c798be9cd10c2e81bf4c6b72c467c0da066b96f4d972fbc6cd6639d4144cd31b",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/05.xlsx"
+    },
+    {
+      "filename": "06.xlsx",
+      "source_id": "93fefe5a-e076-4c25-bb71-87b7776afd3b",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/93fefe5a-e076-4c25-bb71-87b7776afd3b/file_downloaded",
+      "bytes": 32293,
+      "sha256": "e9feff722bc19a760115c6d25a0100db88ea9187ef225c6330364dacfd5ca112",
+      "expected_sha256": "e9feff722bc19a760115c6d25a0100db88ea9187ef225c6330364dacfd5ca112",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/06.xlsx"
+    },
+    {
+      "filename": "07.xlsx",
+      "source_id": "6a24b72b-05fe-4327-b9e3-49680f7b8b0c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/6a24b72b-05fe-4327-b9e3-49680f7b8b0c/file_downloaded",
+      "bytes": 32051,
+      "sha256": "6fd49050326ea93047812d04c8a2a6fd02dd00ffdfdfbb6cf89d044a2e008158",
+      "expected_sha256": "6fd49050326ea93047812d04c8a2a6fd02dd00ffdfdfbb6cf89d044a2e008158",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/07.xlsx"
+    },
+    {
+      "filename": "08.xlsx",
+      "source_id": "dc3537a9-a56d-4b8a-9a7d-29aac55e4188",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/dc3537a9-a56d-4b8a-9a7d-29aac55e4188/file_downloaded",
+      "bytes": 32105,
+      "sha256": "7dd1b63d6fb40798009cdb67dae7645768c3a118e51944f01f6f7f74c278f14d",
+      "expected_sha256": "7dd1b63d6fb40798009cdb67dae7645768c3a118e51944f01f6f7f74c278f14d",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/08.xlsx"
+    },
+    {
+      "filename": "09.xlsx",
+      "source_id": "36f48277-54ce-4f24-92f3-4aaf95d1bee1",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/36f48277-54ce-4f24-92f3-4aaf95d1bee1/file_downloaded",
+      "bytes": 32204,
+      "sha256": "947a3533492fd0c250cd88d30792f1beafc9d7d2d45cd94cf585eff5927f1f70",
+      "expected_sha256": "947a3533492fd0c250cd88d30792f1beafc9d7d2d45cd94cf585eff5927f1f70",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/09.xlsx"
+    },
+    {
+      "filename": "10.xlsx",
+      "source_id": "877e4cfd-d7e3-4de0-850f-e1abf64c7273",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/877e4cfd-d7e3-4de0-850f-e1abf64c7273/file_downloaded",
+      "bytes": 32451,
+      "sha256": "f13f57c163c83598338c916a34f3f57519f1d9c7622a46c4a1be21ad22aca739",
+      "expected_sha256": "f13f57c163c83598338c916a34f3f57519f1d9c7622a46c4a1be21ad22aca739",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/10.xlsx"
+    },
+    {
+      "filename": "11.xlsx",
+      "source_id": "e7dc24c4-39c3-4bb0-8c8e-f7db6302f914",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/e7dc24c4-39c3-4bb0-8c8e-f7db6302f914/file_downloaded",
+      "bytes": 32144,
+      "sha256": "e91bdc75111b5b4d9d1394db70be15882eb3fbee120bb138bbbb83716bc67586",
+      "expected_sha256": "e91bdc75111b5b4d9d1394db70be15882eb3fbee120bb138bbbb83716bc67586",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/11.xlsx"
+    },
+    {
+      "filename": "12.xlsx",
+      "source_id": "f8b7096c-7795-4d6f-bcec-83a5ac11c6bb",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/f8b7096c-7795-4d6f-bcec-83a5ac11c6bb/file_downloaded",
+      "bytes": 32337,
+      "sha256": "46bae31167834cfcb291217c7ee695931598d4dec0a8d31c0540074c339b5fc1",
+      "expected_sha256": "46bae31167834cfcb291217c7ee695931598d4dec0a8d31c0540074c339b5fc1",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/12.xlsx"
+    },
+    {
+      "filename": "13.xlsx",
+      "source_id": "cc4e25d6-b9ce-4322-b2cb-77376bf06d93",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/cc4e25d6-b9ce-4322-b2cb-77376bf06d93/file_downloaded",
+      "bytes": 32079,
+      "sha256": "fc9249da77d7c55a607e9dd7264db86003ef7f121c89621a61926a39bd14a9a8",
+      "expected_sha256": "fc9249da77d7c55a607e9dd7264db86003ef7f121c89621a61926a39bd14a9a8",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/13.xlsx"
+    },
+    {
+      "filename": "14.xlsx",
+      "source_id": "544e26c1-3394-4d88-81ae-89ba5a8857f7",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/544e26c1-3394-4d88-81ae-89ba5a8857f7/file_downloaded",
+      "bytes": 32304,
+      "sha256": "ff5745f7eb299a20762a66f2bbcd25ef7961bfb19269cdf47462198bfe7a9959",
+      "expected_sha256": "ff5745f7eb299a20762a66f2bbcd25ef7961bfb19269cdf47462198bfe7a9959",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/14.xlsx"
+    },
+    {
+      "filename": "15.xlsx",
+      "source_id": "98771c2f-f8ea-47a7-806a-dbff626bb027",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/98771c2f-f8ea-47a7-806a-dbff626bb027/file_downloaded",
+      "bytes": 32186,
+      "sha256": "324f7d61beea966e0a3b023355e9ac664227a9369cda45da1ffab7076db595f0",
+      "expected_sha256": "324f7d61beea966e0a3b023355e9ac664227a9369cda45da1ffab7076db595f0",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/15.xlsx"
+    },
+    {
+      "filename": "16.xlsx",
+      "source_id": "bda631ca-a8f7-462b-883c-2543fcdd485c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/bda631ca-a8f7-462b-883c-2543fcdd485c/file_downloaded",
+      "bytes": 31619,
+      "sha256": "e872382fe49339fbc4d60fc4144537295a0f750d39b6fe09f47ab30da1620626",
+      "expected_sha256": "e872382fe49339fbc4d60fc4144537295a0f750d39b6fe09f47ab30da1620626",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/16.xlsx"
+    },
+    {
+      "filename": "17.xlsx",
+      "source_id": "936c6feb-dbc9-401e-b78c-1b3c9b787ea1",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/936c6feb-dbc9-401e-b78c-1b3c9b787ea1/file_downloaded",
+      "bytes": 31595,
+      "sha256": "818620ac5cbb639fe440d5c20a5b9e1fd8be19fa95a5b877182653b4f199a56c",
+      "expected_sha256": "818620ac5cbb639fe440d5c20a5b9e1fd8be19fa95a5b877182653b4f199a56c",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/17.xlsx"
+    },
+    {
+      "filename": "18.xlsx",
+      "source_id": "2f5d88af-9e94-4624-9cb8-8adc969faafa",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/2f5d88af-9e94-4624-9cb8-8adc969faafa/file_downloaded",
+      "bytes": 32573,
+      "sha256": "64fddc72732c22d6ce4c356dd04bd2aa4f5fbe0ba6ab1e2de937b3f315decafd",
+      "expected_sha256": "64fddc72732c22d6ce4c356dd04bd2aa4f5fbe0ba6ab1e2de937b3f315decafd",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/18.xlsx"
+    },
+    {
+      "filename": "19.xlsx",
+      "source_id": "cc84fe7a-c02d-4112-864e-f15f3e7b4439",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/cc84fe7a-c02d-4112-864e-f15f3e7b4439/file_downloaded",
+      "bytes": 32182,
+      "sha256": "b7f59758df4262e3bb231dfbc353bbb9e610e29b41ca6701128b0bb74673e38d",
+      "expected_sha256": "b7f59758df4262e3bb231dfbc353bbb9e610e29b41ca6701128b0bb74673e38d",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/19.xlsx"
+    },
+    {
+      "filename": "20.xlsx",
+      "source_id": "28b05145-3fe7-4a60-9a4d-4a949aae8a5f",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/28b05145-3fe7-4a60-9a4d-4a949aae8a5f/file_downloaded",
+      "bytes": 32339,
+      "sha256": "481acc0b19f1b91de69ac1570faeabc3516eafd56a5d3d039bda364209d664b5",
+      "expected_sha256": "481acc0b19f1b91de69ac1570faeabc3516eafd56a5d3d039bda364209d664b5",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/20.xlsx"
+    },
+    {
+      "filename": "21.xlsx",
+      "source_id": "22d5cc2a-3d88-4853-b39a-3ed470a0215c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/22d5cc2a-3d88-4853-b39a-3ed470a0215c/file_downloaded",
+      "bytes": 32218,
+      "sha256": "0ef95064dcecbbe4a55c43febafc8b305571b508867164210bf37b45b696cbd7",
+      "expected_sha256": "0ef95064dcecbbe4a55c43febafc8b305571b508867164210bf37b45b696cbd7",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/21.xlsx"
+    },
+    {
+      "filename": "22.xlsx",
+      "source_id": "fc1eca28-18f0-43a5-9f65-ee0dbb2615ca",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/fc1eca28-18f0-43a5-9f65-ee0dbb2615ca/file_downloaded",
+      "bytes": 32338,
+      "sha256": "0ff0391ab07d9928127c2c7edf9e0373b490d8c03db04c877c3180500b8dd6c9",
+      "expected_sha256": "0ff0391ab07d9928127c2c7edf9e0373b490d8c03db04c877c3180500b8dd6c9",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/22.xlsx"
+    },
+    {
+      "filename": "23.xlsx",
+      "source_id": "353d342c-401b-4571-8080-b1b2da3faa30",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/353d342c-401b-4571-8080-b1b2da3faa30/file_downloaded",
+      "bytes": 32274,
+      "sha256": "31aef53b032e47fba9ae805b563d9e4434cd03befd5f8e4bbc9977db36cf1014",
+      "expected_sha256": "31aef53b032e47fba9ae805b563d9e4434cd03befd5f8e4bbc9977db36cf1014",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/23.xlsx"
+    },
+    {
+      "filename": "24.xlsx",
+      "source_id": "7e689d36-697b-4dc6-b3f2-4b77f263e28a",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/7e689d36-697b-4dc6-b3f2-4b77f263e28a/file_downloaded",
+      "bytes": 32261,
+      "sha256": "f419da03d69ccadd68f0964bd98db5b901a7738170596194d20a258e6bae50ea",
+      "expected_sha256": "f419da03d69ccadd68f0964bd98db5b901a7738170596194d20a258e6bae50ea",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/24.xlsx"
+    },
+    {
+      "filename": "25.xlsx",
+      "source_id": "0713e42c-7b71-4a95-b8a5-de642d14d554",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/0713e42c-7b71-4a95-b8a5-de642d14d554/file_downloaded",
+      "bytes": 31837,
+      "sha256": "1b239c496227c472272d478440e16621b7c84619c965bb12c064326b8a3587b4",
+      "expected_sha256": "1b239c496227c472272d478440e16621b7c84619c965bb12c064326b8a3587b4",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/25.xlsx"
+    },
+    {
+      "filename": "26.xlsx",
+      "source_id": "b68386c1-a75a-43b7-91f5-cbd8c599f8f8",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/b68386c1-a75a-43b7-91f5-cbd8c599f8f8/file_downloaded",
+      "bytes": 31386,
+      "sha256": "ee8734e86138ae9aace3b7325e96d270eb5df3a46b66b5f56f35e91711ee23c5",
+      "expected_sha256": "ee8734e86138ae9aace3b7325e96d270eb5df3a46b66b5f56f35e91711ee23c5",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/26.xlsx"
+    },
+    {
+      "filename": "27.xlsx",
+      "source_id": "7f5926c3-0b1f-4d71-99ed-a8fa2b06b273",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/7f5926c3-0b1f-4d71-99ed-a8fa2b06b273/file_downloaded",
+      "bytes": 32109,
+      "sha256": "e228807062326755842aea5ff949fcebe5423f54efac2c875004c38bae477dee",
+      "expected_sha256": "e228807062326755842aea5ff949fcebe5423f54efac2c875004c38bae477dee",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/27.xlsx"
+    },
+    {
+      "filename": "28.xlsx",
+      "source_id": "8f596b5b-bdc9-4c6e-bf22-e43864cb4e9b",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/8f596b5b-bdc9-4c6e-bf22-e43864cb4e9b/file_downloaded",
+      "bytes": 32158,
+      "sha256": "9cd281a848e6cec9cad5ea42d993c5dfda3398328c0674d6cf01b25748790c0c",
+      "expected_sha256": "9cd281a848e6cec9cad5ea42d993c5dfda3398328c0674d6cf01b25748790c0c",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/28.xlsx"
+    },
+    {
+      "filename": "29.xlsx",
+      "source_id": "461cb06a-b6d1-4dfc-b1c9-3ece8a3d745c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/461cb06a-b6d1-4dfc-b1c9-3ece8a3d745c/file_downloaded",
+      "bytes": 32146,
+      "sha256": "c4a43d2538e17a2623e10dea6f5feb52c8a5bb40f21b32691b4bdfb2a5a203c0",
+      "expected_sha256": "c4a43d2538e17a2623e10dea6f5feb52c8a5bb40f21b32691b4bdfb2a5a203c0",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/29.xlsx"
+    },
+    {
+      "filename": "30.xlsx",
+      "source_id": "77f8e6fb-d399-4e72-a5e5-00a329751814",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/77f8e6fb-d399-4e72-a5e5-00a329751814/file_downloaded",
+      "bytes": 32357,
+      "sha256": "d4652afdeb882bd1a6880e691d58d6f0ebbffdaa963c3c06a87046320cfefc33",
+      "expected_sha256": "d4652afdeb882bd1a6880e691d58d6f0ebbffdaa963c3c06a87046320cfefc33",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/30.xlsx"
+    },
+    {
+      "filename": "31.xlsx",
+      "source_id": "a22e3323-d0d1-4f1c-9563-4b874d6aac84",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/a22e3323-d0d1-4f1c-9563-4b874d6aac84/file_downloaded",
+      "bytes": 31658,
+      "sha256": "a98d13fb22940f05d0d53f8288e8e17c54a95468387bbe28587b80e15558ce65",
+      "expected_sha256": "a98d13fb22940f05d0d53f8288e8e17c54a95468387bbe28587b80e15558ce65",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/31.xlsx"
+    },
+    {
+      "filename": "32.xlsx",
+      "source_id": "27b24cd0-b649-46ea-af7f-0a1e175fd129",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/27b24cd0-b649-46ea-af7f-0a1e175fd129/file_downloaded",
+      "bytes": 31954,
+      "sha256": "45bd283ff172751118386231b364e88b8c8b245d28c2d5245e6bcfca7206ac93",
+      "expected_sha256": "45bd283ff172751118386231b364e88b8c8b245d28c2d5245e6bcfca7206ac93",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/32.xlsx"
+    },
+    {
+      "filename": "33.xlsx",
+      "source_id": "42fa252d-9277-46b3-9097-ee8738948091",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/42fa252d-9277-46b3-9097-ee8738948091/file_downloaded",
+      "bytes": 32157,
+      "sha256": "f2f4264c664b0e8bd1bd87c9af417ffa90c9f08dd9ceb1fff30c2cbfc1e3948f",
+      "expected_sha256": "f2f4264c664b0e8bd1bd87c9af417ffa90c9f08dd9ceb1fff30c2cbfc1e3948f",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/33.xlsx"
+    },
+    {
+      "filename": "34.xlsx",
+      "source_id": "b3d23471-9067-4a4a-b19b-d7042329b491",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/b3d23471-9067-4a4a-b19b-d7042329b491/file_downloaded",
+      "bytes": 32297,
+      "sha256": "e56829721e2310fec4c002f4fc42767c814a41061e1cd648dbe67b24072b6452",
+      "expected_sha256": "e56829721e2310fec4c002f4fc42767c814a41061e1cd648dbe67b24072b6452",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/34.xlsx"
+    },
+    {
+      "filename": "35.xlsx",
+      "source_id": "13148565-da89-4096-9b66-1c86b678a3b4",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/13148565-da89-4096-9b66-1c86b678a3b4/file_downloaded",
+      "bytes": 31276,
+      "sha256": "6a726d177fe872418956a007919d8cbe938866ed8d6bd179b5173a02104357c2",
+      "expected_sha256": "6a726d177fe872418956a007919d8cbe938866ed8d6bd179b5173a02104357c2",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/35.xlsx"
+    },
+    {
+      "filename": "36.xlsx",
+      "source_id": "87e29c6f-742f-4519-9285-fd9eb3ff5e18",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/87e29c6f-742f-4519-9285-fd9eb3ff5e18/file_downloaded",
+      "bytes": 32386,
+      "sha256": "e48634f76182efeb47dcdc84ffb51a7102cb95c360e33e428c05444b69e258e3",
+      "expected_sha256": "e48634f76182efeb47dcdc84ffb51a7102cb95c360e33e428c05444b69e258e3",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/36.xlsx"
+    },
+    {
+      "filename": "37.xlsx",
+      "source_id": "0b78fb79-b100-48f6-b2cf-f44f1149887d",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/0b78fb79-b100-48f6-b2cf-f44f1149887d/file_downloaded",
+      "bytes": 32259,
+      "sha256": "14a327ef4aa20789bc5b901cf37d125715f89a2ad7982efa9675294d2a68ea2c",
+      "expected_sha256": "14a327ef4aa20789bc5b901cf37d125715f89a2ad7982efa9675294d2a68ea2c",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/37.xlsx"
+    },
+    {
+      "filename": "38.xlsx",
+      "source_id": "700f2d44-9a68-4a5d-9bde-feb55f98b452",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/700f2d44-9a68-4a5d-9bde-feb55f98b452/file_downloaded",
+      "bytes": 32394,
+      "sha256": "34504cde448b3325633455f9ac4d5f1baf0e7d3cc6e1086a1e622dd3ba41c339",
+      "expected_sha256": "34504cde448b3325633455f9ac4d5f1baf0e7d3cc6e1086a1e622dd3ba41c339",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/38.xlsx"
+    },
+    {
+      "filename": "39.xlsx",
+      "source_id": "4619fbf1-f4a4-446b-958a-663d74b90b40",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/4619fbf1-f4a4-446b-958a-663d74b90b40/file_downloaded",
+      "bytes": 32333,
+      "sha256": "20a70f7c2cc991f1096a5db03f5e9892859acb537f4ddff42fd91dd655532013",
+      "expected_sha256": "20a70f7c2cc991f1096a5db03f5e9892859acb537f4ddff42fd91dd655532013",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/39.xlsx"
+    },
+    {
+      "filename": "40.xlsx",
+      "source_id": "b5a27977-549a-4ef6-b5bb-f8f257b7e71f",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/b5a27977-549a-4ef6-b5bb-f8f257b7e71f/file_downloaded",
+      "bytes": 31826,
+      "sha256": "34dcb4de17342376bf17bd1da01fe51b93ad02a9b5e5eb32209c73be09690749",
+      "expected_sha256": "34dcb4de17342376bf17bd1da01fe51b93ad02a9b5e5eb32209c73be09690749",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/40.xlsx"
+    },
+    {
+      "filename": "Geometric_Parameters.xlsx",
+      "source_id": "46cf4bb1-9efd-4fb3-ae2c-fd57501b0d9e",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/46cf4bb1-9efd-4fb3-ae2c-fd57501b0d9e/file_downloaded",
+      "bytes": 13969,
+      "sha256": "656c5a7129290d75b7a0841ef8928b532560b5de6dc01b9dda648d774e0ce3de",
+      "expected_sha256": "656c5a7129290d75b7a0841ef8928b532560b5de6dc01b9dda648d774e0ce3de",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/Geometric_Parameters.xlsx"
+    },
+    {
+      "filename": "H-1.xlsx",
+      "source_id": "f974d7e6-4916-4a32-bdc2-1cb6c41f7686",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/f974d7e6-4916-4a32-bdc2-1cb6c41f7686/file_downloaded",
+      "bytes": 17895,
+      "sha256": "213ac45e2533af68a603c73623d95a46d88e2820c3a586b802402782a6f018c5",
+      "expected_sha256": "213ac45e2533af68a603c73623d95a46d88e2820c3a586b802402782a6f018c5",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/H-1.xlsx"
+    },
+    {
+      "filename": "H-2.xlsx",
+      "source_id": "00ac7a42-4b4e-4cc0-8ee5-b0c2f32df024",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/00ac7a42-4b4e-4cc0-8ee5-b0c2f32df024/file_downloaded",
+      "bytes": 18239,
+      "sha256": "d513536b7d6bff683a3fad45f2543c999372cff34b499224ecff05b42e724b73",
+      "expected_sha256": "d513536b7d6bff683a3fad45f2543c999372cff34b499224ecff05b42e724b73",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/H-2.xlsx"
+    },
+    {
+      "filename": "H-3.xlsx",
+      "source_id": "2697b720-30e0-4863-b928-efabb5de7369",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/2697b720-30e0-4863-b928-efabb5de7369/file_downloaded",
+      "bytes": 18236,
+      "sha256": "fa2d4c7888210cf2af6e4e55f18d35b3b836ebe7cfce2d105e60fd780b660824",
+      "expected_sha256": "fa2d4c7888210cf2af6e4e55f18d35b3b836ebe7cfce2d105e60fd780b660824",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/H-3.xlsx"
+    },
+    {
+      "filename": "Mass_and_Crash_Indicators.xlsx",
+      "source_id": "b306a9a3-b1b6-4a95-9dd0-e6ed268f23c4",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/b306a9a3-b1b6-4a95-9dd0-e6ed268f23c4/file_downloaded",
+      "bytes": 16987,
+      "sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+      "expected_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/Mass_and_Crash_Indicators.xlsx"
+    },
+    {
+      "filename": "Mechanical_Properties.xlsx",
+      "source_id": "ad3dba59-2bea-4d3b-af7c-84c64224bb1c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/ad3dba59-2bea-4d3b-af7c-84c64224bb1c/file_downloaded",
+      "bytes": 14473,
+      "sha256": "f6b6219af64c795c687b0cc2e08706d4c66071adf42496f6eb387053cc4f178f",
+      "expected_sha256": "f6b6219af64c795c687b0cc2e08706d4c66071adf42496f6eb387053cc4f178f",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/Mechanical_Properties.xlsx"
+    },
+    {
+      "filename": "N-SCMC-1.xlsx",
+      "source_id": "0a3fa7de-9132-4924-9cc5-5875ab4e1fa1",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/0a3fa7de-9132-4924-9cc5-5875ab4e1fa1/file_downloaded",
+      "bytes": 32390,
+      "sha256": "a75d6ce585b2499f93999972969a3132fe5bee0e52808c9b2b79e3435554b831",
+      "expected_sha256": "a75d6ce585b2499f93999972969a3132fe5bee0e52808c9b2b79e3435554b831",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/N-SCMC-1.xlsx"
+    },
+    {
+      "filename": "N-SCMC-2.xlsx",
+      "source_id": "0150da0c-cb59-4566-9289-4d1dd791bddc",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/0150da0c-cb59-4566-9289-4d1dd791bddc/file_downloaded",
+      "bytes": 32234,
+      "sha256": "8ca221c30d7fbb397c512366eabcaa33289e012ba57624c77bcbc79de7fa32fe",
+      "expected_sha256": "8ca221c30d7fbb397c512366eabcaa33289e012ba57624c77bcbc79de7fa32fe",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/N-SCMC-2.xlsx"
+    },
+    {
+      "filename": "N-SCMC-3.xlsx",
+      "source_id": "d795dcb2-c64b-4df6-b2aa-7e7698a07561",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/d795dcb2-c64b-4df6-b2aa-7e7698a07561/file_downloaded",
+      "bytes": 32234,
+      "sha256": "618a4b4154ae644d0979277b440c80811351a41e1adfaaf47e791204953f661c",
+      "expected_sha256": "618a4b4154ae644d0979277b440c80811351a41e1adfaaf47e791204953f661c",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/N-SCMC-3.xlsx"
+    },
+    {
+      "filename": "STWC-1.xlsx",
+      "source_id": "4a528c95-a447-4afd-8ef5-186e84d6bd4b",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/4a528c95-a447-4afd-8ef5-186e84d6bd4b/file_downloaded",
+      "bytes": 32438,
+      "sha256": "24f9dfdb0439ff3813797a5e291c74f504af7e766ff60beed5531d1e3ec0a4b8",
+      "expected_sha256": "24f9dfdb0439ff3813797a5e291c74f504af7e766ff60beed5531d1e3ec0a4b8",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/STWC-1.xlsx"
+    },
+    {
+      "filename": "STWC-2.xlsx",
+      "source_id": "98ce46f5-5134-43ac-81e9-49875203a59c",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/98ce46f5-5134-43ac-81e9-49875203a59c/file_downloaded",
+      "bytes": 32237,
+      "sha256": "3fe7bf039e84234e72f2b473faaa90f534febd0271d791a162840c6a64f83d31",
+      "expected_sha256": "3fe7bf039e84234e72f2b473faaa90f534febd0271d791a162840c6a64f83d31",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/STWC-2.xlsx"
+    },
+    {
+      "filename": "STWC-3.xlsx",
+      "source_id": "88951dad-dcef-484a-88b4-090dac573bad",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/88951dad-dcef-484a-88b4-090dac573bad/file_downloaded",
+      "bytes": 32186,
+      "sha256": "40d8b03731e6cc35c83f1dca5db60eaa17514df82f71f5eca6751f6b019630bc",
+      "expected_sha256": "40d8b03731e6cc35c83f1dca5db60eaa17514df82f71f5eca6751f6b019630bc",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/STWC-3.xlsx"
+    },
+    {
+      "filename": "V-1.xlsx",
+      "source_id": "29a54408-c888-4ee5-9ad4-52c4ab2582e7",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/29a54408-c888-4ee5-9ad4-52c4ab2582e7/file_downloaded",
+      "bytes": 17596,
+      "sha256": "352ffc92935df33e4981973e91e4eb72ee010f36ad93e0bd7e326d2352f0855d",
+      "expected_sha256": "352ffc92935df33e4981973e91e4eb72ee010f36ad93e0bd7e326d2352f0855d",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/V-1.xlsx"
+    },
+    {
+      "filename": "V-2.xlsx",
+      "source_id": "cb8211b5-9a08-4565-a726-25fc45791dfb",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/cb8211b5-9a08-4565-a726-25fc45791dfb/file_downloaded",
+      "bytes": 17570,
+      "sha256": "2a621cd9e018ba499b2668ef7cc3744e9112acb8c6ba15c2d3acb73177cf2a8a",
+      "expected_sha256": "2a621cd9e018ba499b2668ef7cc3744e9112acb8c6ba15c2d3acb73177cf2a8a",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/V-2.xlsx"
+    },
+    {
+      "filename": "V-3.xlsx",
+      "source_id": "2ea609e4-46cf-486d-b481-7e1fff3d4051",
+      "source_url": "https://data.mendeley.com/public-files/datasets/v7p6y654ft/files/2ea609e4-46cf-486d-b481-7e1fff3d4051/file_downloaded",
+      "bytes": 17392,
+      "sha256": "aba89e1b9a38f7076cc808e3d3d79b5d41506999697bad3aaf0dd3c51c08ddd2",
+      "expected_sha256": "aba89e1b9a38f7076cc808e3d3d79b5d41506999697bad3aaf0dd3c51c08ddd2",
+      "local_path": "data/raw/pla_v7p6y654ft_v4/V-3.xlsx"
+    }
+  ],
+  "repository_file_count": 603,
+  "selection": "All XLSX files; geometric STL and deformation photographs omitted"
+}

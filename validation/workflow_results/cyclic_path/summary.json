@@ -1,0 +1,30 @@
+{
+  "software_version": "0.2.0",
+  "dataset_doi": "10.5281/zenodo.10829958",
+  "license": "CC BY 4.0",
+  "source_xlsx_sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
+  "source_points": 125157,
+  "negative_force_observations": 63063,
+  "branches": 2971,
+  "zero_displacement_events": 1984,
+  "ascending_branches": 1532,
+  "descending_branches": 1439,
+  "longest_branch": {
+    "index": 2696,
+    "source_points": 2555
+  },
+  "sum_retained_branch_nodes": 13886,
+  "point_cap_per_branch": 129,
+  "branches_unmet_cap": 1,
+  "reference_signed_path_work_J": 92033.957666125,
+  "reference_sum_of_branch_work_J": 92033.95766612502,
+  "reduced_signed_path_work_J": 91965.42908509009,
+  "signed_terminal_error_J": 68.52858103491599,
+  "maximum_continuous_chronological_work_error_J": 68.7197146269448,
+  "sum_branch_window_bounds_J": 104.47783323401313,
+  "requested_aggregate_error_budget_J": 152.336218511145,
+  "allocation_scale_sum_abs_branch_work_J": 152336.218511145,
+  "all_global_error_checks_pass": true,
+  "all_chronological_intervals_covered_once": true,
+  "interpretation": "Signed chronological path integral F dx; not interpreted as crash energy or closed-cycle dissipation. No smoothing, contact alignment or reversal threshold is applied."
+}

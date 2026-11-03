@@ -1,0 +1,12 @@
+# Scientific reproduction environment; Python 3.12 recommended.
+# WorkCert's runtime installation remains NumPy-only.
+numpy==2.3.5
+numba==0.68.1
+llvmlite==0.50.0
+rdp==0.8
+simplification==2.0.0
+pandas>=2.0
+openpyxl>=3.1
+scipy>=1.10
+matplotlib>=3.7
+Pillow>=8

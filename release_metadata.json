@@ -1,0 +1,28 @@
+{
+  "name": "WorkCert",
+  "version": "0.2.0",
+  "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+  "authors": [
+    "Saisai Hou",
+    "Yunzhi Zhu",
+    "Sen Zhang"
+  ],
+  "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China",
+  "corresponding_author": "Sen Zhang",
+  "email": "szhang@niit.edu.cn",
+  "license": "MIT",
+  "credit": {
+    "Saisai Hou": "Conceptualization, Methodology, Software, Formal analysis, Visualization, Writing – original draft",
+    "Yunzhi Zhu": "Methodology, Validation, Data curation, Writing – review & editing",
+    "Sen Zhang": "Conceptualization, Supervision, Resources, Writing – review & editing, Project administration"
+  },
+  "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.",
+  "funding": "This work was supported by the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province (Grant No. 25KJD110002).",
+  "repository_url": "https://github.com/changs1723/WorkCert",
+  "permanent_code_url": null,
+  "documentation_url": null,
+  "repository_verified": false,
+  "publication_status": "unpublished candidate",
+  "author_test_artifacts_archived": true,
+  "author_verification_record": "validation/author_verification_2026-11-03.json"
+}

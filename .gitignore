@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+*.egg-info/
+build/
+dist/
+.venv/
+.baseline_env/
+.validation/
+qa/
+research/
+repository/
+manuscript/
+figures/

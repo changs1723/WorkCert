@@ -1,0 +1,12 @@
+{
+  "rdp_native_tolerance_agreements": 80,
+  "vw_native_tolerance_agreements": 80,
+  "comparisons_per_native_method": 80,
+  "vw_disagreements": [],
+  "native_versions": {
+    "rdp": "0.8",
+    "simplification": "2.0.0"
+  },
+  "fixed_budget_endpoint_peak_checks": 200,
+  "scope": "Native tolerance mode cross-checks; fixed-budget RDP is explicitly a best-first adaptation"
+}

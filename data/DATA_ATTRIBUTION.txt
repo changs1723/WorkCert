@@ -1,0 +1,47 @@
+Benchmark source attribution
+
+All three archives permit reuse under Creative Commons Attribution 4.0.
+Numerical references and software examples retain credit to the source creators.
+
+1. Shahriar Afkhami (2022), Additively manufactured metal honeycombs,
+Mendeley Data version 1, DOI 10.17632/8bxkdw4nfw.1.
+The 23 CX-steel references use these preparation rules: compression positive,
+contact at the first of three consecutive samples at or above 0.5 kN,
+chronological record-high displacement, endpoint 0.4 of the nominal
+loaded CAD dimension, dense PL interpolation, no smoothing. Twelve Z/TestInput
+records and E_Y_0.1 were excluded during preparation. The retained reference
+CSVs are included under reference_inputs/.
+Associated experiment: Afkhami et al., Thin-Walled Structures 180 (2022), 109864,
+DOI 10.1016/j.tws.2022.109864. Descriptor: Data in Brief 46 (2023), 108857,
+DOI 10.1016/j.dib.2022.108857.
+
+2. wuqiang, Wu (creator name as deposited, 2025), Supplementary date and code
+files for Multi-objective optimization of a bi-material enhanced double-arrow
+honeycomb for improving load-bearing capacity and energy absorption,
+Zenodo version 1, DOI 10.5281/zenodo.16399749.
+The EDAH4_52_35(3.3).csv force-travel record is used in its entirety: 7817 signed
+force observations, force converted from N to kN, initial travel subtracted.
+The prepared source CSV is retained under reference_inputs/ without modification.
+
+3. Ahmed Saber (2026), Quasi-static compression test dataset of
+sinusoidally-corrugated multi-cell PLA+ energy absorbers fabricated by fused
+deposition modeling (FDM), Mendeley Data version 4, DOI 10.17632/v7p6y654ft.4.
+Forty design records (01--40), three nominal SCMC records and three straight-wall
+tube records are used. Each source workbook contains an archived 1000-point
+curve explicitly labelled Displacement (mm), Force (kN). All 55 XLSX files were
+downloaded and verified against the repository SHA256 values. Nine auxiliary
+material/geometry/indicator workbooks are retained but excluded from compression
+curve counts. Photographs and STL files are outside this numerical subset.
+All signed force values are retained. The entire available loading window is
+used; no smoothing, clipping, contact threshold or resampling is introduced.
+Related article as linked by the repository: DOI 10.1515/mt-2026-0038.
+
+The PLA+ inputs are archived 1000-point tabulations. Source and prepared-reference
+hashes, units, node counts and eligibility checks are in metadata/reference_audit.json.
+All error certificates concern the corresponding PL numerical references.
+Original steel and EDAH acquisition files and official repository metadata are
+included byte-for-byte under source_context/. Its manifest links these sources
+to the fixed reference inputs and records the preparation rules and exclusions.
+The original experiments and data remain credited to the source contributors.
+
+Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/

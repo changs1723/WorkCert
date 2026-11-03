@@ -1,0 +1,218 @@
+{
+  "DOI": "10.1088/1361-665x/aeae7c",
+  "title": [
+    "Multi-objective optimization of a bi-material enhanced double-arrow honeycomb for improving load-bearing capacity and energy absorption"
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0007-6579-8921",
+      "authenticated-orcid": true,
+      "given": "Wuqiang",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Northwestern Polytechnical University"
+        },
+        {
+          "name": "Northwestern Polytechnical University"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "formal-analysis",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "investigation",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "validation",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "writing-original-draft",
+          "vocabulary": "credit"
+        }
+      ]
+    },
+    {
+      "given": "Xinwei",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Northwestern Polytechnical University"
+        },
+        {
+          "name": "Northwestern Polytechnical University"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "investigation",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "writing-review-editing",
+          "vocabulary": "credit"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-3770-4824",
+      "authenticated-orcid": true,
+      "given": "Yongbin",
+      "family": "Ma",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Northwestern Polytechnical University"
+        },
+        {
+          "name": "Northwestern Polytechnical University"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "conceptualization",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "funding-acquisition",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "investigation",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "writing-review-editing",
+          "vocabulary": "credit"
+        }
+      ]
+    },
+    {
+      "given": "Junling",
+      "family": "Fan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Aircraft Strength Research Institute of China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "writing-review-editing",
+          "vocabulary": "credit"
+        }
+      ]
+    },
+    {
+      "given": "Pengfei",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Aircraft Strength Research Institute of China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "investigation",
+          "vocabulary": "credit"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-9116-1509",
+      "authenticated-orcid": true,
+      "given": "Zichen",
+      "family": "Deng",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Northwestern Polytechnical University"
+        },
+        {
+          "name": "Northwestern Polytechnical University"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        },
+        {
+          "role": "project-administration",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "supervision",
+          "vocabulary": "credit"
+        },
+        {
+          "role": "writing-review-editing",
+          "vocabulary": "credit"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Smart Materials and Structures"
+  ],
+  "volume": "35",
+  "issue": "10",
+  "page": "105031",
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        1
+      ]
+    ]
+  },
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        14
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        1
+      ]
+    ]
+  },
+  "URL": "https://doi.org/10.1088/1361-665x/aeae7c",
+  "metadata_source": "https://api.crossref.org/works/10.1088/1361-665x/aeae7c",
+  "checked_on": "2026-11-02"
+}

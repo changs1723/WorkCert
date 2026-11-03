@@ -1,0 +1,46 @@
+{
+  "record_date": "2026-11-03",
+  "timezone": "Asia/Taipei",
+  "record_type": "author_activity_confirmation",
+  "source": "Explicit user confirmation in the Codex conversation",
+  "user_statement": "新测试由Hou借助 Codex 编写和执行，并人工核验。",
+  "confirmed_author": "Saisai Hou",
+  "confirmed_activities": {
+    "additional_tests_written_with_Codex_assistance": true,
+    "additional_tests_executed_with_Codex_assistance": true,
+    "additional_tests_manually_verified": true
+  },
+  "files": [
+    {
+      "path": "software/tests/hou_support.py",
+      "sha256": "bbc6a6104c520561fe1a851f2c89c97ef084da0738ef0b930206365a2801512b"
+    },
+    {
+      "path": "software/tests/test_hou_analytic.py",
+      "sha256": "a60090e54e61a8498cb9729acc19c1545cbd228c1856c2770c65358b163ab09f"
+    },
+    {
+      "path": "software/tests/test_hou_cycles_io.py",
+      "sha256": "a77c843a9b3f72a98ba5ab8e96c10295d0d6e41378da2ed3fd365c19f6335132"
+    },
+    {
+      "path": "software/tests/test_hou_paper.py",
+      "sha256": "68102149d781bfa15478c882d09b63f6d89a0661320315b783dd5e5a66b6a17a"
+    }
+  ],
+  "additional_test_methods": 28,
+  "additional_recorded_checks": 759,
+  "automated_evidence": {
+    "record_directory": "validation/hou_acceptance",
+    "summary": "validation/hou_acceptance/summary.json",
+    "baseline_tests_passed": 39,
+    "additional_tests_passed": 28,
+    "total_tests_passed": 67,
+    "failed_or_skipped_tests": 0,
+    "environment": "Windows 10.0.19045; Python 3.12.14; NumPy 2.3.5; installed WorkCert 0.2.0",
+    "evidence_scope": "Local recorded run; remote CI is a separate verification stage"
+  },
+  "scope": "Confirmation of Hou's work on the 28 additional tests; final approval of the revised manuscript by all three authors is recorded separately.",
+  "prior_record_relation": "Updates the 2026-11-02 status that author test artifacts were not yet archived. Earlier raw logs, derivations and their hashes are preserved as originally produced.",
+  "independence_definition": "Expected values are derived independently from mathematical definitions and source inputs, without using WorkCert as the expected-value provider."
+}
