@@ -128,6 +128,7 @@ jobs:
         with:
           name: release-distribution-acceptance
           path: .release-checks/*/acceptance/
+          include-hidden-files: true
           if-no-files-found: error
       - name: Archive the complete scientific source
         run: |
