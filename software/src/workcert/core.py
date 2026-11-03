@@ -480,14 +480,42 @@ class ReducedResponse:
 
         A file checksum detects accidental changes. This method establishes
         consistency with the numerical reference available to the caller.
+        Source identity is exact; numerical metadata allow source-scaled
+        float64 roundoff between platforms without changing the stored bounds.
         """
         x, f = _aligned(x, force)
+        if self.certificate.reference_points != len(x):
+            raise ValueError("Reference size mismatch")
         if _reference_hash(x, f) != self.certificate.reference_sha256:
             raise ValueError("Reference checksum mismatch")
         if not np.array_equal(self.x, x[self.indices]) or not np.array_equal(self.force, f[self.indices]):
             raise ValueError("Retained coordinates do not match their reference indices")
-        if certify(x, f, self.indices) != self.certificate:
-            raise ValueError("Certificate does not match the supplied reference")
+        expected = certify(x, f, self.indices)
+        if expected != self.certificate:
+            # Interpolation kernels may contract multiply/add operations on
+            # one platform but not another. Keep source identity exact and
+            # compare only the arithmetic metadata with same-unit allowances.
+            # Scaling forces before quadrature avoids overflowing a large
+            # absolute-force integral whose epsilon-scaled value is finite.
+            try:
+                with np.errstate(over="raise", invalid="raise"):
+                    scaled_force = (128 * np.finfo(float).eps) * np.abs(f)
+                    force_allowance = float(np.max(scaled_force))
+                    work_allowance = float(np.sum(np.diff(x) *
+                        (0.5 * scaled_force[:-1] + 0.5 * scaled_force[1:])))
+            except FloatingPointError as error:
+                raise ValueError("Reference verification roundoff allowance exceeds float64 limits") from error
+            if not np.isfinite(force_allowance) or not np.isfinite(work_allowance):
+                raise ValueError("Reference verification requires finite roundoff allowances")
+            for name in ("eta", "xi", "prefix", "window", "delta",
+                         "signed_terminal_error", "reference_work",
+                         "min_cumulative_error", "max_cumulative_error"):
+                actual, stored = getattr(expected, name), getattr(self.certificate, name)
+                allowance = force_allowance if name == "delta" else work_allowance
+                if abs(actual - stored) > allowance:
+                    raise ValueError("Certificate field %r does not match the supplied reference: "
+                                     "recomputed=%r, stored=%r, roundoff_allowance=%r" %
+                                     (name, actual, stored, allowance))
         if (self._metadata.get("retained_global_maximum") is not None and
                 self._metadata["retained_global_maximum"] != _retained_global_maximum(x, f, self.indices)):
             raise ValueError("Global-maximum summary does not match the supplied reference")

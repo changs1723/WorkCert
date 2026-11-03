@@ -68,6 +68,20 @@ Read-only `x`, `force` and `indices` arrays have immutable backing storage.
 - `save(path)` and `ReducedResponse.load(path)` persist and validate a response.
 - `verify_reference(x,force)` checks source hash, selected values and errors.
 
+Reference verification keeps the SHA-256, reference size, retained coordinates
+and peak summary exact. Recomputed float64 error fields may differ in their
+last bits across interpolation implementations. With `alpha = 128*eps64`,
+the numeric comparison allows `alpha*max(abs(force))` for `delta` and
+`sum(diff(x)*(alpha*abs(force[:-1])/2 + alpha*abs(force[1:])/2))` for each
+work-valued field. The forces are scaled before quadrature to avoid an
+unnecessary overflow. Both allowances depend only on the supplied reference,
+use the corresponding native units, and vanish for a zero-force source.
+Nonfinite allowances are rejected. A mismatch identifies the field, recomputed
+value, stored value and allowance. Verification never rewrites the table.
+This is an arithmetic-consistency allowance, not an engineering tolerance,
+measurement uncertainty or a rigorous outward-rounded error bound. Payload
+checksums and source hashes retain their exact comparisons.
+
 The schema remains `workcert.response/1.0`; version-0.1.0 files can be loaded.
 Payload checksums detect accidental corruption and do not authenticate a source.
 

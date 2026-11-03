@@ -195,7 +195,8 @@ in `validation/hou_acceptance`. Saisai Hou wrote and executed the additional
 tests with Codex assistance and manually verified them, as confirmed by the
 author on 2026-11-03. The complete repository records this confirmation in
 `validation/author_verification_2026-11-03.json`, separately from the unchanged
-automated run logs. The updated remote CI has not run.
+automated run logs. The historical local logs are separate from current
+results in GitHub Actions.
 
 ## License, citation and migration
 

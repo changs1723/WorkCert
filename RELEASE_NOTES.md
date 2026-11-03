@@ -13,7 +13,13 @@ Earlier local wheel and source-distribution installations passed the original 39
 with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4. The tagged
 publication workflow creates release assets after the Linux, macOS and Windows
 matrix passes for Python 3.10–3.14. Actual run conclusions are available in
-GitHub Actions. The updated acceptance workflow has not been run remotely.
+GitHub Actions.
+
+Reference verification now accepts source-scaled float64 roundoff in numeric
+metadata across platforms while keeping source hashes, node counts, retained
+coordinates and peak summaries exact. Regression subcases cover unit scaling,
+last-bit changes and substantive corruption. Failed-test tracebacks are also
+printed directly in Actions, alongside the archived logs.
 
 The complete-repository suite now includes 28 additional independent numerical
 acceptance tests (67 total). On 2026-11-03 all 67 passed locally using installed

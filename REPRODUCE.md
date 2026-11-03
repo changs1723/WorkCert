@@ -52,7 +52,7 @@ normally 1e-12 absolute; real-data work uses 1e-9 J and other indicators use
 The archived 2026-11-03 run is in `validation/hou_acceptance`: 39 original plus
 28 new tests passed, with 759 new comparisons and no failures or skips, on
 Windows/Python 3.12.14/NumPy 2.3.5/installed WorkCert 0.2.0. The new evidence
-covers that environment only; updated remote CI has not run. This acceptance
+covers that environment only; current remote results are reported in GitHub Actions. This acceptance
 does not rerun all 580 DP controls or million-point timing experiments.
 Saisai Hou wrote and executed the additional tests with Codex assistance and
 manually verified them, as confirmed by the author on 2026-11-03. This author

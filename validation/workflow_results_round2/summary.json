@@ -1,6 +1,6 @@
 {
   "software_version": "0.2.0",
-  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+  "core_sha256": "3b4e3c8a3b75a28eddba1d19a6f7343ecf0d92e7eb28e5894a9ec22d2fdd00db",
   "client_sha256": "252b177487a693667dd89a58b63f43f99cc5469aa5dffc49723dbb42a5932cd0",
   "source_workbook": "data/raw/pla_v7p6y654ft_v4/Mass_and_Crash_Indicators.xlsx",
   "source_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",

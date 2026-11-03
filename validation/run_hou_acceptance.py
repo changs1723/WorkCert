@@ -98,6 +98,12 @@ def main():
         summary[phase]=dict(tests_run=result.testsRun,failures=len(result.failures),errors=len(result.errors),skipped=len(result.skipped),status=status)
         summary['tests_run']+=result.testsRun
         if status!='PASS':summary['status']='FAIL'
+        # Surface the actual traceback in CI, as well as keeping the full
+        # immutable log artifact. A bare exit code hides the failing assertion.
+        if status!='PASS':
+            for case in result.cases:
+                if case['status']!='PASS':
+                    print(case['status']+': '+case['test']+'\n'+case['detail'],flush=True)
         cases.extend(dict(phase=phase,**row) for row in result.cases)
         print(phase+': '+json.dumps(summary[phase]),flush=True)
     with (out/'case_summary.csv').open('w',newline='',encoding='utf-8-sig') as stream:

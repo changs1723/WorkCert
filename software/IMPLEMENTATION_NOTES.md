@@ -24,6 +24,20 @@ which prevents mixing loading and unloading tables with the same domain.
 external selector's indices. No universal preference among selectors is built
 into the API; choosing a method is explicit.
 
+Cross-platform source verification separates identity from arithmetic. The
+reference SHA-256, size, retained values and source-peak summary must match
+exactly. The nine float64 error fields use explicit source-based comparison
+allowances because fused and unfused interpolation can produce different
+last bits. For alpha=128*float64 epsilon, the force allowance is
+alpha*max|F_i|; the work allowance is the trapezoidal sum of alpha*|F_i| over
+the reference coordinates. Scaling the forces first avoids an avoidable
+overflow. No one-unit floor or library-default relative tolerance is used.
+Allowances must be finite and are zero for a zero-force source. Exact metadata
+take a fast path; accepted roundoff does not change the stored certificate.
+This comparison establishes numerical consistency, not a rigorous forward-
+error certificate or producer authenticity. The computation of errors and
+query values is unchanged.
+
 The 39 numerical/CLI/persistence/branch/peak/geometric tests pass for installed wheel and source
 distributions on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and
 3.14.7/2.5.4. The 3.10 and 3.14 virtual environments use independently installed

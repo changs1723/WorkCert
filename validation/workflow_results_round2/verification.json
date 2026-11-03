@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+  "core_sha256": "3b4e3c8a3b75a28eddba1d19a6f7343ecf0d92e7eb28e5894a9ec22d2fdd00db",
   "tables_hashed_and_source_verified": 46,
   "client_contract_quantities_checked": 3128,
   "exact_peak_query_checks": 61,
