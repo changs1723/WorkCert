@@ -10,7 +10,25 @@ def main():
     assert installed['version']=='0.2.0'
     counts={r[a]['tests_passed'] for r in installed['runtimes'] for a in ('wheel','sdist')}
     assert len(counts)==1
-    test_count=next(iter(counts))
+    original_test_count=next(iter(counts))
+    acceptance_dir=ROOT/'qa/hou_acceptance'
+    if not (acceptance_dir/'summary.json').exists():
+        acceptance_dir=ROOT/'validation/hou_acceptance'
+    acceptance=json.loads((acceptance_dir/'summary.json').read_text(encoding='utf8'))
+    acceptance_env=json.loads((acceptance_dir/'environment.json').read_text(encoding='utf8'))
+    assert acceptance['status']=='PASS'
+    assert acceptance['baseline']['tests_run']==original_test_count
+    assert acceptance['baseline']['skipped']==acceptance['independent']['skipped']==0
+    assert acceptance['failed_checks']==0
+    test_count=acceptance['tests_run']
+    assert test_count==original_test_count+acceptance['independent']['tests_run']
+    acceptance_sentence=(
+        'The combined %d-test suite passed locally on Windows with Python/NumPy %s/%s and installed WorkCert %s; '
+        'the additional suite recorded %d individual comparisons without failures or skips. '
+        'Derivations and logs accompany the source under '
+        r'\path{validation/hou_acceptance}.'
+        % (test_count,acceptance_env['python'].split()[0],acceptance_env['numpy'],
+           acceptance_env['workcert'],acceptance['total_checks']))
     h=read('validation/results/scaling/headline_repeats.json')
     assert tuple(int(v) for v in h['python'].split()[0].split('.')[:2])>=(3,10)
     old=h['summary']['v0_1_full_scan'];new=h['summary']['v0_2_incremental']
@@ -22,7 +40,11 @@ def main():
     else:
         ci_sentence='The supplied CI configuration targets Linux, macOS and Windows with Python 3.10--3.14. Remote CI has not yet run for this revision.'
     values={'package_tests':test_count,
-            'tested_platform_statement':'Wheel and source-distribution installations pass all tests on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4. The 3.12 environment reuses its preinstalled NumPy; the other two use independently installed dependencies.',
+            'original_package_tests':original_test_count,
+            'independent_acceptance_tests':acceptance['independent']['tests_run'],
+            'independent_acceptance_checks':acceptance['total_checks'],
+            'independent_acceptance_statement':acceptance_sentence,
+            'tested_platform_statement':'Earlier wheel and source-distribution installations passed the original 39 tests on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4. The 3.12 environment reuses its preinstalled NumPy; the other two use independently installed dependencies.',
             'ci_statement':ci_sentence,'ci_status':ci_data['status'],
             'headline_old_median_seconds':old['median_seconds'],'headline_old_min_seconds':old['minimum_seconds'],
             'headline_old_max_seconds':old['maximum_seconds'],'headline_new_median_seconds':new['median_seconds'],

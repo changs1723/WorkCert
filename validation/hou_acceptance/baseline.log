@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-11-03T11:01:22.299680+08:00",
+  "command": [
+    "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2\\software\\.validation\\round2_20261102\\py312_wheel\\Scripts\\python.exe",
+    "softwarex_v0_2/validation/run_hou_acceptance.py",
+    "--output",
+    "softwarex_v0_2/qa/hou_acceptance"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2\\software\\.validation\\round2_20261102\\py312_wheel\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "numpy": "2.3.5",
+  "numpy_path": "C:\\Users\\chang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\numpy\\__init__.py",
+  "workcert": "0.2.0",
+  "distribution_version": "0.2.0",
+  "import_path": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2\\software\\.validation\\round2_20261102\\py312_wheel\\Lib\\site-packages\\workcert\\__init__.py",
+  "research_root": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2",
+  "source_hashes": {
+    "cli.py": {
+      "workspace": "cf985236a94eb9065c1ceb66a3b7f0b5db22534a54a8f8f9f5a4a1fcc72ae0c6",
+      "installed": "cf985236a94eb9065c1ceb66a3b7f0b5db22534a54a8f8f9f5a4a1fcc72ae0c6"
+    },
+    "core.py": {
+      "workspace": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "installed": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed"
+    },
+    "interop.py": {
+      "workspace": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+      "installed": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff"
+    },
+    "preprocessing.py": {
+      "workspace": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb",
+      "installed": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb"
+    },
+    "selectors.py": {
+      "workspace": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+      "installed": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d"
+    },
+    "__init__.py": {
+      "workspace": "b5145eef5fafb073972ffc7790ecfd471e1f606eea62e6b0edf94a124c2dc95a",
+      "installed": "b5145eef5fafb073972ffc7790ecfd471e1f606eea62e6b0edf94a124c2dc95a"
+    },
+    "__main__.py": {
+      "workspace": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "installed": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
+    }
+  },
+  "test_hashes": {
+    "hou_support.py": "bbc6a6104c520561fe1a851f2c89c97ef084da0738ef0b930206365a2801512b",
+    "test_hou_analytic.py": "a60090e54e61a8498cb9729acc19c1545cbd228c1856c2770c65358b163ab09f",
+    "test_hou_cycles_io.py": "a77c843a9b3f72a98ba5ab8e96c10295d0d6e41378da2ed3fd365c19f6335132",
+    "test_hou_paper.py": "68102149d781bfa15478c882d09b63f6d89a0661320315b783dd5e5a66b6a17a",
+    "test_interop.py": "a8bcead1e493936171ae5ac6bafa610af6399324af1c698c7326aa45dc52ecf8",
+    "test_revision.py": "4a4edce8e1e18dae5ddc61fb7033bab75a527e47a549817bde16ff3263a1b04e",
+    "test_round2.py": "057baee23201d96f2b779ec79a9019fe32931afcbd08a8e95d6db2b0336593be",
+    "test_workcert.py": "55c39a1a9981109b4d6a7eee15d775645d326083b68cf7974c4af3c54d5951f8",
+    "validation/run_hou_acceptance.py": "e9783b051e3331ccdc316221dafde13614e2c2b78de427adef9b0284d3415198",
+    "examples/query_exchange.py": "252b177487a693667dd89a58b63f43f99cc5469aa5dffc49723dbb42a5932cd0",
+    "examples/compose_branch_errors.py": "d3587a82126c046bbb84b7f805d4d5c492dd6b9e2b6956f7504f5ef007eceeec"
+  }
+}
+test_affine_force_and_nonzero_origin (test_workcert.AnalyticTests.test_affine_force_and_nonzero_origin) ... ok
+test_cancellation_and_two_sided_window (test_workcert.AnalyticTests.test_cancellation_and_two_sided_window) ... ok
+test_interior_stationary_point_not_missed (test_workcert.AnalyticTests.test_interior_stationary_point_not_missed) ... ok
+test_large_signed_background_near_zero_terminal_work (test_workcert.AnalyticTests.test_large_signed_background_near_zero_terminal_work) ... ok
+test_one_sign_error_has_exact_equal_bounds (test_workcert.AnalyticTests.test_one_sign_error_has_exact_equal_bounds) ... ok
+test_peak_and_nonmonotone_hierarchy (test_workcert.AnalyticTests.test_peak_and_nonmonotone_hierarchy) ... ok
+test_random_certificates_against_dense_independent_quadrature (test_workcert.AnalyticTests.test_random_certificates_against_dense_independent_quadrature) ... ok
+test_random_window_queries_obey_bound (test_workcert.AnalyticTests.test_random_window_queries_obey_bound) ... ok
+test_shift_invariance_and_signed_normalization (test_workcert.AnalyticTests.test_shift_invariance_and_signed_normalization) ... ok
+test_uniform_and_full_reproduction (test_workcert.AnalyticTests.test_uniform_and_full_reproduction) ... ok
+test_units_preserve_native_numeric_product (test_workcert.AnalyticTests.test_units_preserve_native_numeric_product) ... ok
+test_bad_csv_and_missing_file (test_workcert.CommandLineTests.test_bad_csv_and_missing_file) ... ok
+test_complete_csv_reduce_query_verify (test_workcert.CommandLineTests.test_complete_csv_reduce_query_verify) ... ok
+test_invalid_inputs (test_workcert.InputAndPersistenceTests.test_invalid_inputs) ... ok
+test_query_domains_and_shapes (test_workcert.InputAndPersistenceTests.test_query_domains_and_shapes) ... ok
+test_readonly_arrays_and_metadata_copy (test_workcert.InputAndPersistenceTests.test_readonly_arrays_and_metadata_copy) ... ok
+test_save_load_reference_and_corruption (test_workcert.InputAndPersistenceTests.test_save_load_reference_and_corruption) ... ok
+test_zero_work_requires_absolute_tolerance (test_workcert.InputAndPersistenceTests.test_zero_work_requires_absolute_tolerance) ... ok
+test_branch_invalid_input_rejected (test_revision.RevisionTests.test_branch_invalid_input_rejected) ... ok
+test_closed_hysteresis_and_descending_queries (test_revision.RevisionTests.test_closed_hysteresis_and_descending_queries) ... ok
+test_dwell_transitions_preserve_force_jump_and_work (test_revision.RevisionTests.test_dwell_transitions_preserve_force_jump_and_work) ... ok
+test_incremental_handles_cancellation_and_full_budget (test_revision.RevisionTests.test_incremental_handles_cancellation_and_full_budget) ... ok
+test_incremental_stops_at_first_verified_current_error (test_revision.RevisionTests.test_incremental_stops_at_first_verified_current_error) ... ok
+test_loading_and_unloading_tables_cannot_be_confused (test_revision.RevisionTests.test_loading_and_unloading_tables_cannot_be_confused) ... ok
+test_required_license_alias_is_identical (test_revision.RevisionTests.test_required_license_alias_is_identical) ... ok
+test_selector_must_be_explicit (test_revision.RevisionTests.test_selector_must_be_explicit) ... ok
+test_sign_aware_peak_modes (test_revision.RevisionTests.test_sign_aware_peak_modes) ... ok
+test_units_are_unassigned_until_labelled (test_revision.RevisionTests.test_units_are_unassigned_until_labelled) ... ok
+test_arbitrary_subset_matches_independent_error_evaluation (test_interop.ExternalSelectionTests.test_arbitrary_subset_matches_independent_error_evaluation) ... ok
+test_endpoint_integer_and_provenance_validation (test_interop.ExternalSelectionTests.test_endpoint_integer_and_provenance_validation) ... ok
+test_external_table_survives_portable_roundtrip (test_interop.ExternalSelectionTests.test_external_table_survives_portable_roundtrip) ... ok
+test_exact_coordinate_adapter_accepts_vertices_and_rejects_projection (test_round2.GeometricSelectorTests.test_exact_coordinate_adapter_accepts_vertices_and_rejects_projection) ... ok
+test_vw_anchor_modes_and_fixed_budget_only (test_round2.GeometricSelectorTests.test_vw_anchor_modes_and_fixed_budget_only) ... ok
+test_vw_is_available_from_CLI (test_round2.GeometricSelectorTests.test_vw_is_available_from_CLI) ... ok
+test_vw_matches_independent_exhaustive_triangle_removal (test_round2.GeometricSelectorTests.test_vw_matches_independent_exhaustive_triangle_removal) ... ok
+test_new_peak_summary_roundtrip_and_old_missing_summary (test_round2.QueryPeakTests.test_new_peak_summary_roundtrip_and_old_missing_summary) ... ok
+test_peak_bounds_cover_signed_reference_before_and_after_peak (test_round2.QueryPeakTests.test_peak_bounds_cover_signed_reference_before_and_after_peak) ... ok
+test_peak_summary_validation_and_source_recheck (test_round2.QueryPeakTests.test_peak_summary_validation_and_source_recheck) ... ok
+test_preserved_peak_makes_late_CFE_denominator_exact (test_round2.QueryPeakTests.test_preserved_peak_makes_late_CFE_denominator_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 3.150s
+
+OK

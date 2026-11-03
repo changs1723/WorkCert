@@ -86,14 +86,19 @@ def selectors():
     keys=['work','vertical','rdp','vw','uniform_peak','uniform'];cohorts=['CX_steel','EDAH','PLA_plus']
     matrix=np.asarray([[summary[c]['at33'][m]['window_error_percent'] for m in keys] for c in cohorts])
     gaps=pd.read_csv(ROOT/'validation/results_v02/optimality_gaps.csv')
-    fig,axes=plt.subplots(1,2,figsize=(7,3.35),constrained_layout=True)
+    fig,axes=plt.subplots(1,2,figsize=(7,3.35),constrained_layout=True,
+                          gridspec_kw={'width_ratios':[1.18,1]})
     ax=axes[0];im=ax.imshow(matrix,cmap='Blues',norm=LogNorm(vmin=matrix.min()*.85,vmax=matrix.max()*1.2),aspect='auto')
     for i in range(3):
         for j in range(6):ax.text(j,i,'%.3f'%matrix[i,j],ha='center',va='center',fontsize=8,color='white' if matrix[i,j]>np.sqrt(matrix.min()*matrix.max()) else '#102a3a')
-    ax.set(xticks=range(6),xticklabels=[LABEL[k] for k in keys],yticks=range(3),yticklabels=['CX steel (23)','EDAH (1)','PLA+ (46)'],title='(a) Median interval-work error (%)')
-    ax.tick_params(axis='x',rotation=35)
+    tick_labels={**LABEL,'uniform_peak':'Uniform\n+ peak'}
+    ax.set(xticks=range(6),xticklabels=[tick_labels[k] for k in keys],yticks=range(3),yticklabels=['CX steel (23)','EDAH (1)','PLA+ (46)'],title='(a) Median interval-work error (%)')
+    ax.tick_params(axis='x',rotation=0,labelsize=8)
+    for label in ax.get_xticklabels():
+        label.set_ha('center')
     bar=fig.colorbar(im,ax=ax,fraction=.045,pad=.03,label='Error (%)')
     bar.set_ticks([.15,.3,.6,1.2]);bar.ax.yaxis.set_major_formatter(FuncFormatter(lambda v,p:'%g'%v))
+    bar.ax.minorticks_off()
     ax=axes[1]
     # Field names are recorded in the comparator's data schema.
     methodcol='method' if 'method' in gaps else 'greedy_method'
@@ -104,8 +109,10 @@ def selectors():
     bp=ax.boxplot(data,positions=np.arange(1,6),widths=.55,patch_artist=True,showfliers=True)
     for patch,k in zip(bp['boxes'],keys):patch.set(facecolor=COL[k],alpha=.6)
     ax.axhline(1,color='#555555',lw=.9,ls='--')
-    ax.set(xticks=range(1,6),xticklabels=[LABEL[k] for k in keys],ylabel=r'Area cost / exact optimum $\eta^*$',title='(b) Matched area objective (58 records)',ylim=(.8,max(max(d) for d in data)*1.08))
-    ax.tick_params(axis='x',rotation=35)
+    ax.set(xticks=range(1,6),xticklabels=[tick_labels[k] for k in keys],ylabel=r'Area cost / exact optimum $\eta^*$',title='(b) Matched area objective (58 records)',ylim=(.8,max(max(d) for d in data)*1.08))
+    ax.tick_params(axis='x',rotation=0,labelsize=8)
+    for label in ax.get_xticklabels():
+        label.set_ha('center')
     export(fig,'fig03_selectors')
 
 def stopping_scaling():

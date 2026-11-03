@@ -22,5 +22,7 @@
   "permanent_code_url": null,
   "documentation_url": null,
   "repository_verified": false,
-  "publication_status": "unpublished candidate"
+  "publication_status": "unpublished candidate",
+  "author_test_artifacts_archived": true,
+  "author_verification_record": "validation/author_verification_2026-11-03.json"
 }

@@ -11,3 +11,4 @@ release_validation.json
 
 # Release evidence is versioned separately from the distribution archives.
 !release_validation.json
+!release_validation_round3.json

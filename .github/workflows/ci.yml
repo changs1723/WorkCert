@@ -10,20 +10,24 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python: ['3.10', '3.11', '3.12', '3.13', '3.14']
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: software
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python }}
       - name: Install the source package
-        run: python -m pip install .
+        run: python -m pip install ./software
       - name: Check installed location
         run: python -c "import workcert; print(workcert.__version__, workcert.__file__)"
-      - name: Run numerical, branch, persistence and CLI tests
-        run: python -m unittest discover -s tests -v
+      - name: Run the original 39 checks and independent acceptance separately
+        run: python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_ci
+      - name: Preserve numerical acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: acceptance-${{ matrix.os }}-py${{ matrix.python }}
+          path: validation/hou_acceptance_ci/
+          if-no-files-found: error
       - name: Check CLI version
         run: python -m workcert --version
   release:
@@ -57,15 +61,8 @@ jobs:
           version = metadata["project"]["version"]
           if os.environ["GITHUB_REF_NAME"] != "v" + version:
               raise RuntimeError("The release tag does not match the package version")
-          local = json.loads((root / "software/release_validation.json").read_text())
-          expected_counts = {runtime[kind]["tests_passed"]
-                             for runtime in local["runtimes"]
-                             for kind in ("wheel", "sdist")}
-          if len(expected_counts) != 1:
-              raise RuntimeError("Inconsistent frozen test counts")
-          expected_tests = expected_counts.pop()
-          if expected_tests < 31:
-              raise RuntimeError("Update the frozen validation evidence for this release")
+          # release_validation.json describes the original 39-test historical runs.
+          # Current counts come from the separately recorded acceptance phases.
           source_core_hash = hashlib.sha256(
               (root / "software/src/workcert/core.py").read_bytes()).hexdigest()
           candidates = {
@@ -94,14 +91,17 @@ jobs:
                   raise RuntimeError("Installed artifact differs from the tagged source")
               if "site-packages" not in probe["module"]:
                   raise RuntimeError("Tests must import the installed distribution")
-              test_code = """import sys, unittest
-          suite = unittest.TestLoader().discover('software/tests')
-          if suite.countTestCases() != EXPECTED_TESTS:
-              raise RuntimeError('Unexpected test suite count')
-          result = unittest.TextTestRunner(verbosity=2).run(suite)
-          sys.exit(0 if result.wasSuccessful() else 1)
-          """
-              subprocess.run([str(python), "-c", test_code.replace("EXPECTED_TESTS", str(expected_tests))], cwd=root, check=True)
+              evidence_dir = environment / "acceptance"
+              subprocess.run([str(python), "validation/run_hou_acceptance.py",
+                              "--phase", "all", "--output", str(evidence_dir)],
+                             cwd=root, check=True)
+              acceptance = json.loads((evidence_dir / "summary.json").read_text())
+              if (acceptance["status"] != "PASS" or
+                  acceptance["baseline"]["tests_run"] != 39 or
+                  acceptance["independent"]["tests_run"] <= 0 or
+                  acceptance["baseline"]["skipped"] or
+                  acceptance["independent"]["skipped"]):
+                  raise RuntimeError("Incomplete baseline or independent acceptance")
               cli = subprocess.check_output(
                   [str(python), "-m", "workcert", "--version"], text=True).strip()
               if version not in cli:
@@ -109,7 +109,11 @@ jobs:
               checks.append({"artifact": artifact.name, "kind": kind,
                              "bytes": artifact.stat().st_size,
                              "sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(),
-                             "tests_passed": expected_tests, "cli_version": cli, **probe})
+                             "tests_passed": acceptance["tests_run"],
+                             "baseline_tests_passed": acceptance["baseline"]["tests_run"],
+                             "independent_tests_passed": acceptance["independent"]["tests_run"],
+                             "acceptance_checks": acceptance["total_checks"],
+                             "cli_version": cli, **probe})
           record = {"status": "PASS", "tag": os.environ["GITHUB_REF_NAME"],
                     "source_commit": os.environ["GITHUB_SHA"],
                     "core_sha256": source_core_hash,
@@ -118,6 +122,13 @@ jobs:
           (root / "RELEASE_VALIDATION.json").write_text(
               json.dumps(record, indent=2) + "\n", encoding="utf8")
           PY
+      - name: Preserve exact-distribution acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-distribution-acceptance
+          path: .release-checks/*/acceptance/
+          if-no-files-found: error
       - name: Archive the complete scientific source
         run: |
           git archive --format=zip --output="WorkCert-${GITHUB_REF_NAME}-reproducibility.zip" HEAD

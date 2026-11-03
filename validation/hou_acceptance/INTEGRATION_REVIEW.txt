@@ -1,0 +1,26 @@
+Integration and independent review, 2026-11-03
+Reviewed by a separate Codex agent; this does not record human author approval.
+
+PASS: New test oracles use Fraction/scalar integration/statistics, not WorkCert
+as the expected-value provider. Required internal extremum x=5/3, Ep/Ew
+separation, downward D(q)-D(b), 50/50.009 and endpoint-mean rules inspected.
+PASS: Final numerical evidence reports 39 original + 28 additional = 67 tests,
+759 new comparisons, zero failures/errors/skips. Counts in authoring values agree.
+PASS: CI YAML parses; its embedded release-check Python parses; 15 environment
+combinations specified. Matrix and exact-distribution jobs invoke the same
+separated-phase runner and preserve logs. Three workflow copies are identical.
+PASS: Updated collector, manuscript generator and exporter parse as Python.
+PASS: Public documentation and generator mirror files are byte-identical.
+
+Historical six-installation evidence remains limited to the original 39 tests.
+The 28 additional tests were run on the recorded Windows/Python 3.12.14/
+NumPy 2.3.5/installed WorkCert 0.2.0 environment only. No remote CI or release
+was executed during this review; no DP controls or scaling experiments rerun.
+The new suite requires the full repository's research data and consumer examples.
+Historical release archives, release_validation.json and author verification
+form are not rewritten as evidence for this new acceptance. Current source
+README and tests differ from old distribution metadata; a future publication
+must rebuild and validate those new artifacts through the supplied workflow.
+
+The parent task successfully rebuilt the updated manuscript PDF (15 pages).
+Cover-letter page count and visual QA are checked separately by the parent task.

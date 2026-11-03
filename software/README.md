@@ -175,6 +175,28 @@ scientific plotting code. The 15-job GitHub Actions matrix targets Windows,
 Linux and macOS with Python 3.10-3.14. A workflow file is a test specification;
 completed runs and local installation evidence are recorded separately.
 
+The current complete-repository suite contains 67 tests: the original 39
+package tests plus 28 independent acceptance tests. On 2026-11-03 all 67 passed
+on Windows with Python 3.12.14, NumPy 2.3.5 and installed WorkCert 0.2.0;
+the new tests recorded 759 individual comparisons. Earlier six-environment
+installation evidence applies only to the original 39 tests. The new tests
+also exercise archived research data and consumer examples, so they require
+the complete repository rather than only an installed wheel or extracted sdist.
+
+From the repository root, run:
+
+```text
+python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_run
+```
+
+Original-suite and new-suite logs are separate. Each new run needs a fresh
+output directory. Inputs, mathematical derivations and recorded results are
+in `validation/hou_acceptance`. Saisai Hou wrote and executed the additional
+tests with Codex assistance and manually verified them, as confirmed by the
+author on 2026-11-03. The complete repository records this confirmation in
+`validation/author_verification_2026-11-03.json`, separately from the unchanged
+automated run logs. The updated remote CI has not run.
+
 ## License, citation and migration
 
 MIT terms appear in `LICENSE` and `Licence.txt`. The latter filename is required

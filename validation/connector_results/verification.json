@@ -2,6 +2,7 @@
   "status": "PASS",
   "source_nodes": 1000,
   "point_budget": 33,
+  "selector": "vertical",
   "retained_points": 33,
   "strokes_mm": [
     10.0,
@@ -10,22 +11,29 @@
     40.0
   ],
   "consumer_EA_J": [
-    50.24783714887331,
-    92.76382919014661,
-    137.7301959039682,
-    182.87843529742932
+    50.23330015117332,
+    93.0096822304466,
+    138.39559565926817,
+    183.5438350527293
   ],
   "actual_EA_errors_J": [
-    -0.049612343052586994,
-    -0.09955928729550578,
-    -0.15246159624732059,
-    -0.41025717672627593
+    -0.06414934075257861,
+    0.14629375300448544,
+    0.512938159052652,
+    0.2551425785736967
   ],
-  "stored_prefix_bound_J": 0.5754417434316244,
+  "stored_prefix_bound_J": 0.6649651190841596,
+  "stored_window_bound_J": 0.8146199648866272,
+  "maximum_force_error_kN": 0.20406742789968657,
+  "independent_export_checks": {
+    "delta": 0.20406742789968657,
+    "prefix": 0.6649651190842576,
+    "window": 0.8146199648866883
+  },
   "domain_mm": [
     0.0,
     50.005
   ],
-  "scope": "Documented connector input format; numerical loading-domain round trip only. No solver run, vendor point limit or irreversible constitutive validation is claimed.",
-  "format_documentation": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEELMRefMap/simaelm-c-connelastbehav.htm"
+  "scope": "Independent write/read check of a 33-point force-displacement input table over the measured monotone loading branch. The domain is the source displacement interval, not an unloading law or a solver-specific point limit.",
+  "format_documentation": "https://help.3ds.com/2025/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-connelastbehav.htm"
 }

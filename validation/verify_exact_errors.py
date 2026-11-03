@@ -126,7 +126,16 @@ def main():
         np.testing.assert_array_equal(t.force,f[t.indices])
     counts['signed_peak_modes']=3
     env=os.environ.copy();env['PYTHONPATH']=str(ROOT/'software/src')
-    tests=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=ROOT/'software',env=env,capture_output=True,text=True)
+    # This audit checks the original installation baseline separately. Additional
+    # installed-package acceptance is run by run_hou_acceptance.py; unrestricted
+    # discovery here would silently change the historical baseline count.
+    baseline_code=("import sys, unittest; "
+                   "loader=unittest.TestLoader(); suite=unittest.TestSuite(); "
+                   "[suite.addTests(loader.discover('tests', pattern=p)) for p in "
+                   "('test_workcert.py','test_revision.py','test_interop.py','test_round2.py')]; "
+                   "r=unittest.TextTestRunner(verbosity=2).run(suite); "
+                   "sys.exit(0 if r.wasSuccessful() and not r.skipped else 1)")
+    tests=subprocess.run([sys.executable,'-c',baseline_code],cwd=ROOT/'software',env=env,capture_output=True,text=True)
     expected_tests=json.loads((ROOT/'software/release_validation.json').read_text(encoding='utf8'))['runtimes'][0]['wheel']['tests_passed']
     assert tests.returncode==0 and ('Ran %d tests'%expected_tests) in tests.stderr
     (ROOT/'validation/results_v02/independent_package_tests.log').write_text(tests.stdout+'\n'+tests.stderr,encoding='utf8')

@@ -20,12 +20,33 @@ python -m workcert --help
 python -m unittest discover -s software/tests -v
 ```
 
-The 39 package tests passed for both wheel and source-distribution installations
+The original 39 package tests passed for both wheel and source-distribution installations
 on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4.
 The recorded installation checks are in
 [`software/release_validation.json`](software/release_validation.json).
 The CI workflow targets Linux, macOS and Windows with Python 3.10–3.14; completed
-run status is shown in the repository's Actions tab.
+run status is shown in the repository's Actions tab. The additional acceptance
+suite contains 28 tests with independent mathematical oracles. The original 39
+and new 28 passed together (67 tests, 759 new numerical/behavioral comparisons)
+on Windows, Python 3.12.14, NumPy 2.3.5 and installed WorkCert 0.2.0 on
+2026-11-03. This new run does not add evidence for the other five installation
+combinations or for remote CI.
+
+Run from the complete repository, including its data and consumer examples:
+
+```text
+python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_run
+```
+
+The runner records the original and additional suites in separate logs, with
+version/import-path evidence and per-check expected, actual and difference
+columns. Choose a new output directory for each run. Archived results and
+case-by-case derivations are in [`validation/hou_acceptance`](validation/hou_acceptance).
+Saisai Hou wrote and executed the additional tests with Codex assistance and
+manually verified them, as confirmed by the author on 2026-11-03. The
+[author-verification record](validation/author_verification_2026-11-03.json)
+identifies the files and distinguishes this confirmation from the automated
+test evidence. The original run logs remain unchanged.
 
 ## Construct and reuse a response
 

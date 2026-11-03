@@ -3,6 +3,18 @@
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "numpy": "2.3.5",
   "platform": "Windows-10-10.0.19045-SP0",
+  "hardware": {
+    "captured_utc": "2026-11-03T04:15:32.530696+00:00",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
+    "logical_processors": 8,
+    "physical_memory_bytes": 16843448320,
+    "physical_memory_GiB": 15.686683654785156,
+    "memory_source": "Windows GlobalMemoryStatusEx: total physical memory available to OS",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5"
+  },
+  "hardware_record": "hardware.json",
   "timing": "one measured construction after a separate small warm-up per independent process; native allocations/hash/final global evaluation included",
   "point_cap": 1025,
   "timeout_seconds_per_case": 120.0,
@@ -12,7 +24,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 1.44939118944026,
+      "speed_ratio": 1.6049386841826978,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -22,7 +34,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 3.176844294522995,
+      "speed_ratio": 3.150325766749691,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -32,7 +44,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 3.715386066947247,
+      "speed_ratio": 4.881657308730655,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -42,7 +54,7 @@
       "tolerance_fraction": 0.01,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 5.216703479755324,
+      "speed_ratio": 5.272800165355892,
       "same_reference": true,
       "old_points": 39,
       "new_points": 39
@@ -52,7 +64,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 1.91799941940022,
+      "speed_ratio": 1.5728759000977333,
       "same_reference": true,
       "old_points": 109,
       "new_points": 109
@@ -62,7 +74,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 3.5581030131536093,
+      "speed_ratio": 3.5177145610235248,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -72,7 +84,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 11.127157731352732,
+      "speed_ratio": 14.38929020655132,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -82,7 +94,7 @@
       "tolerance_fraction": 0.001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 12.550814044191043,
+      "speed_ratio": 14.79509256567287,
       "same_reference": true,
       "old_points": 107,
       "new_points": 107
@@ -92,7 +104,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 2.1082437731186783,
+      "speed_ratio": 2.091828272363429,
       "same_reference": true,
       "old_points": 375,
       "new_points": 375
@@ -102,7 +114,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 4.62714991374024,
+      "speed_ratio": 4.49792353721196,
       "same_reference": true,
       "old_points": 335,
       "new_points": 335
@@ -112,7 +124,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 24.783599252724276,
+      "speed_ratio": 18.98029505228522,
       "same_reference": true,
       "old_points": 342,
       "new_points": 342
@@ -122,7 +134,7 @@
       "tolerance_fraction": 0.0001,
       "old_status": "PASS",
       "new_status": "PASS",
-      "speed_ratio": 40.037239573154814,
+      "speed_ratio": 31.97042825404793,
       "same_reference": true,
       "old_points": 342,
       "new_points": 342

@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-11-03T04:17:30.369397+00:00",
+  "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
+  "logical_processors": 8,
+  "physical_memory_bytes": 16843448320,
+  "physical_memory_GiB": 15.686683654785156,
+  "memory_source": "Windows GlobalMemoryStatusEx: total physical memory available to OS",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5"
+}

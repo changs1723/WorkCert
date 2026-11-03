@@ -1,0 +1,16 @@
+test_composer_rejects_missing_duplicate_or_reordered_edges (test_hou_cycles_io.HouCyclesAndPersistence.test_composer_rejects_missing_duplicate_or_reordered_edges) ... ok
+test_cyclic_edges_are_covered_once (test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once) ... ok
+test_descending_error_and_chronological_composition (test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition) ... ok
+test_illegal_source_arrays_and_indices_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected) ... ok
+test_out_of_domain_nonfinite_and_reversed_queries_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected) ... ok
+test_pure_dwell_and_strict_duplicate_policy (test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy) ... ok
+test_saved_checksum_corruption_and_truncation_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence.test_saved_checksum_corruption_and_truncation_are_rejected) ... ok
+test_saved_response_roundtrip_against_analytic_values (test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values) ... ok
+test_self_consistent_digest_does_not_allow_invalid_metadata (test_hou_cycles_io.HouCyclesAndPersistence.test_self_consistent_digest_does_not_allow_invalid_metadata) ... ok
+test_signed_branch_and_interior_work (test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work) ... ok
+test_source_mutation_at_discarded_point_is_rejected (test_hou_cycles_io.HouCyclesAndPersistence.test_source_mutation_at_discarded_point_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.150s
+
+OK

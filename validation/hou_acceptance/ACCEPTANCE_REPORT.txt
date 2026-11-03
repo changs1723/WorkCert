@@ -1,0 +1,96 @@
+WorkCert 0.2.0 独立数值验收交付说明
+日期：2026-11-03（Asia/Taipei）
+
+结论
+先运行原有39项安装测试：39 PASS、0 FAIL、0 ERROR、0 SKIP。
+随后单独编写并运行28项独立验收：28 PASS、0 FAIL、0 ERROR、0 SKIP。
+新测试记录759条数值/关系/拒绝检查，全部PASS。当前自动测试总数67。
+原始安装基线首跑见baseline_39.log及baseline_environment.json；
+最终统一分阶段运行见baseline.log、independent.log、environment.json和summary.json。
+发现后修复的核心软件缺陷：无。本次未修改WorkCert运行实现。
+
+身份与范围
+这套新测试由Codex按用户指定的Hou验收职责设计、编写和执行。
+独立性是“数学真值不调用被测实现”，不是作者身份或人工签署证明。
+本次证据不表示Saisai Hou本人已经独立编写、逐行审阅或人工复跑。
+人工核验及最终作者同意仍应由实际作者登记；不自动填写签名。
+没有重跑580份DP最优控制、百万点性能实验或所有真实数据查询。
+没有把work普遍优于其他选择器、或每加一点误差必下降设为通过条件。
+
+环境
+操作系统：Windows-10-10.0.19045-SP0。
+Python：3.12.14，MSC v.1944 64-bit AMD64；NumPy：2.3.5；WorkCert：0.2.0。
+解释器相对位置：software/.validation/round2_20261102/py312_wheel/Scripts/python.exe。
+从该环境Lib/site-packages/workcert导入，不向sys.path注入运行源码。
+完整绝对导入路径、Python完整版本、NumPy路径和7个运行源码的SHA256见environment.json。
+已安装包的全部运行.py文件与当前software/src/workcert逐一哈希一致。
+本次只证明上述一个实际运行环境；历史39项的六组安装环境证据仍保持原记录。
+
+三类材料
+1. 本次新增脚本
+   software/tests/test_hou_analytic.py：13项，278条检查。
+   software/tests/test_hou_cycles_io.py：11项，167条检查。
+   software/tests/test_hou_paper.py：4项，314条检查。
+   software/tests/hou_support.py：无WorkCert导入的Fraction真值和结果记录工具。
+   validation/run_hou_acceptance.py：独立分阶段运行器，拒绝覆盖已有正式运行目录。
+2. 逐例推导
+   ANALYTIC_DERIVATIONS.txt：第1--3组，每例输入、节点、公式、容差。
+   CYCLES_IO_DERIVATIONS.txt：第4--5组，有向积分、误差组合和拒绝矩阵。
+   PAPER_DERIVATIONS.txt：第6组，全精度输入、SHA256、节点、统计与区间推导。
+3. 原始运行与结果
+   environment.json：环境/导入路径/运行实现与测试源码哈希。
+   baseline_39.log：写新测试前的原39项首跑。
+   baseline.log、independent.log：正式分阶段unittest原始输出。
+   results.csv、results.jsonl：759条期望值、实测值、差异、容差、PASS/FAIL。
+   case_summary.csv：67个测试方法分别标注baseline或independent。
+   summary.json：机器可读计数与结论。
+   cycles_io_preflight.*：开发预检记录，保留备查，不增加正式测试计数。
+
+六组覆盖
+1. 误差公式：6项。直线、正/负非均匀三角形、内部极值、抵消、多保留段非零弦。
+2. 功查询：2项。端点、非节点、跨段、零窗口、标量/向量/广播。
+3. 峰与CFE：5项。正负力、全负力、峰遗漏、绝对/有符号峰、峰前/峰后消费端。
+4. 循环与驻留：5项。每条时间相邻边一次、方向、内部查询、下降误差变换与组合、纯驻留。
+5. 保存与输入：6项。JSON往返、未保留点变更、损坏摘要/文件、非法证书、NaN/重复x/越界。
+6. 论文抽查：4项。表2、05端点、两组控制共8组均值与SD、均值区间端点平均。
+
+关键数值
+必做例1 x=[0,1,2,3],F=[0,2,-1,0],indices=[0,3]：
+  eta=7/3，xi=Ep=Ew=5/3，delta=2；最大D在x=5/3，节点最大只有3/2。
+必做例2 x=[0,1,2,3,4,5,6],F=[0,2,0,-4,0,2,0],indices=[0,6]：
+  D范围[-2,2]，Ep=2，Ew=4，终端误差0。
+原创有向路径：原始功-4，缩减功-8，误差范围[-1/3,4]，Ep=4，Ew=13/3。
+下降局部误差D(q)-D(b)，摘要变换为(-d,l-d,h-d)，不是仅把上下界变号。
+STWC-1：表2四行及未舍入EA/SEA/MCF/峰/CFE区间全部通过，无需修改表2数值。
+试件05：W(50)=290.80043607134797 J；W(50.009)=290.86517258476295 J。
+  多出的0.009 mm贡献0.064736513415002458 J；工作簿EA对应实际端点。
+三重复：sample SD使用n-1分母；均值重构区间=[mean(lower_i),mean(upper_i)]。
+  确定性误差没有独立随机噪声假设，因此不额外除以sqrt(3)。
+解析数值差异最大约8.88e-16；完整逐项误差以results.csv为准。
+
+容差
+解析小例abs_tol=1e-12、rtol=0；精确索引/计数/异常类型不使用浮点容差。
+真实功/误差/功的均值与SD一般1e-9 J，派生指标1e-10、rtol=0。
+输入用未舍入CSV与XLSX原存数值；只有印刷核对允许半个末位（表2为0.0005）。
+不能把1 J重构预算当作work计算实现的验收容差。
+
+复跑（从含software、data、examples、validation的根目录执行）
+  python -m pip install ./software
+  python validation/run_hou_acceptance.py --phase all --output acceptance_rerun
+可以分别运行--phase baseline和--phase independent；给不同的新输出目录。
+普通unittest也可运行：python -m unittest discover -s software/tests -p "test_hou_*.py" -v。
+原39项属于历史回归基线，不计为本次独立编写；759是检查行数，不是759个unittest。
+
+整合状态
+本地CI配置改为先39项、再新增28项，分别留存环境、日志与结果表。
+测试数量与正文/生成器/README据本次证据更新为39+28=67，并明确AI辅助身份。
+远端CI没有执行，本次未推送、发布或覆盖历史发布ZIP与安装验证记录。
+交付验收ZIP是新材料包，保留既有候选包的历史状态。
+
+
+补充确认（2026-11-03；保留以上原始验收记录）
+作者最新确认：“新测试由Hou借助 Codex 编写和执行，并人工核验。”
+据此，Hou借助Codex编写、执行并人工核验新测试的事实已经登记；此前“尚未记录人工核验”的状态由本次确认更新。测试的数学独立性与AI协助身份均保持不变，不再要求另有一套无AI参与的测试。
+新确认记录：validation/author_verification_2026-11-03.json；内部对应记录：research/AUTHOR_VERIFICATION_CONFIRMATION_2026-11-03.json。
+本次确认适用于28项新增测试，不代替三位作者对修订后最终稿的共同终审。原始运行日志、推导、测试文件及其当时哈希均不改写；自动执行证据与作者活动确认分别保存。
+另由独立代理复跑原39项与新增28项，67项及759条比较全部通过，零失败、错误或跳过；对应证据见内部qa/acceptance_2026-11-03/tests_agent/rerun。

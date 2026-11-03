@@ -1,0 +1,54 @@
+{
+  "phase": "original_39_baseline",
+  "timestamp": "2026-11-03T10:54:11.300967+08:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2\\software\\.validation\\round2_20261102\\py312_wheel\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "numpy": "2.3.5",
+  "numpy_path": "C:\\Users\\chang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\numpy\\__init__.py",
+  "workcert": "0.2.0",
+  "distribution_version": "0.2.0",
+  "import_path": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_2\\software\\.validation\\round2_20261102\\py312_wheel\\Lib\\site-packages\\workcert\\__init__.py",
+  "source_hashes": {
+    "cli.py": {
+      "workspace": "cf985236a94eb9065c1ceb66a3b7f0b5db22534a54a8f8f9f5a4a1fcc72ae0c6",
+      "installed": "cf985236a94eb9065c1ceb66a3b7f0b5db22534a54a8f8f9f5a4a1fcc72ae0c6",
+      "match": true
+    },
+    "core.py": {
+      "workspace": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "installed": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "match": true
+    },
+    "interop.py": {
+      "workspace": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+      "installed": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+      "match": true
+    },
+    "preprocessing.py": {
+      "workspace": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb",
+      "installed": "0995dd5e94be1b4ca83ac3e47498d10bbaae20f3a6d3ad68972656e178f17aeb",
+      "match": true
+    },
+    "selectors.py": {
+      "workspace": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+      "installed": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+      "match": true
+    },
+    "__init__.py": {
+      "workspace": "b5145eef5fafb073972ffc7790ecfd471e1f606eea62e6b0edf94a124c2dc95a",
+      "installed": "b5145eef5fafb073972ffc7790ecfd471e1f606eea62e6b0edf94a124c2dc95a",
+      "match": true
+    },
+    "__main__.py": {
+      "workspace": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "installed": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "match": true
+    }
+  },
+  "tests_run": 39,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "PASS"
+}

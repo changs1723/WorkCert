@@ -19,6 +19,14 @@ def main():
     cyc=workflow['cyclic_path']
     headline=read('validation/results/scaling/headline_repeats.json')
     install=read('software/release_validation.json')
+    connector=read('validation/connector_results/verification.json')
+    connector_lines=(ROOT/'validation/connector_results/STWC1_connector.inp').read_text().splitlines()
+    connector_rows=[line for line in connector_lines if not line.startswith('*')]
+    def printed_row(line):
+        force, displacement=map(float,line.split(','))
+        return '%.6f, %.6f'%(force,displacement)
+    connector_excerpt='\n'.join([printed_row(connector_rows[0]),printed_row(connector_rows[1]),
+                                '** intervening rows omitted',printed_row(connector_rows[-1])])
     q=pd.read_csv(ROOT/'validation/workflow_results_round2/queries.csv')
     selected=q[q.specimen=='STWC-1'].sort_values('stroke_mm')
     rows=['%.0f & %.3f & %.3f & %.3f & %.3f & [%.3f, %.3f] \\\\'%(r.stroke_mm,r.EA_J,r.SEA_kJ_kg,r.MCF_kN,r.CFE,r.CFE_lower,r.CFE_upper) for r in selected.itertuples()]
@@ -39,7 +47,11 @@ def main():
             'NEWTIME':'%.2f'%evidence['headline_new_median_seconds'],
             'OLDMIN':'%.2f'%evidence['headline_old_min_seconds'],'OLDMAX':'%.2f'%evidence['headline_old_max_seconds'],
             'NEWMIN':'%.2f'%evidence['headline_new_min_seconds'],'NEWMAX':'%.2f'%evidence['headline_new_max_seconds'],
-            'TESTS':str(evidence['package_tests']), 'PLATFORMS':evidence['tested_platform_statement'],
+            'TESTS':str(evidence['package_tests']),
+            'BASELINETESTS':str(evidence['original_package_tests']),
+            'ACCEPTANCETESTS':str(evidence['independent_acceptance_tests']),
+            'ACCEPTANCE':evidence['independent_acceptance_statement'],
+            'PLATFORMS':evidence['tested_platform_statement'],
             'CISTATUS':evidence['ci_statement'],
             'SCALEENV':evidence['scaling_platform'],
             'WORKFLOWPOINTS':str(pla['retained_nodes']),
@@ -48,6 +60,21 @@ def main():
             'CYCLEERROR':'%.2f'%cyc['maximum_continuous_chronological_work_error_J'],
             'CYCLEBOUND':'%.2f'%cyc['sum_branch_window_bounds_J'],
             'PUBLICLINE':('The fixed public source version is '+r'\url{'+source+'}.') if source else ''}
+    values.update(CONNECTORROWS=connector_excerpt,
+                  CONNECTORDELTA='%.3f'%connector['maximum_force_error_kN'],
+                  CONNECTOREP='%.3f'%connector['stored_prefix_bound_J'],
+                  CONNECTOREW='%.3f'%connector['stored_window_bound_J'])
+    hardware=ROOT/'validation/results/scaling/hardware.json'
+    if hardware.exists():
+        hw=json.loads(hardware.read_text(encoding='utf8'))
+        cpu=hw['cpu_model'].replace('(R)','').replace('(TM)','').replace('_',r'\_').replace('&',r'\&')
+        os_name=' '.join(hw['platform'].split('-')[:2])
+        values['HARDWARE']=(
+            '%s, a %s CPU, %.2f GiB of OS-visible RAM, '
+            'Python %s and NumPy %s' %
+            (os_name, cpu, hw['physical_memory_GiB'], hw['python'].split()[0], hw['numpy']))
+    else:
+        raise RuntimeError('Capture the hardware of the current timing run first')
     def fill(text):
         for k,v in values.items():text=text.replace('@@'+k+'@@',v)
         assert '@@' not in text
@@ -101,17 +128,17 @@ C8&Support email for questions&\href{mailto:szhang@niit.edu.cn}{szhang@niit.edu.
 \end{tabular}\caption{Code metadata.}\label{tab:code}\end{table}
 
 \section{Motivation and significance}
-Tabulated structural laws support subsequent calculations. The documented Abaqus bushing-calibration workflow transfers reaction-force and relative-motion histories to connector definitions in an assembly analysis \cite{AbaqusBushing}. WorkCert quantifies force and work errors at a user-specified point budget. A 33-point loading-domain export and separate reader illustrate this interface.
+Tabulated structural laws support subsequent calculations. The Abaqus bushing example transfers force--motion histories from detailed simulations to connector definitions in an assembly analysis \cite{AbaqusBushing}. WorkCert quantifies force and work errors at a chosen table size. Section~\ref{sec:connector} demonstrates the corresponding loading-branch input interface.
 
-Energy absorption (EA), specific energy absorption (SEA), mean crushing force (MCF) and crush-force efficiency (CFE) depend on the selected stroke. A reusable table supports changing limits and peak queries while retaining explicit numerical error information. The public-data example here is small enough to exchange in full. Its purpose is to evaluate reduced-table fidelity and its relation to specimen variability, with the complete source retained for audit.
+Energy absorption (EA), specific energy absorption (SEA), mean crushing force (MCF) and crush-force efficiency (CFE) vary with stroke. Reusable tables support changing limits and peak queries. Although the example dataset can be exchanged in full, it allows reconstruction errors to be compared with specimen variability.
 
-Simplification includes Ramer, Douglas--\allowbreak Peucker and Visvalingam--\allowbreak Whyatt, alongside sliding-window, top-down and bottom-up segmentation \cite{Ramer1972,DouglasPeucker1973,Visvalingam1993,Keogh2001}. Optimal polygonal approximation depends on its objective \cite{Imai1988}. Sum-, max- and difference-area objectives are established in area-based simplification \cite{Bose2006,Daneshpajouh2012}. WorkCert combines these residual summaries with exact continuous work-query extrema, persistence and branch handling. It accepts external nodes and maps returned coordinates to reference indices for tools such as \path{rdp}, \path{simplification} and \path{shapely.simplify} \cite{rdpSoftware,Hugel2021,ShapelySoftware}.
+Ramer, Douglas--\allowbreak Peucker, Visvalingam--\allowbreak Whyatt and time-series segmentation provide established simplification strategies \cite{Ramer1972,DouglasPeucker1973,Visvalingam1993,Keogh2001}. Optimal approximation depends on its objective \cite{Imai1988}, including established area measures \cite{Bose2006,Daneshpajouh2012}. WorkCert combines these summaries with continuous work-query extrema, persistence and branches. It accepts external nodes from tools including \path{rdp}, \path{simplification} and \path{shapely.simplify} \cite{rdpSoftware,Hugel2021,ShapelySoftware}.
 
 \section{Software description}
 \subsection{Software architecture}
-NumPy is the only runtime dependency. Modules separate input validation, selection, errors, queries, persistence and branch preprocessing (Fig.~\ref{fig:architecture}). Research and plotting requirements are separate. Immutably backed response arrays keep coordinates consistent with cached primitives.
+NumPy is the sole runtime dependency. Separate modules handle validation, selection, errors, queries, persistence and branches (Fig.~\ref{fig:architecture}). Immutable arrays protect cached primitives; research dependencies are separate.
 
-A JSON table stores coordinates, source indices, units, errors, provenance and a versioned schema. Source and payload hashes identify the reference and detect file changes. Loading checks numerical consistency; \path{verify_reference} re-evaluates errors against the source.
+JSON stores nodes, units, errors and provenance in a versioned schema. Source and payload hashes identify changes; loading checks consistency and \path{verify_reference} recomputes errors against the source.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig01_architecture.pdf}
 \caption{Producer, exchange and consumer stages. OpenAI Codex (OpenAI, local CLI version 0.166.0-alpha.5.1) assisted the Python code for this explanatory diagram.}\label{fig:architecture}\end{figure}
@@ -123,9 +150,9 @@ Let $F$ be the supplied piecewise-linear reference with $n$ nodes on $[0,U]$ and
 E_p&=\max_{0\leq u\leq U}|D(u)|,&E_w&=\max D-\min D,\qquad
 \delta=\max|r|.
 \end{align}
-For any interval $[a,b]$, the reconstruction error in work equals $D(b)-D(a)$. Thus $E_p$ and $E_w$ are the exact continuous prefix and interval maxima of the specified piecewise-linear references, evaluated analytically in float64; $\eta$ and $\xi$ are conservative bounds. All satisfy $E_p\leq E_w\leq\xi\leq\eta$. The metadata describe numerical reconstruction rather than measurement uncertainty. Reference nodes and interior residual zeros determine the extrema, including extrema missed by a query grid.
+For any interval $[a,b]$, work error is $D(b)-D(a)$. Analytical float64 evaluation gives the continuous maxima $E_p$ and $E_w$, whereas $\eta$ and $\xi$ are bounds: $E_p\leq E_w\leq\xi\leq\eta$. Reference nodes and interior zeros of $r$ locate the extrema. These quantities describe reconstruction relative to the numerical reference, not measurement uncertainty.
 
-The selector is explicit. Work and vertical priorities split an interval at its largest vertical residual and differ in how they prioritize intervals. Effective-area Visvalingam--Whyatt and uniform alternatives are also available. Endpoints are retained. Peak modes preserve the maximum absolute force, maximum signed force or minimum signed force. Nonnegative node values give a nonnegative linear interpolant. Labels describe native units without rescaling; omitted labels remain unspecified. The engineering example supplies mm and kN explicitly, giving work in J.
+Users choose work priority, vertical priority, effective-area Visvalingam--Whyatt or uniform selection. Both priority methods split at the largest vertical residual but rank intervals differently. Endpoints are retained; peak modes preserve the largest absolute force, signed maximum or signed minimum. Nonnegative nodes give nonnegative interpolants. Native units remain unspecified unless supplied; mm and kN give work in J.
 
 Tolerance stopping evaluates each current representation because a greedy refinement need not decrease its error. An augmented balanced tree stores each interval's cumulative residual-work primitive initialized at zero: its terminal value $d$, minimum $l$ and maximum $h$, together with absolute area and force deviation. Concatenating intervals $A$ and $B$ gives
 \begin{equation}
@@ -135,6 +162,7 @@ Only the two new interval summaries and their tree ancestors change after a spli
 
 Queries use cached primitives and binary interval searches. Prefix work is quadratic within each linear segment; interval work is a primitive difference. Non-finite or out-of-domain queries raise errors. \path{split_monotone_branches} retains reversal endpoints, chronological orientation and zero-work equal-displacement events. Descending branches store increasing coordinates but use their original direction for $\int F\,dx$.
 
+\begin{minipage}{\linewidth}
 \subsection{Sample code snippets}
 The following construction reads the public \path{STWC-1} reference; the separate consumer needs only the saved table and its measured mass of 16.2 g:
 \begin{verbatim}
@@ -152,14 +180,23 @@ ea = c.work(q)          # J
 sea = ea / 16.2         # J/g = kJ/kg
 mcf = ea / q           # J/mm = kN
 \end{verbatim}
-The executable \path{examples/query_exchange.py} additionally evaluates peaks, CFE and their intervals from the received JSON. This client--producer agreement checks interoperability. A separate comparison uses indicators supplied in the original experimental workbook. The API parameter name \path{certificate=} is retained for compatibility and selects the reconstruction-error quantity.
+\end{minipage}
+The consumer \path{examples/query_exchange.py} also evaluates peak forces and CFE intervals; source-workbook indicators provide an external check. The API parameter \path{certificate=} selects the reconstruction-error quantity.
 
 \subsection{Verification and AI-assisted implementation}\label{sec:verification}
-The @@TESTS@@ package tests cover analytical errors, cancellation, interior extrema, arbitrary-node integration, branch orientation, source identity, persistence, unit labels, peak conventions and the CLI. @@PLATFORMS@@ @@CISTATUS@@ Exact dynamic-programming results are checked against exhaustive small-reference enumeration and analytical interval costs. The archived benchmark verifies actual serialized tables, query errors and source hashes.
+The regression suite adds @@ACCEPTANCETESTS@@ additional tests in \path{software/tests/test_hou_analytic.py}, \path{test_hou_cycles_io.py} and \path{test_hou_paper.py} to @@BASELINETESTS@@ existing tests. @@ACCEPTANCE@@ @@CISTATUS@@ Dynamic-programming controls are checked against exhaustive enumeration and analytical costs; serialized tables are checked against their references.
 
-OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted research planning and drafted implementations of the reconstruction-error routines, incremental tree, selectors, preprocessing, validation and plotting programs. Numerical checks use analytical fixtures, exact rational integration, exhaustive enumeration and third-party simplification libraries. Acquisition, preparation and plotting are scripted from the archived inputs and results. Saisai Hou independently wrote verification tests; Yunzhi Zhu checked dynamic-programming results against exhaustive enumeration; Sen Zhang reviewed the full manuscript. The distributed automated suite was developed within the AI-assisted workflow. The complete assistance scope is declared at the end of the article, and author roles are stated in CRediT.
+OpenAI Codex assisted research planning and implementation of error routines, the incremental tree, selectors, preprocessing, validation and plotting. Acquisition and analysis are scripted from archived inputs. Saisai Hou developed and executed the additional tests with Codex assistance and manually verified the results; Yunzhi Zhu checked dynamic programming against exhaustive enumeration; Sen Zhang reviewed the manuscript. Expected values use analytical fixtures, rational integration and source-workbook calculations. The complete AI assistance scope and CRediT roles appear below.
 
 \section{Illustrative examples}
+\subsection{A loading-branch connector table}\label{sec:connector}
+The measured \texttt{STWC-1} loading domain is $0\leq u\leq50.005$ mm. \path{validation/connector_exchange.py} exports 33 retained points as nonlinear connector-elasticity data, with force preceding displacement. An excerpt, rounded here to six decimals, is:
+\begin{verbatim}
+*CONNECTOR ELASTICITY, COMPONENT=1, NONLINEAR
+@@CONNECTORROWS@@
+\end{verbatim}
+Vertical priority gives $\delta=@@CONNECTORDELTA@@$ kN, $E_p=@@CONNECTOREP@@$ J and $E_w=@@CONNECTOREW@@$ J. A separate reader integrates the exported 17-digit values and reproduces the table's work at 10--40 mm. This checks data exchange on the measured loading branch; an assembly analysis would additionally need a constitutive model for unloading. For force-table fidelity, vertical priority or the archived $\delta$-optimal nodes supplied through \path{from_indices} are appropriate: their matched force objective differs from work priority (Table~\ref{tab:selectors}).
+
 \subsection{Specimen queries, repeatability and source indicators}
 The PLA+ dataset contains 40 singly tested Latin-hypercube configurations and two triplicate controls, STWC and nominal SCMC: 42 configurations and 46 specimens \cite{Saber2026,Guler2026}. Measured masses and indicators accompany the force histories. Tables constructed with a 1 J interval-work budget retain @@WORKFLOWPOINTS@@ of 46,000 reference nodes. A consumer queries strokes of 10, 20, 30 and 40 mm and the intervening work windows.
 
@@ -171,9 +208,9 @@ At stroke $u$, $EA=W(u)$, $SEA=EA/m$, $MCF=EA/u$ and $CFE=MCF/P(u)$, with $P(u)$
 @@METRICS@@
 \bottomrule\end{tabular}\end{table}
 
-All 184 requested indicator sets contain their dense-reference values. Across the two triplicate controls and four strokes, the largest stored prefix bound is below the observed sample EA standard deviation in all eight comparisons. Those deviations range from 0.993 to 3.350 J. These are descriptive estimates for the two controls, with no variance assigned to the 40 singleton designs. Averaging the triplicate controls produces 3444 configuration-level comparisons, using control means and singleton values; 3345 have separate reconstruction intervals at 1 J. Their numerical separation alone does not establish experimental distinguishability. A separate $\pm0.05$ g rounding sensitivity is provided for masses reported to 0.1 g.
+All 184 indicator sets contain their dense-reference values. The largest prefix bound is below the observed EA sample standard deviation in all eight control/stroke comparisons. The closest is nominal SCMC at 10 mm: 0.915 J versus 0.993 J. With three observations per control, these scatter estimates are descriptive. A control-mean interval averages the specimen endpoints, $[\sum_i L_i/3,\sum_i U_i/3]$; deterministic bounds receive no $\sqrt{3}$ reduction. Using these means and the 40 singletons gives 3444 configuration comparisons, 3345 with separate numerical intervals. Experimental distinguishability requires specimen-variability information. A $\pm0.05$ g mass-rounding scenario gives a maximum mass-only relative SEA change of 0.310\% and reduces separated specimen pairs from 4001 to 3937 of 4140.
 
-External checks evaluate the workbook indicators at its stated assessment strokes. The intervals cover 45 of 46 EA, SEA, MCF and CFE entries, and all 46 peak forces. For specimen 05, the dense-reference $EA(50)$ is 290.800436 J and the workbook value is 290.865173 J. The latter equals integration to the archived endpoint, 50.009 mm. The same endpoint convention explains all 13 nonzero EA discrepancies: their terminal displacements are 50.004--50.009 mm whereas the workbook lists 50 mm. Nominal-stroke coverage and this endpoint audit are reported separately (Fig.~\ref{fig:workflow}).
+At the workbook's stated strokes, intervals cover 45 of 46 EA, SEA, MCF and CFE entries and all 46 peak forces. For specimen 05, reference $EA(50)=290.800436$ J; the workbook's 290.865173 J equals integration to 50.009 mm. This endpoint convention explains all 13 nonzero EA discrepancies: archived endpoints are 50.004--50.009 mm, whereas the workbook lists 50 mm. Figure~\ref{fig:workflow} distinguishes nominal-stroke coverage from this endpoint audit.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig02_workflow.pdf}
 \caption{Reduced-table reuse: (a) reference and exchanged STWC-1 response; (b) queried EA errors; (c) triplicate-control scatter and reconstruction bounds; (d) EA intervals compared with source-workbook values at the stated strokes. OpenAI Codex assisted the archived plotting code.}\label{fig:workflow}\end{figure}
@@ -181,23 +218,17 @@ External checks evaluate the workbook indicators at its stated assessment stroke
 \subsection{A signed cyclic response}
 The stainless-steel bending record contains 125,157 chronological pairs \cite{CyclicDataset2024,CyclicPaper2022}. Exact preprocessing retains 2971 monotone branches and 1984 zero-displacement events. Branch node-count quartiles are 2, 9 and 26, with a maximum of 2555. Ignoring zero steps leaves 1242 direction changes; 67.4\% of the resulting runs span at most 0.1 mm. These are numerical direction changes, rather than a count of loading cycles.
 
-A running-extremum deadband diagnostic detects 94 reversals throughout the range 0.1--5 mm, consistent with the paper's 47-cycle failure record. The command history is unavailable for event-by-event attribution. This diagnostic does not filter or merge the reference path, so its reconstruction errors continue to refer to the original observations (Fig.~\ref{fig:cyclic}).
+A running-extremum deadband diagnostic detects 94 reversals throughout 0.1--5 mm, consistent with the 47-cycle failure of specimen S1-L1 in Table~3 of \cite{CyclicPaper2022}; its loading protocol is described in Section~2.4. The diagnostic leaves the reference path unchanged (Fig.~\ref{fig:cyclic}) and does not synchronize reversals with unavailable command events.
 
-Each branch uses work priority, absolute-peak retention, a 129-point cap and interval tolerance $0.001|W_b|$, where $W_b$ is the directed reference branch work. The tables retain @@CYCLERETAINED@@ nodes; one branch reaches the cap before meeting tolerance. Reference signed path work is 92.034 kJ. Terminal reconstruction deficit is 68.529 J (0.0745\%); maximum continuous error is @@CYCLEERROR@@ J (0.0747\%), below the summed interval bound @@CYCLEBOUND@@ J (0.1135\%). The cumulative error has both increasing and decreasing increments. Its net positive bias is an observed property of this representation, not a universal sign rule for vertex-subset interpolation. Descending branches transform their summaries to $(-d,l-d,h-d)$ before chronological composition. This recovers the exact global prefix error from stored metadata without summing branch bounds. Signed path work is kept distinct from closed-cycle dissipation.
+Branches use work priority, absolute-peak retention, a 129-point cap and interval tolerance $0.001|W_b|$ for directed reference work $W_b$. They retain @@CYCLERETAINED@@ nodes; one reaches the cap before tolerance. Against 92.034 kJ of signed path work, terminal deficit is 68.529 J (0.0745\%), maximum continuous error @@CYCLEERROR@@ J (0.0747\%) and summed interval bound @@CYCLEBOUND@@ J (0.1135\%). Cumulative error rises and falls; its net positive bias is specific to this representation. Descending summaries become $(-d,l-d,h-d)$ before chronological composition, recovering global prefix error from metadata. Signed path work differs from closed-cycle dissipation.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig05_cyclic.pdf}
 \caption{Cyclic history, branch sizes, deadband reversal counts and chronological work error. The deadband is diagnostic only; the original path is retained. Shading shows $\pm\sum_b E_{w,b}$. OpenAI Codex assisted the archived plotting code.}\label{fig:cyclic}\end{figure}
 
-\section{Impact}
-\subsection{Research tasks and intended users}
-WorkCert supports structural-data curators and analysts building tabulated response models. Its contribution is a queryable reduced representation with explicit reference-relative errors. The examples connect those errors to common indicators, repeated-specimen scatter, source-protocol checks and cyclic path accounting. Fixed terminal indicators can be stored directly; reusable tables support varying strokes and force queries. The supplied public-data workflows establish numerical functionality; external laboratory adoption has not been documented.
-
-Vertex-subset interpolation can retain a signed area bias. Each stored branch requires increasing coordinates, while the branch sequence preserves cyclic chronology. Measurement uncertainty is separate from reconstruction, and adaptive refinement retains $O(nK)$ worst-case scanning cost. These properties delimit the error information returned by the software.
-
 \subsection{Selectors and objective-matched optima}
 The main comparison uses 23 stainless-steel honeycomb records of commercial grade CX, one enhanced double-arrow honeycomb (EDAH) record and the 46 PLA+ curves \cite{Afkhami2022,Afkhami2023,AfkhamiDataset2022,WuDataset2025,Wu2026,Saber2026}. Cohort summaries accompany pooled values. Preparation rules, including the CX 0.5 kN contact threshold and endpoint at 40\% of the nominal loaded dimension, are executable and archived with the original acquisition records.
 
-Six force selectors are tested at 9, 17, 33, 65 and 129 nodes; all six appear in Table~\ref{tab:selectors}. Geometric RDP uses dimensionless displacement and force coordinates; its fixed-count best-first form and peak constraints are specified in the benchmark. Visvalingam--Whyatt uses progressive effective-area elimination. Native tolerance implementations are cross-checked against \path{rdp} and \path{simplification}. The complete comparison contains 2100 force tables, 350 work-only tables, 560 stopping cases and 70 scalar controls. The work-only control serves integral queries without providing the same retained force response.
+Six force selectors are tested at 9, 17, 33, 65 and 129 nodes (Table~\ref{tab:selectors}). RDP uses dimensionless coordinates and a fixed-count best-first rule; VW progressively removes effective-area vertices. Native tolerance implementations are cross-checked against \path{rdp} and \path{simplification}. The archive contains 2100 force tables, 350 work-only tables, 560 stopping cases and 70 scalar controls, with algorithm and peak constraints specified for each comparison.
 
 At 33 nodes, Visvalingam--Whyatt has the lowest pooled median prefix and interval errors among the force selectors (Table~\ref{tab:selectors}). Work priority improves prefix error over vertical priority in 45 of 70 records and over Visvalingam--Whyatt in 33. Accordingly, method selection is explicit, and external nodes can be passed to \path{from_indices}; the software does not prescribe a universally preferred selector.
 
@@ -207,21 +238,28 @@ At 33 nodes, Visvalingam--Whyatt has the lowest pooled median prefix and interva
 @@METHODS@@
 \bottomrule\end{tabular}\end{table}
 
-The optimal controls minimize additive area cost $\eta$ or maximum vertical error $\delta$ with identical endpoint and peak constraints. They use exact interval costs and fixed-count dynamic programming, producing 580 optimal paths across 58 references and all five budgets, including 129 nodes. At 33 nodes, work priority's median $\eta/\eta^*$ is 1.319, whereas vertical priority's median $\delta/\delta^*$ is 1.663. These ratios quantify greedy gaps for their respective objectives. Prefix error depends on cumulative signed residuals and is reported separately, without an optimality claim (Fig.~\ref{fig:selectors}).
+Dynamic programming minimizes $\eta$ or $\delta$ with identical endpoint and peak constraints, producing 580 optimal paths across 58 references and all five budgets. At 33 nodes, work priority has median $\eta/\eta^*=1.319$. For the force objective, vertical priority gives $\delta/\delta^*=1.663$, versus 2.615 for work priority. These objective-specific gaps support selector choice; they do not establish prefix-error optimality (Fig.~\ref{fig:selectors}).
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig03_selectors.pdf}
 \caption{Cohort-specific interval errors and objective-matched optimality gaps. OpenAI Codex assisted the archived plotting code.}\label{fig:selectors}\end{figure}
 
 \subsection{Stopping budgets and construction scale}
-For the same requirement on every work interval, a 1\% tolerance using $E_w$ retains a median of 14 nodes under work priority, compared with 27 using $\eta$. The corresponding vertical-priority counts are 15 and 28. Prefix-only requests have a different requirement and are reported in their own tables. Direct evaluation tightens stopping decisions because the full reference is already available during construction.
+At the same 1\% interval-work tolerance, $E_w$ stopping retains a median of 14 nodes under work priority, compared with 27 using $\eta$; vertical-priority counts are 15 and 28. Prefix-only results are tabulated separately. Construction-time reference access enables these direct error evaluations.
 
-Incremental aggregation addresses repeated whole-reference evaluation. A deterministic synthetic scaling study covers $10^3$ to $10^6$ samples and three tolerances, separately from the experimental validation. At $10^6$ samples and a 0.1\% interval-work tolerance, three independent paired runs take a median @@OLDTIME@@ s for version 0.1 and @@NEWTIME@@ s for version 0.2; ranges are [@@OLDMIN@@, @@OLDMAX@@] and [@@NEWMIN@@, @@NEWMAX@@] s on the recorded @@SCALEENV@@ environment. Both retain 107 nodes. Whole-reference error evaluations fall from 105 to one. Small cases can incur tree overhead. The source signal, complete timings and retained-node checks accompany the results (Fig.~\ref{fig:scale}).
+Synthetic scaling covers $10^3$--$10^6$ samples and three tolerances. Timings use @@HARDWARE@@. At $10^6$ samples and 0.1\% interval tolerance, three independent paired runs take median @@OLDTIME@@ s for version 0.1 and @@NEWTIME@@ s for version 0.2, retaining the same 107 nodes. Whole-reference evaluations fall from 105 to one; small cases incur tree overhead. The archive supplies per-run timings, ranges and host details (Fig.~\ref{fig:scale}).
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig04_stopping_scaling.pdf}
 \caption{Identical interval-work stopping requirements and construction time versus reference size. Boxes show quartiles and medians; whiskers reach the extreme observations within the 1.5-interquartile-range fences, and circles mark outliers. Lines in (b) show single runs; squares and bars at $10^6$ samples show the medians and minimum--maximum ranges of three paired runs. OpenAI Codex assisted the plotting code.}\label{fig:scale}\end{figure}
 
+\section{Impact}
+Finite-element analysts can export a chosen-size loading table and inspect both its force deviation and work-query errors before incorporating it in a response model. The connector example separates these two objectives: selecting for force fidelity can require different nodes from selecting for integral accuracy. Existing optimal-node or geometric tools can share the same query and persistence interface.
+
+Experimental-data curators can exchange a reduced record once and support later stroke-dependent EA, SEA, MCF and CFE calculations. Stored bounds identify which close numerical comparisons need finer tables; the source-workbook audit identifies endpoint conventions that refinement cannot resolve. Researchers reusing cyclic records can compose directed branch summaries to recover continuous path-work error without reloading the dense reference. These workflows serve table construction, database reuse and method comparison. Independent laboratory adoption has not yet been documented.
+
+Vertex-subset tables can retain signed area bias. Each branch requires increasing coordinates, with chronology stored separately. Reconstruction errors do not quantify measurement uncertainty; adaptive selection retains $O(nK)$ worst-case scanning cost.
+
 \section{Conclusions}
-WorkCert provides reusable force--displacement tables with explicit reconstruction errors. Peak retention sharpens indicator intervals, while source-workbook audits distinguish reconstruction from assessment conventions. Repeat measurements place numerical resolution in an experimental context. Interchangeable selectors and objective-matched controls expose approximation trade-offs; incremental aggregation and chronological branch summaries support larger references and signed paths. The accompanying inputs, programs and outputs make these operations reproducible.
+WorkCert combines reusable force--displacement tables, explicit reconstruction errors and checked persistence. Peak summaries sharpen indicator intervals; source audits distinguish endpoint conventions from reconstruction error. Matched-objective controls guide selector choice, while incremental aggregation and directed branch summaries support large and cyclic references. Archived inputs, programs and outputs reproduce these workflows.
 
 \section*{CRediT authorship contribution statement}
 \textbf{Saisai Hou:} Conceptualization, Methodology, Software, Formal analysis, Visualization, Writing -- original draft.
@@ -245,7 +283,7 @@ COVER=r'''\documentclass[11pt,a4paper]{article}
 \usepackage[margin=25mm]{geometry}\usepackage[T1]{fontenc}\usepackage{mathpazo,hyperref,xurl}
 \hypersetup{hidelinks}\setlength{\parindent}{0pt}\setlength{\parskip}{7pt}\setlength{\emergencystretch}{2em}
 \begin{document}
-2 November 2026
+3 November 2026
 
 Dear SoftwareX Editors,
 
