@@ -8,14 +8,16 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 import hashlib
 import heapq
+import itertools
 import json
+import math
 from pathlib import Path
 from typing import Any, Dict, Optional
 
 import numpy as np
 
 SCHEMA = "workcert.response/1.0"
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 BOUND_NAMES = ("eta", "xi", "prefix", "window")
 
 
@@ -50,9 +52,99 @@ def _indices(indices, n):
     return result
 
 
+def _area_terms(x, f):
+    """Rounded trapezoid terms, without first adding potentially large forces."""
+    try:
+        with np.errstate(over="raise", invalid="raise"):
+            terms = np.diff(x) * (0.5 * f[:-1] + 0.5 * f[1:])
+    except FloatingPointError as error:
+        raise ValueError("The response exceeds finite float64 integration limits") from error
+    if not np.all(np.isfinite(terms)):
+        raise ValueError("The response exceeds finite float64 integration limits")
+    return terms
+
+
+def _area_components(x, f):
+    """Keep the low part of the endpoint mean before multiplying by width."""
+    try:
+        with np.errstate(over="raise", invalid="raise"):
+            zero = np.zeros(len(f) - 1)
+            high, low = _twofold_add(.5 * f[:-1], zero, .5 * f[1:], zero)
+            width = np.diff(x)
+            high, low = width * high, width * low
+    except FloatingPointError as error:
+        raise ValueError("The response exceeds finite float64 integration limits") from error
+    if not np.all(np.isfinite(high)) or not np.all(np.isfinite(low)):
+        raise ValueError("The response exceeds finite float64 integration limits")
+    return high, low
+
+
+def _twofold_add(a, ac, b, bc):
+    """Merge two compensated sums with explicitly separated binary64 operations."""
+    total = a + b
+    virtual_b = total - a
+    correction = (a - (total - virtual_b)) + (b - virtual_b)
+    correction = correction + ac + bc
+    high = total + correction
+    return high, correction - (high - total)
+
+
+def _integration_cache(x, f):
+    """Compensated pairwise sums and all node primitives in O(n) work/storage.
+
+    The balanced up/down scan avoids the n-deep dependency of np.cumsum.
+    Each tree node retains a low correction; math.fsum supplies the terminal
+    rounded sum of the trapezoid terms. This is not outward-rounded arithmetic.
+    """
+    terms, term_low = _area_components(x, f)
+    count = len(terms)
+    size = 1 << (count - 1).bit_length()
+    high, low = np.zeros(2 * size), np.zeros(2 * size)
+    high[size:size + count] = terms
+    low[size:size + count] = term_low
+    try:
+        with np.errstate(over="raise", invalid="raise"):
+            width = size // 2
+            while width:
+                high[width:2 * width], low[width:2 * width] = _twofold_add(
+                    high[2 * width:4 * width:2], low[2 * width:4 * width:2],
+                    high[2 * width + 1:4 * width:2], low[2 * width + 1:4 * width:2])
+                width //= 2
+            prefix_high, prefix_low = np.zeros(2 * size), np.zeros(2 * size)
+            width = 1
+            while width < size:
+                prefix_high[2 * width:4 * width:2] = prefix_high[width:2 * width]
+                prefix_low[2 * width:4 * width:2] = prefix_low[width:2 * width]
+                prefix_high[2 * width + 1:4 * width:2], prefix_low[2 * width + 1:4 * width:2] = _twofold_add(
+                    prefix_high[width:2 * width], prefix_low[width:2 * width],
+                    high[2 * width:4 * width:2], low[2 * width:4 * width:2])
+                width *= 2
+            primitive = np.empty(count + 1)
+            primitive[:-1] = prefix_high[size:size + count] + prefix_low[size:size + count]
+            primitive[-1] = math.fsum(itertools.chain(terms, term_low))
+    except (FloatingPointError, OverflowError) as error:
+        raise ValueError("The response exceeds finite float64 integration limits") from error
+    if not np.all(np.isfinite(primitive)):
+        raise ValueError("The response exceeds finite float64 integration limits")
+    return primitive, high, low, size
+
+
 def _primitive_at_nodes(x, f):
-    with np.errstate(over="raise", invalid="raise"):
-        return np.r_[0.0, np.cumsum(np.diff(x) * (0.5 * f[:-1] + 0.5 * f[1:]))]
+    return _integration_cache(x, f)[0]
+
+
+def _residual(x, f, retained_x, retained_f):
+    """Evaluate F - Fhat in local force offsets, avoiding a large shared baseline."""
+    interval = np.clip(np.searchsorted(retained_x, x, side="right") - 1,
+                       0, len(retained_x) - 2)
+    slope = ((retained_f[interval + 1] - retained_f[interval]) /
+             (retained_x[interval + 1] - retained_x[interval]))
+    offset = f - retained_f[interval]
+    result = offset - slope * (x - retained_x[interval])
+    # Exact retained vertices have identically zero reconstruction residual.
+    positions = np.searchsorted(x, retained_x)
+    result[positions] = 0.0
+    return result
 
 
 def _reference_hash(x, f):
@@ -72,7 +164,10 @@ def _absolute_area(x, r):
     scale = np.maximum(a[crossing], b[crossing])
     aa, bb = a[crossing] / scale, b[crossing] / scale
     area[crossing] = h[crossing] * scale * 0.5 * (aa * aa + bb * bb) / (aa + bb)
-    return float(np.sum(area))
+    try:
+        return math.fsum(area)
+    except OverflowError as error:
+        raise ValueError("The absolute residual integral exceeds float64 limits") from error
 
 
 _ZERO = (0.0, 0.0, 0.0, 0.0, 0.0)
@@ -222,7 +317,7 @@ def certify(x, force, indices):
     ids = _indices(indices, len(x))
     try:
         with np.errstate(over="raise", invalid="raise", divide="raise"):
-            r = f - np.interp(x, x[ids], f[ids])
+            r = _residual(x, f, x[ids], f[ids])
             eta, terminal, lo, hi, delta = _summary(x, r)
             work = float(_primitive_at_nodes(x, f)[-1])
             values = [eta, (eta + abs(terminal)) * 0.5, max(abs(lo), abs(hi)),
@@ -269,8 +364,19 @@ class ReducedResponse:
             raise ValueError("metadata must be a JSON object")
         self._validate_peak_summary()
         try:
-            self._slope = np.diff(self._f) / np.diff(self._x)
-            self._primitive = _primitive_at_nodes(self._x, self._f)
+            with np.errstate(over="raise", invalid="raise", divide="raise"):
+                self._slope = np.diff(self._f) / np.diff(self._x)
+            self._primitive, self._area_high, self._area_low, self._area_base = _integration_cache(self._x, self._f)
+            self._area_absolute = np.abs(self._area_high) + np.abs(self._area_low)
+            # Absolute *original-component* sums must not be inferred from a
+            # node's signed value: that value can already have cancelled.
+            width = self._area_base // 2
+            with np.errstate(over="raise", invalid="raise"):
+                while width:
+                    self._area_absolute[width:2 * width] = (
+                        self._area_absolute[2 * width:4 * width:2] +
+                        self._area_absolute[2 * width + 1:4 * width:2])
+                    width //= 2
         except FloatingPointError as error:
             raise ValueError("The reduced table exceeds float64 limits") from error
         if not np.all(np.isfinite(self._slope)) or not np.all(np.isfinite(self._primitive)):
@@ -278,9 +384,10 @@ class ReducedResponse:
         # Cancellation can make terminal work tiny even when signed component
         # work is large. Scale this consistency check by the retained absolute
         # force quadrature as well as by the reported residual bounds.
-        scale = max(1.0, abs(certificate.reference_work), certificate.eta,
+        scale = max(abs(certificate.reference_work), certificate.eta,
                     abs(float(_primitive_at_nodes(self._x, np.abs(self._f))[-1])))
-        if abs(certificate.reference_work - self._primitive[-1] - certificate.signed_terminal_error) > np.finfo(float).eps * scale * 256:
+        allowance = 0. if scale == 0. else 16 * math.ulp(scale)
+        if abs(certificate.reference_work - self._primitive[-1] - certificate.signed_terminal_error) > allowance:
             raise ValueError("Retained terminal work is inconsistent with its certificate")
         # Bytes-backed arrays cannot be made writable again with setflags.
         # This keeps public coordinates and cached query primitives coherent.
@@ -320,8 +427,9 @@ class ReducedResponse:
             raise ValueError("Invalid reference size")
         if not isinstance(c.reference_sha256, str) or len(c.reference_sha256) != 64 or any(ch not in "0123456789abcdef" for ch in c.reference_sha256):
             raise ValueError("Invalid reference SHA-256")
-        scale = max(1.0, c.eta, abs(c.reference_work))
-        tol = np.finfo(float).eps * scale * 128
+        scale = max(c.eta, c.xi, c.prefix, c.window, abs(c.signed_terminal_error),
+                    abs(c.min_cumulative_error), abs(c.max_cumulative_error))
+        tol = 0. if scale == 0. else 16 * math.ulp(scale)
         if c.min_cumulative_error > tol or c.max_cumulative_error < -tol:
             raise ValueError("The cumulative-error range must contain zero")
         if (abs(c.xi - (c.eta + abs(c.signed_terminal_error)) * .5) > tol or
@@ -416,25 +524,106 @@ class ReducedResponse:
         return lower, upper
 
     def work(self, q):
-        """Integrate the retained PL force exactly from x[0] to q."""
+        """Evaluate the retained PL prefix integral in compensated float64 arithmetic."""
         values = self._query(q)
         i = np.clip(np.searchsorted(self._x, values, side="right") - 1, 0, len(self._x) - 2)
-        h = values - self._x[i]
         try:
             with np.errstate(over="raise", invalid="raise"):
-                result = self._primitive[i] + h * (self._f[i] + .5 * self._slope[i] * h)
+                first = np.zeros(i.shape, dtype=np.int64)
+                whole, correction, magnitude = self._range_work(first, i)
+                local, local_low = self._local_work_parts(i, self._x[i], values)
+                whole, correction = _twofold_add(whole, correction, local, local_low)
+                result = whole + correction
+                magnitude = magnitude + np.abs(local) + np.abs(local_low)
+                result = self._cancellation_fallback(result, magnitude, first, i, local, local_low)
+                result = np.where(values == self._x[-1], self._primitive[-1], result)
         except FloatingPointError as error:
             raise ValueError("The requested work exceeds finite float64 limits") from error
         return float(result) if result.ndim == 0 else result
 
+    def _local_work_parts(self, i, a, b):
+        """One linear segment, evaluated without global primitive subtraction."""
+        width = self._x[i + 1] - self._x[i]
+        weight = (.5 * (a - self._x[i]) + .5 * (b - self._x[i])) / width
+        left, right = (1. - weight) * self._f[i], weight * self._f[i + 1]
+        zero = np.zeros(np.shape(left))
+        high, low = _twofold_add(left, zero, right, zero)
+        return (b - a) * high, (b - a) * low
+
+    def _range_work(self, first, stop):
+        """Sum complete segments [first, stop) using their compensated tree."""
+        left = np.asarray(first, dtype=np.int64).copy() + self._area_base
+        right = np.asarray(stop, dtype=np.int64).copy() + self._area_base
+        result, correction, magnitude = np.zeros(left.shape), np.zeros(left.shape), np.zeros(left.shape)
+        while np.any(left < right):
+            use_left = (left < right) & ((left & 1) != 0)
+            # Clip inactive leaves: a stop at the last segment equals 2*base.
+            index = np.minimum(left, len(self._area_high) - 1)
+            result, correction = _twofold_add(result, correction,
+                np.where(use_left, self._area_high[index], 0.),
+                np.where(use_left, self._area_low[index], 0.))
+            magnitude = magnitude + np.where(use_left, self._area_absolute[index], 0.)
+            left = left + use_left
+            use_right = (left < right) & ((right & 1) != 0)
+            right = right - use_right
+            index = np.minimum(right, len(self._area_high) - 1)
+            result, correction = _twofold_add(result, correction,
+                np.where(use_right, self._area_high[index], 0.),
+                np.where(use_right, self._area_low[index], 0.))
+            magnitude = magnitude + np.where(use_right, self._area_absolute[index], 0.)
+            left //= 2
+            right //= 2
+        return result, correction, magnitude
+
+    def _cancellation_fallback(self, result, magnitude, first, stop, *endpoint_components):
+        """Use original terms if net work is below eps times their absolute sum.
+
+        A fixed twofold cache can lose a third widely separated scale before
+        a query. The absolute-component tree detects that conditioning even
+        when a cached signed subtree has become zero. This condition check is
+        a precision policy, not an arithmetic enclosure. Affected queries cost
+        O(m) over their m original retained segments; normal queries stay O(log K).
+        """
+        affected = (magnitude > 0.) & (np.abs(result) <= np.finfo(float).eps * magnitude)
+        if not np.any(affected):
+            return result
+        output = np.asarray(result).copy()
+        flat = output.reshape(-1)
+        starts, stops = np.asarray(first).reshape(-1), np.asarray(stop).reshape(-1)
+        endpoints = [np.asarray(component).reshape(-1) for component in endpoint_components]
+        for position in np.flatnonzero(np.asarray(affected).reshape(-1)):
+            a = self._area_base + int(starts[position])
+            b = self._area_base + int(stops[position])
+            try:
+                flat[position] = math.fsum(itertools.chain(
+                    self._area_high[a:b], self._area_low[a:b],
+                    (component[position] for component in endpoints)))
+            except OverflowError as error:
+                raise ValueError("The requested work exceeds finite float64 limits") from error
+        return output
+
     def window_work(self, a, b):
-        """Integrate over broadcastable a <= b within the reference domain."""
+        """Integrate local windows with broadcastable a <= b, without large-prefix cancellation."""
         a, b = np.broadcast_arrays(self._query(a), self._query(b))
         if np.any(a > b):
             raise ValueError("Window start must not exceed window end")
         try:
             with np.errstate(over="raise", invalid="raise"):
-                result = self.work(b) - self.work(a)
+                first = np.clip(np.searchsorted(self._x, a, side="right") - 1, 0, len(self._x) - 2)
+                last = np.clip(np.searchsorted(self._x, b, side="right") - 1, 0, len(self._x) - 2)
+                same = first == last
+                head, head_low = self._local_work_parts(first, a, np.where(same, b, self._x[first + 1]))
+                tail, tail_low = self._local_work_parts(last, self._x[last], b)
+                start = np.where(same, last, first + 1)
+                middle, correction, magnitude = self._range_work(start, last)
+                result, correction = _twofold_add(middle, correction, head, head_low)
+                tail, tail_low = np.where(same, 0., tail), np.where(same, 0., tail_low)
+                result, correction = _twofold_add(result, correction,
+                    tail, tail_low)
+                result = result + correction
+                magnitude = magnitude + np.abs(head) + np.abs(head_low) + np.abs(tail) + np.abs(tail_low)
+                result = self._cancellation_fallback(result, magnitude, start, last,
+                                                     head, head_low, tail, tail_low)
         except FloatingPointError as error:
             raise ValueError("The requested window work exceeds finite float64 limits") from error
         return float(result) if np.ndim(result) == 0 else result
@@ -480,8 +669,9 @@ class ReducedResponse:
 
         A file checksum detects accidental changes. This method establishes
         consistency with the numerical reference available to the caller.
-        Source identity is exact; numerical metadata allow source-scaled
-        float64 roundoff between platforms without changing the stored bounds.
+        Source identity is exact. Nonzero numerical fields admit a 16-ULP
+        local comparison allowance; a zero field must match zero exactly.
+        This consistency check does not enclose floating-point query error.
         """
         x, f = _aligned(x, force)
         if self.certificate.reference_points != len(x):
@@ -492,26 +682,14 @@ class ReducedResponse:
             raise ValueError("Retained coordinates do not match their reference indices")
         expected = certify(x, f, self.indices)
         if expected != self.certificate:
-            # Interpolation kernels may contract multiply/add operations on
-            # one platform but not another. Keep source identity exact and
-            # compare only the arithmetic metadata with same-unit allowances.
-            # Scaling forces before quadrature avoids overflowing a large
-            # absolute-force integral whose epsilon-scaled value is finite.
-            try:
-                with np.errstate(over="raise", invalid="raise"):
-                    scaled_force = (128 * np.finfo(float).eps) * np.abs(f)
-                    force_allowance = float(np.max(scaled_force))
-                    work_allowance = float(np.sum(np.diff(x) *
-                        (0.5 * scaled_force[:-1] + 0.5 * scaled_force[1:])))
-            except FloatingPointError as error:
-                raise ValueError("Reference verification roundoff allowance exceeds float64 limits") from error
-            if not np.isfinite(force_allowance) or not np.isfinite(work_allowance):
-                raise ValueError("Reference verification requires finite roundoff allowances")
             for name in ("eta", "xi", "prefix", "window", "delta",
                          "signed_terminal_error", "reference_work",
                          "min_cumulative_error", "max_cumulative_error"):
                 actual, stored = getattr(expected, name), getattr(self.certificate, name)
-                allowance = force_allowance if name == "delta" else work_allowance
+                # Zero is a meaningful claim; a large force baseline cannot
+                # excuse replacing a resolved nonzero reconstruction error by 0.
+                scale = max(abs(actual), abs(stored))
+                allowance = 0. if actual == 0. or stored == 0. else 16 * math.ulp(scale)
                 if abs(actual - stored) > allowance:
                     raise ValueError("Certificate field %r does not match the supplied reference: "
                                      "recomputed=%r, stored=%r, roundoff_allowance=%r" %
@@ -525,7 +703,7 @@ class ReducedResponse:
 def _segment(x, f, a, b):
     if b - a < 2:
         return _ZERO, None
-    r = f[a:b + 1] - np.interp(x[a:b + 1], [x[a], x[b]], [f[a], f[b]])
+    r = _residual(x[a:b + 1], f[a:b + 1], x[[a, b]], f[[a, b]])
     split = a + 1 + int(np.argmax(np.abs(r[1:-1])))
     return _summary(x[a:b + 1], r), split
 

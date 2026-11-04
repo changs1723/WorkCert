@@ -1,60 +1,41 @@
 # WorkCert
 
-WorkCert attaches reconstruction-error metadata to reduced force–displacement
-tables and provides force, prefix-work and interval-work queries after exchange.
-It supports explicit selectors, nodes from external simplification tools,
-native-unit labels, checked JSON persistence and directed monotone branches of
-cyclic loading histories.
+WorkCert stores selected-node force-displacement tables with reconstruction-error
+metadata, work queries, checked JSON persistence and directed branches for cyclic
+histories. It accepts externally selected source nodes and keeps native unit labels.
 
-**Version:** 0.2.0. **Authors:** Saisai Hou, Yunzhi Zhu and Sen Zhang.
-**Correspondence:** szhang@niit.edu.cn.
+**Version:** 0.3.0, local review candidate. **Authors:** Saisai Hou, Yunzhi Zhu and
+Sen Zhang. **Correspondence:** szhang@niit.edu.cn.
 
-## Install and test
+This candidate has not been released or assigned a version DOI. Publication links,
+remote CI and final author approval are recorded separately; the 0.2.0 software DOI
+does not identify this revision or the accompanying manuscript.
 
-The runtime package requires Python 3.10 or later and NumPy 1.24 or later.
-From this repository root:
+## Install and use
+
+Python 3.10 or later and NumPy 1.24 or later are required.
 
 ```text
 python -m pip install ./software
 python -m workcert --help
-python -m unittest discover -s software/tests -v
+python validation/run_installed_suite.py --output ../workcert-installed-checks
 ```
 
-The original 39 package tests passed for both wheel and source-distribution installations
-on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4.
-The recorded installation checks are in
-[`software/release_validation.json`](software/release_validation.json).
-The CI workflow targets Linux, macOS and Windows with Python 3.10–3.14; completed
-run status is shown in the repository's Actions tab. The additional acceptance
-suite contains 28 tests with independent mathematical oracles. The original 39
-and new 28 passed together (67 tests, 759 new numerical/behavioral comparisons)
-on Windows, Python 3.12.14, NumPy 2.3.5 and installed WorkCert 0.2.0 on
-2026-11-03. This new run does not add evidence for the other five installation
-combinations or for remote CI.
-
-Run from the complete repository, including its data and consumer examples:
-
-```text
-python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_run
-```
-
-The runner records the original and additional suites in separate logs, with
-version/import-path evidence and per-check expected, actual and difference
-columns. Choose a new output directory for each run. Archived results and
-case-by-case derivations are in [`validation/hou_acceptance`](validation/hou_acceptance).
-Saisai Hou wrote and executed the additional tests with Codex assistance and
-manually verified them, as confirmed by the author on 2026-11-03. The
-[author-verification record](validation/author_verification_2026-11-03.json)
-identifies the files and distinguishes this confirmation from the automated
-test evidence. The original run logs remain unchanged.
-
-## Construct and reuse a response
-
-This small input is synthetic and illustrates the interface:
+The test runner checks that every runtime module comes from the installed package
+and matches the current source. Local installation evidence is in
+`release_evidence/local_installation.json`, with the actual Python/NumPy versions,
+distribution hashes, test phases and dependency-isolation details. A workflow
+definition is supplied for Linux, macOS and Windows; it is not a remote test result.
+Each installation's `evidence` entry resolves to its archived acceptance outputs in
+`release_evidence/installations`: summaries, environments, cases, check results and
+test logs. The public summary records the SHA-256 of the original internal record
+and the sizes and hashes of these unchanged outputs. Absolute import paths in the
+environment records identify where the tested package was loaded during that run.
 
 ```python
 from workcert import ReducedResponse, reduce_response
 
+# Synthetic values illustrate the API.
 x = [0.0, 1.0, 2.0, 3.0]
 force = [0.0, 3.0, 1.0, 0.0]
 table = reduce_response(x, force, method="work", max_points=3,
@@ -63,116 +44,111 @@ table.save("response.json")
 received = ReducedResponse.load("response.json")
 print(received.work(2.5))
 print(received.window_work(1.0, 2.5))
-print(received.certificate.prefix, received.certificate.window)
 ```
 
-The selector is explicit. `work`, `vertical`, `vw`, `uniform` and `uniform_peak` are
-available. `from_indices` accepts external nodes; `indices_from_coordinates` maps exact returned coordinates back to reference indices. Peak
-retention can use absolute, positive or negative force. Omitted unit labels
-remain `unspecified`; labels do not rescale the supplied numbers. Use
-`tolerance=...`, `certificate="window"` or `certificate="prefix"` for a query
-requirement and inspect `metadata["tolerance_met"]` when imposing a point cap.
+Choose the selector explicitly. Methods include work priority, vertical priority,
+Visvalingam-Whyatt and uniform strategies; `from_indices` accepts external nodes.
+Peak retention supports either force sign convention. Omitted units remain
+`unspecified`; labels do not rescale numbers. Inspect `tolerance_met` when imposing
+a point cap.
 
-The numerical reference is the complete supplied piecewise-linear curve.
-`prefix` and `window` report its continuous maximum work-reconstruction errors;
-`eta` and `xi` are conservative integral bounds and `delta` is the force error.
-The evaluation uses analytic float64 formulas. These values describe numerical
-reconstruction, independently of experimental measurement uncertainty.
+## Numerical queries and precision
 
-See the [package README](software/README.md) and
-[API reference](software/docs/API.md) for complete signatures, units, branch
-orientation, validation and persistence behavior.
+Error metadata describe reconstruction relative to the supplied piecewise-linear
+numerical reference. Compensated pairwise integration and local range queries
+avoid serial accumulation drift and subtraction of two large global prefixes.
+Use `window_work(a, b)` for a local interval. Floating-point quadrature and returned
+values still round; reconstruction bounds do not include query arithmetic error.
 
-## Public-data reuse and source-indicator checks
-
-The worked example uses 46 PLA+ specimens representing 42 configurations:
-40 singletons and two triplicate controls. It evaluates EA, SEA, MCF, peak force
-and CFE at changing strokes. Post-global-peak queries use exact retained-peak
-summaries; reconstruction errors are compared with the actual control-specimen
-scatter. Configuration comparisons use the control means and singleton values.
-They describe numerical resolution, not experimental significance.
-
-With Python 3.12, prepare the research environment before running examples:
+Source hashes and retained coordinates are checked exactly. Numerical metadata
+use a field-local ULP comparison policy, with exact zero agreement. This checks
+file consistency rather than providing a forward-error theorem. The API explains
+the arithmetic model and limits. Reproduce the numerical examples with:
 
 ```text
-python -m pip install -r validation/requirements-reproduce.txt
-python validation/review_round2_workflow.py
-python validation/review_round2_verify_workflow.py
-python examples/query_exchange.py validation/workflow_results_round2/tables/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
-python validation/connector_exchange.py
+python software/examples/numerical_stability_probe.py --output ../stability.json
 ```
 
-The client reads the received JSON and reported mass, without the full curve.
-All eight repeated-control/stroke cases have stored work errors below their
-observed sample EA standard deviations. Source-workbook checks cover 45/46
-nominal-stroke EA/SEA/MCF/CFE values and all 46 peaks. The separate endpoint audit
-explains all 13 source-EA discrepancies: workbook 50 mm labels accompany
-actual endpoints of 50.004–50.009 mm. Both conventions and all residuals are saved.
-The connector example exports a 33-point loading-branch input table and checks
-it with an independent reader; it does not run a finite-element solver.
+## Scientific workflows
 
-A cyclic example preserves negative forces, reversals and dwells:
+The included public inputs cover 70 compression references and a chronological
+cyclic-bending response. The scripts provide preparation, geometric comparators,
+objective-matched dynamic programming, per-case outputs, source-workbook checks,
+cyclic summaries and plotting programs.
+
+The decision example asks for the best configuration at a requested stroke. The
+consumer identifies overlapping intervals, requests smaller work budgets only for
+the contenders, and checks the resulting numerical separation at reported masses.
+For configurations 26 and 35, a +/-0.05 g mass-rounding scenario leaves overlapping
+SEA intervals even with full source curves. More precise mass information is
+needed to resolve that choice; further curve refinement alone is insufficient.
+A separate inverse
+query converts a prescribed quasi-static work capacity into a stroke interval.
+These are comparisons of numerical references, not statistical tests of material
+or manufacturing reliability.
+
+The standalone `examples/compose_branch_errors.py` checks that each directed
+summary contains both zero and its terminal error. This ordering check has no
+work-unit tolerance floor. The composition identity holds in real arithmetic;
+the example evaluates it with sequential binary64 operations and supplies no
+rounding-error enclosure. For example, terminal values `[1e16, 1, -1e16]` sum to
+zero in this implementation, whereas their real-arithmetic sum is one.
 
 ```text
-python validation/user_workflow.py --case cyclic
-python validation/cyclic_round2.py
-python validation/verify_cyclic_round2.py
-python examples/compose_branch_errors.py validation/cyclic_round2_results/branch_error_manifest.json
+python validation/test_branch_summary_validation.py
 ```
-
-The 2,971 exact branches are not 2,971 physical loading reversals. A deadband
-sweep is diagnostic only and leaves the reference path unchanged. The last
-command uses only saved branch metadata to compose chronological work-error
-extrema; it needs neither WorkCert nor the dense reference. Legacy selective
-refinement files remain numerical controls, with no claim of experimental
-significance for arbitrarily close specimens.
-
-## Comparative validation and reproduction
-
-The compression comparison contains 70 numerical references, six force
-selectors, work-only and scalar controls, and separate stopping requirements.
-It saves 3660 actual JSON results, including 580 fixed-count dynamic-programming
-paths at all five budgets on the 58 eligible original references with at most 1000 nodes. Area and
-vertical-error optima are compared only with their matching objectives.
 
 ```text
-python validation/verify_extended_benchmark.py
-python validation/reproduce_v02.py --verify-only
+python validation/decision_workflow.py
+python validation/decision_verify.py
 ```
 
-The independent checks include native RDP/VW implementation comparisons,
-exhaustive small-reference optima, continuous query checks, source checksums and
-every saved table. The incremental scaling study includes the byte-preserved
-0.1 implementation, deterministic synthetic inputs and three independent paired
-million-sample repeats. Complete commands, environment requirements and output
-locations are in [REPRODUCE.md](REPRODUCE.md) and
-[`validation/BASELINES_README.txt`](validation/BASELINES_README.txt).
+These construction commands intentionally replace derived case-study results.
+To audit the supplied results without modifying the source, use:
 
-## Public data and licenses
+```text
+python validation/reproduce_v03.py --verify-only --output-dir ../workcert-verification
+```
 
-| Source | Role in the examples | Version-specific DOI |
-|---|---|---|
-| Afkhami, metal honeycombs | 23 prepared CX-steel responses; acquisition records and preparation mapping included | [10.17632/8bxkdw4nfw.1](https://doi.org/10.17632/8bxkdw4nfw.1) |
-| Wu, enhanced double-arrow honeycomb | One signed force–travel record | [10.5281/zenodo.16399749](https://doi.org/10.5281/zenodo.16399749) |
-| Saber, PLA+ absorbers | 46 archived compression curves, measured masses and auxiliary workbooks | [10.17632/v7p6y654ft.4](https://doi.org/10.17632/v7p6y654ft.4) |
-| González-de-León et al., cyclic stainless-steel member | One complete 125,157-point cyclic-bending history, assessed separately | [10.5281/zenodo.10829958](https://doi.org/10.5281/zenodo.10829958) |
+Reports and any validator-generated files stay in the separate output copy.
+`--recompute` explicitly rebuilds scientific results. Details, dependency records
+and the distinction between hash checks, independent arithmetic and optimization
+reruns are in [REPRODUCE.md](REPRODUCE.md).
 
-All four experimental sources use CC BY 4.0. The original files, creator
-attribution, checksums and transformation rules are retained under `data/`.
-See [data/DATA_ATTRIBUTION.txt](data/DATA_ATTRIBUTION.txt) and
-[data/extended/DATA_ATTRIBUTION.txt](data/extended/DATA_ATTRIBUTION.txt).
-Code uses the MIT License. `LICENSE` is the conventional filename and
-`Licence.txt` is the filename required by SoftwareX; their identical terms are
-kept at the repository and package roots. Dataset ownership is unchanged.
+## The corresponding article object
 
-## Citation and maintenance
+The `article` folder fixes the actual manuscript and cover PDFs, their editable
+LaTeX sources and figures. `article/article_manifest.json` binds these bytes to
+the seven software modules, exact scientific inputs and article-building programs.
+`article_inputs/publication_snapshot.json` pins the metadata used in the article;
+regeneration does not consult live CI, the network or mutable development QA.
+`article_inputs/scientific_fingerprints.json` detects changes to the pinned inputs.
 
-Software citation metadata are in [CITATION.cff](CITATION.cff). Cite the original
-dataset contributors when reusing the experimental records. The package
-changelog is [software/CHANGELOG.md](software/CHANGELOG.md). The scientific
-evidence consists of the executable examples and comparative validation;
-independent adoption and commercial use have not been documented.
+```text
+python authoring/build_documents_v03.py --keep-figures
+```
+
+This rebuilds from the supplied exact figure PDFs. Omit `--keep-figures` to recreate
+the plots as well. Exact PDF bytes are checked in the recorded TeX environment;
+different TeX or font versions can change the binary output. The frozen PDF hash
+always identifies the accompanying article object independently of a software DOI.
+
+## Authorship, licenses and evidence
+
+The runtime software uses MIT terms; `LICENSE` and the SoftwareX-required
+`Licence.txt` are identical. Third-party experimental inputs keep their credited
+CC BY 4.0 licenses. The article snapshot is a separate manuscript object and does
+not imply journal publication or a manuscript publication license.
+
+The dated Hou acceptance records and author-verification statement are preserved
+under `validation/hou_acceptance` and
+`validation/author_verification_2026-11-03.json`. Their original scope is recorded
+there. Current 0.3 installation results are separate, and new automated regressions
+are not relabelled as additional human review.
 
 ## Use of AI
 
-OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.
+OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.
+
+See the [package documentation](software/README.md) and
+[API reference](software/docs/API.md) for signatures, units and persistence rules.

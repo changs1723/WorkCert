@@ -1,0 +1,23 @@
+{
+  "protocol_origin_date": "2026-10-31",
+  "original_DP_budgets": [
+    9,
+    17,
+    33,
+    65
+  ],
+  "extended_DP_budgets": [
+    9,
+    17,
+    33,
+    65,
+    129
+  ],
+  "extension_recorded_date": "2026-11-02",
+  "documentation_correction_date": "2026-11-03",
+  "prior_public_version": "0.2.0",
+  "prior_public_archive_doi": "10.5281/zenodo.23915585",
+  "prior_public_protocol_sha256": "4a007dcc22492ed92761857a1af073d8e647edccb109b6a0bed993d91165c4ed",
+  "current_protocol_sha256": "608da31dba8ef5fda95fc2a8155bc3d2aba312217a7d14fa6ceea1e774504ab3",
+  "interpretation": "The 129-node DP budget was added in an internal revision after the initial four-budget plan. It is not represented as a preregistered decision."
+}

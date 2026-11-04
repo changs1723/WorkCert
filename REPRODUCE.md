@@ -1,170 +1,179 @@
-# Reproducing WorkCert 0.2
+# Reproducing WorkCert 0.3.0
 
-Run commands from the repository root. Runtime installation and scientific
-validation use separate dependencies. The complete reference and raw numerical
-inputs are included; acquisition scripts verify existing files before making
-any network request.
+The scientific source, the installable package, and the manuscript are distinct
+versioned objects. The source contains the original numerical inputs,
+preparation programs, saved results, verification programs and plotting code.
+An article snapshot and its build manifest identify the corresponding PDF and
+editable manuscript separately. A software DOI identifies the contents of its
+software record; it does not by itself identify a manuscript PDF.
 
-## Runtime installation and package checks
+## Install and test the actual package
+
+The runtime requires Python 3.10 or later and NumPy 1.24 or later.
 
 ```text
 python -m pip install ./software
-python -m unittest discover -s software/tests -v
+python validation/run_installed_suite.py --output ../workcert-installed-checks
+python validation/test_reproduction_contract.py
 ```
 
-The supported runtime starts at Python 3.10. Source-distribution and wheel
-installation evidence is in `software/release_validation.json`; it records
-only the original 39-test suite and remains unchanged. The rebuilt November 3
-wheel and source distribution are recorded separately in
-`software/release_validation_round3.json`: each exact asset passed all 67 tests
-and 759 additional comparisons after installation in a new Python 3.12 virtual
-environment using the existing base NumPy and build dependencies.
+Choose a new, empty output directory. The installed-suite runner verifies that
+all runtime modules are imported from the installed distribution and match the
+source hashes. It discovers every `test_*.py` file once, and records three
+phases: the 39 baseline methods, the 28 Hou acceptance methods, and the current
+0.3 numerical-stability regressions. The original Hou tests retain their
+separate per-check ledger. Test method counts and the number of ledger rows are
+different quantities; the generated summary reports both. The CLI contract
+checks separately verify successful and failing audits, mutation detection,
+output isolation, and refusal to overwrite earlier reports.
 
-## Independent numerical acceptance
+`environment.json` records Python, NumPy, WorkCert, import locations and hashes.
+Each phase has a raw log; failures also appear in the terminal. `cases.csv`,
+`results.jsonl`, `results.csv` and `summary.json` preserve the checks actually
+performed. This entry point does not regenerate scientific outputs. Earlier
+0.2 acceptance logs and the author's dated test-verification statement concern
+that recorded run; they are not recast as human verification of new 0.3 tests.
 
-The complete repository adds 28 tests, for a current total of 67. Use the
-installed package and retain the repository's `data/`, `validation/` and
-`examples/` directories. No research packages beyond WorkCert and NumPy are
-needed for this acceptance run; its oracles use Python's standard library.
+## Research dependencies
 
-```text
-python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_run
-```
-
-`--phase baseline` runs only the original 39 installation checks;
-`--phase independent` runs only the 28 additional tests. The default `all`
-executes them in that order and records separate logs. Use a new output
-directory each time: prior results cannot be overwritten. The runner verifies
-that all installed runtime files match the workspace and refuses a direct
-source-tree import.
-
-The saved `environment.json` records Python, NumPy and WorkCert versions,
-import paths and file hashes. `baseline.log` and `independent.log` are raw
-unittest logs; `results.csv`/`results.jsonl` contain every new comparison's
-expected value, actual value, difference, tolerance and PASS/FAIL;
-`case_summary.csv` and `summary.json` record case and suite counts. New tests
-cover analytical formulas (including interior residual zeros), work windows,
-signed peaks and CFE, chronological branches and dwells, persistence/rejection,
-Table 2, specimen 05 and both triplicate controls. Analytical tolerances are
-normally 1e-12 absolute; real-data work uses 1e-9 J and other indicators use
-1e-10, with separate half-last-digit checks for printed values.
-
-The archived 2026-11-03 run is in `validation/hou_acceptance`: 39 original plus
-28 new tests passed, with 759 new comparisons and no failures or skips, on
-Windows/Python 3.12.14/NumPy 2.3.5/installed WorkCert 0.2.0. The new evidence
-covers that environment only; current remote results are reported in GitHub Actions. This acceptance
-does not rerun all 580 DP controls or million-point timing experiments.
-Saisai Hou wrote and executed the additional tests with Codex assistance and
-manually verified them, as confirmed by the author on 2026-11-03. This author
-confirmation is recorded in
-[`validation/author_verification_2026-11-03.json`](validation/author_verification_2026-11-03.json),
-separately from the automated evidence. Original run logs and derivations
-remain unchanged. This confirmation concerns the new tests; it does not
-record all three authors' final approval of the revised manuscript.
-
-## Research environment
-
-Use Python 3.12 for the recorded comparative and dynamic-programming environment:
+Comparisons, workbook audits, plotting and dynamic programming have additional
+dependencies beyond the NumPy-only runtime:
 
 ```text
 python -m pip install -r validation/requirements-reproduce.txt
-python -m pip install ./software
 ```
 
-`validation/requirements-baselines-locked.txt` records the tested NumPy, Numba,
-llvmlite, RDP and simplification versions. These packages are research
-dependencies; WorkCert's runtime dependency is NumPy.
+`requirements-baselines-locked.txt` records the comparative environment. Timings
+record their actual environment and implementation hashes separately.
 
-## Verify the archived evidence
+## Verify the frozen source without changing it
 
 ```text
-python validation/reproduce_v02.py --verify-only
+python validation/reproduce_v03.py --verify-only --output-dir ../workcert-verification
 ```
 
-The verification checks source preparation, the 3660 comparative/optimal-path
-tables and their source hashes, exhaustive small-reference controls, and the
-database-exchange and chronological-branch outputs. The figure programs use the
-archived numerical results directly.
+Verification first checks the supplied `MANIFEST.sha256`, when present. It
+copies the frozen scientific files to `working_copy` in the new output directory,
+checks copied bytes against the initial source snapshot, and runs the numerical
+validators there. Existing validators may write reports inside that isolated
+copy. They never replace the original data, saved tables, exported connector
+input, or recorded scientific results. No cyclic or connector generator runs
+in verification mode, and no result is silently regenerated before it is checked.
 
-Individual verification commands are:
+The final `verification_summary.json` records the source hashes before and after,
+all command exit codes, and `source_unchanged`. The same source-immutability
+check runs after a failing validator. The isolated working copy and logs remain
+available for inspection. With no `--output-dir`, a new system temporary folder
+is created and its path is printed. Outputs inside `software`, `data`,
+`validation`, `examples`, `references`, `authoring`, `release_evidence`, `article`,
+`article_inputs` or `figures` are
+rejected. The repository's private `qa` directory or a sibling directory is
+suitable. Use a new output folder for every run.
+
+For a quick byte-integrity check of a published archive:
 
 ```text
-python data/source_context/verify_preparation.py
-python validation/verify_extended_benchmark.py
-python validation/verify_workflow.py
+python validation/reproduce_v03.py --verify-only --checks integrity --output-dir ../workcert-integrity
 ```
 
-## Recompute the scientific examples
+This mode requires the published manifest and is explicitly an integrity check,
+not numerical recomputation. A development tree without a root manifest can
+use full verification, whose table and source validators inspect their own
+manifests. Hash identity, independent arithmetic and rerunning an optimization
+problem are recorded as different forms of evidence.
+
+Full numerical verification checks preparation, the saved comparative tables,
+exact rational controls, client indicators, cyclic outputs and the frozen
+connector export. `independent_archive_arithmetic.py` uses standard-library
+scalar arithmetic rather than WorkCert queries to recompute all saved force-table
+errors, work-only errors and terminal scalars. Small-reference dynamic-programming
+optimality checks supplement those path-cost checks. They do not imply that
+verification has rerun all 580 full-size optimizations. When present, the new
+`decision_verify.py` independently checks the decision-focused case as well.
+
+The earlier `reproduce_v02.py` command is a compatibility alias for this same
+read-only protocol. Direct invocation of an older component verifier can still
+write its own report; use the unified entry point to preserve the source tree.
+
+## Explicitly recompute the scientific results
 
 ```text
-python validation/reproduce_v02.py --recompute
+python validation/reproduce_v03.py --recompute
 ```
 
-The unified entry point verifies/acquires the included fixed inputs, reconstructs
-the prepared references, runs native selector checks, evaluates the six-selector
-comparison, solves the objective-matched dynamic programmes, and reruns the
-database-exchange and cyclic-path examples. Add `--figures` to regenerate the
-plots after these numerical computations. Detailed component commands
-and definitions are in `validation/BASELINES_README.txt` and
-`validation/WORKFLOW_README.txt`.
+This mode intentionally replaces derived results in the source tree. It verifies
+or acquires included fixed inputs, prepares references, checks selectors,
+rebuilds comparisons, solves objective-matched dynamic programmes, and rebuilds
+the exchange, cyclic, connector and decision examples. Original input files are
+verified before any acquisition request. This operation differs from a read-only
+audit. Run it in a development checkout or a fresh copy when preserving a release.
 
-The default recomputation reuses the archived construction timings. To rerun all
-scaling cases and the three independent paired headline repeats as well:
+To regenerate timings and figures as well:
 
 ```text
-python validation/reproduce_v02.py --recompute --include-scaling --figures
-python authoring/collect_v02_values.py
+python validation/reproduce_v03.py --recompute --include-scaling --figures
 ```
 
-Run timings without other CPU-heavy jobs. New times depend on the host and load;
-the supplied measurements record their Python/NumPy versions, signal definition,
-node cap, tolerance, repeated measurements and implementation hashes. The
-million-point signal is explicitly synthetic and is separate from the
-experimental validation.
+`--figures` and `--include-scaling` require `--recompute`; they cannot be added to
+a verification-only command. Timings use a synthetic signal, a specified host,
+paired processes and recorded software hashes. New measurements depend on the
+host and load. They do not describe every possible experimental response.
 
-The November 3 timing run records CPU model, OS-visible physical memory and
-software versions in `validation/results/scaling/hardware.json`, and embeds
-hardware metadata in the measurement summaries. The earlier timings are retained
-in the internal research archive rather than mixed with the current figure.
-
-## Regenerate figures and inspect a consumer query
-
-```text
-python authoring/build_v02_figures.py
-python examples/query_exchange.py validation/workflow_results_round2/tables/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
-```
-
-The five figures are exported as vector PDF, preview PNG and 600 dpi TIFF.
-`examples/query_exchange.py` reads only the JSON response and measured mass; it
-does not read the dense source curve. `validation/review_round2_verify_workflow.py` compares
-all 46 initial client responses with the corresponding producer outputs.
-
-Optional manuscript generation uses `authoring/collect_v02_values.py` and
-`authoring/build_v02_manuscript.py`; typesetting additionally requires a standard
-TeX installation with `elsarticle`. The journal's editable manuscript source
-archive contains the class and bibliography style used for typesetting.
-
-## Output map
+## Scientific outputs and consumers
 
 | Directory | Contents |
 |---|---|
-| `data/raw`, `data/reference_inputs`, `data/source_context`, `data/extended` | Original numeric sources, credited metadata, archived prepared inputs and preparation checks |
-| `data/prepared` | 70 unchanged numerical compression references |
-| `validation/results_v02` | 3080 comparison/stopping/scalar tables, 580 optimal-path tables, per-case CSVs, summaries and independent checks |
-| `validation/workflow_results_round2` | 46 current exchange tables, 42 configuration summaries, replicate scatter and source-workbook checks |
-| `validation/cyclic_round2_results` | Branch-size and deadband diagnostics; exact chronological metadata and verifiers |
-| `validation/connector_results` | 33-point connector-format round trip on a loading branch |
-| `validation/workflow_results` | 123 exchanged compression tables, 2971 cyclic branch tables, client queries, scalar responses, source links and checks |
-| `validation/results/scaling` | Recorded construction timings and paired repeats |
-| `validation/scaling` | Archived 0.1 implementation used as the full-scan control |
-| `authoring` | Reproducible value collection, scientific plotting and manuscript generation |
+| `data/raw`, `data/reference_inputs`, `data/source_context`, `data/extended` | Credited original numerical inputs and source metadata |
+| `data/prepared` | 70 numerical compression references |
+| `validation/results_v02` | Comparative tables, scalar/stopping controls and objective-matched DP paths; the directory name retains the established data layout |
+| `validation/workflow_results_round2` | Specimen and configuration queries, repeated controls and source-workbook comparisons |
+| `validation/workflow_results` | Exchange tables and chronological branch tables |
+| `validation/cyclic_round2_results` | Branch diagnostics, directed residual summaries and deadband diagnostics |
+| `validation/connector_results` | Saved 33-point connector-format export and its numerical round trip |
+| `validation/decision_results` | Initial adjacent rankings and query-driven candidate refinements |
+| `validation/results/scaling` | Timings with implementation, software and hardware records |
 
-The root `MANIFEST.sha256` covers the files actually present in the published
-tree, including dotfiles, and excludes itself and Git's internal files. Code
-uses MIT terms; the experimental datasets retain CC BY 4.0 attribution.
+The source data keep their CC BY 4.0 attribution and software code uses MIT terms.
+The established directory names identify scientific datasets and compatibility
+layouts; they do not mean that cached 0.2 arithmetic is accepted as 0.3 evidence.
 
-The connector example uses vertical priority over the measured 0–50.005 mm
-loading branch. `validation/connector_exchange.py` writes full-precision data,
-reads the force/displacement columns independently, and checks force and
-continuous work errors against the original polyline. This is a table exchange
-test; solver regularization and unloading laws are separate modelling choices.
+`examples/query_exchange.py` reads a saved table and reported mass without
+loading its dense reference. For example:
+
+```text
+python examples/query_exchange.py validation/workflow_results_round2/tables/STWC-1.json --mass-g 16.2 --strokes 10 20 30 40
+```
+
+`validation/decision_results/mass_rounding.json` reports the initial, refined and
+full-reference SEA intervals for configurations 26 and 35, using both reported
+masses and a +/-0.05 g rounding scenario. The refined tables separate the
+reported-mass values; rounding leaves the pair unresolved even with full source
+curves. `decision_workflow.py` regenerates this result and `decision_verify.py`
+checks it using independent Decimal arithmetic.
+
+`examples/compose_branch_errors.py` enforces the exact ordering invariant that
+each summary's extrema contain zero and its terminal value, without a work-unit
+tolerance floor. Composition uses sequential binary64 arithmetic; the
+real-arithmetic identity does not enclose rounding error. Its regression suite
+includes equivalent unit scales, invalid zero extrema, directed records and
+strong cancellation:
+
+```text
+python validation/test_branch_summary_validation.py
+```
+
+The connector example is a loading-table exchange and an independent numerical
+reader. It is not a record of a finite-element solver run. The consumer does not
+infer unloading laws or solver regularization from the force table.
+
+## Manuscript and publication-state provenance
+
+Scientific tables and figures are rebuilt from the fixed inputs. Mutable facts
+such as a later release URL, CI conclusion or newly registered DOI are publication
+metadata, not scientific observations. The manuscript snapshot and its hash/build
+record specify exactly which metadata were used for the accompanying article.
+Use those editable sources to regenerate that article; do not infer that an older
+software archive's generator recreates later editorial changes. New version URLs
+and DOI claims must be bound to their actual published records. The 0.2 DOI
+`10.5281/zenodo.23915585` remains the preceding software archive and must not be
+presented as the 0.3.0 version DOI.

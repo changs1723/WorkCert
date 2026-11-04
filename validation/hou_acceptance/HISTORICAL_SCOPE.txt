@@ -1,0 +1,5 @@
+Dated acceptance evidence
+
+The original files in this folder describe the recorded earlier 0.2.0 acceptance run and its analytic derivations.
+The dated author-verification statement is preserved unchanged. Current 0.3 runtime and distribution checks
+are recorded separately under release_evidence/local_installation.json. No new human verification is inferred.

@@ -1,0 +1,3 @@
+stage,specimen,configuration,stroke_mm,requested_window_budget_J,previous_points,points,window_bound_J,prefix_bound_J,tolerance_met,previous_table_sha256,table_sha256,table
+1,26,26,20.0,0.5,42,48,0.3674912557407993,0.3608653872846005,True,20370224368f18e1c300aad8f516856faadd2301d2ffd0199aa5e9fca93d9179,c69c82dec0a9997914db29322b1ca7361480608d0867c1324fe1036b8ee2905c,validation/decision_results/tables/refinement_01/26.json
+1,35,35,20.0,0.5,21,33,0.44711367319301465,0.30757233619095187,True,859e145123a77db8fee00dad52f57bd95ba78d685f0ae84b2e9025bc12710422,0b27990edaad4b8982a826ac77fd3911c75ee65779e5c72b76c4bd02f9dae8ef,validation/decision_results/tables/refinement_01/35.json

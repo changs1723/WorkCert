@@ -1,0 +1,180 @@
+{
+  "schema": "workcert.mass-rounding-sensitivity/1.0",
+  "stroke_mm": 20.0,
+  "leader_at_reported_masses": "26",
+  "challenger": "35",
+  "mass_half_width_g": 0.05,
+  "unit_identity": "J/g equals kJ/kg",
+  "formula": "For W_hat > E >= 0 and m > h > 0, SEA lies in [(W_hat-E)/(m+h), (W_hat+E)/(m-h)]. Worst lead is the leader lower endpoint minus the challenger upper endpoint.",
+  "role": "Post-decision deterministic mass-rounding sensitivity; no change to the consumer's fixed-mass refinement rule",
+  "interpretation": "The reported-mass ordering is separated after curve refinement, but the +/-0.05 g scenario overlaps even with the dense references. Further curve refinement cannot resolve the missing mass information.",
+  "source_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+  "source_csv_sha256": {
+    "26": "3de4955d2dda195f8ab5230a815ec908e3e74f78d2c9321447e7859bbcbce921",
+    "35": "88706dba58b5e14c65dfb909e037fccec33dad94014d6de7e96c4f9f801ffc2a"
+  },
+  "stages": {
+    "initial": {
+      "records": [
+        {
+          "specimen": "26",
+          "reported_mass_g": 30.0,
+          "mass_interval_g": [
+            29.95,
+            30.05
+          ],
+          "retained_points": 42,
+          "work_estimate_J": 241.46427634329254,
+          "prefix_bound_J": 0.7669046572845956,
+          "work_interval_J": [
+            240.69737168600795,
+            242.23118100057712
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            8.023245722866932,
+            8.074372700019238
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            8.009895896372976,
+            8.08785245410942
+          ]
+        },
+        {
+          "specimen": "35",
+          "reported_mass_g": 29.8,
+          "mass_interval_g": [
+            29.75,
+            29.85
+          ],
+          "retained_points": 21,
+          "work_estimate_J": 238.31662277235395,
+          "prefix_bound_J": 0.9216328469273238,
+          "work_interval_J": [
+            237.39498992542661,
+            239.2382556192813
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            7.966274829712303,
+            8.028129383197358
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            7.952930985776436,
+            8.0416220376229
+          ]
+        }
+      ],
+      "reported_mass_worst_lead_kJ_kg": -0.004883660330426309,
+      "rounded_mass_worst_lead_kJ_kg": -0.031726141249924567,
+      "reported_mass_order_separated": false,
+      "rounded_mass_order_separated": false
+    },
+    "refined": {
+      "records": [
+        {
+          "specimen": "26",
+          "reported_mass_g": 30.0,
+          "mass_interval_g": [
+            29.95,
+            30.05
+          ],
+          "retained_points": 48,
+          "work_estimate_J": 241.415177009096,
+          "prefix_bound_J": 0.3608653872846005,
+          "work_interval_J": [
+            241.0543116218114,
+            241.7760423963806
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            8.035143720727046,
+            8.059201413212687
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            8.02177409723166,
+            8.07265583961204
+          ]
+        },
+        {
+          "specimen": "35",
+          "reported_mass_g": 29.8,
+          "mass_interval_g": [
+            29.75,
+            29.85
+          ],
+          "retained_points": 33,
+          "work_estimate_J": 238.8555808222971,
+          "prefix_bound_J": 0.30757233619095187,
+          "work_interval_J": [
+            238.54800848610614,
+            239.16315315848806
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            8.004966727721682,
+            8.025609166392217
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            7.991558073236386,
+            8.039097585159263
+          ]
+        }
+      ],
+      "reported_mass_worst_lead_kJ_kg": 0.009534554334829082,
+      "rounded_mass_worst_lead_kJ_kg": -0.01732348792760341,
+      "reported_mass_order_separated": true,
+      "rounded_mass_order_separated": false
+    },
+    "dense_reference": {
+      "records": [
+        {
+          "specimen": "26",
+          "reported_mass_g": 30.0,
+          "mass_interval_g": [
+            29.95,
+            30.05
+          ],
+          "retained_points": 1000,
+          "work_estimate_J": 241.19427528864014,
+          "prefix_bound_J": 0.0,
+          "work_interval_J": [
+            241.19427528864014,
+            241.19427528864014
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            8.039809176288005,
+            8.039809176288005
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            8.026431789971385,
+            8.05323122833523
+          ]
+        },
+        {
+          "specimen": "35",
+          "reported_mass_g": 29.8,
+          "mass_interval_g": [
+            29.75,
+            29.85
+          ],
+          "retained_points": 1000,
+          "work_estimate_J": 238.88892309209078,
+          "prefix_bound_J": 0.0,
+          "work_interval_J": [
+            238.88892309209078,
+            238.88892309209078
+          ],
+          "reported_mass_SEA_interval_kJ_kg": [
+            8.016406815170832,
+            8.016406815170832
+          ],
+          "rounded_mass_SEA_interval_kJ_kg": [
+            8.002978998059993,
+            8.02987976780137
+          ]
+        }
+      ],
+      "reported_mass_worst_lead_kJ_kg": 0.023402361117172532,
+      "rounded_mass_worst_lead_kJ_kg": -0.0034479778299854047,
+      "reported_mass_order_separated": true,
+      "rounded_mass_order_separated": false
+    }
+  }
+}

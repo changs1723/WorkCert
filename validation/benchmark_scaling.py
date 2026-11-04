@@ -104,7 +104,7 @@ def one(implementation, n, tolerance):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--one", choices=("v0_1_full_scan", "v0_2_incremental"))
+    parser.add_argument("--one", choices=("v0_1_full_scan", "v0_3_stable_incremental"))
     parser.add_argument("--n", type=int)
     parser.add_argument("--tolerance", type=float)
     parser.add_argument("--timeout", type=float, default=120.)
@@ -120,7 +120,7 @@ def main():
     if args.headline:
         rows=[]
         for repeat in range(3):
-            order=("v0_1_full_scan","v0_2_incremental") if repeat%2==0 else ("v0_2_incremental","v0_1_full_scan")
+            order=("v0_1_full_scan","v0_3_stable_incremental") if repeat%2==0 else ("v0_3_stable_incremental","v0_1_full_scan")
             for implementation in order:
                 p=subprocess.run([sys.executable,str(Path(__file__).resolve()),"--one",implementation,
                                   "--n","1000000","--tolerance","0.001"],capture_output=True,text=True,timeout=args.timeout)
@@ -128,7 +128,7 @@ def main():
                 row=json.loads(p.stdout);row['repeat']=repeat+1;rows.append(row)
                 print(json.dumps(row),flush=True)
         summary={}
-        for implementation in ("v0_1_full_scan","v0_2_incremental"):
+        for implementation in ("v0_1_full_scan","v0_3_stable_incremental"):
             values=[r['seconds'] for r in rows if r['implementation']==implementation]
             summary[implementation]={'median_seconds':float(np.median(values)),
                                      'minimum_seconds':min(values),'maximum_seconds':max(values)}
@@ -138,14 +138,14 @@ def main():
                 'hardware':hardware,'hardware_record':'hardware.json',
                 'method':'three independent process pairs; alternating implementation order; separate small warm-up; all construction/hash/final global check included',
                 'measurements':rows,'summary':summary,
-                'median_speed_ratio':summary['v0_1_full_scan']['median_seconds']/summary['v0_2_incremental']['median_seconds']}
+                'median_speed_ratio':summary['v0_1_full_scan']['median_seconds']/summary['v0_3_stable_incremental']['median_seconds']}
         (out/'headline_repeats.json').write_text(json.dumps(report,indent=2),encoding='utf8')
         print(json.dumps(summary),flush=True)
         return
     records=[]
     for tolerance in (.01, .001, .0001):
         for n in (1000,10000,100000,1000000):
-            for implementation in ("v0_1_full_scan","v0_2_incremental"):
+            for implementation in ("v0_1_full_scan","v0_3_stable_incremental"):
                 command=[sys.executable,str(Path(__file__).resolve()),"--one",implementation,
                          "--n",str(n),"--tolerance",str(tolerance)]
                 try:

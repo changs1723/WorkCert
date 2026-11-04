@@ -53,7 +53,11 @@ class ExternalSelectionTests(unittest.TestCase):
                             other.save(path)
                             restored = ReducedResponse.load(path)
                             before = restored.to_bytes()
-                            self.assertTrue(restored.verify_reference(xx, ff))
+                            if getattr(c, name) == 0.:
+                                with self.assertRaisesRegex(ValueError, "Certificate field"):
+                                    restored.verify_reference(xx, ff)
+                            else:
+                                self.assertTrue(restored.verify_reference(xx, ff))
                             self.assertEqual(restored.to_bytes(), before)
                     # Altered but internally consistent bounds must still be
                     # rejected after the envelope checksum has been renewed.

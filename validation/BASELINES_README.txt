@@ -1,4 +1,4 @@
-WorkCert v0.2 extended selector and exact-objective benchmark
+WorkCert selector and exact-objective benchmark
 
 The protocol is baselines_protocol.txt. The 70 numerical references are unchanged
 from the credited source archive. All numerical rows retain dataset identifiers;
@@ -17,9 +17,12 @@ Commands from the revision project root:
   python validation/extended_benchmark.py --finish-dp
   python validation/verify_extended_benchmark.py
 
-The last command evaluates the already computed optimal paths using WorkCert
+The --finish-dp step evaluates the already computed optimal paths using WorkCert
 and reports matched-objective greedy/optimal ratios. It does not rerun selection
 or reinterpret the DP paths as globally optimal prefix/window approximations.
+The final verifier checks saved source/table hashes and targeted small-reference
+cost/optimality cases. Hash checks are not independent arithmetic recomputation
+of all 3660 saved tables.
 
 Selectors
 Work priority and vertical priority share a largest-vertical-residual insertion
@@ -43,13 +46,17 @@ All 58 original references with n <= 1000 are included: 46 PLA+ and 12 CX steel.
 The other 12 larger originals (11 steel records and the EDAH record) are listed as excluded. No original
 is downsampled to make an optimality claim. For every eligible reference,
 all candidate edges are evaluated for continuous absolute residual area eta
-and maximum vertical residual delta. Paths of exactly 9, 17, 33 or 65 vertices
+and maximum vertical residual delta. Paths of exactly 9, 17, 33, 65 or 129 vertices
 minimize sum(edge eta) or max(edge delta), respectively, and retain the same
 endpoints/absolute-peak node. Cost precomputation is O(n^3), DP O(K n^2), and
 memory O(n^2+K n). A compiled loop makes n = 1000 practical on the recorded host;
 the n ceiling remains explicit rather than implying arbitrary-size scalability.
 The prefix and window errors of those optimal-objective paths are measured
 separately. Neither objective makes their prefix/window errors globally optimal.
+The original 31 October DP protocol listed four budgets; 129 was added during
+the 2 November internal revision. Its documented extension is distinct from the
+original plan. The current five-budget list matches optimal_dp.py and all 580
+saved paths; no original dataset was downsampled for this extension.
 
 Artifacts
 selector_metrics.csv: 2100 force-based and 350 work-only fixed-budget rows.
@@ -68,3 +75,16 @@ explicit method choice is preserved in all per-record outcomes, including
 records where VW or vertical allocation improves on work allocation.
 Build timings in selector_metrics are single descriptive construction samples;
 performance claims use the separately controlled scaling experiment instead.
+
+Decision-oriented follow-up
+  python validation/decision_workflow.py
+  python validation/decision_verify.py
+The first command reconstructs only its own decision_results directory. It
+reports all-pair and adjacent-reference comparisons separately, then demonstrates
+a consumer request that refines only overlapping best-candidate tables. Dense
+reference values are used for evaluation after the requests are selected.
+The second command uses standard-library arithmetic and the saved inputs,
+without importing WorkCert, to check the resulting workflow. It prints its
+report unless an explicit output path is requested.
+The same directory includes cohort/configuration weighting sensitivity for
+the 70-reference table comparison and the 58-reference DP controls.

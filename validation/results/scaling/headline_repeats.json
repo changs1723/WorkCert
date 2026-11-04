@@ -4,7 +4,7 @@
   "numpy": "2.3.5",
   "platform": "Windows-10-10.0.19045-SP0",
   "hardware": {
-    "captured_utc": "2026-11-03T04:17:30.369397+00:00",
+    "captured_utc": "2026-11-03T14:16:07.127758+00:00",
     "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
     "logical_processors": 8,
     "physical_memory_bytes": 16843448320,
@@ -23,7 +23,7 @@
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 13.95474399998784,
+      "seconds": 11.778179300017655,
       "retained_points": 107,
       "tolerance_met": true,
       "actual_window_relative": 0.0009998229113517291,
@@ -34,34 +34,34 @@
       "repeat": 1
     },
     {
-      "implementation": "v0_2_incremental",
+      "implementation": "v0_3_stable_incremental",
       "n": 1000000,
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 0.9478996000252664,
+      "seconds": 4.880769700044766,
       "retained_points": 107,
       "tolerance_met": true,
-      "actual_window_relative": 0.0009998229113517291,
+      "actual_window_relative": 0.000999822911351681,
       "global_error_evaluations": 1,
       "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
-      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
       "status": "PASS",
       "repeat": 1
     },
     {
-      "implementation": "v0_2_incremental",
+      "implementation": "v0_3_stable_incremental",
       "n": 1000000,
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 1.0328165999380872,
+      "seconds": 4.868752699927427,
       "retained_points": 107,
       "tolerance_met": true,
-      "actual_window_relative": 0.0009998229113517291,
+      "actual_window_relative": 0.000999822911351681,
       "global_error_evaluations": 1,
       "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
-      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
       "status": "PASS",
       "repeat": 2
     },
@@ -71,7 +71,7 @@
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 13.969629999948665,
+      "seconds": 12.09046129998751,
       "retained_points": 107,
       "tolerance_met": true,
       "actual_window_relative": 0.0009998229113517291,
@@ -87,7 +87,7 @@
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 14.338092499994673,
+      "seconds": 11.310733500053175,
       "retained_points": 107,
       "tolerance_met": true,
       "actual_window_relative": 0.0009998229113517291,
@@ -98,33 +98,33 @@
       "repeat": 3
     },
     {
-      "implementation": "v0_2_incremental",
+      "implementation": "v0_3_stable_incremental",
       "n": 1000000,
       "tolerance_fraction": 0.001,
       "tolerance_kind": "window",
       "max_points": 1025,
-      "seconds": 1.0638731999788433,
+      "seconds": 5.865387000027113,
       "retained_points": 107,
       "tolerance_met": true,
-      "actual_window_relative": 0.0009998229113517291,
+      "actual_window_relative": 0.000999822911351681,
       "global_error_evaluations": 1,
       "reference_sha256": "5af2947feef1e299d9c6fffa8045af44c6094b79d73ee826e033b5e7d6a854de",
-      "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
       "status": "PASS",
       "repeat": 3
     }
   ],
   "summary": {
     "v0_1_full_scan": {
-      "median_seconds": 13.969629999948665,
-      "minimum_seconds": 13.95474399998784,
-      "maximum_seconds": 14.338092499994673
+      "median_seconds": 11.778179300017655,
+      "minimum_seconds": 11.310733500053175,
+      "maximum_seconds": 12.09046129998751
     },
-    "v0_2_incremental": {
-      "median_seconds": 1.0328165999380872,
-      "minimum_seconds": 0.9478996000252664,
-      "maximum_seconds": 1.0638731999788433
+    "v0_3_stable_incremental": {
+      "median_seconds": 4.880769700044766,
+      "minimum_seconds": 4.868752699927427,
+      "maximum_seconds": 5.865387000027113
     }
   },
-  "median_speed_ratio": 13.52576052784791
+  "median_speed_ratio": 2.4131807120318802
 }

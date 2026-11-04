@@ -1,38 +1,35 @@
-# WorkCert 0.2.0
+# WorkCert 0.3.0
 
-This version includes built-in Visvalingam–Whyatt selection, exact-coordinate adapters, retained-peak query bounds, chronological metadata composition, source-indicator and replicate checks, and incremental reconstruction-error aggregation, directed monotone
-branches for cyclic histories, explicit selector choice, sign-aware peak modes,
-unassigned unit labels and an interface for externally selected nodes.
+WorkCert provides force-displacement tables, work queries and reconstruction-error
+metadata relative to supplied numerical references.
 
-The complete scientific tree includes original numerical sources, preparation
-programs, a database-exchange example with measured masses and engineering
-indicators, a full cyclic-bending path, geometric comparators, objective-matched
-dynamic programming and figure-generation programs.
+This version adds compensated integration, local range queries, cancellation
+controls, field-local metadata checks and consistent overflow diagnostics. A
+consumer workflow requests finer tables for overlapping candidates, while a
+separate inverse query maps a prescribed quasi-static work capacity to a stroke
+interval. The decision example distinguishes curve resolution from mass precision:
+configurations 26 and 35 separate at reported masses but remain unresolved under
+the +/-0.05 g mass-rounding scenario, including with full source curves.
 
-Earlier local wheel and source-distribution installations passed the original 39 tests on Windows
-with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and 3.14.7/2.5.4. The tagged
-publication workflow creates release assets after the Linux, macOS and Windows
-matrix passes for Python 3.10–3.14. Actual run conclusions are available in
-GitHub Actions.
+Directed branches preserve cyclic paths and zero-work events. The standalone
+summary consumer requires extrema to contain zero and the terminal error without
+a unit-dependent tolerance. Its sequential binary64 composition implements the
+real-arithmetic identities without enclosing arithmetic rounding.
 
-Reference verification now accepts source-scaled float64 roundoff in numeric
-metadata across platforms while keeping source hashes, node counts, retained
-coordinates and peak summaries exact. Regression subcases cover unit scaling,
-last-bit changes and substantive corruption. Failed-test tracebacks are also
-printed directly in Actions, alongside the archived logs.
+Both local distribution formats passed 81 installed-package tests with Windows
+Python 3.10, 3.12 and 3.14; archived evidence records actual dependency isolation.
+Twelve additional standalone summary tests cover unit scaling, invalid envelopes,
+descending branches, cancellation and overflow. The supplied workflow tests the
+current source on Linux, macOS and Windows with Python 3.10-3.14, then builds,
+installs and tests the exact tagged distributions before publishing a Release.
+Actual remote conclusions are recorded by GitHub Actions.
 
-The complete-repository suite now includes 28 additional independent numerical
-acceptance tests (67 total). On 2026-11-03 all 67 passed locally using installed
-WorkCert 0.2.0, Windows, Python 3.12.14 and NumPy 2.3.5. The new suite records
-759 per-check comparisons and separate raw logs in `validation/hou_acceptance`.
-This is additional evidence for that environment only. Saisai Hou wrote and
-executed the additional tests with Codex assistance and manually verified
-them, as confirmed by the author on 2026-11-03. The separate record is
-`validation/author_verification_2026-11-03.json`; original run logs and
-derivations are preserved. The confirmation concerns the tests, not all
-three authors' final approval of the revised manuscript.
+The complete source contains credited public data, preparation and benchmark
+programs, numerical outputs, plotting code and pinned article-building inputs.
+The article identity manifest binds the accompanying PDF and editable sources to
+their scientific inputs and runtime modules. Earlier author-verification records
+retain their original dates and scope.
 
-Install the wheel or source distribution, or run `python -m pip install ./software`
-from the complete source archive. See `REPRODUCE.md` for scientific verification
-and recomputation. Code uses the MIT License; credited experimental inputs retain
-their CC BY 4.0 licenses.
+Install with `python -m pip install ./software` from the complete source or use a
+tested distribution. See `REPRODUCE.md` for verification and recomputation. Code
+uses the MIT License; credited experimental inputs retain CC BY 4.0.

@@ -1,0 +1,49 @@
+{
+  "timestamp_utc": "2026-11-03T14:07:15.317096+00:00",
+  "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "workcert": "0.3.0",
+  "distribution_version": "0.3.0",
+  "import_path": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_3\\qa\\round5\\distribution_installs\\py310_sdist_retry1\\env\\Lib\\site-packages\\workcert\\__init__.py",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "source_hashes": {
+    "cli.py": {
+      "workspace": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+      "installed": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a"
+    },
+    "core.py": {
+      "workspace": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "installed": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9"
+    },
+    "interop.py": {
+      "workspace": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+      "installed": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff"
+    },
+    "preprocessing.py": {
+      "workspace": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+      "installed": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be"
+    },
+    "selectors.py": {
+      "workspace": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+      "installed": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d"
+    },
+    "__init__.py": {
+      "workspace": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+      "installed": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9"
+    },
+    "__main__.py": {
+      "workspace": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "installed": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
+    }
+  },
+  "test_hashes": {
+    "test_hou_analytic.py": "a60090e54e61a8498cb9729acc19c1545cbd228c1856c2770c65358b163ab09f",
+    "test_hou_cycles_io.py": "a77c843a9b3f72a98ba5ab8e96c10295d0d6e41378da2ed3fd365c19f6335132",
+    "test_hou_paper.py": "68102149d781bfa15478c882d09b63f6d89a0661320315b783dd5e5a66b6a17a",
+    "test_interop.py": "4457110d7387a7957cb95504a9f35117e5ba3fe36dd4b9976f1e810053917236",
+    "test_numerical_stability.py": "7efe5ea1efea6c39c3b9de434a259cb6a634ba733edfa5314a3d4605bf5da468",
+    "test_revision.py": "4a4edce8e1e18dae5ddc61fb7033bab75a527e47a549817bde16ff3263a1b04e",
+    "test_round2.py": "057baee23201d96f2b779ec79a9019fe32931afcbd08a8e95d6db2b0336593be",
+    "test_workcert.py": "55c39a1a9981109b4d6a7eee15d775645d326083b68cf7974c4af3c54d5951f8"
+  }
+}

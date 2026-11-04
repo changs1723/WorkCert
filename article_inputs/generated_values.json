@@ -1,0 +1,770 @@
+{
+  "metadata": {
+    "name": "WorkCert",
+    "version": "0.3.0",
+    "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+    "authors": [
+      "Saisai Hou",
+      "Yunzhi Zhu",
+      "Sen Zhang"
+    ],
+    "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China",
+    "corresponding_author": "Sen Zhang",
+    "email": "szhang@niit.edu.cn",
+    "license": "MIT",
+    "credit": {
+      "Saisai Hou": "Conceptualization, Methodology, Software, Formal analysis, Visualization, Writing – original draft",
+      "Yunzhi Zhu": "Methodology, Validation, Data curation, Writing – review & editing",
+      "Sen Zhang": "Conceptualization, Supervision, Resources, Writing – review & editing, Project administration"
+    },
+    "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.",
+    "funding": "This work was supported by the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province (Grant No. 25KJD110002).",
+    "repository_url": "https://github.com/changs1723/WorkCert",
+    "permanent_code_url": null,
+    "documentation_url": null,
+    "archive_doi": null,
+    "archive_doi_url": null,
+    "public_release_published": false
+  },
+  "verification": {
+    "status": "PASS",
+    "version": "0.3.0",
+    "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "tests_passed": 81,
+    "new_numeric_test_methods": 14,
+    "installation_statement": "Both distributions passed all 81 tests in separate Windows environments with Python 3.10/3.12/3.14 and NumPy 2.2.6/2.3.5/2.5.4, respectively. The 3.12 environments reused base-runtime dependencies.",
+    "remote_ci_statement": "",
+    "scope": "Actual local installation results; no 0.3.0 remote CI or new human-review claim"
+  },
+  "article_date": "4 November 2026",
+  "software_core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "point_counts": {
+    "initial": 1520,
+    "final": 1538
+  },
+  "timing": {
+    "old": {
+      "median_seconds": 11.778179300017655,
+      "minimum_seconds": 11.310733500053175,
+      "maximum_seconds": 12.09046129998751
+    },
+    "new": {
+      "median_seconds": 4.880769700044766,
+      "minimum_seconds": 4.868752699927427,
+      "maximum_seconds": 5.865387000027113
+    },
+    "new_points": 107,
+    "new_global_evaluations": 1,
+    "old_global_evaluations": 105,
+    "hardware": {
+      "captured_utc": "2026-11-03T14:16:07.127758+00:00",
+      "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
+      "logical_processors": 8,
+      "physical_memory_bytes": 16843448320,
+      "physical_memory_GiB": 15.686683654785156,
+      "memory_source": "Windows GlobalMemoryStatusEx: total physical memory available to OS",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.3.5"
+    }
+  },
+  "cyclic": {
+    "software_version": "0.3.0",
+    "dataset_doi": "10.5281/zenodo.10829958",
+    "license": "CC BY 4.0",
+    "source_xlsx_sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
+    "source_points": 125157,
+    "negative_force_observations": 63063,
+    "branches": 2971,
+    "zero_displacement_events": 1984,
+    "ascending_branches": 1532,
+    "descending_branches": 1439,
+    "longest_branch": {
+      "index": 2696,
+      "source_points": 2555
+    },
+    "sum_retained_branch_nodes": 13890,
+    "point_cap_per_branch": 129,
+    "branches_unmet_cap": 1,
+    "reference_signed_path_work_J": 92033.957666125,
+    "reference_sum_of_branch_work_J": 92033.95766612502,
+    "reduced_signed_path_work_J": 91965.42782859008,
+    "signed_terminal_error_J": 68.52983753492299,
+    "maximum_continuous_chronological_work_error_J": 68.72097112694482,
+    "sum_branch_window_bounds_J": 104.4777888590652,
+    "requested_aggregate_error_budget_J": 152.336218511145,
+    "allocation_scale_sum_abs_branch_work_J": 152336.218511145,
+    "all_global_error_checks_pass": true,
+    "all_chronological_intervals_covered_once": true,
+    "interpretation": "Signed chronological path integral F dx; not interpreted as crash energy or closed-cycle dissipation. No smoothing, contact alignment or reversal threshold is applied."
+  },
+  "decisions": {
+    "software_version": "0.3.0",
+    "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "workflow_sha256": "9a80ce2abd452b63be256faf9c55de245033be8d9fe3bafcaa7a90c6cc0c3312",
+    "source_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+    "initial_work_budget_J": 1.0,
+    "point_cap": 129,
+    "configuration_count": 42,
+    "specimens": 46,
+    "initial_total_retained_points": 1520,
+    "initial_adjacent_pairs": 164,
+    "initial_adjacent_separated": 103,
+    "initial_all_pairs": 3444,
+    "initial_all_pairs_separated": 3345,
+    "per_stroke_difficulty": [
+      {
+        "stroke_mm": 10.0,
+        "adjacent_pairs": 41,
+        "adjacent_separated": 16,
+        "all_pairs": 861,
+        "all_pairs_separated": 809
+      },
+      {
+        "stroke_mm": 20.0,
+        "adjacent_pairs": 41,
+        "adjacent_separated": 26,
+        "all_pairs": 861,
+        "all_pairs_separated": 841
+      },
+      {
+        "stroke_mm": 30.0,
+        "adjacent_pairs": 41,
+        "adjacent_separated": 31,
+        "all_pairs": 861,
+        "all_pairs_separated": 848
+      },
+      {
+        "stroke_mm": 40.0,
+        "adjacent_pairs": 41,
+        "adjacent_separated": 30,
+        "all_pairs": 861,
+        "all_pairs_separated": 847
+      }
+    ],
+    "best_candidate_query": {
+      "stroke_mm": 20.0,
+      "initial_decision": {
+        "stage": 0,
+        "stroke_mm": 20.0,
+        "total_retained_nodes": 1520,
+        "consumer_read_dense_references": false,
+        "leader": "26",
+        "challengers": [
+          "35"
+        ],
+        "request_configurations": [
+          "26",
+          "35"
+        ],
+        "winner_separated": false,
+        "leader_lower_kJ_kg": 8.02324572286693,
+        "largest_other_upper_kJ_kg": 8.028129383197358,
+        "separation_margin_kJ_kg": -0.004883660330428086
+      },
+      "final_decision": {
+        "stage": 1,
+        "stroke_mm": 20.0,
+        "total_retained_nodes": 1538,
+        "consumer_read_dense_references": false,
+        "leader": "26",
+        "challengers": [],
+        "request_configurations": [],
+        "winner_separated": true,
+        "leader_lower_kJ_kg": 8.035143720727046,
+        "largest_other_upper_kJ_kg": 8.025609166392217,
+        "separation_margin_kJ_kg": 0.009534554334829082
+      },
+      "refined_specimens": [
+        "26",
+        "35"
+      ],
+      "unchanged_specimens": 44,
+      "refinement_rounds": 1,
+      "final_total_retained_points": 1538,
+      "net_retained_points_added": 18,
+      "retained_points_transmitted_in_refinement_responses": 81,
+      "reference_best": "26",
+      "reference_runner_up": "35",
+      "reference_best_runner_up_gap_kJ_kg": 0.023402361117172532,
+      "truth_used_to_select_requests": false,
+      "final_all_pairs_separated_at_query": 842,
+      "final_adjacent_separated_at_query": 27
+    },
+    "energy_to_stroke": {
+      "specimen": "STWC-1",
+      "energy_target_J": 100.0,
+      "loading_interval_mm": [
+        10.0,
+        40.0
+      ],
+      "retained_points": 20,
+      "prefix_bound_J": 0.6948406444837637,
+      "source_force_lower_bound_kN": 2.6166162732562475,
+      "reference_minimum_force_on_loading_interval_kN": 3.247199,
+      "table_inverse_mm": 21.992441915748607,
+      "stroke_lower_mm": 21.812164291835515,
+      "stroke_upper_mm": 22.169622542935322,
+      "stroke_interval_width_mm": 0.357458251099807,
+      "reference_inverse_mm": 22.01666656104441,
+      "reference_contained": true,
+      "scope": "Inverse quasi-static work capacity of a fixed loading record; not an impact-dynamics prediction"
+    },
+    "cyclic_point_cap_diagnostic": [
+      {
+        "branch": 2533,
+        "source_points": 1663,
+        "retained_points": 129,
+        "allocated_bound_J": 0.08719373627500035,
+        "window_bound_J": 0.1542233705008432,
+        "achieved_to_requested_ratio": 1.7687436860652246
+      }
+    ],
+    "closest_control_SD_comparison": {
+      "configuration": "N-SCMC",
+      "stroke_mm": 10.0,
+      "n": 3,
+      "maximum_prefix_bound_J": 0.9145375846350459,
+      "EA_sample_SD_J": 0.9933474995882541,
+      "bound_to_sample_SD_ratio": 0.9206622909043661
+    },
+    "supporting_inputs": {
+      "validation/workflow_results/cyclic_path/branch_metrics.csv": "447f2e8fe6719857ab089c42766b02434e187f7ae037c663e908bc2815f50b5f",
+      "validation/workflow_results_round2/repeat_scatter.csv": "93654fcb40fcd58c94cb094ffc7f60c3e37fc9a879a7cd9ac2d8e37066a08fec"
+    },
+    "sampling_scope": "The four strokes reuse the same two triplicate controls; eight descriptive control/stroke summaries are not eight independent experiments. One joule is an illustrative reconstruction budget.",
+    "decision_scope": "Separation certifies ordering of the supplied numerical configurations at the reported masses, not experimental distinguishability of manufactured designs.",
+    "weighting_sensitivity": {
+      "force_cohort_counts": {
+        "CX_steel": 23,
+        "EDAH": 1,
+        "PLA_plus": 46
+      },
+      "DP_cohort_counts": {
+        "CX_steel": 12,
+        "PLA_plus": 46
+      },
+      "PLA_share_force_records_percent": 65.71428571428571,
+      "PLA_share_DP_records_percent": 79.3103448275862,
+      "configuration_weight_total_force": 66,
+      "configuration_weight_total_DP": 54,
+      "weighted_median_definition": "Weighted empirical median using rational cohort/configuration weights; if cumulative weight equals one half exactly, use the midpoint of the bracketing values, recovering the conventional even-sample median",
+      "weighting_schemes": {
+        "equal_records": "Every recorded specimen has unit weight",
+        "equal_cohorts": "Each available cohort has equal total weight; EDAH remains one observation",
+        "equal_configurations": "The three trials in each repeated PLA control share unit total weight; all other recorded configurations have unit weight"
+      },
+      "cohort_window_error_rankings": {
+        "CX_steel": [
+          "vertical",
+          "work",
+          "vw",
+          "rdp",
+          "uniform_peak",
+          "uniform"
+        ],
+        "EDAH": [
+          "work",
+          "vw",
+          "uniform_peak",
+          "uniform",
+          "vertical",
+          "rdp"
+        ],
+        "PLA_plus": [
+          "vw",
+          "work",
+          "vertical",
+          "rdp",
+          "uniform_peak",
+          "uniform"
+        ]
+      },
+      "sensitivity_window_error_rankings": {
+        "equal_records": [
+          "vw",
+          "work",
+          "vertical",
+          "rdp",
+          "uniform_peak",
+          "uniform"
+        ],
+        "equal_cohorts": [
+          "vw",
+          "work",
+          "vertical",
+          "uniform_peak",
+          "uniform",
+          "rdp"
+        ],
+        "equal_configurations": [
+          "vw",
+          "work",
+          "vertical",
+          "rdp",
+          "uniform_peak",
+          "uniform"
+        ]
+      },
+      "selector_metrics_sha256": "121c95b70749036900b11e9b4e8e5c4ec79b2a2955aecc69b8b932802f63189e",
+      "optimality_gaps_sha256": "06371b721c6fcfee8cd9019c85c481737d0eb427a2a64e581968194896708ad5"
+    }
+  },
+  "mass_rounding": {
+    "schema": "workcert.mass-rounding-sensitivity/1.0",
+    "stroke_mm": 20.0,
+    "leader_at_reported_masses": "26",
+    "challenger": "35",
+    "mass_half_width_g": 0.05,
+    "unit_identity": "J/g equals kJ/kg",
+    "formula": "For W_hat > E >= 0 and m > h > 0, SEA lies in [(W_hat-E)/(m+h), (W_hat+E)/(m-h)]. Worst lead is the leader lower endpoint minus the challenger upper endpoint.",
+    "role": "Post-decision deterministic mass-rounding sensitivity; no change to the consumer's fixed-mass refinement rule",
+    "interpretation": "The reported-mass ordering is separated after curve refinement, but the +/-0.05 g scenario overlaps even with the dense references. Further curve refinement cannot resolve the missing mass information.",
+    "source_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+    "source_csv_sha256": {
+      "26": "3de4955d2dda195f8ab5230a815ec908e3e74f78d2c9321447e7859bbcbce921",
+      "35": "88706dba58b5e14c65dfb909e037fccec33dad94014d6de7e96c4f9f801ffc2a"
+    },
+    "stages": {
+      "initial": {
+        "records": [
+          {
+            "specimen": "26",
+            "reported_mass_g": 30.0,
+            "mass_interval_g": [
+              29.95,
+              30.05
+            ],
+            "retained_points": 42,
+            "work_estimate_J": 241.46427634329254,
+            "prefix_bound_J": 0.7669046572845956,
+            "work_interval_J": [
+              240.69737168600795,
+              242.23118100057712
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              8.023245722866932,
+              8.074372700019238
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              8.009895896372976,
+              8.08785245410942
+            ]
+          },
+          {
+            "specimen": "35",
+            "reported_mass_g": 29.8,
+            "mass_interval_g": [
+              29.75,
+              29.85
+            ],
+            "retained_points": 21,
+            "work_estimate_J": 238.31662277235395,
+            "prefix_bound_J": 0.9216328469273238,
+            "work_interval_J": [
+              237.39498992542661,
+              239.2382556192813
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              7.966274829712303,
+              8.028129383197358
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              7.952930985776436,
+              8.0416220376229
+            ]
+          }
+        ],
+        "reported_mass_worst_lead_kJ_kg": -0.004883660330426309,
+        "rounded_mass_worst_lead_kJ_kg": -0.031726141249924567,
+        "reported_mass_order_separated": false,
+        "rounded_mass_order_separated": false
+      },
+      "refined": {
+        "records": [
+          {
+            "specimen": "26",
+            "reported_mass_g": 30.0,
+            "mass_interval_g": [
+              29.95,
+              30.05
+            ],
+            "retained_points": 48,
+            "work_estimate_J": 241.415177009096,
+            "prefix_bound_J": 0.3608653872846005,
+            "work_interval_J": [
+              241.0543116218114,
+              241.7760423963806
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              8.035143720727046,
+              8.059201413212687
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              8.02177409723166,
+              8.07265583961204
+            ]
+          },
+          {
+            "specimen": "35",
+            "reported_mass_g": 29.8,
+            "mass_interval_g": [
+              29.75,
+              29.85
+            ],
+            "retained_points": 33,
+            "work_estimate_J": 238.8555808222971,
+            "prefix_bound_J": 0.30757233619095187,
+            "work_interval_J": [
+              238.54800848610614,
+              239.16315315848806
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              8.004966727721682,
+              8.025609166392217
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              7.991558073236386,
+              8.039097585159263
+            ]
+          }
+        ],
+        "reported_mass_worst_lead_kJ_kg": 0.009534554334829082,
+        "rounded_mass_worst_lead_kJ_kg": -0.01732348792760341,
+        "reported_mass_order_separated": true,
+        "rounded_mass_order_separated": false
+      },
+      "dense_reference": {
+        "records": [
+          {
+            "specimen": "26",
+            "reported_mass_g": 30.0,
+            "mass_interval_g": [
+              29.95,
+              30.05
+            ],
+            "retained_points": 1000,
+            "work_estimate_J": 241.19427528864014,
+            "prefix_bound_J": 0.0,
+            "work_interval_J": [
+              241.19427528864014,
+              241.19427528864014
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              8.039809176288005,
+              8.039809176288005
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              8.026431789971385,
+              8.05323122833523
+            ]
+          },
+          {
+            "specimen": "35",
+            "reported_mass_g": 29.8,
+            "mass_interval_g": [
+              29.75,
+              29.85
+            ],
+            "retained_points": 1000,
+            "work_estimate_J": 238.88892309209078,
+            "prefix_bound_J": 0.0,
+            "work_interval_J": [
+              238.88892309209078,
+              238.88892309209078
+            ],
+            "reported_mass_SEA_interval_kJ_kg": [
+              8.016406815170832,
+              8.016406815170832
+            ],
+            "rounded_mass_SEA_interval_kJ_kg": [
+              8.002978998059993,
+              8.02987976780137
+            ]
+          }
+        ],
+        "reported_mass_worst_lead_kJ_kg": 0.023402361117172532,
+        "rounded_mass_worst_lead_kJ_kg": -0.0034479778299854047,
+        "reported_mass_order_separated": true,
+        "rounded_mass_order_separated": false
+      }
+    }
+  },
+  "numerical_probe": {
+    "status": "PASS",
+    "run_utc": "2026-11-03T13:52:42.184652+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "workcert": "0.3.0",
+    "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "oracle": "Exact Fraction integral of binary64 constants and local triangle; no measurements",
+    "legacy_comparison": "Documented NumPy serial-cumsum formula, not an old-package execution",
+    "constant_cases": [
+      {
+        "source_points": 1001,
+        "x_step": 0.0001,
+        "constant_force": 0.1,
+        "exact_binary_input_integral": "12980742146337070512478121581609/1298074214633706907132624082305024",
+        "expected_float64": 0.010000000000000002,
+        "legacy_serial_reference_work": 0.009999999999999974,
+        "legacy_absolute_error": 2.7755575615628914e-17,
+        "new_reference_work": 0.010000000000000002,
+        "new_absolute_error": 0.0,
+        "retained_points": 2,
+        "all_reconstruction_errors_zero": true
+      },
+      {
+        "source_points": 10001,
+        "x_step": 0.0001,
+        "constant_force": 0.1,
+        "exact_binary_input_integral": "3602879701896397/36028797018963968",
+        "expected_float64": 0.1,
+        "legacy_serial_reference_work": 0.09999999999998385,
+        "legacy_absolute_error": 1.6153745008296028e-14,
+        "new_reference_work": 0.1,
+        "new_absolute_error": 0.0,
+        "retained_points": 2,
+        "all_reconstruction_errors_zero": true
+      },
+      {
+        "source_points": 100001,
+        "x_step": 0.0001,
+        "constant_force": 0.1,
+        "exact_binary_input_integral": "18014398509481985/18014398509481984",
+        "expected_float64": 1.0,
+        "legacy_serial_reference_work": 0.9999999999988083,
+        "legacy_absolute_error": 1.191713394632643e-12,
+        "new_reference_work": 1.0,
+        "new_absolute_error": 0.0,
+        "retained_points": 2,
+        "all_reconstruction_errors_zero": true
+      },
+      {
+        "source_points": 1000001,
+        "x_step": 0.0001,
+        "constant_force": 0.1,
+        "exact_binary_input_integral": "90071992547409925/9007199254740992",
+        "expected_float64": 10.0,
+        "legacy_serial_reference_work": 9.999999999987013,
+        "legacy_absolute_error": 1.2986944852855231e-11,
+        "new_reference_work": 10.000000000000002,
+        "new_absolute_error": 1.7763568394002505e-15,
+        "retained_points": 2,
+        "all_reconstruction_errors_zero": true
+      }
+    ],
+    "short_window_cases": [
+      {
+        "dominant_force": 1.0,
+        "exponent": 0,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.5,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.5,
+        "window_reconstruction_error": 0.0
+      },
+      {
+        "dominant_force": 10000.0,
+        "exponent": 4,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.5,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.5,
+        "window_reconstruction_error": 0.0
+      },
+      {
+        "dominant_force": 100000000.0,
+        "exponent": 8,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.5,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.5,
+        "window_reconstruction_error": 0.0
+      },
+      {
+        "dominant_force": 1000000000000.0,
+        "exponent": 12,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.5,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.5,
+        "window_reconstruction_error": 0.0
+      },
+      {
+        "dominant_force": 1000000000000000.0,
+        "exponent": 15,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.5,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.5,
+        "window_reconstruction_error": 0.0
+      },
+      {
+        "dominant_force": 1e+16,
+        "exponent": 16,
+        "query": [
+          1.0,
+          2.0
+        ],
+        "exact_binary_input_integral": "1/2",
+        "expected_float64": 0.5,
+        "legacy_prefix_subtraction": 0.0,
+        "new_direct_window": 0.5,
+        "new_prefix_subtraction": 0.0,
+        "window_reconstruction_error": 0.0
+      }
+    ],
+    "verification_case": {
+      "actual_prefix_error": 0.010009765625,
+      "unaltered_reference_verified": true,
+      "zero_forgery_rejected_at_construction": true,
+      "construction_message": "Retained terminal work is inconsistent with its certificate",
+      "self_consistent_zero_forgery_rejected_by_verification": true,
+      "verification_message": "Certificate field 'eta' does not match the supplied reference: recomputed=0.010009765625, stored=0.0, roundoff_allowance=0.0"
+    },
+    "overflow_api_cases": [
+      {
+        "method": "work",
+        "exception": "ValueError",
+        "message": "The response exceeds finite float64 integration limits"
+      },
+      {
+        "method": "vertical",
+        "exception": "ValueError",
+        "message": "The response exceeds finite float64 integration limits"
+      },
+      {
+        "method": "uniform",
+        "exception": "ValueError",
+        "message": "The response exceeds finite float64 integration limits"
+      },
+      {
+        "method": "uniform_peak",
+        "exception": "ValueError",
+        "message": "The response exceeds finite float64 integration limits"
+      },
+      {
+        "method": "vw",
+        "exception": "ValueError",
+        "message": "The response exceeds finite float64 integration limits"
+      }
+    ],
+    "multiscale_window_case": {
+      "x": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0
+      ],
+      "force": [
+        0.0,
+        2e+100,
+        0.0,
+        2.0,
+        0.0,
+        2e-100,
+        0.0,
+        -2e+100,
+        0.0,
+        -2.0,
+        0.0
+      ],
+      "expected_float64": 2e-100,
+      "actual_window": 2e-100,
+      "actual_prefix": 2e-100,
+      "fallback_condition": "abs(net) <= eps64 * sum(abs(original area components))",
+      "fallback_method": "math.fsum over original queried leaf components and endpoint pieces",
+      "query_complexity": "O(log K) normally; O(m) for a cancellation-triggered query spanning m segments"
+    },
+    "path_component_consistency_case": {
+      "force": [
+        0.0,
+        1e+16,
+        1.0,
+        -1e+16,
+        0.0
+      ],
+      "exact_input_integral": "1",
+      "path_reference_work": 1.0
+    },
+    "arithmetic_scope": "Reconstruction metadata do not enclose floating-point query error. Direct windows avoid subtracting large global primitives; multiplication and output rounding remain binary64."
+  },
+  "stopping": {
+    "work": {
+      "eta": {
+        "median": 27.0,
+        "min": 9,
+        "max": 51
+      },
+      "xi": {
+        "median": 19.0,
+        "min": 6,
+        "max": 33
+      },
+      "prefix": {
+        "median": 12.5,
+        "min": 6,
+        "max": 23
+      },
+      "window": {
+        "median": 14.0,
+        "min": 6,
+        "max": 27
+      }
+    },
+    "vertical": {
+      "eta": {
+        "median": 28.0,
+        "min": 9,
+        "max": 63
+      },
+      "xi": {
+        "median": 20.0,
+        "min": 7,
+        "max": 43
+      },
+      "prefix": {
+        "median": 14.0,
+        "min": 7,
+        "max": 27
+      },
+      "window": {
+        "median": 15.0,
+        "min": 7,
+        "max": 36
+      }
+    }
+  }
+}

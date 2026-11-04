@@ -1,4 +1,4 @@
-# WorkCert 0.2.0 API
+# WorkCert 0.3.0 API
 
 ## Reduction
 
@@ -61,29 +61,62 @@ Read-only `x`, `force` and `indices` arrays have immutable backing storage.
 - `peak_force(q)` returns the maximum signed retained force from the origin
   through q, including the interpolated force at q.
 - `peak_bounds(q)` returns `(lower, upper)` for the corresponding source peak.
-- `work(q)` integrates from the first reference x to q using cached primitives.
+- `work(q)` integrates from the first reference x to q using compensated cached range sums.
 - `window_work(a,b)` broadcasts endpoints and requires a <= b.
 - Nonfinite and out-of-domain queries raise `ValueError`; no extrapolation.
 - `to_bytes()` produces deterministic compact UTF-8 JSON.
 - `save(path)` and `ReducedResponse.load(path)` persist and validate a response.
 - `verify_reference(x,force)` checks source hash, selected values and errors.
 
-Reference verification keeps the SHA-256, reference size, retained coordinates
-and peak summary exact. Recomputed float64 error fields may differ in their
-last bits across interpolation implementations. With `alpha = 128*eps64`,
-the numeric comparison allows `alpha*max(abs(force))` for `delta` and
-`sum(diff(x)*(alpha*abs(force[:-1])/2 + alpha*abs(force[1:])/2))` for each
-work-valued field. The forces are scaled before quadrature to avoid an
-unnecessary overflow. Both allowances depend only on the supplied reference,
-use the corresponding native units, and vanish for a zero-force source.
-Nonfinite allowances are rejected. A mismatch identifies the field, recomputed
-value, stored value and allowance. Verification never rewrites the table.
-This is an arithmetic-consistency allowance, not an engineering tolerance,
-measurement uncertainty or a rigorous outward-rounded error bound. Payload
-checksums and source hashes retain their exact comparisons.
+Three numerical meanings are separate:
 
-The schema remains `workcert.response/1.0`; version-0.1.0 files can be loaded.
-Payload checksums detect accidental corruption and do not authenticate a source.
+1. `eta`, `xi`, `prefix`, `window` and `delta` are the exact-real PL
+   reconstruction quantities defined by the supplied binary64 coordinates.
+   Their returned values are float64 evaluations of those formulas.
+2. Integration and queries also round. Compensated pairwise sums retain low
+   components of segment means and sums; terminal sums use `math.fsum`.
+   Products, interpolation and the final returned number still round. The
+   reconstruction values do not include those arithmetic effects and are
+   not outward-rounded enclosures. Large positive and negative contributions
+   or a very small requested error need an independent precision check.
+3. File/reference checks compare metadata, rather than proving arithmetic
+   enclosures or engineering tolerances. SHA-256, source size, retained
+   coordinates and peak summaries match exactly. Recomputed and stored
+   **nonzero** numerical fields may differ by at most 16 ULPs at the larger
+   field magnitude; if either field is zero, both must be exactly zero.
+   This local serialization policy has no force-baseline or one-unit floor.
+   It permits final-bit variation without letting a large source force mask
+   an erased reconstruction error. It is not a general forward-error theorem.
+
+`window_work` integrates endpoint pieces and compensated complete-segment
+range sums in O(log K) work per ordinary query. It never subtracts two global prefix
+values. For a full table `x=[0,1,2]`, `force=[1e16,0,1]`, the interval
+`window_work(1,2)` is `0.5` while manually subtracting `work(2)-work(1)`
+returns zero: both huge prefixes round to the same binary64 number.
+Use `window_work` for local intervals. A cached absolute-original-component
+sum detects severe cancellation even when a signed subtree has already lost
+small terms: if `abs(net) <= eps64 * sum(abs(components))`, the query is
+recomputed by `math.fsum` over its original retained-segment components and
+endpoint pieces. This precision-triggered fallback costs O(m) for the m
+segments spanned by that query. The condition estimate is not an error bound.
+The public example
+`software/examples/numerical_stability_probe.py` reproduces this distinction,
+long constant references and rejected inconsistent metadata as JSON.
+
+Loading checks relationships using their work-valued scales; terminal-work
+consistency uses the retained absolute-work quadrature and error scale.
+Neither check inserts a one-unit floor. Their 16-ULP consistency budgets
+are distinct from the reconstruction quantities. A source-verification
+mismatch names the field, recomputed value, stored value and allowance;
+verification never changes the saved file.
+
+The JSON schema remains `workcert.response/1.0`. Earlier files can be read
+when their stored numerical identities meet these checks. The strengthened
+0.3.0 recomputation can reject metadata from earlier evaluation algorithms,
+even with the same source hash. In that case regenerate the table with
+`from_indices` and the trusted full reference; do not widen a tolerance or
+silently replace a bound. Payload checksums detect accidental changes and
+do not authenticate a source.
 
 New tables carry a `retained_global_maximum` summary only when the first global
 signed maximum of the supplied source is retained. Its reference index,
@@ -109,7 +142,7 @@ result has `branches`, `events`, `reference_work` and `source_points`. Each
 A reversal node is shared by adjacent branches.
 
 `branch.directed_work(response,q=None)` evaluates physical F dx from its
-chronological start to q (default end): `response.work(q)-response.work(start_x)`.
+chronological start to q (default end): a signed `response.window_work` call on the corresponding interval.
 The response must have the same branch domain and reference hash. Loading and unloading stay
 separate even when they share displacement values.
 

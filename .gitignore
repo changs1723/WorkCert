@@ -6,10 +6,6 @@ __pycache__/
 build/
 dist/
 .venv/
-.baseline_env/
 .validation/
 qa/
-research/
-repository/
-manuscript/
-figures/
+public_source/

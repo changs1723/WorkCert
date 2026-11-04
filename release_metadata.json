@@ -1,6 +1,6 @@
 {
   "name": "WorkCert",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
   "authors": [
     "Saisai Hou",
@@ -16,18 +16,14 @@
     "Yunzhi Zhu": "Methodology, Validation, Data curation, Writing – review & editing",
     "Sen Zhang": "Conceptualization, Supervision, Resources, Writing – review & editing, Project administration"
   },
-  "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.",
+  "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.",
   "funding": "This work was supported by the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province (Grant No. 25KJD110002).",
   "repository_url": "https://github.com/changs1723/WorkCert",
-  "permanent_code_url": "https://github.com/changs1723/WorkCert/tree/7d9e2de90e9a00c48b967a83ee086952f7b805ed",
-  "documentation_url": "https://github.com/changs1723/WorkCert/blob/7d9e2de90e9a00c48b967a83ee086952f7b805ed/software/docs/API.md",
-  "repository_verified": true,
-  "publication_status": "public source verified",
-  "author_test_artifacts_archived": true,
-  "author_verification_record": "validation/author_verification_2026-11-03.json",
-  "source_verification": {
-    "commit": "7d9e2de90e9a00c48b967a83ee086952f7b805ed",
-    "ci_url": "https://github.com/changs1723/WorkCert/actions/runs/41620174520",
-    "platform_jobs_passed": 15
-  }
+  "permanent_code_url": null,
+  "documentation_url": null,
+  "publication_state": "local review candidate",
+  "archive_doi": null,
+  "article_identity": "article/article_manifest.json",
+  "pinned_article_build_inputs": "article_inputs/publication_snapshot.json",
+  "installation_evidence": "release_evidence/local_installation.json"
 }

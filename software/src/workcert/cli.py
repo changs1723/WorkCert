@@ -22,7 +22,7 @@ def _read_csv(path, x_column, force_column):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="workcert", description="Reduce tabulated responses and inspect reconstruction errors.")
-    parser.add_argument("--version", action="version", version="WorkCert 0.2.0")
+    parser.add_argument("--version", action="version", version="WorkCert 0.3.0")
     commands = parser.add_subparsers(dest="command", required=True)
     reduce = commands.add_parser("reduce", help="Reduce a CSV with a header row")
     reduce.add_argument("csv")
@@ -80,7 +80,7 @@ def main(argv=None):
                               "work_unit": table.work_unit}
         print(json.dumps(output, ensure_ascii=False, allow_nan=False, indent=2))
         return 0
-    except (ValueError, OSError, OverflowError) as error:
+    except (ValueError, OSError, OverflowError, FloatingPointError) as error:
         print("workcert: " + str(error), file=sys.stderr)
         return 2
 
