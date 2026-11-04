@@ -1,0 +1,127 @@
+{
+  "created": "2026-11-04T01:28:11.331770+00:00",
+  "modified": "2026-11-04T01:28:11.542966+00:00",
+  "id": 23934502,
+  "conceptrecid": "23915584",
+  "doi": "10.5281/zenodo.23934502",
+  "conceptdoi": "10.5281/zenodo.23915584",
+  "doi_url": "https://doi.org/10.5281/zenodo.23934502",
+  "metadata": {
+    "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+    "doi": "10.5281/zenodo.23934502",
+    "publication_date": "2026-11-04",
+    "description": "NumPy-based force-displacement table queries and reconstruction-error metadata. Code is MIT; credited third-party experimental inputs retain CC BY 4.0. The included article snapshot has a separate identity manifest.",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Hou, Saisai",
+        "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China"
+      },
+      {
+        "name": "Zhu, Yunzhi",
+        "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China"
+      },
+      {
+        "name": "Zhang, Sen",
+        "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/changs1723/WorkCert/tree/v0.3.0",
+        "relation": "isSupplementTo",
+        "resource_type": "software",
+        "scheme": "url"
+      }
+    ],
+    "version": "0.3.0",
+    "custom": {
+      "code:codeRepository": "https://github.com/changs1723/WorkCert"
+    },
+    "resource_type": {
+      "title": "Software",
+      "type": "software"
+    },
+    "license": {
+      "id": "mit-license"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "23915584"
+          }
+        }
+      ]
+    }
+  },
+  "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+  "links": {
+    "self": "https://zenodo.org/api/records/23934502",
+    "self_html": "https://zenodo.org/records/23934502",
+    "preview_html": "https://zenodo.org/records/23934502?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.23934502",
+    "self_doi": "https://doi.org/10.5281/zenodo.23934502",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23934502",
+    "reserve_doi": "https://zenodo.org/api/records/23934502/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/23915584",
+    "parent_html": "https://zenodo.org/records/23915584",
+    "parent_doi": "https://doi.org/10.5281/zenodo.23915584",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23915584",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:23934502/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:23934502/sequence/default",
+    "files": "https://zenodo.org/api/records/23934502/files",
+    "media_files": "https://zenodo.org/api/records/23934502/media-files",
+    "latest": "https://zenodo.org/api/records/23934502/versions/latest",
+    "latest_html": "https://zenodo.org/records/23934502/latest",
+    "versions": "https://zenodo.org/api/records/23934502/versions",
+    "draft": "https://zenodo.org/api/records/23934502/draft",
+    "access_links": "https://zenodo.org/api/records/23934502/access/links",
+    "access_grants": "https://zenodo.org/api/records/23934502/access/grants",
+    "access_users": "https://zenodo.org/api/records/23934502/access/users",
+    "access_request": "https://zenodo.org/api/records/23934502/access/request",
+    "access": "https://zenodo.org/api/records/23934502/access",
+    "communities": "https://zenodo.org/api/records/23934502/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/23934502/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/23934502/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/23934502/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/23934502/quota-increase",
+    "requests": "https://zenodo.org/api/records/23934502/requests"
+  },
+  "updated": "2026-11-04T01:28:11.542966+00:00",
+  "recid": "23934502",
+  "revision": 3,
+  "files": [
+    {
+      "id": "0553e246-c660-4b41-ba60-17c86ff41541",
+      "key": "changs1723/WorkCert-v0.3.0.zip",
+      "size": 24515457,
+      "checksum": "md5:cb3e82e0cb00ae9c2c37abb1f6b35619",
+      "links": {
+        "self": "https://zenodo.org/api/records/23934502/files/changs1723/WorkCert-v0.3.0.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1985889"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 3,
+    "unique_downloads": 3,
+    "views": 1,
+    "unique_views": 1,
+    "version_downloads": 0,
+    "version_unique_downloads": 0,
+    "version_unique_views": 0,
+    "version_views": 0
+  },
+  "state": "done",
+  "submitted": true
+}

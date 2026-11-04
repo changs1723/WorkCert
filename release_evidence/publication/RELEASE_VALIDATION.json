@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "tag": "v0.3.0",
+  "source_commit": "cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848",
+  "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "validation": "Exact built wheel and sdist installed in separate fresh virtual environments",
+  "artifacts": [
+    {
+      "artifact": "workcert-0.3.0-py3-none-any.whl",
+      "kind": "wheel",
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
+      "tests_passed": 81,
+      "baseline_tests_passed": 39,
+      "hou_acceptance_tests_passed": 28,
+      "revision_03_tests_passed": 14,
+      "test_phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "acceptance_checks": 759,
+      "cli_version": "WorkCert 0.3.0",
+      "version": "0.3.0",
+      "module": "/home/runner/work/WorkCert/WorkCert/release-checks/wheel/lib/python3.12/site-packages/workcert/__init__.py",
+      "python": "3.12.15 (main, Oct  1 2026, 02:36:28) [GCC 15.2.0]",
+      "numpy": "2.5.4",
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9"
+    },
+    {
+      "artifact": "workcert-0.3.0.tar.gz",
+      "kind": "sdist",
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
+      "tests_passed": 81,
+      "baseline_tests_passed": 39,
+      "hou_acceptance_tests_passed": 28,
+      "revision_03_tests_passed": 14,
+      "test_phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "acceptance_checks": 759,
+      "cli_version": "WorkCert 0.3.0",
+      "version": "0.3.0",
+      "module": "/home/runner/work/WorkCert/WorkCert/release-checks/sdist/lib/python3.12/site-packages/workcert/__init__.py",
+      "python": "3.12.15 (main, Oct  1 2026, 02:36:28) [GCC 15.2.0]",
+      "numpy": "2.5.4",
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9"
+    }
+  ]
+}

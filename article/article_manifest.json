@@ -7,7 +7,7 @@
     "Yunzhi Zhu",
     "Sen Zhang"
   ],
-  "publication_status": "local review candidate",
+  "publication_status": "published software; separate manuscript object",
   "software_runtime_tree_sha256": "fc42ecd6d8b3cbd61493dabeb40540635a1530e546250c30afc6e67c6df6fa83",
   "software_runtime_files": {
     "software/src/workcert/__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
@@ -20,13 +20,18 @@
   },
   "pinned_publication_snapshot": {
     "path": "article_inputs/publication_snapshot.json",
-    "sha256": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a"
+    "sha256": "c21106e3395938829b342efc1a7122265bf6a7da28bc35cf548e159cfd05b411"
   },
   "scientific_inputs": {
-    "article_inputs/publication_snapshot.json": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a",
+    "article_inputs/publication_snapshot.json": "c21106e3395938829b342efc1a7122265bf6a7da28bc35cf548e159cfd05b411",
     "data/prepared/PLA_STWC-1.csv": "02db23d79dc95f8511446e424a89d5918c05207f3cb6302aefff77ac997b4464",
     "references/additions.bib": "6d622a3db8ae14b1274ecb6b8a49b7041e033b028b90c84e61abb68c2c2bef0e",
     "references/original_sources.bib": "e7bee4b0b0af163d79943b09897a5ff91c1487d389595871206cd928b3f58f2d",
+    "release_evidence/publication/RELEASE_VALIDATION.json": "3c96c7b7bf9ad334ad96aef7522c420d492a233db59c7629d5c006ede128df54",
+    "release_evidence/publication/SHA256SUMS": "b6c371de8b0044ce1cb7f5ffa4b4dbc5a27b1d73a613aacfadcccfaae890ff4c",
+    "release_evidence/publication/tag_ci.json": "0904f5afa9129ff0f003c7e0e47f51810e16b07c7362d9e9d4ea584fe11d2b5a",
+    "release_evidence/publication/verification.json": "77876e313b0886826c1e08c9df37c47afa7cf6906bb6c78b704fcd8c17a54a6f",
+    "release_evidence/publication/zenodo_record.json": "a5ce56438581dd5e6e472695dfd3ce892d03791481b038f87b759fe707eea62c",
     "validation/connector_results/verification.json": "ff277aa20d1c133d089eeb00731d83181865c0d6437d71ee8bd785092c7e569d",
     "validation/cyclic_round2_results/branch_diagnostics.csv": "bc584d9adbe81badd226f3f775585c3c5b1bea1d784a903ee2b36b4bc642b4be",
     "validation/cyclic_round2_results/deadband_sensitivity.csv": "0856c0a9f2083a533f648ef29ecced2834611b5f05a897f33591701928054639",
@@ -51,14 +56,14 @@
     "validation/workflow_results_round2/summary.json": "d4afb5ca4658d42744678d5d6e957f1b1efa8e79d64debf5ee8dcfe3f9c58cff"
   },
   "article_build_programs": {
-    "authoring/collect_values.py": "20af50308aeb9e4f456490b07ac10284d34ea842249e68b862b996552076c555",
-    "authoring/build_manuscript.py": "5536e4c830a56f671349a014e8efacad0c00c9259d6cdc00604388ff3ef11631",
+    "authoring/collect_values.py": "4a743bea90325b55d09fe85c3ab586a50bdb4fa432a541991fe1516334065a8c",
+    "authoring/build_manuscript.py": "22002793f11ee6bd6f5f4a8421a207fd0cdfa06e2ff7dd2d24351b16155bad23",
     "authoring/build_figures.py": "a4d66fc154db61f0f42fc431a544c83a8401f21c51943237eb81096558fcfa98",
     "authoring/build_documents_v03.py": "8dd9598af690e2d0190d01f1e1f89f28f1e96a97f9f37434fb19bee95b5bc309"
   },
   "scientific_fingerprints": {
     "path": "article_inputs/scientific_fingerprints.json",
-    "sha256": "986f0281b29274b014d10789a80c49352e8b1623a60d0138f1959dbd255cc9f1"
+    "sha256": "42c53a2a130dc0a1691cf478d785e7fc35f385dca4d139e8c802bb49b61e354a"
   },
   "build_environment": {
     "SOURCE_DATE_EPOCH": "1793750400",
@@ -67,12 +72,12 @@
   },
   "frozen_files": {
     "cover_letter.pdf": {
-      "bytes": 50782,
-      "sha256": "d6ca152e85b0feea81ffa4189f8d521716eb603d1fc92bc6ce5b1477dc7937bc"
+      "bytes": 83760,
+      "sha256": "01c3a44bde5d71bd71c5f08aa1f672ae04357cf19c67a37f0241125caccd3928"
     },
     "cover_letter.tex": {
-      "bytes": 2483,
-      "sha256": "706c6eeba504d72bf3a11585b33864214b575f6515f9f792c77fb3bce81f7d16"
+      "bytes": 2693,
+      "sha256": "828521997842be501ca1e992b59f024ca0690a5014d3eaa741ee1ae6bc8b6efd"
     },
     "elsarticle-num.bst": {
       "bytes": 29462,
@@ -103,12 +108,12 @@
       "sha256": "4c777b832e5c607ef93a7fd53c1eaf1a87e6bb01c3148bb8806e3300b3e85b32"
     },
     "main.pdf": {
-      "bytes": 778205,
-      "sha256": "1679d4e7dc1f08807fc097b58dd0d258d1af54bba4f59fb01c2d3566238b54ce"
+      "bytes": 783708,
+      "sha256": "b5268c04ddfe542f91ff3b923fa241e6f39976ad066c41372b15915a25ec6e73"
     },
     "main.tex": {
-      "bytes": 22921,
-      "sha256": "599a13492c37b4a9cfcaff6dffb8ff7bbd1e7fbabf69b16f55814f06388815a5"
+      "bytes": 23326,
+      "sha256": "4b0f4e30a603cb009331bec5622c7b886ba989a4caab4980f81e5b0aae6d2b19"
     },
     "README.txt": {
       "bytes": 1011,

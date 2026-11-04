@@ -3,7 +3,7 @@
   "software_version": "0.3.0",
   "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
   "inputs": {
-    "article_inputs/publication_snapshot.json": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a",
+    "article_inputs/publication_snapshot.json": "c21106e3395938829b342efc1a7122265bf6a7da28bc35cf548e159cfd05b411",
     "validation/results_v02/comparative_summary.json": "c689caebb0d695aaf3cd8fd59bfaf565fa5241f037c2544d1b749e72d1a0d7d5",
     "validation/results_v02/dp_summary.json": "722e4db85b42c3502d6798dd717034137f372dd68743826d52c28daad238f4dd",
     "validation/decision_results/summary.json": "824820aa0184902471a4d2d8ed79bb29fe68cc223c0658138e9d36ca46c9f475",
@@ -12,7 +12,12 @@
     "validation/results/scaling/headline_repeats.json": "b1d5ce87fdeec7deb8aa392010fb1ccd0f7795a57c9b76224de78952046e5986",
     "validation/workflow_results/summary_all.json": "6875849f7b3c1123e02501e3bebfdec1fdc8c67c4c8f6b0b31b5d4ec7953ca1c",
     "validation/workflow_results_round2/summary.json": "d4afb5ca4658d42744678d5d6e957f1b1efa8e79d64debf5ee8dcfe3f9c58cff",
-    "validation/connector_results/verification.json": "ff277aa20d1c133d089eeb00731d83181865c0d6437d71ee8bd785092c7e569d"
+    "validation/connector_results/verification.json": "ff277aa20d1c133d089eeb00731d83181865c0d6437d71ee8bd785092c7e569d",
+    "release_evidence/publication/RELEASE_VALIDATION.json": "3c96c7b7bf9ad334ad96aef7522c420d492a233db59c7629d5c006ede128df54",
+    "release_evidence/publication/SHA256SUMS": "b6c371de8b0044ce1cb7f5ffa4b4dbc5a27b1d73a613aacfadcccfaae890ff4c",
+    "release_evidence/publication/tag_ci.json": "0904f5afa9129ff0f003c7e0e47f51810e16b07c7362d9e9d4ea584fe11d2b5a",
+    "release_evidence/publication/verification.json": "77876e313b0886826c1e08c9df37c47afa7cf6906bb6c78b704fcd8c17a54a6f",
+    "release_evidence/publication/zenodo_record.json": "a5ce56438581dd5e6e472695dfd3ce892d03791481b038f87b759fe707eea62c"
   },
   "publication_state_source": "Pinned article_inputs/publication_snapshot.json; no live QA or network state is read"
 }

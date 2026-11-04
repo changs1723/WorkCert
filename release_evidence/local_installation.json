@@ -1,7 +1,10 @@
 {
   "status": "PASS",
   "version": "0.3.0",
-  "date": "2026-11-03",
+  "date": "2026-11-04",
+  "timestamp_utc": "2026-11-04T01:50:28.377833+00:00",
+  "tag": "v0.3.0",
+  "source_commit": "cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848",
   "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
   "runtime_fingerprints": {
     "cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
@@ -12,25 +15,28 @@
     "__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
     "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
   },
-  "scope": "Six actual fresh Windows installations; no remote-CI result inferred",
+  "scope": "Six actual fresh Windows installations of the exact downloaded GitHub v0.3.0 release wheel and sdist; separate from remote CI and prior local candidate packages",
+  "artifact_directory": "Published GitHub v0.3.0 release assets",
   "artifacts": [
     {
       "name": "workcert-0.3.0-py3-none-any.whl",
-      "bytes": 24906,
-      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082"
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
+      "download_url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/workcert-0.3.0-py3-none-any.whl"
     },
     {
       "name": "workcert-0.3.0.tar.gz",
-      "bytes": 56741,
-      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b"
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
+      "download_url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/workcert-0.3.0.tar.gz"
     }
   ],
   "installations": [
     {
       "kind": "wheel",
       "artifact": "workcert-0.3.0-py3-none-any.whl",
-      "bytes": 24906,
-      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
       "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
       "numpy": "2.2.6",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -68,8 +74,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2712,
-          "sha256": "dddc59dc9f310a02ace1c0170fadf02c053eac339353b115427b358fed1c1240"
+          "bytes": 2728,
+          "sha256": "75cf9433f9e70732e3284e8b697499b6444e77b3e5bc949c6a20f6c184535805"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -85,23 +91,23 @@
         },
         "baseline.log": {
           "bytes": 3418,
-          "sha256": "0d400228fc6741f577ab6806f98c8aa6f285600edb523f446932850af36b70de"
+          "sha256": "4da663348c67f9c96ca4f146772b59f8a7b7cf4f08f9f915c0a0f64ecdac0a1b"
         },
         "hou_acceptance.log": {
           "bytes": 2669,
-          "sha256": "6611ea349741ced3a2675e9bc9afa4e9ca4dc4195dc83c59653cd9546c8b6e11"
+          "sha256": "abaa6d46149d24f834895c621dcba94d0452ab2dc59caa9b129edb2c4a53a79e"
         },
         "revision_03.log": {
           "bytes": 1695,
-          "sha256": "774f3314ea6bb8d8ad5839475515dec541c3d7c70f386e99b6da5800e4545811"
+          "sha256": "991faf48a9623527b9c5420fa84eb0346297edf7052dfa444e58cf36a999b103"
         }
       }
     },
     {
       "kind": "sdist",
       "artifact": "workcert-0.3.0.tar.gz",
-      "bytes": 56741,
-      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
       "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
       "numpy": "2.2.6",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -139,8 +145,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2719,
-          "sha256": "15c89659a5b4626b105ad9ae56dc2f2ab5685e7dac9f6152548f49937e6ec2fd"
+          "bytes": 2728,
+          "sha256": "42aa1fc6f1d70634d97d284829f74a62a02ee6a996885891beff5764f17cfc74"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -156,23 +162,23 @@
         },
         "baseline.log": {
           "bytes": 3418,
-          "sha256": "0109e49b7d78bf4b6d4cbcc9e57d0795633c066b30767273d9d57491b1f96ebb"
+          "sha256": "21a8260b0d89dbd949ed8d59b963467b02cad8d0167178d53a79d0b4a2556064"
         },
         "hou_acceptance.log": {
           "bytes": 2669,
-          "sha256": "048b0f27153fa9096726532ad7b71d79651da0f08c3579d4502ac80f1461bf0d"
+          "sha256": "06b4e7f76d2b8a993831e1fd560643f63bdbb24e79109d5da16ff9bace968a8c"
         },
         "revision_03.log": {
           "bytes": 1695,
-          "sha256": "5ab3215616329bba71502a84c1de941719dba869a3d60688090d0bf1df703bad"
+          "sha256": "a8506185c31d250c0de1a8b34f1f355046f8adf2fafe615ae1675d5757da6af4"
         }
       }
     },
     {
       "kind": "wheel",
       "artifact": "workcert-0.3.0-py3-none-any.whl",
-      "bytes": 24906,
-      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
       "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
       "numpy": "2.3.5",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -210,8 +216,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2697,
-          "sha256": "70aea7602e4fdf6a2ab865237bd0913f758ee02cb564cf1bc4f94c3a3154cd48"
+          "bytes": 2713,
+          "sha256": "b27186a69735bc4c0d95a7e17d094e24fae4ce9bb3c814af68017dbcc5251084"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -227,23 +233,23 @@
         },
         "baseline.log": {
           "bytes": 5141,
-          "sha256": "9aba7b9a4eff629aa25f7dff84ca34d39261839ddedb0a8824519bd3447f3ca2"
+          "sha256": "18a4ad922d4e50925a54df31eac3bace6e4c09ec69a1b7083d6dee081a19ae3d"
         },
         "hou_acceptance.log": {
           "bytes": 3924,
-          "sha256": "89d6bf4f3f4b82872e2d7961577b905a08ef27f4900439e9b862a2d58aa77c7d"
+          "sha256": "5cada4750b17cd8b5efc9d535babc5725a9c848378a2f7887aa026b29ffb3f94"
         },
         "revision_03.log": {
           "bytes": 2460,
-          "sha256": "16519052e1d094d4900b72454b29c5c3f1ae809b72d4507770d0f1f61fee229e"
+          "sha256": "e998b507ce28de221686be44baecc2f1209ba1aa5e5139b71f4015a28e113a38"
         }
       }
     },
     {
       "kind": "sdist",
       "artifact": "workcert-0.3.0.tar.gz",
-      "bytes": 56741,
-      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
       "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
       "numpy": "2.3.5",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -281,8 +287,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2697,
-          "sha256": "ad16f8fbe7f549788e212163217c22dda029efbd89ea00a42b52b409b163a4f8"
+          "bytes": 2713,
+          "sha256": "d48cac89fc9e9d78fb0f3478cfc35794517f24e82d2b043ef74dd1ef6693d789"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -298,23 +304,23 @@
         },
         "baseline.log": {
           "bytes": 5141,
-          "sha256": "6dfcc87f0b44e04b0712a38042f19cd09dc1684c1502041daec51ea2655da0e4"
+          "sha256": "ba2495c115bb0145f14b84c079f1fbe0959e4b114c78bbc94f5245b3c90b80c0"
         },
         "hou_acceptance.log": {
           "bytes": 3924,
-          "sha256": "e4a793ad55bad0ec7e5a726700a2cd91dc43facfa0d1e0c43f243eab3d061368"
+          "sha256": "e6c8cf2948e6b2e465fda936ad18721f906ffc6d6d0d6461376c7f91012ca563"
         },
         "revision_03.log": {
           "bytes": 2460,
-          "sha256": "74c53c09fbf71e2830766276ef4c6c235d371338d9bccd8c105d261802378d43"
+          "sha256": "0db650689f87eca488c17eb3f4f5dc9879d93aa33553491b2afee5c3774a4818"
         }
       }
     },
     {
       "kind": "wheel",
       "artifact": "workcert-0.3.0-py3-none-any.whl",
-      "bytes": 24906,
-      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
       "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
       "numpy": "2.5.4",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -352,8 +358,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2712,
-          "sha256": "3eed21af71dafeda60b9f7fc5ff6b0439330bbbd973e3ed50bc44cc92d39fac5"
+          "bytes": 2728,
+          "sha256": "f7babcfd506f5c54a8dd67a3a29f9d011457e01e003c407e4efeef5f34353ab8"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -369,23 +375,23 @@
         },
         "baseline.log": {
           "bytes": 5141,
-          "sha256": "b3f48aecf7233635deadb6f27438cfca75e1b17e3c83628a7912ee03526637ec"
+          "sha256": "1f6d2b1a8d31b6b4313a2c3f2780684df8d624338fba9e7aa4c360ce19968abb"
         },
         "hou_acceptance.log": {
           "bytes": 3924,
-          "sha256": "a7e7967b675936b2fc6ad46ff3f3e3bda7e28271276e1103f7a67252d1aaf12e"
+          "sha256": "f7f9b02b5dbaee1585371838d4adf554401d0ec949ef750ba492f14c0cfb7d76"
         },
         "revision_03.log": {
           "bytes": 2460,
-          "sha256": "71838f055b9e64c9563b8c3b09a5bb5cbba2b1863fd858bd145e16f8d506ecb2"
+          "sha256": "42341808062aff4c80089e88f82169936d14dc4720dff1f535b45c2b08f980dc"
         }
       }
     },
     {
       "kind": "sdist",
       "artifact": "workcert-0.3.0.tar.gz",
-      "bytes": 56741,
-      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
       "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
       "numpy": "2.5.4",
       "platform": "Windows-10-10.0.19045-SP0",
@@ -423,8 +429,8 @@
           "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
         },
         "environment.json": {
-          "bytes": 2712,
-          "sha256": "424ce5a415ae35fd8bd3f5bca9780d57531147240bb6601005f4c38de912356b"
+          "bytes": 2728,
+          "sha256": "35fee3c589d1d380f7cddc7b29aee00f443c68c1b307362763e6f76855be068e"
         },
         "cases.csv": {
           "bytes": 8195,
@@ -440,19 +446,19 @@
         },
         "baseline.log": {
           "bytes": 5141,
-          "sha256": "5d7b1cef4ffcf0da30a01a16135c184a1cb247fda8a93712846d24cf749bbe8c"
+          "sha256": "3149868c55e4669a5b716a7f80858810eddab00f701da1cc0de07a0da23ecebe"
         },
         "hou_acceptance.log": {
           "bytes": 3924,
-          "sha256": "475dd5929ef3dc8c78a20ca0f40cbf7a920be677c4ccbf643a4a1e5383ade45e"
+          "sha256": "613e999406d61e26efefcd6899e1d93f92fe8071bf0019d2c573f24f0b90208c"
         },
         "revision_03.log": {
           "bytes": 2460,
-          "sha256": "d400d2d06fb7dc86ae2f04caa9b439c4f17ad4d7256724d9a3f5c2b60f8be33e"
+          "sha256": "42c1a03603a58dacfc258f33399e9686c816523dc65619eeb73e28b2a7287e9b"
         }
       }
     }
   ],
-  "original_internal_record_sha256": "77ed84ef0cdb5cca2bd0dcefa6cd127516c5a9bca86aab0171c90ab97a2c36b5",
+  "original_internal_record_sha256": "d10e5d8b029a97e0c832312aab9ee2c72b18084630302c84ece8bd86746b9777",
   "evidence_path_policy": "Evidence entries resolve within this source archive. Original environment import paths are observations of the tested installation and are not archive navigation links."
 }

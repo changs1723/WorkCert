@@ -14,6 +14,6 @@ test_source_baseline_cannot_excuse_zeroed_nonzero_error (test_numerical_stabilit
 test_three_scale_cancellation_all_permutations_and_interior_windows (test_numerical_stability.NumericalStabilityTests.test_three_scale_cancellation_all_permutations_and_interior_windows) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 5.482s
+Ran 14 tests in 7.342s
 
 OK

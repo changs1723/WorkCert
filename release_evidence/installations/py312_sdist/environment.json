@@ -1,10 +1,10 @@
 {
-  "timestamp_utc": "2026-11-03T14:08:12.113684+00:00",
+  "timestamp_utc": "2026-11-04T01:48:31.587497+00:00",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "numpy": "2.3.5",
   "workcert": "0.3.0",
   "distribution_version": "0.3.0",
-  "import_path": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_3\\qa\\round5\\distribution_installs\\py312_sdist\\env\\Lib\\site-packages\\workcert\\__init__.py",
+  "import_path": "C:\\Users\\chang\\Desktop\\\u79d1\u78142026\\RIMNI\\softwarex_v0_3\\qa\\publication_2026-11-04\\distribution_installs\\py312_sdist\\env\\Lib\\site-packages\\workcert\\__init__.py",
   "platform": "Windows-10-10.0.19045-SP0",
   "source_hashes": {
     "cli.py": {

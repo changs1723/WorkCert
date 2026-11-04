@@ -28,6 +28,6 @@ test_triplicate_arithmetic_means_and_sample_sd (test_hou_paper.HouPaperAcceptanc
 test_triplicate_mean_intervals_average_endpoints (test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints) ... ok
 
 ----------------------------------------------------------------------
-Ran 28 tests in 0.704s
+Ran 28 tests in 0.760s
 
 OK

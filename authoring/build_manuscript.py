@@ -42,14 +42,18 @@ def main():
         cpu, hw["physical_memory_GiB"], hw["python"].split()[0], hw["numpy"])
     code_statement = ("The fixed software source is " + r"\url{" + source + "}. ") if source else "The versioned source bundle accompanies this manuscript. "
     archive_statement = ("The software archive is " + r"\url{" + meta["archive_doi_url"] + "}. ") if meta.get("archive_doi_url") else ""
+    article_statement = ("The final article sources, figures and build inputs are fixed at " +
+                         r"\url{" + meta["article_source_url"] + "}. ") if meta.get("article_source_url") else ""
     credit = "\n".join(r"\textbf{" + name + ":} " + meta["credit"][name].replace(" – ", " -- ").replace("&", r"\&") + "." for name in meta["authors"])
     failed = decision["cyclic_point_cap_diagnostic"][0]
     values = {
         "TITLE": meta["title"].replace("–", "--"), "VERSION": meta["version"],
         "DATE": collected["article_date"],
         "AI": meta["ai_disclosure"], "FUNDING": meta["funding"], "CREDIT": credit,
+        "AITOOL": meta["ai_disclosure"].split(" assisted", 1)[0],
         "CODE": codelink, "DOCS": doclink, "METHODS": "\n".join(methods),
         "CODEAVAIL": code_statement + archive_statement,
+        "ARTICLEAVAIL": article_statement,
         "TESTS": str(tests["tests_passed"]),
         "INSTALL": tests["installation_statement"],
         "CI": tests.get("remote_ci_statement", ""),
@@ -129,7 +133,7 @@ MAIN = r'''\documentclass[preprint,12pt,a4paper]{elsarticle}
 \cortext[cor]{Corresponding author.}\ead{szhang@niit.edu.cn}
 \affiliation[a]{organization={Department of Public Basic Courses, Nanjing University of Industry Technology},city={Nanjing},country={China}}
 \begin{abstract}
-WorkCert combines reduced force--displacement tables with continuous reconstruction-error metadata, reusable work queries and checked persistence. Compensated integration and local range sums support long references and short windows with large preceding work. A public-data workflow compares energy-absorption indicators for 46 specimens representing 42 configurations. Initial tables separate 103 of 164 adjacent numerical comparisons. At a 20 mm query, refining two overlapping responses adds @@ADDED@@ retained nodes and identifies the leader at reported masses; mass rounding leaves that choice unresolved. A second example inverts a prescribed work capacity into a stroke interval. Signed branches support cyclic histories. Geometric selectors and objective-matched dynamic programming contextualize point selection: replacing conservative area stopping with direct interval-error stopping reduces median counts from @@ETAPOINTS@@ to @@WINDOWPOINTS@@ for the same requirement. Data, tests, numerical outputs and a hash-linked article snapshot accompany the software.
+WorkCert is a Python package for reduced force--displacement tables with reconstruction-error metadata and reusable work queries. Compensated integration and local range sums support long references and short windows. Examples using public data demonstrate energy-absorption screening, selective refinement, work-to-stroke inversion and signed cyclic histories. Refinement identifies the leading candidate at reported masses; mass rounding leaves the comparison unresolved. Six selectors and objective-matched dynamic programming contextualize reduction quality. Within work-priority selection, direct interval-error stopping reduces median table size from @@ETAPOINTS@@ to @@WINDOWPOINTS@@ nodes for the same 1\% requirement. Source data, tests, numerical outputs and article-building inputs accompany the software.
 \end{abstract}
 \begin{keyword}Research software\sep Force--displacement data\sep Reconstruction error\sep Energy absorption\sep Stable integration\sep Cyclic response\end{keyword}
 \end{frontmatter}\clearpage
@@ -199,7 +203,7 @@ The consumer can request finer source tables when error intervals overlap. \path
 \subsection{Verification and AI-assisted implementation}
 The installed suite contains @@TESTS@@ methods, including analytical acceptance cases and constant, affine, cancellation, rescaling, persistence and overflow regressions. @@INSTALL@@ @@CI@@ Exact-rational fixtures and an independent scalar integrator check reconstruction and queries; small dynamic-programming problems are checked against enumeration. Frozen-table identity checks are recorded separately from independent numerical recalculation.
 
-OpenAI Codex assisted research planning, implementation, data acquisition, analysis and plotting. The archived contributor-verification record identifies the scope of human checks. Expected test values use analytical or rational calculations and original workbook indicators. The complete assistance statement and author contributions appear below.
+@@AITOOL@@ assisted research planning, public-data collection, implementation, analysis, plotting and manuscript preparation. The assisted code includes \path{software/src/workcert}, \path{validation} and \path{authoring}. The script \path{validation/reproduce_v03.py} verifies saved results; \path{authoring/build_documents_v03.py} rebuilds the article and data-derived figures. The dated contributor-verification record identifies human checks. Expected values use analytical or rational calculations and original workbook indicators.
 
 \section{Illustrative examples}
 \subsection{Integration and verification precision}
@@ -208,7 +212,7 @@ A 100,001-point constant reference, $x_i=10^{-4}i$ mm and $F_i=0.1$ kN, reduces 
 For $x=[0,1,2]$ and $F=[10^{16},0,1]$, full-node retention gives $E_w=0$, yet subtracting rounded global prefixes loses the 0.5 J window $[1,2]$. Direct integration returns 0.5 J. A signed unit-step fixture $F=[0,10^{16},1,-10^{16},0]$ returns 1 J by retaining both components of each endpoint mean. A separate $10^{12}$-baseline example has $E_p=0.010009765625$ J; replacing its error metadata by zeros is rejected. These cases distinguish stable computation from representation fidelity.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig01_numerics.pdf}
-\caption{Arithmetic tests: (a) terminal-work error against exact binary-input integration; (b) local-window work with a dominant preceding force. Serial accumulation and prefix subtraction are explicit comparison formulas. OpenAI Codex assisted the archived plotting code.}\label{fig:numeric}\end{figure}
+\caption{Arithmetic tests: (a) terminal-work error against exact binary-input integration; (b) local-window work with a dominant preceding force. Serial accumulation and prefix subtraction are explicit comparison formulas. OpenAI Codex assisted with the archived plotting code.}\label{fig:numeric}\end{figure}
 
 \subsection{Decision-focused table exchange}
 The PLA+ dataset contains 40 singly tested configurations and two triplicate controls: 42 configurations and 46 specimens \cite{Saber2026,Guler2026}. A demonstration 1 J interval budget retains @@INITPOINTS@@ of 46,000 source nodes. At stroke $u$, $EA=W(u)$, $SEA=EA/m$, $MCF=EA/u$ and $CFE=MCF/P(u)$ for prefix peak $P(u)$. Retaining the source global peak makes later peak queries exact, sharpening CFE intervals to $(\widehat W\pm E_p)/(uP)$; earlier queries use force-error bounds and retained anchors, with a positive peak lower bound.
@@ -224,7 +228,7 @@ The same interface answers an inverse query. A @@INVERSEPOINTS@@-node STWC-1 tab
 Source-indicator checks cover 45/46 workbook EA, SEA, MCF and CFE entries, and all peaks. Specimen 05's stated 50 mm EA differs because its workbook integrates to 50.009 mm. Actual endpoints of 50.004--50.009 mm explain all 13 nonzero EA discrepancies; these checks concern source calculations and endpoint conventions.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig02_decisions.pdf}
-\caption{Consumer workflow: reference/table response, candidate intervals at reported masses, adjacent versus all-pair separation, targeted point allocation, inverse work query and repeated-specimen scatter. Black ticks in (b) mark reference values used only for evaluation. OpenAI Codex assisted the archived plotting code.}\label{fig:workflow}\end{figure}
+\caption{Consumer workflow: reference/table response, candidate intervals at reported masses, adjacent versus all-pair separation, targeted point allocation, inverse work query and repeated-specimen scatter. Black ticks in (b) mark reference values used only for evaluation. OpenAI Codex assisted with the archived plotting code.}\label{fig:workflow}\end{figure}
 
 A connector exchange uses 33 vertical-priority nodes, with $\delta=@@CONNECTORDELTA@@$ kN, $E_p=@@CONNECTOREP@@$ J and $E_w=@@CONNECTOREW@@$ J. A separate reader verifies exported force--displacement rows and work queries. This example evaluates loading-table exchange; solver response, unloading and convergence require their own constitutive analysis.
 
@@ -234,7 +238,7 @@ A stainless-steel record contains 125,157 chronological pairs \cite{CyclicDatase
 Work-priority branches use absolute-peak retention, a 129-point cap and budget $0.001|W_b|$. They retain @@CYCLENODES@@ nodes. Branch 2533 reaches the cap with $E_w=@@FAILBOUND@@$ J against @@FAILBUDGET@@ J requested, a @@FAILEDRATIO@@ ratio; \path{tolerance_met=False} exposes this outcome. Against @@CYCLEWORK@@ kJ signed path work, terminal error is @@CYCLEEND@@ J, continuous chronological error @@CYCLEERROR@@ J and summed branch-window bound @@CYCLEBOUND@@ J. These are computed global results, not an automatic consequence of relative branch budgets. Descending summaries become $(-d,l-d,h-d)$ before chronological composition. The standalone composer evaluates this real-arithmetic identity with sequential float64 operations; its metadata exclude rounding error. Path work differs from closed-cycle dissipation.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig03_cyclic.pdf}
-\caption{Cyclic path, branch sizes, diagnostic reversal scales and chronological work error. Shading shows $\pm\sum_b E_{w,b}$. OpenAI Codex assisted the archived plotting code.}\label{fig:cyclic}\end{figure}
+\caption{Cyclic path, branch sizes, diagnostic reversal scales and chronological work error. Shading shows $\pm\sum_b E_{w,b}$. OpenAI Codex assisted with the archived plotting code.}\label{fig:cyclic}\end{figure}
 
 \subsection{Selectors and matched-objective controls}
 The comparison comprises 23 CX-steel honeycomb records, one enhanced double-arrow honeycomb (EDAH) record and 46 PLA+ curves \cite{Afkhami2022,Afkhami2023,AfkhamiDataset2022,WuDataset2025,Wu2026,Saber2026}. Archived preparation includes CX contact alignment at 0.5 kN and a window ending at 40\% of nominal loaded size. Six selectors use 9, 17, 33, 65 and 129 nodes. Fixed-count RDP uses normalized coordinates; native tolerance selectors are cross-checked separately. Outputs comprise 2100 force tables, 350 work-only tables, 560 stopping cases and 70 scalar controls.
@@ -250,7 +254,7 @@ The pooled 33-node median favors VW, whereas CX alone favors vertical priority a
 Dynamic programming supplies 580 area- or force-optimal paths under identical endpoint and peak constraints across all five budgets. Work priority's area-cost ratio and vertical priority's force-cost ratio address different objectives; neither establishes prefix-error optimality.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig04_selectors.pdf}
-\caption{Cohort-specific window errors, weighting sensitivity and matched-area optimality gaps. OpenAI Codex assisted the archived plotting code.}\label{fig:selectors}\end{figure}
+\caption{Cohort-specific window errors, weighting sensitivity and matched-area optimality gaps. OpenAI Codex assisted with the archived plotting code.}\label{fig:selectors}\end{figure}
 
 \subsection{Stopping and scale}
 For the same 1\% interval-work requirement, work-priority stopping retains median @@WINDOWPOINTS@@ nodes using $E_w$, versus @@ETAPOINTS@@ using conservative $\eta$. This compares stopping measures within one selector. Prefix-only requirements are tabulated separately.
@@ -258,7 +262,7 @@ For the same 1\% interval-work requirement, work-priority stopping retains media
 Synthetic scaling uses $10^3$--$10^6$ samples and three tolerances on @@HARDWARE@@. At one million samples and 0.1\% window tolerance, three independent paired processes give median @@OLDTIME@@ s for full-scan version 0.1 and @@NEWTIME@@ s for the current stable incremental implementation, retaining @@TIMEPOINTS@@ nodes. Complete error evaluations decrease from @@OLDEVALS@@ to @@NEWEVALS@@. Small cases incur tree and compensated-sum overhead. Figure~\ref{fig:scale} reports this signal and host, with source hashes and individual timings archived.
 
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{figures/fig05_scaling.pdf}
-\caption{Matched interval stopping and measured construction cost. Boxes show quartiles and medians, with 1.5-interquartile-range whiskers; timing bars show three-process minimum--maximum ranges. OpenAI Codex assisted the archived plotting code.}\label{fig:scale}\end{figure}
+\caption{Matched interval stopping and measured construction cost. Boxes show quartiles and medians, with 1.5-interquartile-range whiskers; timing bars show three-process minimum--maximum ranges. OpenAI Codex assisted with the archived plotting code.}\label{fig:scale}\end{figure}
 
 \FloatBarrier
 \section{Impact}
@@ -278,7 +282,7 @@ The authors declare no competing interests.
 \section*{Acknowledgements}
 The authors thank the contributors of the public compression and cyclic-loading datasets.
 \section*{Data and code availability}
-The CC BY 4.0 sources are \url{https://doi.org/10.17632/8bxkdw4nfw.1}, \url{https://doi.org/10.5281/zenodo.16399749}, \url{https://doi.org/10.17632/v7p6y654ft.4} and \url{https://doi.org/10.5281/zenodo.10829958}. @@CODEAVAIL@@ The article snapshot fixes its PDF, LaTeX, generator inputs and software fingerprints separately from software publication metadata. Scientific verification runs in a scratch copy, leaving supplied files unchanged; recomputation and article rebuilding are separate documented commands.
+The CC BY 4.0 sources are \url{https://doi.org/10.17632/8bxkdw4nfw.1}, \url{https://doi.org/10.5281/zenodo.16399749}, \url{https://doi.org/10.17632/v7p6y654ft.4} and \url{https://doi.org/10.5281/zenodo.10829958}. @@CODEAVAIL@@ @@ARTICLEAVAIL@@ The article manifest links the final PDF and editable sources to their software modules and scientific inputs. Verification and recomputation are separate documented commands.
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
 @@AI@@
 \bibliographystyle{elsarticle-num}{\small\bibliography{references}}
@@ -298,9 +302,9 @@ Please consider \emph{@@TITLE@@} as an Original Software Publication describing 
 
 WorkCert combines reduced force--displacement tables with continuous work-error metadata, compensated integration, local window queries and checked persistence. A public-data consumer workflow requests finer tables from two source records to identify the leader at reported masses, while a mass-rounding scenario shows when better mass information is needed. The same interface inverts a prescribed work capacity into a stroke interval. A complete cyclic-bending history illustrates directed branch composition and explicit detection of an unmet point-capped budget.
 
-Evaluation includes constant and affine scale families, strong-cancellation windows, corrupted metadata and overflow regressions; geometric selectors and objective-matched dynamic programming contextualize selection. The accompanying material contains source data, preparation and plotting programs, numerical outputs, installation instructions and tests. The frozen article snapshot links its typeset text and build inputs to software fingerprints. @@CODEAVAIL@@
+Evaluation includes constant and affine scale families, strong-cancellation windows, corrupted metadata and overflow regressions; geometric selectors and objective-matched dynamic programming contextualize selection. The accompanying material contains source data, preparation and plotting programs, numerical outputs, installation instructions and tests. @@CODEAVAIL@@ @@ARTICLEAVAIL@@
 
-\textbf{Use of artificial intelligence.} @@AI@@
+\textbf{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process.} @@AI@@
 
 The authors are Saisai Hou, Yunzhi Zhu and Sen Zhang, all affiliated with the Department of Public Basic Courses, Nanjing University of Industry Technology. Sen Zhang is the corresponding author. The work is supported by Grant No. 25KJD110002 of the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province.
 

@@ -166,14 +166,19 @@ The connector example is a loading-table exchange and an independent numerical
 reader. It is not a record of a finite-element solver run. The consumer does not
 infer unloading laws or solver regularization from the force table.
 
-## Manuscript and publication-state provenance
+## Software and article identities
 
-Scientific tables and figures are rebuilt from the fixed inputs. Mutable facts
-such as a later release URL, CI conclusion or newly registered DOI are publication
-metadata, not scientific observations. The manuscript snapshot and its hash/build
-record specify exactly which metadata were used for the accompanying article.
-Use those editable sources to regenerate that article; do not infer that an older
-software archive's generator recreates later editorial changes. New version URLs
-and DOI claims must be bound to their actual published records. The 0.2 DOI
-`10.5281/zenodo.23915585` remains the preceding software archive and must not be
-presented as the 0.3.0 version DOI.
+The software is fixed at `v0.3.0`, commit
+`cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848`, and archived at
+https://doi.org/10.5281/zenodo.23934502. Its published wheel and source distribution
+were downloaded, hash-checked and installed in six new Windows environments.
+`release_evidence/local_installation.json` describes those runs, including
+dependency reuse. `release_evidence/publication` preserves publication checks.
+
+The final article and its generation inputs are fixed separately at
+https://github.com/changs1723/WorkCert/tree/article-v0.3.0-final.
+The seven runtime modules match the released software. The article manifest
+identifies the final PDF and the inputs needed to regenerate it. Build commands
+read the supplied publication snapshot, rather than live network or CI state.
+The software archive retains its original article snapshot; use the article tag
+or the accompanying complete article-reproducibility archive for the final PDF.

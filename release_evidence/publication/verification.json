@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "software_version": "0.3.0",
+  "software_tag": "v0.3.0",
+  "software_source_commit": "cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848",
+  "version_doi": "10.5281/zenodo.23934502",
+  "version_doi_url": "https://doi.org/10.5281/zenodo.23934502",
+  "release_url": "https://github.com/changs1723/WorkCert/releases/tag/v0.3.0",
+  "assets": [
+    {
+      "name": "RELEASE_VALIDATION.json",
+      "bytes": 2811,
+      "sha256": "3c96c7b7bf9ad334ad96aef7522c420d492a233db59c7629d5c006ede128df54",
+      "url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/RELEASE_VALIDATION.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 406,
+      "sha256": "b6c371de8b0044ce1cb7f5ffa4b4dbc5a27b1d73a613aacfadcccfaae890ff4c",
+      "url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/SHA256SUMS"
+    },
+    {
+      "name": "workcert-0.3.0-py3-none-any.whl",
+      "bytes": 24840,
+      "sha256": "8bbae484a8694e3bf33544a75feece5b3709ec060af079fed57a1f715166eef9",
+      "url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/workcert-0.3.0-py3-none-any.whl"
+    },
+    {
+      "name": "workcert-0.3.0.tar.gz",
+      "bytes": 56889,
+      "sha256": "4e6d7b12ee27d29b53bf9f85052f1bb8fc044f8204bf34fc42633d674fb39eea",
+      "url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/workcert-0.3.0.tar.gz"
+    },
+    {
+      "name": "WorkCert-v0.3.0-reproducibility.zip",
+      "bytes": 24100851,
+      "sha256": "003c83b1f69916cfe63099c08a9fbd7f12df34fe75f85937b4e206224b124f8b",
+      "url": "https://github.com/changs1723/WorkCert/releases/download/v0.3.0/WorkCert-v0.3.0-reproducibility.zip"
+    }
+  ],
+  "source_files_verified": 7337,
+  "software_source_manifest_sha256": "49fdf1685745622c99569842490e272ea9be6312cee63bae3bcab5cfa6a46b99",
+  "github_and_zenodo_source_bytes_match": true,
+  "doi_resolution": {
+    "status": "PASS",
+    "timestamp_utc": "2026-11-04T01:44:42.378879+00:00",
+    "doi_url": "https://doi.org/10.5281/zenodo.23934502",
+    "http_status": 200,
+    "resolved_url": "https://zenodo.org/records/23934502"
+  },
+  "local_release_distribution_installations": 6,
+  "package_tests_per_installation": 81,
+  "installation_evidence": "release_evidence/local_installation.json",
+  "runtime_fingerprints": {
+    "cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+    "__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
+  },
+  "article_source_url": "https://github.com/changs1723/WorkCert/tree/article-v0.3.0-final",
+  "identity_scope": "The DOI identifies the immutable software release. The final article and its generation inputs are a separate fixed object with the same runtime modules."
+}

@@ -1,0 +1,944 @@
+{
+  "status": "PASS",
+  "source_commit": "cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848",
+  "tag": "v0.3.0",
+  "workflow_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817",
+  "jobs": [
+    {
+      "name": "test (macos-latest, 3.10)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635185",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (macos-latest, 3.11)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635343",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (ubuntu-latest, 3.13)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635357",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (macos-latest, 3.13)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635362",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (windows-latest, 3.10)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635406",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (ubuntu-latest, 3.10)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635449",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (ubuntu-latest, 3.12)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635456",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (ubuntu-latest, 3.14)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635509",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (ubuntu-latest, 3.11)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635532",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (macos-latest, 3.14)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635543",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (windows-latest, 3.13)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635564",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (macos-latest, 3.12)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635580",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (windows-latest, 3.11)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635586",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (windows-latest, 3.14)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635688",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "test (windows-latest, 3.12)",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126325635689",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install the source package",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check installed location",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run all installed-package tests in separately recorded phases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve numerical acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check immutable-verification CLI contract",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check directed-branch summary validation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check CLI version",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "release",
+      "conclusion": "success",
+      "html_url": "https://github.com/changs1723/WorkCert/actions/runs/41753993817/job/126326188497",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build distributions",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install and test the exact release distributions",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve exact-distribution acceptance evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Archive the complete scientific source",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish tagged assets after the platform matrix passes",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}

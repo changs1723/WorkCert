@@ -20,11 +20,15 @@
     "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.",
     "funding": "This work was supported by the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province (Grant No. 25KJD110002).",
     "repository_url": "https://github.com/changs1723/WorkCert",
-    "permanent_code_url": null,
-    "documentation_url": null,
-    "archive_doi": null,
-    "archive_doi_url": null,
-    "public_release_published": false
+    "permanent_code_url": "https://github.com/changs1723/WorkCert/tree/v0.3.0",
+    "documentation_url": "https://github.com/changs1723/WorkCert/blob/v0.3.0/software/docs/API.md",
+    "archive_doi": "10.5281/zenodo.23934502",
+    "archive_doi_url": "https://doi.org/10.5281/zenodo.23934502",
+    "public_release_published": true,
+    "public_release_url": "https://github.com/changs1723/WorkCert/releases/tag/v0.3.0",
+    "tagged_source_commit": "cb1ad2ac154f21ff5c1a2c078a890bf3cbd57848",
+    "article_source_url": "https://github.com/changs1723/WorkCert/tree/article-v0.3.0-final",
+    "article_tag": "article-v0.3.0-final"
   },
   "verification": {
     "status": "PASS",
@@ -32,9 +36,9 @@
     "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
     "tests_passed": 81,
     "new_numeric_test_methods": 14,
-    "installation_statement": "Both distributions passed all 81 tests in separate Windows environments with Python 3.10/3.12/3.14 and NumPy 2.2.6/2.3.5/2.5.4, respectively. The 3.12 environments reused base-runtime dependencies.",
-    "remote_ci_statement": "",
-    "scope": "Actual local installation results; no 0.3.0 remote CI or new human-review claim"
+    "installation_statement": "Both published distribution formats passed all 81 tests in six new Windows environments with Python 3.10/3.12/3.14 and NumPy 2.2.6/2.3.5/2.5.4. The Python 3.12 environments reused base dependencies.",
+    "remote_ci_statement": "The version-tag workflow passed all 15 Linux/macOS/Windows and Python 3.10--3.14 jobs, each including the installed suite, 12 branch-summary tests and four verification-CLI tests. It also installed and tested the built wheel and source distribution.",
+    "scope": "Verified public tag workflow and six actual installations of its downloaded release assets; human verification remains documented by its dated record"
   },
   "article_date": "4 November 2026",
   "software_core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",

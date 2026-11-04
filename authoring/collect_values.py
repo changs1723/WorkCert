@@ -17,6 +17,8 @@ def main():
         for name, expected in json.loads(frozen.read_text(encoding="utf8"))["inputs"].items():
             assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, "Frozen article input changed: " + name
     snapshot = read("article_inputs/publication_snapshot.json")
+    for name, expected in snapshot.get("publication_evidence", {}).items():
+        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
     meta = snapshot.get("metadata", snapshot)
     assert meta["version"] == "0.3.0"
     fingerprints = snapshot.get("software_fingerprints", {})
@@ -68,6 +70,7 @@ def main():
                   "validation/numerical_stability_results.json", "validation/results/scaling/headline_repeats.json",
                   "validation/workflow_results/summary_all.json", "validation/workflow_results_round2/summary.json",
                   "validation/connector_results/verification.json"]
+    scientific += sorted(snapshot.get("publication_evidence", {}))
     record = {"schema": "workcert.article-inputs/1", "software_version": meta["version"],
               "core_sha256": core_hash, "inputs": {n: hashlib.sha256((ROOT / n).read_bytes()).hexdigest() for n in scientific},
               "publication_state_source": "Pinned article_inputs/publication_snapshot.json; no live QA or network state is read"}

@@ -4,12 +4,13 @@ WorkCert stores selected-node force-displacement tables with reconstruction-erro
 metadata, work queries, checked JSON persistence and directed branches for cyclic
 histories. It accepts externally selected source nodes and keeps native unit labels.
 
-**Version:** 0.3.0, local review candidate. **Authors:** Saisai Hou, Yunzhi Zhu and
+**Version:** 0.3.0, released 4 November 2026. **Authors:** Saisai Hou, Yunzhi Zhu and
 Sen Zhang. **Correspondence:** szhang@niit.edu.cn.
 
-This candidate has not been released or assigned a version DOI. Publication links,
-remote CI and final author approval are recorded separately; the 0.2.0 software DOI
-does not identify this revision or the accompanying manuscript.
+The released software is fixed at [v0.3.0](https://github.com/changs1723/WorkCert/tree/v0.3.0)
+and archived under [10.5281/zenodo.23934502](https://doi.org/10.5281/zenodo.23934502).
+The [final article sources](https://github.com/changs1723/WorkCert/tree/article-v0.3.0-final)
+bind the manuscript PDF, figures and build inputs to that unchanged runtime.
 
 ## Install and use
 
@@ -24,8 +25,10 @@ python validation/run_installed_suite.py --output ../workcert-installed-checks
 The test runner checks that every runtime module comes from the installed package
 and matches the current source. Local installation evidence is in
 `release_evidence/local_installation.json`, with the actual Python/NumPy versions,
-distribution hashes, test phases and dependency-isolation details. A workflow
-definition is supplied for Linux, macOS and Windows; it is not a remote test result.
+distribution hashes, test phases and dependency-isolation details. The
+[tag workflow](https://github.com/changs1723/WorkCert/actions/runs/41753993817)
+passed all 15 Linux/macOS/Windows and Python 3.10-3.14 jobs, followed by installation
+tests of the actual release wheel and source distribution.
 Each installation's `evidence` entry resolves to its archived acceptance outputs in
 `release_evidence/installations`: summaries, environments, cases, check results and
 test logs. The public summary records the SHA-256 of the original internal record
@@ -132,6 +135,11 @@ This rebuilds from the supplied exact figure PDFs. Omit `--keep-figures` to recr
 the plots as well. Exact PDF bytes are checked in the recorded TeX environment;
 different TeX or font versions can change the binary output. The frozen PDF hash
 always identifies the accompanying article object independently of a software DOI.
+
+The software DOI archives the released software snapshot. The article tag fixes
+the final manuscript and its updated publication inputs separately. Package
+documentation inside the archived software is retained as built; this root guide
+and the article manifest describe the final article object.
 
 ## Authorship, licenses and evidence
 

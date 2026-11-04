@@ -39,6 +39,6 @@ test_save_load_reference_and_corruption (test_workcert.InputAndPersistenceTests.
 test_zero_work_requires_absolute_tolerance (test_workcert.InputAndPersistenceTests.test_zero_work_requires_absolute_tolerance) ... ok
 
 ----------------------------------------------------------------------
-Ran 39 tests in 4.876s
+Ran 39 tests in 4.648s
 
 OK
