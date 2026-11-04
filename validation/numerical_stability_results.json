@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "run_utc": "2026-11-03T13:52:42.184652+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "workcert": "0.3.0",
+  "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "oracle": "Exact Fraction integral of binary64 constants and local triangle; no measurements",
+  "legacy_comparison": "Documented NumPy serial-cumsum formula, not an old-package execution",
+  "constant_cases": [
+    {
+      "source_points": 1001,
+      "x_step": 0.0001,
+      "constant_force": 0.1,
+      "exact_binary_input_integral": "12980742146337070512478121581609/1298074214633706907132624082305024",
+      "expected_float64": 0.010000000000000002,
+      "legacy_serial_reference_work": 0.009999999999999974,
+      "legacy_absolute_error": 2.7755575615628914e-17,
+      "new_reference_work": 0.010000000000000002,
+      "new_absolute_error": 0.0,
+      "retained_points": 2,
+      "all_reconstruction_errors_zero": true
+    },
+    {
+      "source_points": 10001,
+      "x_step": 0.0001,
+      "constant_force": 0.1,
+      "exact_binary_input_integral": "3602879701896397/36028797018963968",
+      "expected_float64": 0.1,
+      "legacy_serial_reference_work": 0.09999999999998385,
+      "legacy_absolute_error": 1.6153745008296028e-14,
+      "new_reference_work": 0.1,
+      "new_absolute_error": 0.0,
+      "retained_points": 2,
+      "all_reconstruction_errors_zero": true
+    },
+    {
+      "source_points": 100001,
+      "x_step": 0.0001,
+      "constant_force": 0.1,
+      "exact_binary_input_integral": "18014398509481985/18014398509481984",
+      "expected_float64": 1.0,
+      "legacy_serial_reference_work": 0.9999999999988083,
+      "legacy_absolute_error": 1.191713394632643e-12,
+      "new_reference_work": 1.0,
+      "new_absolute_error": 0.0,
+      "retained_points": 2,
+      "all_reconstruction_errors_zero": true
+    },
+    {
+      "source_points": 1000001,
+      "x_step": 0.0001,
+      "constant_force": 0.1,
+      "exact_binary_input_integral": "90071992547409925/9007199254740992",
+      "expected_float64": 10.0,
+      "legacy_serial_reference_work": 9.999999999987013,
+      "legacy_absolute_error": 1.2986944852855231e-11,
+      "new_reference_work": 10.000000000000002,
+      "new_absolute_error": 1.7763568394002505e-15,
+      "retained_points": 2,
+      "all_reconstruction_errors_zero": true
+    }
+  ],
+  "short_window_cases": [
+    {
+      "dominant_force": 1.0,
+      "exponent": 0,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.5,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.5,
+      "window_reconstruction_error": 0.0
+    },
+    {
+      "dominant_force": 10000.0,
+      "exponent": 4,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.5,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.5,
+      "window_reconstruction_error": 0.0
+    },
+    {
+      "dominant_force": 100000000.0,
+      "exponent": 8,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.5,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.5,
+      "window_reconstruction_error": 0.0
+    },
+    {
+      "dominant_force": 1000000000000.0,
+      "exponent": 12,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.5,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.5,
+      "window_reconstruction_error": 0.0
+    },
+    {
+      "dominant_force": 1000000000000000.0,
+      "exponent": 15,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.5,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.5,
+      "window_reconstruction_error": 0.0
+    },
+    {
+      "dominant_force": 1e+16,
+      "exponent": 16,
+      "query": [
+        1.0,
+        2.0
+      ],
+      "exact_binary_input_integral": "1/2",
+      "expected_float64": 0.5,
+      "legacy_prefix_subtraction": 0.0,
+      "new_direct_window": 0.5,
+      "new_prefix_subtraction": 0.0,
+      "window_reconstruction_error": 0.0
+    }
+  ],
+  "verification_case": {
+    "actual_prefix_error": 0.010009765625,
+    "unaltered_reference_verified": true,
+    "zero_forgery_rejected_at_construction": true,
+    "construction_message": "Retained terminal work is inconsistent with its certificate",
+    "self_consistent_zero_forgery_rejected_by_verification": true,
+    "verification_message": "Certificate field 'eta' does not match the supplied reference: recomputed=0.010009765625, stored=0.0, roundoff_allowance=0.0"
+  },
+  "overflow_api_cases": [
+    {
+      "method": "work",
+      "exception": "ValueError",
+      "message": "The response exceeds finite float64 integration limits"
+    },
+    {
+      "method": "vertical",
+      "exception": "ValueError",
+      "message": "The response exceeds finite float64 integration limits"
+    },
+    {
+      "method": "uniform",
+      "exception": "ValueError",
+      "message": "The response exceeds finite float64 integration limits"
+    },
+    {
+      "method": "uniform_peak",
+      "exception": "ValueError",
+      "message": "The response exceeds finite float64 integration limits"
+    },
+    {
+      "method": "vw",
+      "exception": "ValueError",
+      "message": "The response exceeds finite float64 integration limits"
+    }
+  ],
+  "multiscale_window_case": {
+    "x": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0
+    ],
+    "force": [
+      0.0,
+      2e+100,
+      0.0,
+      2.0,
+      0.0,
+      2e-100,
+      0.0,
+      -2e+100,
+      0.0,
+      -2.0,
+      0.0
+    ],
+    "expected_float64": 2e-100,
+    "actual_window": 2e-100,
+    "actual_prefix": 2e-100,
+    "fallback_condition": "abs(net) <= eps64 * sum(abs(original area components))",
+    "fallback_method": "math.fsum over original queried leaf components and endpoint pieces",
+    "query_complexity": "O(log K) normally; O(m) for a cancellation-triggered query spanning m segments"
+  },
+  "path_component_consistency_case": {
+    "force": [
+      0.0,
+      1e+16,
+      1.0,
+      -1e+16,
+      0.0
+    ],
+    "exact_input_integral": "1",
+    "path_reference_work": 1.0
+  },
+  "arithmetic_scope": "Reconstruction metadata do not enclose floating-point query error. Direct windows avoid subtracting large global primitives; multiplication and output rounding remain binary64."
+}

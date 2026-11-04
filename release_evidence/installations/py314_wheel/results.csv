@@ -1,0 +1,760 @@
+﻿test,check,expected,actual,difference,atol,rtol,tolerance,status
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand eta,15/2,15/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand xi,15/2,15/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand prefix,15/2,15/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand window,15/2,15/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand delta,3,3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,oracle hand signed_terminal_error,-15/2,-15/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate eta,15/2,7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate xi,15/2,7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate prefix,15/2,7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate window,15/2,7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate delta,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate signed_terminal_error,-15/2,-7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate min_cumulative_error,-15/2,-7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate max_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,certificate reference_work,-15/2,-7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,D witness x=-2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,retained W x=-2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,D witness x=-1,-3/2,-1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,retained W x=-1,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,D witness x=3,-15/2,-7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_negative_nonuniform_triangle,retained W x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand eta,48/5,48/5,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand xi,63/10,63/10,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand prefix,33/10,33/10,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand window,63/10,63/10,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand delta,3,3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand signed_terminal_error,-3,-3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand min_cumulative_error,-3,-3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,oracle hand max_cumulative_error,33/10,33/10,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate eta,48/5,9.6,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate xi,63/10,6.3,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate prefix,33/10,3.3,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate window,63/10,6.3,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate delta,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate signed_terminal_error,-3,-3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate min_cumulative_error,-3,-3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate max_cumulative_error,33/10,3.3,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,certificate reference_work,57/2,28.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=1,3/2,1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=1,3/2,1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=11/5,33/10,3.299999999999999,-8.881784197001252e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=11/5,231/50,4.620000000000001,8.881784197001252e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=3,5/2,2.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=3,15/2,7.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=4,3/2,1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=4,12,12.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=6,-3/2,-1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=6,24,24.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,D witness x=7,-3,-3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_nonzero_chord_multiple_retained_segments,retained W x=7,63/2,31.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand eta,15,15,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand xi,15,15,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand prefix,15,15,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand window,15,15,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand delta,6,6,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,oracle hand signed_terminal_error,15,15,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate eta,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate xi,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate prefix,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate window,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate delta,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate signed_terminal_error,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate min_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate max_cumulative_error,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,certificate reference_work,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,D witness x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,retained W x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,D witness x=2,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,retained W x=2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,D witness x=5,15,15.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_positive_triangle,retained W x=5,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand eta,7/3,7/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand xi,5/3,5/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand prefix,5/3,5/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand window,5/3,5/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand delta,2,2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand signed_terminal_error,1,1,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand min_cumulative_error,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,oracle hand max_cumulative_error,5/3,5/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate eta,7/3,2.3333333333333335,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate xi,5/3,1.6666666666666667,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate prefix,5/3,1.6666666666666665,-2.220446049250313e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate window,5/3,1.6666666666666665,-2.220446049250313e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate delta,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate signed_terminal_error,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate min_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate max_cumulative_error,5/3,1.6666666666666665,-2.220446049250313e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,certificate reference_work,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,D witness x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,retained W x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,D witness x=1,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,retained W x=1,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,D witness x=5/3,5/3,1.6666666666666667,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,retained W x=5/3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,D witness x=2,3/2,1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,retained W x=2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,D witness x=3,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,retained W x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,critical abscissa,5/3,5/3,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,critical point is between original nodes,True,True,,0,0,0,PASS
+test_hou_analytic.HouFormulaTests.test_required_interior_extremum,node-only maximum would miss extremum,3/2,3/2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand eta,8,8,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand xi,4,4,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand prefix,2,2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand window,4,4,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand delta,4,4,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand signed_terminal_error,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand min_cumulative_error,-2,-2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,oracle hand max_cumulative_error,2,2,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate eta,8,8.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate xi,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate prefix,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate window,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate delta,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate signed_terminal_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate min_cumulative_error,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate max_cumulative_error,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,certificate reference_work,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=1,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=1,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=2,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=4,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=4,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=5,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=5,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,D witness x=6,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,retained W x=6,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,"window witness [2,4]",-4,-4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_required_window_prefix_separation,zero terminal work,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand eta,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand xi,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand prefix,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand window,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand delta,0,0,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,oracle hand reference_work,20,20,0.0,0,0,0.0,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate eta,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate xi,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate prefix,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate window,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate delta,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate signed_terminal_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate min_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate max_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,certificate reference_work,20,20.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,D witness x=2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,retained W x=2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,D witness x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,retained W x=3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,D witness x=5,0,8.881784197001252e-16,8.881784197001252e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,retained W x=5,6,5.999999999999999,-8.881784197001252e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,D witness x=7,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouFormulaTests.test_shifted_affine_line,retained W x=7,20,20.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,absolute selected peak present,1,"[0, 1, 4]",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,absolute signed maximum covered,4,"(0.0, 8.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,negative selected peak present,1,"[0, 1, 4]",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,negative signed maximum covered,4,"(0.0, 8.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,positive selected peak present,3,"[0, 3, 4]",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,positive signed maximum covered,4,"(4.0, 4.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,positive lower exact,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_absolute_peak_is_not_signed_maximum,positive upper exact,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 0,-8,-8.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 0,-8 within bounds,"(-8.0, -5.666666666666666)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 1/2,-5,-5.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 1/2,-5 within bounds,"(-7.333333333333334, -2.6666666666666665)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 1,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 1,-2 within bounds,"(-2.0, -2.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak lower 1,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak upper 1,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 3/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 3/2,-2 within bounds,"(-2.0, -2.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak lower 3/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak upper 3/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 3,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 3,-2 within bounds,"(-2.0, -2.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak lower 3,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak upper 3,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,retained signed peak 4,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,true source prefix covered 4,-2 within bounds,"(-2.0, -2.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak lower 4,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_all_negative_signed_maximum,postpeak upper 4,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE central 2,11/20,0.55,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE true covered 2,2/3 within interval,"(np.float64(0.14285714285714285), np.float64(1.5))",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE central 3,23/42,0.5476190476190477,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE true covered 3,17/42 within interval,"(np.float64(0.38095238095238093), np.float64(0.7142857142857143))",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak lower 3,8/21,0.38095238095238093,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak upper 3,5/7,0.7142857142857143,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE central 4,71/112,0.6339285714285714,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE true covered 4,29/56 within interval,"(np.float64(0.5089285714285714), np.float64(0.7589285714285714))",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak lower 4,57/112,0.5089285714285714,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak upper 4,85/112,0.7589285714285714,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE central 5,9/14,0.6428571428571429,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE true covered 5,19/35 within interval,"(np.float64(0.5428571428571428), np.float64(0.7428571428571429))",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak lower 5,19/35,0.5428571428571428,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_cfe_consumer_postpeak_and_prepeak,CFE postpeak upper 5,26/35,0.7428571428571429,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 0,0 within bounds,"(0.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 1/2,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 1/2,1 within bounds,"(0.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 1,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 1,2 within bounds,"(0.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 3/2,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 3/2,2 within bounds,"(0.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 5/2,5,5.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 5/2,7/2 within bounds,"(0.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 3,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 3,6 within bounds,"(6.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak lower 3,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak upper 3,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 4,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 4,6 within bounds,"(6.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak lower 4,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak upper 4,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,retained signed peak 5,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,true source prefix covered 5,6 within bounds,"(6.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak lower 5,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_mixed_force_global_signed_peak_retained,postpeak upper 5,6,6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 0,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 0,-2 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 1/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 1/2,1/2 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 1,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 1,3 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 3/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 3/2,3 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 5/2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 5/2,3 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 3,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 3,6 within bounds,"(-2.0, 6.0)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 7/2,-1/2,-0.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 7/2,6 within bounds,"(-2.0, 7.5)",,0,0,0,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,retained signed peak 4,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouPeakTests.test_signed_global_peak_omitted,true source prefix covered 4,6 within bounds,"(1.0, 9.0)",,0,0,0,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix -2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix -2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force -2,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix -3/2,19/12,1.5833333333333333,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix -3/2,19/12,1.5833333333333333,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force -3/2,10/3,3.3333333333333335,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix -1,10/3,3.333333333333333,-4.440892098500626e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix -1,10/3,3.333333333333333,-4.440892098500626e-16,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force -1,11/3,3.6666666666666665,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 1/3,238/27,8.814814814814815,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 1/3,238/27,8.814814814814815,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 1/3,41/9,4.555555555555555,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 1,12,12.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 1,12,12.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 1,5,5.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 5/2,18,18.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 5/2,18,18.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 5/2,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 4,21,21.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 4,21,21.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 4,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 19/4,339/16,21.1875,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 19/4,339/16,21.1875,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 19/4,-1/2,-0.5,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,vector prefix 6,19,19.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,scalar prefix 6,19,19.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_piecewise_queries_at_endpoints_nodes_and_interior,force 6,-3,-3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (-2, -2)",0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (6, 6)",0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (-2, 6)",19,19.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (-2, 1)",12,12.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (1, 4)",9,9.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (Fraction(-3, 2), Fraction(11, 2))",56/3,18.666666666666668,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (Fraction(1, 3), Fraction(2, 3))",14/9,1.5555555555555556,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"window (Fraction(5, 2), Fraction(19, 4))",51/16,3.1875,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"broadcast (-2, 4)",21,21.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"broadcast (-2, 6)",19,19.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"broadcast (1, 4)",9,9.0,0.0,1e-12,0,1e-12,PASS
+test_hou_analytic.HouWorkTests.test_window_queries_zero_length_nonnode_and_multisegment,"broadcast (1, 6)",7,7.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_composer_rejects_missing_duplicate_or_reordered_edges,cyclic.composition.missing_edge,ValueError,ValueError: Records must cover chronological edges exactly once in order,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_composer_rejects_missing_duplicate_or_reordered_edges,cyclic.composition.duplicate_edge,ValueError,ValueError: Records must cover chronological edges exactly once in order,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_composer_rejects_missing_duplicate_or_reordered_edges,cyclic.composition.reordered_edges,ValueError,ValueError: Records must cover chronological edges exactly once in order,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.source_points,11,11,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch_count,3,3,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.dwell_count,2,2,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch0.source_indices,"[0, 1, 2, 3]","[0, 1, 2, 3]",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch0.direction,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch0.start_x,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch0.end_x,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch1.source_indices,"[7, 6, 5, 4]","[7, 6, 5, 4]",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch1.direction,-1,-1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch1.start_x,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch1.end_x,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch2.source_indices,"[8, 9, 10]","[8, 9, 10]",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch2.direction,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch2.start_x,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.branch2.end_x,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event0.source_pair,"(3, 4)","(3, 4)",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event0.displacement,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event0.start_force,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event0.end_force,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event1.source_pair,"(7, 8)","(7, 8)",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event1.displacement,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event1.start_force,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.event1.end_force,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_0_1.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_1_2.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_2_3.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_3_4.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_4_5.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_5_6.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_6_7.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_7_8.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_8_9.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.edge_9_10.count,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.total_edge_count,10,10,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_cyclic_edges_are_covered_once,cyclic.reference_work,-4,-4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.eta,14/3,4.666666666666667,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.xi,10/3,3.3333333333333335,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.prefix,10/3,3.333333333333333,-4.440892098500626e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.window,10/3,3.333333333333333,-4.440892098500626e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.delta,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.signed_terminal_error,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.min_cumulative_error,-10/3,-3.333333333333333,4.440892098500626e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.ascending_metadata.max_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.directed_error@3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.directed_error@5/3,-4/3,-1.3333333333333335,-2.220446049250313e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,descending.directed_error@0,2,2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.signed_terminal_error,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.minimum_cumulative_error,-1/3,-0.33333333333333304,2.7755575615628914e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.maximum_cumulative_error,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.prefix,4,4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.window,13/3,4.333333333333333,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.branches,3,3,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_descending_error_and_chronological_composition,cyclic.composed.zero_work_events,2,2,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.duplicate_x,ValueError,ValueError: x must be strictly increasing with a finite domain span,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.nan_x,ValueError,ValueError: x and force must contain finite values,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.nan_force,ValueError,ValueError: x and force must contain finite values,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.infinite_force,ValueError,ValueError: x and force must contain finite values,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.duplicate_index,ValueError,"ValueError: indices must be unique, increasing and within the reference",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.missing_endpoint,ValueError,ValueError: indices must include both reference endpoints,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_source.noninteger_index,ValueError,ValueError: indices must be a one-dimensional integer array,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_illegal_source_arrays_and_indices_are_rejected,invalid_path.nan_force,ValueError,ValueError: Inputs must be finite,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.force_at.below,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.force_at.above,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.force_at.nan,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.force_at.inf,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.work.below,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.work.above,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.work.nan,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.work.inf,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_force.below,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_force.above,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_force.nan,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_force.inf,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_bounds.below,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_bounds.above,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_bounds.nan,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.peak_bounds.inf,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.window.below,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.window.above,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.window.nan_start,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.window.nan_end,ValueError,ValueError: Queries must be finite and lie inside the reference domain,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_out_of_domain_nonfinite_and_reversed_queries_are_rejected,invalid_query.window.reversed,ValueError,ValueError: Window start must not exceed window end,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.reference_work,0,0.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.branches,0,0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.events,3,3,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event0.start,0,0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event0.end,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event0.start_force,-3,-3.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event0.end_force,5,5.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event1.start,1,1,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event1.end,2,2,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event1.start_force,5,5.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event1.end_force,-2,-2.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event2.start,2,2,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event2.end,3,3,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event2.start_force,-2,-2.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.only.event2.end_force,9,9.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_pure_dwell_and_strict_duplicate_policy,dwell.strict_policy,ValueError,ValueError: Equal displacement samples require duplicate_policy='split',,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_checksum_corruption_and_truncation_are_rejected,corruption.payload_without_updated_digest,ValueError,ValueError: Response payload checksum mismatch,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_checksum_corruption_and_truncation_are_rejected,corruption.truncated_json,ValueError,ValueError: Malformed WorkCert response file,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.roundtrip_bytes,byte-identical,byte-identical,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.roundtrip_metadata,"{'provenance': {'acceptance': 'Hou', 'case': 'signed nonuniform table'}, 'retained_global_maximum': None, 'selection_method': 'external_indices'}","{'provenance': {'acceptance': 'Hou', 'case': 'signed nonuniform table'}, 'retained_global_maximum': None, 'selection_method': 'external_indices'}",,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.index0,0,0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.x0,0,0.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.force0,1,1.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.index1,2,2,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.x1,2,2.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.force1,-2,-2.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.index2,3,3,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.x2,4,4.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.force2,3,3.0,0.0,0,0,0.0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.work_unit,J,J,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.original_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_work@1,1/4,0.25,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.original_work@1,1/4,0.25,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_work@2,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.original_work@2,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_work@3,-7/4,-1.75,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.original_work@3,-7/4,-1.75,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_work@4,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.original_work@4,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,"persistence.loaded_window[1,3]",-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.eta,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.xi,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.prefix,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.window,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.delta,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.signed_terminal_error,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.reference_work,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.min_cumulative_error,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.loaded_metadata.max_cumulative_error,9/2,4.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_saved_response_roundtrip_against_analytic_values,persistence.reference_verified,True,True,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_self_consistent_digest_does_not_allow_invalid_metadata,corruption.rehashed_negative_prefix,ValueError,ValueError: Certificate bounds must be nonnegative,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.full_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.reduced_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.full_work@1/2,1/4,0.25,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.reduced_work@1/2,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.full_work@5/3,5/3,1.6666666666666665,-2.220446049250313e-16,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.reduced_work@5/3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.full_work@3,1,1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.reduced_work@3,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch0.default_end_work,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.full_work@3,0,-0.0,-0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.reduced_work@3,0,-0.0,-0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.full_work@5/2,-5/4,-1.25,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.reduced_work@5/2,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.full_work@5/3,-4,-4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.reduced_work@5/3,-8/3,-2.6666666666666665,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.full_work@0,-4,-4.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.reduced_work@0,-6,-6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch1.default_end_work,-6,-6.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.full_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.reduced_work@0,0,0.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.full_work@1/2,-3/8,-0.375,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.reduced_work@1/2,-1/2,-0.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.full_work@3/2,-5/8,-0.625,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.reduced_work@3/2,-3/2,-1.5,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.full_work@2,-1,-1.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.reduced_work@2,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.branch2.default_end_work,-2,-2.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_signed_branch_and_interior_work,cyclic.reduced_total,-8,-8.0,0.0,1e-12,0,1e-12,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_source_mutation_at_discarded_point_is_rejected,source_mutation.retained_values_unchanged,True,True,,0,0,0,PASS
+test_hou_cycles_io.HouCyclesAndPersistence.test_source_mutation_at_discarded_point_is_rejected,source_mutation.omitted_point,ValueError,ValueError: Reference checksum mismatch,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 source verification,True,True,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 nominal stroke mm,50.0,50.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 archived endpoint mm,50.009,50.009,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 archived nominal EA,290.800436071348,290.8004360713479,-5.684341886080802e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 workbook EA equals endpoint integral,290.86517258476295,290.8651725847626,-3.410605131648481e-13,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 discrepancy equals last 0.009 mm work,0.06473651341500246,0.06473651341462983,-3.72632480427626e-13,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 endpoint minus nominal,0.06473651341500246,0.06473651341497089,-3.157196726277789e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 nominal and endpoint genuinely differ,True,0.06473651341462983,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 printed nominal EA,290.800436071348,290.800436,-7.134798352126381e-08,5e-07,0,5e-07,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 printed endpoint EA,290.86517258476295,290.865173,4.1523708205204457e-07,5e-07,0,5e-07,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 independent Ep,0.6141078995989311,0.6141078995989303,-7.771561172376096e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 reduced work@50.000,290.1863324645445,290.1863324645445,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 reference covered@50.000,True,True,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 reduced work@50.009,290.251064685164,290.251064685164,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_specimen05_nominal_and_archived_endpoint,05 reference covered@50.009,True,True,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1 source verification,True,True,,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1 independent Ep,0.6948406444837648,0.6948406444837637,-1.1102230246251565e-15,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1 measured mass g,16.2,16.2,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 dense EA archived,50.297449491925946,50.297449491925946,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client EA_J,50.82295321437366,50.82295321437366,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived EA_J,50.82295321437366,50.82295321437366,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client SEA_kJ_kg,3.1372193342205965,3.1372193342205965,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived SEA_kJ_kg,3.1372193342205965,3.1372193342205965,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client MCF_kN,5.082295321437366,5.082295321437366,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived MCF_kN,5.082295321437366,5.082295321437366,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client CFE,0.45005218614512815,0.45005218614512815,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived CFE,0.45005218614512815,0.45005218614512815,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client EA_lower_J,50.1281125698899,50.1281125698899,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived EA_lower_J,50.1281125698899,50.1281125698899,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client EA_upper_J,51.517793858857424,51.517793858857424,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived EA_upper_J,51.517793858857424,51.517793858857424,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client SEA_lower_kJ_kg,3.094327936412957,3.094327936412957,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived SEA_lower_kJ_kg,3.094327936412957,3.094327936412957,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client SEA_upper_kJ_kg,3.1801107320282362,3.1801107320282362,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived SEA_upper_kJ_kg,3.1801107320282362,3.1801107320282362,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client MCF_lower_kN,5.01281125698899,5.01281125698899,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived MCF_lower_kN,5.01281125698899,5.01281125698899,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client MCF_upper_kN,5.151779385885742,5.151779385885742,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived MCF_upper_kN,5.151779385885742,5.151779385885742,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client CFE_lower,0.4438991680441658,0.4438991680441658,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived CFE_lower,0.4438991680441658,0.4438991680441658,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 client CFE_upper,0.45620520424609057,0.45620520424609057,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 archived CFE_upper,0.45620520424609057,0.45620520424609057,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 dense EA enclosed,True,"[50.1281125698899, 50.297449491925946, 51.517793858857424]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded EA_J,50.82295321437366,50.823,4.6785626338419206e-05,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded SEA_kJ_kg,3.1372193342205965,3.137,-0.00021933422059650098,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded MCF_kN,5.082295321437366,5.082,-0.0002953214373659918,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded CFE,0.45005218614512815,0.45,-5.218614512814135e-05,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded CFE_lower,0.4438991680441658,0.444,0.000100831955834213,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@10 Table 2 rounded CFE_upper,0.45620520424609057,0.456,-0.0002052042460905512,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@10 window[0,10]",50.82295321437366,50.82295321437366,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@10 window[0,10]",50.82295321437366,50.82295321437366,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 dense EA archived,92.86338847744213,92.86338847744213,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client EA_J,92.90405088432702,92.90405088432702,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived EA_J,92.90405088432702,92.90405088432702,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client SEA_kJ_kg,5.734817955822656,5.734817955822656,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived SEA_kJ_kg,5.734817955822656,5.734817955822656,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client MCF_kN,4.645202544216351,4.645202544216351,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived MCF_kN,4.645202544216351,4.645202544216351,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client CFE,0.411346336229872,0.411346336229872,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived CFE,0.411346336229872,0.411346336229872,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client EA_lower_J,92.20921023984326,92.20921023984326,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived EA_lower_J,92.20921023984326,92.20921023984326,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client EA_upper_J,93.59889152881078,93.59889152881078,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived EA_upper_J,93.59889152881078,93.59889152881078,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client SEA_lower_kJ_kg,5.691926558015016,5.691926558015016,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived SEA_lower_kJ_kg,5.691926558015016,5.691926558015016,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client SEA_upper_kJ_kg,5.7777093536302955,5.7777093536302955,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived SEA_upper_kJ_kg,5.7777093536302955,5.7777093536302955,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client MCF_lower_kN,4.610460511992163,4.610460511992163,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived MCF_lower_kN,4.610460511992163,4.610460511992163,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client MCF_upper_kN,4.679944576440539,4.679944576440539,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived MCF_upper_kN,4.679944576440539,4.679944576440539,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client CFE_lower,0.4082698271793908,0.4082698271793908,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived CFE_lower,0.4082698271793908,0.4082698271793908,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 client CFE_upper,0.41442284528035317,0.41442284528035317,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 archived CFE_upper,0.41442284528035317,0.41442284528035317,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 dense EA enclosed,True,"[92.20921023984326, 92.86338847744213, 93.59889152881078]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded EA_J,92.90405088432702,92.904,-5.088432702393675e-05,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded SEA_kJ_kg,5.734817955822656,5.735,0.0001820441773441317,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded MCF_kN,4.645202544216351,4.645,-0.00020254421635179654,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded CFE,0.411346336229872,0.411,-0.00034633622987201296,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded CFE_lower,0.4082698271793908,0.408,-0.0002698271793908358,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@20 Table 2 rounded CFE_upper,0.41442284528035317,0.414,-0.00042284528035319013,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@20 window[0,20]",92.90405088432702,92.90405088432702,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@20 window[10,20]",42.08109766995336,42.08109766995336,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 dense EA archived,137.8826575002156,137.8826575002156,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client EA_J,138.28996431314857,138.28996431314857,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived EA_J,138.28996431314857,138.28996431314857,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client SEA_kJ_kg,8.536417550194356,8.536417550194356,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived SEA_kJ_kg,8.536417550194356,8.536417550194356,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client MCF_kN,4.609665477104953,4.609665477104953,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived MCF_kN,4.609665477104953,4.609665477104953,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client CFE,0.4081994245037451,0.4081994245037451,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived CFE,0.4081994245037451,0.4081994245037451,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client EA_lower_J,137.5951236686648,137.5951236686648,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived EA_lower_J,137.5951236686648,137.5951236686648,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client EA_upper_J,138.98480495763235,138.98480495763235,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived EA_upper_J,138.98480495763235,138.98480495763235,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client SEA_lower_kJ_kg,8.493526152386716,8.493526152386716,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived SEA_lower_kJ_kg,8.493526152386716,8.493526152386716,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client SEA_upper_kJ_kg,8.579308948001998,8.579308948001998,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived SEA_upper_kJ_kg,8.579308948001998,8.579308948001998,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client MCF_lower_kN,4.586504122288827,4.586504122288827,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived MCF_lower_kN,4.586504122288827,4.586504122288827,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client MCF_upper_kN,4.632826831921078,4.632826831921078,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived MCF_upper_kN,4.632826831921078,4.632826831921078,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client CFE_lower,0.4061484184700909,0.4061484184700909,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived CFE_lower,0.4061484184700909,0.4061484184700909,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 client CFE_upper,0.4102504305373993,0.4102504305373993,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 archived CFE_upper,0.4102504305373993,0.4102504305373993,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 dense EA enclosed,True,"[137.5951236686648, 137.8826575002156, 138.98480495763235]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded EA_J,138.28996431314857,138.29,3.568685141885908e-05,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded SEA_kJ_kg,8.536417550194356,8.536,-0.0004175501943564086,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded MCF_kN,4.609665477104953,4.61,0.0003345228950477619,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded CFE,0.4081994245037451,0.408,-0.00019942450374510479,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded CFE_lower,0.4061484184700909,0.406,-0.00014841847009089415,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@30 Table 2 rounded CFE_upper,0.4102504305373993,0.41,-0.0002504305373993154,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@30 window[0,30]",138.28996431314857,138.28996431314857,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@30 window[20,30]",45.38591342882156,45.38591342882156,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 dense EA archived,183.2886924741556,183.2886924741556,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client EA_J,183.2618814321097,183.26188143210973,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived EA_J,183.2618814321097,183.26188143210973,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client SEA_kJ_kg,11.312461816796896,11.312461816796898,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived SEA_kJ_kg,11.312461816796896,11.312461816796898,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client MCF_kN,4.581547035802743,4.5815470358027435,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived MCF_kN,4.581547035802743,4.5815470358027435,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived PCF_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client CFE,0.40570945389426977,0.4057094538942698,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived CFE,0.40570945389426977,0.4057094538942698,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client EA_lower_J,182.56704078762593,182.56704078762596,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived EA_lower_J,182.56704078762593,182.56704078762596,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client EA_upper_J,183.95672207659348,183.9567220765935,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived EA_upper_J,183.95672207659348,183.9567220765935,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client SEA_lower_kJ_kg,11.269570418989256,11.269570418989257,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived SEA_lower_kJ_kg,11.269570418989256,11.269570418989257,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client SEA_upper_kJ_kg,11.355353214604536,11.355353214604538,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived SEA_upper_kJ_kg,11.355353214604536,11.355353214604538,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client MCF_lower_kN,4.564176019690648,4.564176019690649,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived MCF_lower_kN,4.564176019690648,4.564176019690649,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client MCF_upper_kN,4.598918051914837,4.598918051914838,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived MCF_upper_kN,4.598918051914837,4.598918051914838,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived PCF_lower_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived PCF_upper_kN,11.29268,11.29268,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client CFE_lower,0.4041711993690291,0.4041711993690292,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived CFE_lower,0.4041711993690291,0.4041711993690292,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 client CFE_upper,0.4072477084195104,0.40724770841951047,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 archived CFE_upper,0.4072477084195104,0.40724770841951047,5.551115123125783e-17,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 dense EA enclosed,True,"[182.56704078762596, 183.2886924741556, 183.9567220765935]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded EA_J,183.2618814321097,183.262,0.00011856789029707215,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded SEA_kJ_kg,11.312461816796896,11.312,-0.000461816796896386,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded MCF_kN,4.581547035802743,4.582,0.0004529641972572662,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded CFE,0.40570945389426977,0.406,0.0002905461057302605,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded CFE_lower,0.4041711993690291,0.404,-0.00017119936902909583,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,STWC-1@40 Table 2 rounded CFE_upper,0.4072477084195104,0.407,-0.00024770841951043954,0.0005,0,0.0005,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@40 window[0,40]",183.2618814321097,183.26188143210973,2.842170943040401e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_stwc1_table2_full_precision_and_printed,"STWC-1@40 window[30,40]",44.97191711896114,44.97191711896114,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 EA_mean_J,50.45564321795674,50.45564321795674,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 EA_sample_SD_J,1.2162448674029132,1.2162448674029132,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 SEA_mean_kJ_kg,3.1145458776516506,3.1145458776516506,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 SEA_sample_SD_kJ_kg,0.07507684366684657,0.07507684366684657,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 configuration SEA mean,3.1145458776516506,3.1145458776516506,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 configuration SEA sample SD,0.07507684366684657,0.07507684366684657,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 maximum independent Ep,0.7319422002036908,0.731942200203691,2.220446049250313e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@10 reported Ep below observed sample SD,True,"[0.7319422002036908, 1.2162448674029132]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 EA_mean_J,93.20965277437799,93.20965277437797,-1.4210854715202004e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 EA_sample_SD_J,2.4682026564460373,2.4682026564460373,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 SEA_mean_kJ_kg,5.753682270023333,5.753682270023333,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 SEA_sample_SD_kJ_kg,0.1523581886695087,0.1523581886695087,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 configuration SEA mean,5.753682270023333,5.753682270023333,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 configuration SEA sample SD,0.1523581886695087,0.1523581886695087,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 maximum independent Ep,0.7319422002036908,0.731942200203691,2.220446049250313e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@20 reported Ep below observed sample SD,True,"[0.7319422002036908, 2.4682026564460373]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 EA_mean_J,137.6801928027711,137.6801928027711,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 EA_sample_SD_J,1.3476529927514591,1.347652992751446,-1.3100631690576847e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 SEA_mean_kJ_kg,8.49877733350439,8.49877733350439,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 SEA_sample_SD_kJ_kg,0.08318845634268261,0.08318845634268181,-8.049116928532385e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 configuration SEA mean,8.49877733350439,8.49877733350439,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 configuration SEA sample SD,0.08318845634268261,0.08318845634268181,-8.049116928532385e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 maximum independent Ep,0.7319422002036908,0.731942200203691,2.220446049250313e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@30 reported Ep below observed sample SD,True,"[0.7319422002036908, 1.3476529927514591]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 EA_mean_J,181.0617305733158,181.0617305733158,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 EA_sample_SD_J,3.3503225126085554,3.3503225126085554,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 SEA_mean_kJ_kg,11.176650035389866,11.176650035389864,-1.7763568394002505e-15,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 SEA_sample_SD_kJ_kg,0.20681003164250342,0.20681003164250342,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 configuration SEA mean,11.176650035389866,11.176650035389864,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 configuration SEA sample SD,0.20681003164250342,0.20681003164250342,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 maximum independent Ep,0.7319422002036908,0.731942200203691,2.220446049250313e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,STWC@40 reported Ep below observed sample SD,True,"[0.7319422002036908, 3.3503225126085554]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 EA_mean_J,80.20726426357737,80.20726426357736,-1.4210854715202004e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 EA_sample_SD_J,0.9933474995882556,0.9933474995882541,-1.5543122344752192e-15,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 SEA_mean_kJ_kg,2.8543510414084476,2.854351041408447,-4.440892098500626e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 SEA_sample_SD_kJ_kg,0.03535044482520493,0.035350444825204635,-2.914335439641036e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 configuration SEA mean,2.8543510414084476,2.854351041408447,-4.440892098500626e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 configuration SEA sample SD,0.03535044482520493,0.035350444825204635,-2.914335439641036e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 maximum independent Ep,0.9145375846350458,0.9145375846350459,1.1102230246251565e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@10 reported Ep below observed sample SD,True,"[0.9145375846350458, 0.9933474995882556]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 EA_mean_J,162.9184396846135,162.9184396846135,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 EA_sample_SD_J,1.6198376546472837,1.6198376546472983,1.4654943925052066e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 SEA_mean_kJ_kg,5.79780924144532,5.797809241445319,-8.881784197001252e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 SEA_sample_SD_kJ_kg,0.057645468136914395,0.05764546813691486,4.649058915617843e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 configuration SEA mean,5.79780924144532,5.797809241445319,-8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 configuration SEA sample SD,0.057645468136914395,0.05764546813691486,4.649058915617843e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 maximum independent Ep,0.9145375846350458,0.9145375846350459,1.1102230246251565e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@20 reported Ep below observed sample SD,True,"[0.9145375846350458, 1.6198376546472837]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 EA_mean_J,251.9744560918617,251.9744560918617,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 EA_sample_SD_J,1.461271437910885,1.4612714379108849,-2.220446049250313e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 SEA_mean_kJ_kg,8.967062494372302,8.967062494372302,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 SEA_sample_SD_kJ_kg,0.05200254227440818,0.05200254227440818,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 configuration SEA mean,8.967062494372302,8.967062494372302,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 configuration SEA sample SD,0.05200254227440818,0.05200254227440818,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 maximum independent Ep,0.9145375846350458,0.9145375846350459,1.1102230246251565e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@30 reported Ep below observed sample SD,True,"[0.9145375846350458, 1.461271437910885]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 EA_mean_J,343.25255457324454,343.2525545732445,-5.684341886080802e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 EA_sample_SD_J,2.3689403594239256,2.368940359423907,-1.865174681370263e-14,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 SEA_mean_kJ_kg,12.215393401183078,12.215393401183078,0.0,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 SEA_sample_SD_kJ_kg,0.08430392738163409,0.0843039273816335,-5.828670879282072e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 configuration SEA mean,12.215393401183078,12.215393401183078,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 configuration SEA sample SD,0.08430392738163409,0.0843039273816335,-5.828670879282072e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 replicate count,3,3.0,0.0,1e-12,0,1e-12,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 maximum independent Ep,0.9145375846350458,0.9145375846350459,1.1102230246251565e-16,1e-09,0,1e-09,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_arithmetic_means_and_sample_sd,N-SCMC@40 reported Ep below observed sample SD,True,"[0.9145375846350458, 2.3689403594239256]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval reduced mean,3.146938444703944,3.146938444703944,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval lower archived,3.106637219844545,3.106637219844545,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval upper archived,3.1872396695633425,3.187239669563342,-4.440892098500626e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval lower client,3.106637219844545,3.1066372198445453,4.440892098500626e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval upper client,3.1872396695633425,3.1872396695633425,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval encloses dense mean,True,"[3.106637219844545, 3.1145458776516506, 3.1872396695633425]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval deterministic halfwidth,0.0403012248593988,0.04030122485939858,-2.220446049250313e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@10 mean interval does not divide error bound by sqrt(n),True,"[0.04030122485939858, 0.023267923021245536]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval reduced mean,5.766019607841123,5.766019607841123,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval lower archived,5.725718382981725,5.725718382981725,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval upper archived,5.806320832700522,5.806320832700521,-8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval lower client,5.725718382981725,5.725718382981724,-8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval upper client,5.806320832700522,5.806320832700521,-8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval encloses dense mean,True,"[5.725718382981725, 5.753682270023333, 5.806320832700522]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval deterministic halfwidth,0.04030122485939858,0.04030122485939813,-4.440892098500626e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@20 mean interval does not divide error bound by sqrt(n),True,"[0.04030122485939813, 0.023267923021245408]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval reduced mean,8.511187197875646,8.511187197875648,1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval lower archived,8.470885973016248,8.470885973016246,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval upper archived,8.551488422735046,8.551488422735046,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval lower client,8.470885973016248,8.470885973016248,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval upper client,8.551488422735046,8.551488422735046,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval encloses dense mean,True,"[8.470885973016248, 8.49877733350439, 8.551488422735046]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval deterministic halfwidth,0.04030122485939902,0.04030122485939991,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@30 mean interval does not divide error bound by sqrt(n),True,"[0.04030122485939991, 0.023267923021245664]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval reduced mean,11.175145240810474,11.175145240810474,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval lower archived,11.134844015951074,11.134844015951074,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval upper archived,11.215446465669872,11.215446465669872,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval lower client,11.134844015951074,11.134844015951074,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval upper client,11.215446465669872,11.215446465669872,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval encloses dense mean,True,"[11.134844015951074, 11.176650035389866, 11.215446465669872]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval deterministic halfwidth,0.04030122485939902,0.04030122485939902,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,STWC@40 mean interval does not divide error bound by sqrt(n),True,"[0.04030122485939902, 0.023267923021245664]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval reduced mean,2.853498134539286,2.8534981345392865,4.440892098500626e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval lower archived,2.8253199020841104,2.8253199020841104,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval upper archived,2.881676366994462,2.881676366994462,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval lower client,2.8253199020841104,2.8253199020841104,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval upper client,2.881676366994462,2.881676366994462,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval encloses dense mean,True,"[2.8253199020841104, 2.8543510414084476, 2.881676366994462]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval deterministic halfwidth,0.02817823245517581,0.02817823245517581,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@10 mean interval does not divide error bound by sqrt(n),True,"[0.02817823245517581, 0.016268710093283605]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval reduced mean,5.802207148659899,5.802207148659899,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval lower archived,5.774028916204723,5.774028916204723,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval upper archived,5.830385381115074,5.830385381115074,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval lower client,5.774028916204723,5.774028916204723,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval upper client,5.830385381115074,5.830385381115074,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval encloses dense mean,True,"[5.774028916204723, 5.79780924144532, 5.830385381115074]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval deterministic halfwidth,0.02817823245517559,0.02817823245517559,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@20 mean interval does not divide error bound by sqrt(n),True,"[0.02817823245517559, 0.016268710093283477]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval reduced mean,8.96672780831965,8.966727808319648,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval lower archived,8.938549575864474,8.938549575864473,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval upper archived,8.994906040774826,8.994906040774824,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval lower client,8.938549575864474,8.938549575864473,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval upper client,8.994906040774826,8.994906040774824,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval encloses dense mean,True,"[8.938549575864474, 8.967062494372302, 8.994906040774826]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval deterministic halfwidth,0.02817823245517559,0.02817823245517559,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@30 mean interval does not divide error bound by sqrt(n),True,"[0.02817823245517559, 0.016268710093283477]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval reduced mean,12.222242985989825,12.222242985989823,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval lower archived,12.194064753534649,12.194064753534647,-1.7763568394002505e-15,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval upper archived,12.250421218445,12.250421218445,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval lower client,12.194064753534649,12.194064753534649,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval upper client,12.250421218445,12.250421218445,0.0,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval encloses dense mean,True,"[12.194064753534649, 12.215393401183078, 12.250421218445]",,0,0,0,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval deterministic halfwidth,0.02817823245517559,0.028178232455176477,8.881784197001252e-16,1e-10,0,1e-10,PASS
+test_hou_paper.HouPaperAcceptance.test_triplicate_mean_intervals_average_endpoints,N-SCMC@40 mean interval does not divide error bound by sqrt(n),True,"[0.028178232455176477, 0.016268710093283477]",,0,0,0,PASS

@@ -1,0 +1,75 @@
+{
+  "force_cohort_counts": {
+    "CX_steel": 23,
+    "EDAH": 1,
+    "PLA_plus": 46
+  },
+  "DP_cohort_counts": {
+    "CX_steel": 12,
+    "PLA_plus": 46
+  },
+  "PLA_share_force_records_percent": 65.71428571428571,
+  "PLA_share_DP_records_percent": 79.3103448275862,
+  "configuration_weight_total_force": 66,
+  "configuration_weight_total_DP": 54,
+  "weighted_median_definition": "Weighted empirical median using rational cohort/configuration weights; if cumulative weight equals one half exactly, use the midpoint of the bracketing values, recovering the conventional even-sample median",
+  "weighting_schemes": {
+    "equal_records": "Every recorded specimen has unit weight",
+    "equal_cohorts": "Each available cohort has equal total weight; EDAH remains one observation",
+    "equal_configurations": "The three trials in each repeated PLA control share unit total weight; all other recorded configurations have unit weight"
+  },
+  "cohort_window_error_rankings": {
+    "CX_steel": [
+      "vertical",
+      "work",
+      "vw",
+      "rdp",
+      "uniform_peak",
+      "uniform"
+    ],
+    "EDAH": [
+      "work",
+      "vw",
+      "uniform_peak",
+      "uniform",
+      "vertical",
+      "rdp"
+    ],
+    "PLA_plus": [
+      "vw",
+      "work",
+      "vertical",
+      "rdp",
+      "uniform_peak",
+      "uniform"
+    ]
+  },
+  "sensitivity_window_error_rankings": {
+    "equal_records": [
+      "vw",
+      "work",
+      "vertical",
+      "rdp",
+      "uniform_peak",
+      "uniform"
+    ],
+    "equal_cohorts": [
+      "vw",
+      "work",
+      "vertical",
+      "uniform_peak",
+      "uniform",
+      "rdp"
+    ],
+    "equal_configurations": [
+      "vw",
+      "work",
+      "vertical",
+      "rdp",
+      "uniform_peak",
+      "uniform"
+    ]
+  },
+  "selector_metrics_sha256": "121c95b70749036900b11e9b4e8e5c4ec79b2a2955aecc69b8b932802f63189e",
+  "optimality_gaps_sha256": "06371b721c6fcfee8cd9019c85c481737d0eb427a2a64e581968194896708ad5"
+}

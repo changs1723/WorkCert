@@ -1,0 +1,44 @@
+test_arbitrary_subset_matches_independent_error_evaluation (test_interop.ExternalSelectionTests) ... ok
+test_endpoint_integer_and_provenance_validation (test_interop.ExternalSelectionTests) ... ok
+test_external_table_survives_portable_roundtrip (test_interop.ExternalSelectionTests) ... ok
+test_branch_invalid_input_rejected (test_revision.RevisionTests) ... ok
+test_closed_hysteresis_and_descending_queries (test_revision.RevisionTests) ... ok
+test_dwell_transitions_preserve_force_jump_and_work (test_revision.RevisionTests) ... ok
+test_incremental_handles_cancellation_and_full_budget (test_revision.RevisionTests) ... ok
+test_incremental_stops_at_first_verified_current_error (test_revision.RevisionTests) ... ok
+test_loading_and_unloading_tables_cannot_be_confused (test_revision.RevisionTests) ... ok
+test_required_license_alias_is_identical (test_revision.RevisionTests) ... ok
+test_selector_must_be_explicit (test_revision.RevisionTests) ... ok
+test_sign_aware_peak_modes (test_revision.RevisionTests) ... ok
+test_units_are_unassigned_until_labelled (test_revision.RevisionTests) ... ok
+test_exact_coordinate_adapter_accepts_vertices_and_rejects_projection (test_round2.GeometricSelectorTests) ... ok
+test_vw_anchor_modes_and_fixed_budget_only (test_round2.GeometricSelectorTests) ... ok
+test_vw_is_available_from_CLI (test_round2.GeometricSelectorTests) ... ok
+test_vw_matches_independent_exhaustive_triangle_removal (test_round2.GeometricSelectorTests) ... ok
+test_new_peak_summary_roundtrip_and_old_missing_summary (test_round2.QueryPeakTests) ... ok
+test_peak_bounds_cover_signed_reference_before_and_after_peak (test_round2.QueryPeakTests) ... ok
+test_peak_summary_validation_and_source_recheck (test_round2.QueryPeakTests) ... ok
+test_preserved_peak_makes_late_CFE_denominator_exact (test_round2.QueryPeakTests) ... ok
+test_affine_force_and_nonzero_origin (test_workcert.AnalyticTests) ... ok
+test_cancellation_and_two_sided_window (test_workcert.AnalyticTests) ... ok
+test_interior_stationary_point_not_missed (test_workcert.AnalyticTests) ... ok
+test_large_signed_background_near_zero_terminal_work (test_workcert.AnalyticTests) ... ok
+test_one_sign_error_has_exact_equal_bounds (test_workcert.AnalyticTests) ... ok
+test_peak_and_nonmonotone_hierarchy (test_workcert.AnalyticTests) ... ok
+test_random_certificates_against_dense_independent_quadrature (test_workcert.AnalyticTests) ... ok
+test_random_window_queries_obey_bound (test_workcert.AnalyticTests) ... ok
+test_shift_invariance_and_signed_normalization (test_workcert.AnalyticTests) ... ok
+test_uniform_and_full_reproduction (test_workcert.AnalyticTests) ... ok
+test_units_preserve_native_numeric_product (test_workcert.AnalyticTests) ... ok
+test_bad_csv_and_missing_file (test_workcert.CommandLineTests) ... ok
+test_complete_csv_reduce_query_verify (test_workcert.CommandLineTests) ... ok
+test_invalid_inputs (test_workcert.InputAndPersistenceTests) ... ok
+test_query_domains_and_shapes (test_workcert.InputAndPersistenceTests) ... ok
+test_readonly_arrays_and_metadata_copy (test_workcert.InputAndPersistenceTests) ... ok
+test_save_load_reference_and_corruption (test_workcert.InputAndPersistenceTests) ... ok
+test_zero_work_requires_absolute_tolerance (test_workcert.InputAndPersistenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 6.376s
+
+OK

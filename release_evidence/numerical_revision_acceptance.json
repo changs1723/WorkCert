@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-03",
+  "status": "PASS",
+  "source_core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "preprocessing_sha256": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+  "total_test_methods": 81,
+  "new_strict_test_methods": 14,
+  "new_test_file": "software/tests/test_numerical_stability.py",
+  "test_log": "qa/stable_numeric_suite_final.log",
+  "development_scope": "AI-assisted implementation and test development; no new human-verification claim",
+  "review_driven_fixes": [
+    "stable long-reference integration",
+    "local window integration",
+    "strict scale-local metadata comparison",
+    "overflow API and CLI",
+    "severe multiscale cancellation fallback",
+    "consistent chronological source quadrature"
+  ],
+  "fallback_complexity": "O(log K) ordinary query; O(m) original-term recomputation when abs(net)<=eps64*sum(abs(components)), m<=K-1"
+}

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0 — prepared 3 November 2026
+
+- Replace serial cumulative sums with compensated pairwise integration.
+- Integrate local work windows without subtracting large global primitives.
+- Recompute severely cancelling queries from original components and keep path-reference arithmetic consistent.
+- Evaluate residuals in local force offsets and strengthen metadata checks.
+- Remove unit-sized consistency floors and require exact zero/nonzero agreement.
+- Unify finite-range overflow as API ValueError and concise CLI exit 2.
+- Add strict-review regressions and a machine-readable numerical-stability example.
+
+
 ## 0.2.0 — prepared 31 October 2026; revised 2 November 2026
 
 - Require an explicit selection method and label unassigned units explicitly.

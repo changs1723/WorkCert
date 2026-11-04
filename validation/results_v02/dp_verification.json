@@ -18,349 +18,349 @@
       "curve": "metal_A_X_1.8",
       "dataset": "CX_steel",
       "points": 904,
-      "edge_cost_seconds": 0.36428139999043196
+      "edge_cost_seconds": 0.36042030004318804
     },
     {
       "curve": "metal_A_Y_1.8",
       "dataset": "CX_steel",
       "points": 958,
-      "edge_cost_seconds": 0.4563859000336379
+      "edge_cost_seconds": 0.415015900041908
     },
     {
       "curve": "metal_B_X_1.8",
       "dataset": "CX_steel",
       "points": 892,
-      "edge_cost_seconds": 0.3622533999150619
+      "edge_cost_seconds": 0.33854440005961806
     },
     {
       "curve": "metal_B_Y_1.8",
       "dataset": "CX_steel",
       "points": 925,
-      "edge_cost_seconds": 0.39735640003345907
+      "edge_cost_seconds": 0.3780651999404654
     },
     {
       "curve": "metal_C_X_1.8",
       "dataset": "CX_steel",
       "points": 926,
-      "edge_cost_seconds": 0.40487839991692454
+      "edge_cost_seconds": 0.38746540003921837
     },
     {
       "curve": "metal_C_Y_1.8",
       "dataset": "CX_steel",
       "points": 947,
-      "edge_cost_seconds": 0.4436686000553891
+      "edge_cost_seconds": 0.40576590003911406
     },
     {
       "curve": "metal_D_X_1.8",
       "dataset": "CX_steel",
       "points": 927,
-      "edge_cost_seconds": 0.4040442999685183
+      "edge_cost_seconds": 0.3737330000149086
     },
     {
       "curve": "metal_D_Y_1.8",
       "dataset": "CX_steel",
       "points": 948,
-      "edge_cost_seconds": 0.44224150001537055
+      "edge_cost_seconds": 0.40432059997692704
     },
     {
       "curve": "metal_E_X_1.8",
       "dataset": "CX_steel",
       "points": 927,
-      "edge_cost_seconds": 0.4028728000121191
+      "edge_cost_seconds": 0.38096520002000034
     },
     {
       "curve": "metal_E_Y_1.8",
       "dataset": "CX_steel",
       "points": 945,
-      "edge_cost_seconds": 0.4262334000086412
+      "edge_cost_seconds": 0.4013659000629559
     },
     {
       "curve": "metal_F_X_1.8",
       "dataset": "CX_steel",
       "points": 927,
-      "edge_cost_seconds": 0.3907749999780208
+      "edge_cost_seconds": 0.37545259995386004
     },
     {
       "curve": "metal_F_Y_1.8",
       "dataset": "CX_steel",
       "points": 946,
-      "edge_cost_seconds": 0.41887579998001456
+      "edge_cost_seconds": 0.40392239997163415
     },
     {
       "curve": "PLA_01",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48235760000534356
+      "edge_cost_seconds": 0.46336759999394417
     },
     {
       "curve": "PLA_02",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4974285999778658
+      "edge_cost_seconds": 0.47406699997372925
     },
     {
       "curve": "PLA_03",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48272610001731664
+      "edge_cost_seconds": 0.46643050003331155
     },
     {
       "curve": "PLA_04",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5076576999854296
+      "edge_cost_seconds": 0.47623429994564503
     },
     {
       "curve": "PLA_05",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49530339997727424
+      "edge_cost_seconds": 0.4656743999803439
     },
     {
       "curve": "PLA_06",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4842198999831453
+      "edge_cost_seconds": 0.46407540002837777
     },
     {
       "curve": "PLA_07",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49345459998585284
+      "edge_cost_seconds": 0.46084149996750057
     },
     {
       "curve": "PLA_08",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4888515999773517
+      "edge_cost_seconds": 0.4589352000039071
     },
     {
       "curve": "PLA_09",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5478084000060335
+      "edge_cost_seconds": 0.4756532999454066
     },
     {
       "curve": "PLA_10",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.6005144000519067
+      "edge_cost_seconds": 0.46632689994294196
     },
     {
       "curve": "PLA_11",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5433934000320733
+      "edge_cost_seconds": 0.4751119000138715
     },
     {
       "curve": "PLA_12",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5540786000201479
+      "edge_cost_seconds": 0.4915356000419706
     },
     {
       "curve": "PLA_13",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49674139998387545
+      "edge_cost_seconds": 0.48910939996130764
     },
     {
       "curve": "PLA_14",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4888771999394521
+      "edge_cost_seconds": 0.48574839998036623
     },
     {
       "curve": "PLA_15",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48576160008087754
+      "edge_cost_seconds": 0.49590330000501126
     },
     {
       "curve": "PLA_16",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.486146799987182
+      "edge_cost_seconds": 0.4833265000488609
     },
     {
       "curve": "PLA_17",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5016981000080705
+      "edge_cost_seconds": 0.47319799999240786
     },
     {
       "curve": "PLA_18",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4921262999996543
+      "edge_cost_seconds": 0.4698720999294892
     },
     {
       "curve": "PLA_19",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5006437000120059
+      "edge_cost_seconds": 0.46628250007051975
     },
     {
       "curve": "PLA_20",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4888011000584811
+      "edge_cost_seconds": 0.5294506999198347
     },
     {
       "curve": "PLA_21",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.495575699955225
+      "edge_cost_seconds": 0.4688134000170976
     },
     {
       "curve": "PLA_22",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4965941000264138
+      "edge_cost_seconds": 0.4539961999980733
     },
     {
       "curve": "PLA_23",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4937719999579713
+      "edge_cost_seconds": 0.4562680000672117
     },
     {
       "curve": "PLA_24",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5064262000378221
+      "edge_cost_seconds": 0.470228600082919
     },
     {
       "curve": "PLA_25",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48856689990498126
+      "edge_cost_seconds": 0.4649857999756932
     },
     {
       "curve": "PLA_26",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5117931000422686
+      "edge_cost_seconds": 0.4686290000099689
     },
     {
       "curve": "PLA_27",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48358540004119277
+      "edge_cost_seconds": 0.47929279995150864
     },
     {
       "curve": "PLA_28",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4937591999769211
+      "edge_cost_seconds": 0.4655528999865055
     },
     {
       "curve": "PLA_29",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4931728000519797
+      "edge_cost_seconds": 0.4596099000191316
     },
     {
       "curve": "PLA_30",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4957810000050813
+      "edge_cost_seconds": 0.45585489994846284
     },
     {
       "curve": "PLA_31",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4899077999871224
+      "edge_cost_seconds": 0.4661474000895396
     },
     {
       "curve": "PLA_32",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4925914000486955
+      "edge_cost_seconds": 0.47156299999915063
     },
     {
       "curve": "PLA_33",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48865180008579046
+      "edge_cost_seconds": 0.4712085999781266
     },
     {
       "curve": "PLA_34",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4839875000761822
+      "edge_cost_seconds": 0.4609267000341788
     },
     {
       "curve": "PLA_35",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4957554000429809
+      "edge_cost_seconds": 0.4780547999544069
     },
     {
       "curve": "PLA_36",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.48472369997762144
+      "edge_cost_seconds": 0.4766704000066966
     },
     {
       "curve": "PLA_37",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5151655999943614
+      "edge_cost_seconds": 0.48500769992824644
     },
     {
       "curve": "PLA_38",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5771577000850812
+      "edge_cost_seconds": 0.46470349992159754
     },
     {
       "curve": "PLA_39",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5597365000285208
+      "edge_cost_seconds": 0.48284180008340627
     },
     {
       "curve": "PLA_40",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49819439998827875
+      "edge_cost_seconds": 0.4811683000298217
     },
     {
       "curve": "PLA_N-SCMC-1",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49464719998650253
+      "edge_cost_seconds": 0.49057929997798055
     },
     {
       "curve": "PLA_N-SCMC-2",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.4900146999862045
+      "edge_cost_seconds": 0.47601960005704314
     },
     {
       "curve": "PLA_N-SCMC-3",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49391950003337115
+      "edge_cost_seconds": 0.4843909000046551
     },
     {
       "curve": "PLA_STWC-1",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49715099995955825
+      "edge_cost_seconds": 0.4782306000124663
     },
     {
       "curve": "PLA_STWC-2",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.49385099997743964
+      "edge_cost_seconds": 0.4686018000356853
     },
     {
       "curve": "PLA_STWC-3",
       "dataset": "PLA_plus",
       "points": 1000,
-      "edge_cost_seconds": 0.5060149000491947
+      "edge_cost_seconds": 0.4660799999255687
     }
   ],
   "excluded_records": [

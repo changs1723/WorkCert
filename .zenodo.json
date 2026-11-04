@@ -1,6 +1,6 @@
 {
   "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
@@ -18,11 +18,5 @@
       "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China"
     }
   ],
-  "description": "NumPy-based reconstruction-error metadata and queries for force–displacement tables. The software code uses MIT terms; included third-party experimental datasets retain their credited CC BY 4.0 licenses.",
-  "keywords": [
-    "structural response",
-    "force-displacement",
-    "reconstruction error",
-    "research software"
-  ]
+  "description": "NumPy-based force-displacement table queries and reconstruction-error metadata. Code is MIT; credited third-party experimental inputs retain CC BY 4.0. The included article snapshot has a separate identity manifest."
 }

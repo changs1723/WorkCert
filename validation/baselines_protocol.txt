@@ -1,5 +1,15 @@
-WorkCert v0.2 comparative protocol — fixed before extended results
-31 October 2026
+WorkCert comparative protocol and recorded extension
+Protocol origin: 31 October 2026. Documentation synchronized: 3 November 2026.
+
+The original force-table comparison used all five budgets below. The initial
+DP comparison used four budgets (9,17,33,65). During the 2 November 2026 internal
+revision, DP was extended to 129 points to match the force-table budget range.
+That extension produced 58 x 5 x 2 = 580 optimal paths. The four-budget wording
+was left unchanged in the 0.2.0 protocol/README; this version corrects it.
+The fifth DP budget is a documented extension, not a preregistered choice.
+The prior four-budget wording remains in the frozen 0.2.0 software archive
+(DOI 10.5281/zenodo.23915585); decision_results/protocol_history.json records
+its checksum and the documented extension date alongside this corrected file.
 
 Use all 70 unchanged original prepared PL numerical references. Keep archive-
 specific summaries and pooled descriptive results. No curve is screened by error.
@@ -23,7 +33,7 @@ Exact DP uses every original reference with n<=1000 (58 records: 46 PLA+,
 ceiling and listed individually. Do not downsample an original and call its
 solution optimal for the original reference. Objectives are additive continuous
 absolute-area residual eta and maximum vertical residual delta, at budgets
-9,17,33,65, with the same endpoint/absolute-peak constraints. Report greedy eta
+9,17,33,65,129, with the same endpoint/absolute-peak constraints. Report greedy eta
 over optimal eta and greedy delta over optimal delta; evaluate prefix/window
 errors at those selected paths separately. No prefix/window global-optimality
 claim. Verify DP independently by exhaustive vertex-subset enumeration at n=8.

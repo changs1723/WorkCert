@@ -4,7 +4,7 @@
       "work": {
         "records": 58,
         "median_ratio": 1.2496551095448596,
-        "maximum_ratio": 1.620712499925168
+        "maximum_ratio": 1.6207124999251685
       },
       "vertical": {
         "records": 58,
@@ -13,8 +13,8 @@
       },
       "rdp": {
         "records": 58,
-        "median_ratio": 1.2631947287104452,
-        "maximum_ratio": 1.8937112248118466
+        "median_ratio": 1.263194728710445,
+        "maximum_ratio": 1.8937112248118462
       },
       "vw": {
         "records": 58,
@@ -23,25 +23,25 @@
       },
       "uniform_peak": {
         "records": 58,
-        "median_ratio": 2.498904269117455,
+        "median_ratio": 2.4989042691174546,
         "maximum_ratio": 4.987068020343866
       }
     },
     "17": {
       "work": {
         "records": 58,
-        "median_ratio": 1.245689257350662,
+        "median_ratio": 1.2456892573506622,
         "maximum_ratio": 1.6878538330535457
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.3152040553419566,
-        "maximum_ratio": 1.8966657325793894
+        "median_ratio": 1.3152040553419568,
+        "maximum_ratio": 1.8966657325793896
       },
       "rdp": {
         "records": 58,
         "median_ratio": 1.4084034222134818,
-        "maximum_ratio": 2.5749333406618886
+        "maximum_ratio": 2.574933340661889
       },
       "vw": {
         "records": 58,
@@ -51,19 +51,19 @@
       "uniform_peak": {
         "records": 58,
         "median_ratio": 2.295274820027129,
-        "maximum_ratio": 3.414595462990263
+        "maximum_ratio": 3.4145954629902633
       }
     },
     "33": {
       "work": {
         "records": 58,
         "median_ratio": 1.3190117220309805,
-        "maximum_ratio": 1.5636534168572118
+        "maximum_ratio": 1.5636534168572116
       },
       "vertical": {
         "records": 58,
         "median_ratio": 1.369543639793374,
-        "maximum_ratio": 1.6870424453881476
+        "maximum_ratio": 1.6870424453881474
       },
       "rdp": {
         "records": 58,
@@ -72,8 +72,8 @@
       },
       "vw": {
         "records": 58,
-        "median_ratio": 1.3961532924434525,
-        "maximum_ratio": 1.6567900673738187
+        "median_ratio": 1.3961532924434528,
+        "maximum_ratio": 1.6567900673738185
       },
       "uniform_peak": {
         "records": 58,
@@ -84,54 +84,54 @@
     "65": {
       "work": {
         "records": 58,
-        "median_ratio": 1.2852429910346657,
-        "maximum_ratio": 1.597765149835724
+        "median_ratio": 1.285242991034666,
+        "maximum_ratio": 1.5977651498357222
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.3639964075097177,
-        "maximum_ratio": 1.6145201173840507
+        "median_ratio": 1.3639964075097186,
+        "maximum_ratio": 1.6145201173840509
       },
       "rdp": {
         "records": 58,
-        "median_ratio": 1.8495257761644708,
+        "median_ratio": 1.8495257761644714,
         "maximum_ratio": 2.763671176201627
       },
       "vw": {
         "records": 58,
-        "median_ratio": 1.3661559264767535,
-        "maximum_ratio": 1.802249886003504
+        "median_ratio": 1.3661559264767544,
+        "maximum_ratio": 1.8022498860035085
       },
       "uniform_peak": {
         "records": 58,
-        "median_ratio": 2.6740440155409857,
+        "median_ratio": 2.674044015540985,
         "maximum_ratio": 4.3930856019025715
       }
     },
     "129": {
       "work": {
         "records": 58,
-        "median_ratio": 1.2958792716208256,
-        "maximum_ratio": 1.572715660048992
+        "median_ratio": 1.2958792716208265,
+        "maximum_ratio": 1.5727156600489944
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.388061320854324,
-        "maximum_ratio": 1.695621173395763
+        "median_ratio": 1.3880613208543258,
+        "maximum_ratio": 1.6956211733957605
       },
       "rdp": {
         "records": 58,
-        "median_ratio": 1.8981226715341322,
-        "maximum_ratio": 3.273308307035575
+        "median_ratio": 1.8981226715341313,
+        "maximum_ratio": 3.273308307035573
       },
       "vw": {
         "records": 58,
-        "median_ratio": 1.311348398964523,
-        "maximum_ratio": 1.5367807570801115
+        "median_ratio": 1.3113483989645234,
+        "maximum_ratio": 1.5367807570801117
       },
       "uniform_peak": {
         "records": 58,
-        "median_ratio": 2.677979114585918,
+        "median_ratio": 2.677979114585919,
         "maximum_ratio": 4.5977919023576925
       }
     }
@@ -140,23 +140,23 @@
     "9": {
       "work": {
         "records": 58,
-        "median_ratio": 1.9007692068191315,
-        "maximum_ratio": 3.6053493842300637
+        "median_ratio": 1.900769206819132,
+        "maximum_ratio": 3.605349384230063
       },
       "vertical": {
         "records": 58,
         "median_ratio": 1.6580369511542878,
-        "maximum_ratio": 3.09066356322779
+        "maximum_ratio": 3.0906635632277895
       },
       "rdp": {
         "records": 58,
         "median_ratio": 1.8639714212959415,
-        "maximum_ratio": 5.007427381310055
+        "maximum_ratio": 5.007427381310057
       },
       "vw": {
         "records": 58,
         "median_ratio": 1.9120174004550865,
-        "maximum_ratio": 3.476675181480959
+        "maximum_ratio": 3.47667518148096
       },
       "uniform_peak": {
         "records": 58,
@@ -167,39 +167,39 @@
     "17": {
       "work": {
         "records": 58,
-        "median_ratio": 2.038145633607395,
+        "median_ratio": 2.0381456336073946,
         "maximum_ratio": 3.4927177545953922
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.4784656111130086,
+        "median_ratio": 1.4784656111130081,
         "maximum_ratio": 2.6261680037984463
       },
       "rdp": {
         "records": 58,
         "median_ratio": 3.7126335892114684,
-        "maximum_ratio": 9.174594267167352
+        "maximum_ratio": 9.174594267167347
       },
       "vw": {
         "records": 58,
-        "median_ratio": 2.1668925625089925,
-        "maximum_ratio": 5.027476403139318
+        "median_ratio": 2.166892562508994,
+        "maximum_ratio": 5.027476403139319
       },
       "uniform_peak": {
         "records": 58,
         "median_ratio": 4.618734510701987,
-        "maximum_ratio": 9.174594267167352
+        "maximum_ratio": 9.174594267167347
       }
     },
     "33": {
       "work": {
         "records": 58,
-        "median_ratio": 2.6154436289042593,
-        "maximum_ratio": 4.6890207556868955
+        "median_ratio": 2.615443628904258,
+        "maximum_ratio": 4.689020755686897
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.6628502068333848,
+        "median_ratio": 1.6628502068333801,
         "maximum_ratio": 2.270095168928107
       },
       "rdp": {
@@ -209,8 +209,8 @@
       },
       "vw": {
         "records": 58,
-        "median_ratio": 3.0955687482073415,
-        "maximum_ratio": 6.015800710910907
+        "median_ratio": 3.0955687482073397,
+        "maximum_ratio": 6.0158007109109075
       },
       "uniform_peak": {
         "records": 58,
@@ -221,23 +221,23 @@
     "65": {
       "work": {
         "records": 58,
-        "median_ratio": 3.024633389614868,
+        "median_ratio": 3.024633389614876,
         "maximum_ratio": 6.010416900169416
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.6686136874821322,
-        "maximum_ratio": 2.06277449275112
+        "median_ratio": 1.6686136874821407,
+        "maximum_ratio": 2.062774492751125
       },
       "rdp": {
         "records": 58,
-        "median_ratio": 7.217121792568097,
+        "median_ratio": 7.217121792568108,
         "maximum_ratio": 16.044455737813227
       },
       "vw": {
         "records": 58,
-        "median_ratio": 3.450699406688424,
-        "maximum_ratio": 6.128680494610232
+        "median_ratio": 3.450699406688412,
+        "maximum_ratio": 6.128680494610233
       },
       "uniform_peak": {
         "records": 58,
@@ -248,28 +248,28 @@
     "129": {
       "work": {
         "records": 58,
-        "median_ratio": 3.461125928862262,
+        "median_ratio": 3.4611259288622853,
         "maximum_ratio": 5.402834927749224
       },
       "vertical": {
         "records": 58,
-        "median_ratio": 1.5698058586991994,
-        "maximum_ratio": 1.9368756207633326
+        "median_ratio": 1.5698058586992194,
+        "maximum_ratio": 1.93687562076328
       },
       "rdp": {
         "records": 58,
-        "median_ratio": 8.035593710763466,
+        "median_ratio": 8.035593710763454,
         "maximum_ratio": 14.388375769441895
       },
       "vw": {
         "records": 58,
-        "median_ratio": 3.3336977050966605,
+        "median_ratio": 3.333697705096683,
         "maximum_ratio": 5.229225642594184
       },
       "uniform_peak": {
         "records": 58,
-        "median_ratio": 21.396411938330488,
-        "maximum_ratio": 52.89567410529355
+        "median_ratio": 21.39641193833049,
+        "maximum_ratio": 52.895674105293544
       }
     }
   }

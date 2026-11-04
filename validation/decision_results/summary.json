@@ -1,0 +1,212 @@
+{
+  "software_version": "0.3.0",
+  "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "workflow_sha256": "9a80ce2abd452b63be256faf9c55de245033be8d9fe3bafcaa7a90c6cc0c3312",
+  "source_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644",
+  "initial_work_budget_J": 1.0,
+  "point_cap": 129,
+  "configuration_count": 42,
+  "specimens": 46,
+  "initial_total_retained_points": 1520,
+  "initial_adjacent_pairs": 164,
+  "initial_adjacent_separated": 103,
+  "initial_all_pairs": 3444,
+  "initial_all_pairs_separated": 3345,
+  "per_stroke_difficulty": [
+    {
+      "stroke_mm": 10.0,
+      "adjacent_pairs": 41,
+      "adjacent_separated": 16,
+      "all_pairs": 861,
+      "all_pairs_separated": 809
+    },
+    {
+      "stroke_mm": 20.0,
+      "adjacent_pairs": 41,
+      "adjacent_separated": 26,
+      "all_pairs": 861,
+      "all_pairs_separated": 841
+    },
+    {
+      "stroke_mm": 30.0,
+      "adjacent_pairs": 41,
+      "adjacent_separated": 31,
+      "all_pairs": 861,
+      "all_pairs_separated": 848
+    },
+    {
+      "stroke_mm": 40.0,
+      "adjacent_pairs": 41,
+      "adjacent_separated": 30,
+      "all_pairs": 861,
+      "all_pairs_separated": 847
+    }
+  ],
+  "best_candidate_query": {
+    "stroke_mm": 20.0,
+    "initial_decision": {
+      "stage": 0,
+      "stroke_mm": 20.0,
+      "total_retained_nodes": 1520,
+      "consumer_read_dense_references": false,
+      "leader": "26",
+      "challengers": [
+        "35"
+      ],
+      "request_configurations": [
+        "26",
+        "35"
+      ],
+      "winner_separated": false,
+      "leader_lower_kJ_kg": 8.02324572286693,
+      "largest_other_upper_kJ_kg": 8.028129383197358,
+      "separation_margin_kJ_kg": -0.004883660330428086
+    },
+    "final_decision": {
+      "stage": 1,
+      "stroke_mm": 20.0,
+      "total_retained_nodes": 1538,
+      "consumer_read_dense_references": false,
+      "leader": "26",
+      "challengers": [],
+      "request_configurations": [],
+      "winner_separated": true,
+      "leader_lower_kJ_kg": 8.035143720727046,
+      "largest_other_upper_kJ_kg": 8.025609166392217,
+      "separation_margin_kJ_kg": 0.009534554334829082
+    },
+    "refined_specimens": [
+      "26",
+      "35"
+    ],
+    "unchanged_specimens": 44,
+    "refinement_rounds": 1,
+    "final_total_retained_points": 1538,
+    "net_retained_points_added": 18,
+    "retained_points_transmitted_in_refinement_responses": 81,
+    "reference_best": "26",
+    "reference_runner_up": "35",
+    "reference_best_runner_up_gap_kJ_kg": 0.023402361117172532,
+    "truth_used_to_select_requests": false,
+    "final_all_pairs_separated_at_query": 842,
+    "final_adjacent_separated_at_query": 27
+  },
+  "energy_to_stroke": {
+    "specimen": "STWC-1",
+    "energy_target_J": 100.0,
+    "loading_interval_mm": [
+      10.0,
+      40.0
+    ],
+    "retained_points": 20,
+    "prefix_bound_J": 0.6948406444837637,
+    "source_force_lower_bound_kN": 2.6166162732562475,
+    "reference_minimum_force_on_loading_interval_kN": 3.247199,
+    "table_inverse_mm": 21.992441915748607,
+    "stroke_lower_mm": 21.812164291835515,
+    "stroke_upper_mm": 22.169622542935322,
+    "stroke_interval_width_mm": 0.357458251099807,
+    "reference_inverse_mm": 22.01666656104441,
+    "reference_contained": true,
+    "scope": "Inverse quasi-static work capacity of a fixed loading record; not an impact-dynamics prediction"
+  },
+  "cyclic_point_cap_diagnostic": [
+    {
+      "branch": 2533,
+      "source_points": 1663,
+      "retained_points": 129,
+      "allocated_bound_J": 0.08719373627500035,
+      "window_bound_J": 0.1542233705008432,
+      "achieved_to_requested_ratio": 1.7687436860652246
+    }
+  ],
+  "closest_control_SD_comparison": {
+    "configuration": "N-SCMC",
+    "stroke_mm": 10.0,
+    "n": 3,
+    "maximum_prefix_bound_J": 0.9145375846350459,
+    "EA_sample_SD_J": 0.9933474995882541,
+    "bound_to_sample_SD_ratio": 0.9206622909043661
+  },
+  "supporting_inputs": {
+    "validation/workflow_results/cyclic_path/branch_metrics.csv": "447f2e8fe6719857ab089c42766b02434e187f7ae037c663e908bc2815f50b5f",
+    "validation/workflow_results_round2/repeat_scatter.csv": "93654fcb40fcd58c94cb094ffc7f60c3e37fc9a879a7cd9ac2d8e37066a08fec"
+  },
+  "sampling_scope": "The four strokes reuse the same two triplicate controls; eight descriptive control/stroke summaries are not eight independent experiments. One joule is an illustrative reconstruction budget.",
+  "decision_scope": "Separation certifies ordering of the supplied numerical configurations at the reported masses, not experimental distinguishability of manufactured designs.",
+  "weighting_sensitivity": {
+    "force_cohort_counts": {
+      "CX_steel": 23,
+      "EDAH": 1,
+      "PLA_plus": 46
+    },
+    "DP_cohort_counts": {
+      "CX_steel": 12,
+      "PLA_plus": 46
+    },
+    "PLA_share_force_records_percent": 65.71428571428571,
+    "PLA_share_DP_records_percent": 79.3103448275862,
+    "configuration_weight_total_force": 66,
+    "configuration_weight_total_DP": 54,
+    "weighted_median_definition": "Weighted empirical median using rational cohort/configuration weights; if cumulative weight equals one half exactly, use the midpoint of the bracketing values, recovering the conventional even-sample median",
+    "weighting_schemes": {
+      "equal_records": "Every recorded specimen has unit weight",
+      "equal_cohorts": "Each available cohort has equal total weight; EDAH remains one observation",
+      "equal_configurations": "The three trials in each repeated PLA control share unit total weight; all other recorded configurations have unit weight"
+    },
+    "cohort_window_error_rankings": {
+      "CX_steel": [
+        "vertical",
+        "work",
+        "vw",
+        "rdp",
+        "uniform_peak",
+        "uniform"
+      ],
+      "EDAH": [
+        "work",
+        "vw",
+        "uniform_peak",
+        "uniform",
+        "vertical",
+        "rdp"
+      ],
+      "PLA_plus": [
+        "vw",
+        "work",
+        "vertical",
+        "rdp",
+        "uniform_peak",
+        "uniform"
+      ]
+    },
+    "sensitivity_window_error_rankings": {
+      "equal_records": [
+        "vw",
+        "work",
+        "vertical",
+        "rdp",
+        "uniform_peak",
+        "uniform"
+      ],
+      "equal_cohorts": [
+        "vw",
+        "work",
+        "vertical",
+        "uniform_peak",
+        "uniform",
+        "rdp"
+      ],
+      "equal_configurations": [
+        "vw",
+        "work",
+        "vertical",
+        "rdp",
+        "uniform_peak",
+        "uniform"
+      ]
+    },
+    "selector_metrics_sha256": "121c95b70749036900b11e9b4e8e5c4ec79b2a2955aecc69b8b932802f63189e",
+    "optimality_gaps_sha256": "06371b721c6fcfee8cd9019c85c481737d0eb427a2a64e581968194896708ad5"
+  }
+}

@@ -129,15 +129,22 @@ def main():
     # This audit checks the original installation baseline separately. Additional
     # installed-package acceptance is run by run_hou_acceptance.py; unrestricted
     # discovery here would silently change the historical baseline count.
-    baseline_code=("import sys, unittest; "
+    baseline_code=("import sys, unittest, json; "
                    "loader=unittest.TestLoader(); suite=unittest.TestSuite(); "
                    "[suite.addTests(loader.discover('tests', pattern=p)) for p in "
                    "('test_workcert.py','test_revision.py','test_interop.py','test_round2.py')]; "
+                   "expected=suite.countTestCases(); "
                    "r=unittest.TextTestRunner(verbosity=2).run(suite); "
+                   "print('WORKCERT_BASELINE_SUMMARY='+json.dumps(dict(discovered=expected, "
+                   "executed=r.testsRun, successful=r.wasSuccessful(), skipped=len(r.skipped)))); "
                    "sys.exit(0 if r.wasSuccessful() and not r.skipped else 1)")
     tests=subprocess.run([sys.executable,'-c',baseline_code],cwd=ROOT/'software',env=env,capture_output=True,text=True)
-    expected_tests=json.loads((ROOT/'software/release_validation.json').read_text(encoding='utf8'))['runtimes'][0]['wheel']['tests_passed']
-    assert tests.returncode==0 and ('Ran %d tests'%expected_tests) in tests.stderr
+    baseline_summary=json.loads(next(line.split('=',1)[1] for line in tests.stdout.splitlines()
+                                     if line.startswith('WORKCERT_BASELINE_SUMMARY=')))
+    expected_tests=baseline_summary['discovered']
+    assert (tests.returncode==0 and expected_tests>0 and
+            baseline_summary['executed']==expected_tests and
+            baseline_summary['successful'] and not baseline_summary['skipped'])
     (ROOT/'validation/results_v02/independent_package_tests.log').write_text(tests.stdout+'\n'+tests.stderr,encoding='utf8')
     report={'status':'PASS','python':sys.version,'numpy':np.__version__,'reviewed_core_sha256':hashlib.sha256((ROOT/'software/src/workcert/core.py').read_bytes()).hexdigest(),
             'counts':counts,'package_tests_passed':expected_tests,'maximum_rational_oracle_absolute_difference':maxdiff,

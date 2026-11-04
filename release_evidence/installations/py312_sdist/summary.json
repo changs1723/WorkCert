@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests_run": 81,
+  "total_checks": 759,
+  "failed_checks": 0,
+  "discovery": "Every test_*.py file exactly once",
+  "phases": {
+    "baseline": {
+      "tests_run": 39,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "PASS"
+    },
+    "hou_acceptance": {
+      "tests_run": 28,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "PASS"
+    },
+    "revision_03": {
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "PASS"
+    }
+  },
+  "human_review_inferred": false
+}

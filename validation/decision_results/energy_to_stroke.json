@@ -1,0 +1,19 @@
+{
+  "specimen": "STWC-1",
+  "energy_target_J": 100.0,
+  "loading_interval_mm": [
+    10.0,
+    40.0
+  ],
+  "retained_points": 20,
+  "prefix_bound_J": 0.6948406444837637,
+  "source_force_lower_bound_kN": 2.6166162732562475,
+  "reference_minimum_force_on_loading_interval_kN": 3.247199,
+  "table_inverse_mm": 21.992441915748607,
+  "stroke_lower_mm": 21.812164291835515,
+  "stroke_upper_mm": 22.169622542935322,
+  "stroke_interval_width_mm": 0.357458251099807,
+  "reference_inverse_mm": 22.01666656104441,
+  "reference_contained": true,
+  "scope": "Inverse quasi-static work capacity of a fixed loading record; not an impact-dynamics prediction"
+}

@@ -24,27 +24,63 @@ which prevents mixing loading and unloading tables with the same domain.
 external selector's indices. No universal preference among selectors is built
 into the API; choosing a method is explicit.
 
-Cross-platform source verification separates identity from arithmetic. The
-reference SHA-256, size, retained values and source-peak summary must match
-exactly. The nine float64 error fields use explicit source-based comparison
-allowances because fused and unfused interpolation can produce different
-last bits. For alpha=128*float64 epsilon, the force allowance is
-alpha*max|F_i|; the work allowance is the trapezoidal sum of alpha*|F_i| over
-the reference coordinates. Scaling the forces first avoids an avoidable
-overflow. No one-unit floor or library-default relative tolerance is used.
-Allowances must be finite and are zero for a zero-force source. Exact metadata
-take a fast path; accepted roundoff does not change the stored certificate.
-This comparison establishes numerical consistency, not a rigorous forward-
-error certificate or producer authenticity. The computation of errors and
-query values is unchanged.
+## Stable binary64 integration and metadata comparison (0.3.0)
 
-The 39 numerical/CLI/persistence/branch/peak/geometric tests pass for installed wheel and source
-distributions on Windows with Python/NumPy 3.10.0/2.2.6, 3.12.14/2.3.5 and
-3.14.7/2.5.4. The 3.10 and 3.14 virtual environments use independently installed
-dependencies; the 3.12 environment shares a preinstalled NumPy. Package imports
-are checked to resolve to the installed environment. Fifteen original v0.1.0
-JSON responses were additionally loaded and verified against their references.
-Artifact hashes and precise runtime evidence are in `release_validation.json`.
+Residuals use local force offsets, `(F-F_left)-slope*(x-x_left)`, with
+separately materialized NumPy operations. This avoids subtracting two
+independently rounded large force baselines. Retained residuals are zero.
+
+An O(n) balanced up/down scan replaces serial cumulative addition. Tree
+nodes carry a high sum and a low correction with the standard TwoSum
+addition identity. Segment endpoint means also retain their low component;
+`math.fsum` computes each terminal sum. The scan has O(log n) dependency
+depth and O(n) storage. Products, subnormal arithmetic and final float64
+outputs still round; neither the scan nor the PL-error formulas constitute
+outward-rounded arithmetic.
+
+A response caches an analogous O(K)-size compensated segment tree. Prefix
+and interval queries combine complete-segment ranges with directly integrated
+endpoint pieces. The endpoint integral uses the midpoint's convex weights
+on the original endpoint forces; it does not first round two interpolated
+endpoint forces. Each ordinary query takes O(log K) work. Directed branch queries
+use the local interval interface as well. This avoids loss caused solely by
+subtracting large global prefixes. It cannot make a binary64 return value
+resolve a term smaller than that value's own spacing.
+
+A twofold cache alone cannot preserve arbitrarily many widely separated
+scales. Each response therefore also caches absolute sums of the original
+leaf components. If the computed net is no larger than eps64 times this
+absolute sum, the query is recomputed with `math.fsum` over its original
+segment components and endpoint pieces. This detects internal cancellation
+that may already have reduced a signed subtree to zero. The fallback costs
+O(m) for a query spanning m retained segments; this changes the worst-case
+query complexity to O(K). The eps64 condition is a precision policy, not an
+outward error estimate. Path-reference integration uses the same endpoint-
+mean components and summation policy as the response integrals.
+
+Reference verification keeps source identity exact. Its numeric comparison
+allows at most 16 ULPs at the larger nonzero field magnitude and requires
+zero/nonzero agreement exactly. The 16-ULP budget is an explicit metadata
+comparison policy tested with final-bit and material perturbations, not a
+bound on integration error or a safety/security guarantee. In particular,
+large force magnitudes do not relax an error field's comparison.
+
+Internal range/identity relationships use their own work-valued scales
+and a 16-ULP consistency budget, with no unit-sized floor. Consequently a
+small physical unit does not turn a materially inconsistent file into a
+valid object. Resolved reconstruction errors cannot be replaced by zero
+under the former source-force-scaled allowance. If an old saved table fails
+these stronger checks, regenerate its metadata from its trusted full source.
+
+The 0.2.0 installation and source records remain historical evidence;
+they are not evidence that the revised 0.3.0 runtime passed those runs.
+New strict-review tests are in `tests/test_numerical_stability.py`. They
+cover constant and exactly representable affine families, actual binary
+non-affine samples, short windows, signed cancellation, small-unit corruption,
+source checks and API/CLI overflow. The new tests were developed with AI
+assistance and do not extend the authors' earlier manual-verification record.
+Current installed-suite and platform evidence are recorded with the actual
+runtime hashes by the repository validation workflow.
 
 The supplied CI workflow targets Python 3.10-3.14 on Linux, macOS and Windows.
 A workflow specification alone is not evidence of a completed remote run.

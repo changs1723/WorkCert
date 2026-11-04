@@ -1,0 +1,709 @@
+[
+  {
+    "stage": 0,
+    "stroke_mm": 20.0,
+    "total_retained_nodes": 1520,
+    "consumer_received_configurations": [
+      {
+        "configuration": "01",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.008237646949435,
+        "SEA_lower_kJ_kg": 6.976021016615884,
+        "SEA_upper_kJ_kg": 7.0404542772829855
+      },
+      {
+        "configuration": "02",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.614829578223124,
+        "SEA_lower_kJ_kg": 4.588935120784889,
+        "SEA_upper_kJ_kg": 4.640724035661359
+      },
+      {
+        "configuration": "03",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.817056026918198,
+        "SEA_lower_kJ_kg": 7.79979039527696,
+        "SEA_upper_kJ_kg": 7.834321658559436
+      },
+      {
+        "configuration": "04",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.5050761277028935,
+        "SEA_lower_kJ_kg": 5.483774209258927,
+        "SEA_upper_kJ_kg": 5.52637804614686
+      },
+      {
+        "configuration": "05",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.0340064680917385,
+        "SEA_lower_kJ_kg": 4.0099238053623685,
+        "SEA_upper_kJ_kg": 4.0580891308211084
+      },
+      {
+        "configuration": "06",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.116373402937324,
+        "SEA_lower_kJ_kg": 6.089898313563387,
+        "SEA_upper_kJ_kg": 6.142848492311261
+      },
+      {
+        "configuration": "07",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.149862041918354,
+        "SEA_lower_kJ_kg": 7.121396840118955,
+        "SEA_upper_kJ_kg": 7.178327243717753
+      },
+      {
+        "configuration": "08",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.557907438074408,
+        "SEA_lower_kJ_kg": 6.5315426164145745,
+        "SEA_upper_kJ_kg": 6.584272259734242
+      },
+      {
+        "configuration": "09",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.261081635139894,
+        "SEA_lower_kJ_kg": 6.23844085123315,
+        "SEA_upper_kJ_kg": 6.283722419046638
+      },
+      {
+        "configuration": "10",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.046459965255939,
+        "SEA_lower_kJ_kg": 5.026973519750851,
+        "SEA_upper_kJ_kg": 5.065946410761026
+      },
+      {
+        "configuration": "11",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.592025416290682,
+        "SEA_lower_kJ_kg": 6.560331962782484,
+        "SEA_upper_kJ_kg": 6.623718869798881
+      },
+      {
+        "configuration": "12",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.266574791543208,
+        "SEA_lower_kJ_kg": 5.242177449876203,
+        "SEA_upper_kJ_kg": 5.2909721332102135
+      },
+      {
+        "configuration": "13",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.489017071913864,
+        "SEA_lower_kJ_kg": 6.4586700015488665,
+        "SEA_upper_kJ_kg": 6.519364142278861
+      },
+      {
+        "configuration": "14",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.158279132392505,
+        "SEA_lower_kJ_kg": 5.139156666118609,
+        "SEA_upper_kJ_kg": 5.1774015986664015
+      },
+      {
+        "configuration": "15",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.270004833551529,
+        "SEA_lower_kJ_kg": 5.234140542264769,
+        "SEA_upper_kJ_kg": 5.305869124838289
+      },
+      {
+        "configuration": "16",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.703315830272546,
+        "SEA_lower_kJ_kg": 7.6759392861050335,
+        "SEA_upper_kJ_kg": 7.730692374440058
+      },
+      {
+        "configuration": "17",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.7270232705932145,
+        "SEA_lower_kJ_kg": 6.710938189097586,
+        "SEA_upper_kJ_kg": 6.743108352088843
+      },
+      {
+        "configuration": "18",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.628048498102266,
+        "SEA_lower_kJ_kg": 4.597654547195496,
+        "SEA_upper_kJ_kg": 4.658442449009035
+      },
+      {
+        "configuration": "19",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.021131952742859,
+        "SEA_lower_kJ_kg": 5.989346649767592,
+        "SEA_upper_kJ_kg": 6.0529172557181266
+      },
+      {
+        "configuration": "20",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.931472988937814,
+        "SEA_lower_kJ_kg": 5.9080380737552645,
+        "SEA_upper_kJ_kg": 5.954907904120363
+      },
+      {
+        "configuration": "21",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.170430488670098,
+        "SEA_lower_kJ_kg": 6.140925752863523,
+        "SEA_upper_kJ_kg": 6.199935224476673
+      },
+      {
+        "configuration": "22",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.727981175917217,
+        "SEA_lower_kJ_kg": 5.706230456881578,
+        "SEA_upper_kJ_kg": 5.7497318949528555
+      },
+      {
+        "configuration": "23",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.134488884106726,
+        "SEA_lower_kJ_kg": 6.104586735488557,
+        "SEA_upper_kJ_kg": 6.164391032724895
+      },
+      {
+        "configuration": "24",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.374194207772895,
+        "SEA_lower_kJ_kg": 5.346991577372518,
+        "SEA_upper_kJ_kg": 5.401396838173272
+      },
+      {
+        "configuration": "25",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.987406965408081,
+        "SEA_lower_kJ_kg": 6.961015106976926,
+        "SEA_upper_kJ_kg": 7.0137988238392355
+      },
+      {
+        "configuration": "26",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 8.048809211443084,
+        "SEA_lower_kJ_kg": 8.02324572286693,
+        "SEA_upper_kJ_kg": 8.074372700019238
+      },
+      {
+        "configuration": "27",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.798442806070049,
+        "SEA_lower_kJ_kg": 6.764296519938862,
+        "SEA_upper_kJ_kg": 6.832589092201236
+      },
+      {
+        "configuration": "28",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.798088442995017,
+        "SEA_lower_kJ_kg": 5.775234609004209,
+        "SEA_upper_kJ_kg": 5.820942276985824
+      },
+      {
+        "configuration": "29",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.57683105687537,
+        "SEA_lower_kJ_kg": 5.546128148462045,
+        "SEA_upper_kJ_kg": 5.607533965288694
+      },
+      {
+        "configuration": "30",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.224672879581169,
+        "SEA_lower_kJ_kg": 6.201684786079818,
+        "SEA_upper_kJ_kg": 6.247660973082519
+      },
+      {
+        "configuration": "31",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.512470705157287,
+        "SEA_lower_kJ_kg": 6.482517393386136,
+        "SEA_upper_kJ_kg": 6.542424016928438
+      },
+      {
+        "configuration": "32",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.927826385523139,
+        "SEA_lower_kJ_kg": 6.907436672025328,
+        "SEA_upper_kJ_kg": 6.94821609902095
+      },
+      {
+        "configuration": "33",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.474293510702606,
+        "SEA_lower_kJ_kg": 6.454880128569943,
+        "SEA_upper_kJ_kg": 6.493706892835268
+      },
+      {
+        "configuration": "34",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.673144627832937,
+        "SEA_lower_kJ_kg": 4.653628793591596,
+        "SEA_upper_kJ_kg": 4.6926604620742784
+      },
+      {
+        "configuration": "35",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.99720210645483,
+        "SEA_lower_kJ_kg": 7.966274829712303,
+        "SEA_upper_kJ_kg": 8.028129383197358
+      },
+      {
+        "configuration": "36",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.090641899790714,
+        "SEA_lower_kJ_kg": 5.062468568338665,
+        "SEA_upper_kJ_kg": 5.118815231242762
+      },
+      {
+        "configuration": "37",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.853153324209996,
+        "SEA_lower_kJ_kg": 5.8221777225419995,
+        "SEA_upper_kJ_kg": 5.884128925877992
+      },
+      {
+        "configuration": "38",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.936781644107563,
+        "SEA_lower_kJ_kg": 4.918187098132449,
+        "SEA_upper_kJ_kg": 4.955376190082676
+      },
+      {
+        "configuration": "39",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.336843769872317,
+        "SEA_lower_kJ_kg": 6.309268620280388,
+        "SEA_upper_kJ_kg": 6.364418919464246
+      },
+      {
+        "configuration": "40",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.608957972924166,
+        "SEA_lower_kJ_kg": 7.590388900697974,
+        "SEA_upper_kJ_kg": 7.627527045150359
+      },
+      {
+        "configuration": "N-SCMC",
+        "stroke_mm": 20.0,
+        "specimens": 3,
+        "SEA_kJ_kg": 5.802207148659899,
+        "SEA_lower_kJ_kg": 5.774028916204723,
+        "SEA_upper_kJ_kg": 5.830385381115074
+      },
+      {
+        "configuration": "STWC",
+        "stroke_mm": 20.0,
+        "specimens": 3,
+        "SEA_kJ_kg": 5.766019607841123,
+        "SEA_lower_kJ_kg": 5.725718382981724,
+        "SEA_upper_kJ_kg": 5.806320832700522
+      }
+    ],
+    "consumer_read_dense_references": false,
+    "leader": "26",
+    "challengers": [
+      "35"
+    ],
+    "request_configurations": [
+      "26",
+      "35"
+    ],
+    "winner_separated": false,
+    "leader_lower_kJ_kg": 8.02324572286693,
+    "largest_other_upper_kJ_kg": 8.028129383197358,
+    "separation_margin_kJ_kg": -0.004883660330428086
+  },
+  {
+    "stage": 1,
+    "stroke_mm": 20.0,
+    "total_retained_nodes": 1538,
+    "consumer_received_configurations": [
+      {
+        "configuration": "01",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.008237646949435,
+        "SEA_lower_kJ_kg": 6.976021016615884,
+        "SEA_upper_kJ_kg": 7.0404542772829855
+      },
+      {
+        "configuration": "02",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.614829578223124,
+        "SEA_lower_kJ_kg": 4.588935120784889,
+        "SEA_upper_kJ_kg": 4.640724035661359
+      },
+      {
+        "configuration": "03",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.817056026918198,
+        "SEA_lower_kJ_kg": 7.79979039527696,
+        "SEA_upper_kJ_kg": 7.834321658559436
+      },
+      {
+        "configuration": "04",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.5050761277028935,
+        "SEA_lower_kJ_kg": 5.483774209258927,
+        "SEA_upper_kJ_kg": 5.52637804614686
+      },
+      {
+        "configuration": "05",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.0340064680917385,
+        "SEA_lower_kJ_kg": 4.0099238053623685,
+        "SEA_upper_kJ_kg": 4.0580891308211084
+      },
+      {
+        "configuration": "06",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.116373402937324,
+        "SEA_lower_kJ_kg": 6.089898313563387,
+        "SEA_upper_kJ_kg": 6.142848492311261
+      },
+      {
+        "configuration": "07",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.149862041918354,
+        "SEA_lower_kJ_kg": 7.121396840118955,
+        "SEA_upper_kJ_kg": 7.178327243717753
+      },
+      {
+        "configuration": "08",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.557907438074408,
+        "SEA_lower_kJ_kg": 6.5315426164145745,
+        "SEA_upper_kJ_kg": 6.584272259734242
+      },
+      {
+        "configuration": "09",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.261081635139894,
+        "SEA_lower_kJ_kg": 6.23844085123315,
+        "SEA_upper_kJ_kg": 6.283722419046638
+      },
+      {
+        "configuration": "10",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.046459965255939,
+        "SEA_lower_kJ_kg": 5.026973519750851,
+        "SEA_upper_kJ_kg": 5.065946410761026
+      },
+      {
+        "configuration": "11",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.592025416290682,
+        "SEA_lower_kJ_kg": 6.560331962782484,
+        "SEA_upper_kJ_kg": 6.623718869798881
+      },
+      {
+        "configuration": "12",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.266574791543208,
+        "SEA_lower_kJ_kg": 5.242177449876203,
+        "SEA_upper_kJ_kg": 5.2909721332102135
+      },
+      {
+        "configuration": "13",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.489017071913864,
+        "SEA_lower_kJ_kg": 6.4586700015488665,
+        "SEA_upper_kJ_kg": 6.519364142278861
+      },
+      {
+        "configuration": "14",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.158279132392505,
+        "SEA_lower_kJ_kg": 5.139156666118609,
+        "SEA_upper_kJ_kg": 5.1774015986664015
+      },
+      {
+        "configuration": "15",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.270004833551529,
+        "SEA_lower_kJ_kg": 5.234140542264769,
+        "SEA_upper_kJ_kg": 5.305869124838289
+      },
+      {
+        "configuration": "16",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.703315830272546,
+        "SEA_lower_kJ_kg": 7.6759392861050335,
+        "SEA_upper_kJ_kg": 7.730692374440058
+      },
+      {
+        "configuration": "17",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.7270232705932145,
+        "SEA_lower_kJ_kg": 6.710938189097586,
+        "SEA_upper_kJ_kg": 6.743108352088843
+      },
+      {
+        "configuration": "18",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.628048498102266,
+        "SEA_lower_kJ_kg": 4.597654547195496,
+        "SEA_upper_kJ_kg": 4.658442449009035
+      },
+      {
+        "configuration": "19",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.021131952742859,
+        "SEA_lower_kJ_kg": 5.989346649767592,
+        "SEA_upper_kJ_kg": 6.0529172557181266
+      },
+      {
+        "configuration": "20",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.931472988937814,
+        "SEA_lower_kJ_kg": 5.9080380737552645,
+        "SEA_upper_kJ_kg": 5.954907904120363
+      },
+      {
+        "configuration": "21",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.170430488670098,
+        "SEA_lower_kJ_kg": 6.140925752863523,
+        "SEA_upper_kJ_kg": 6.199935224476673
+      },
+      {
+        "configuration": "22",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.727981175917217,
+        "SEA_lower_kJ_kg": 5.706230456881578,
+        "SEA_upper_kJ_kg": 5.7497318949528555
+      },
+      {
+        "configuration": "23",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.134488884106726,
+        "SEA_lower_kJ_kg": 6.104586735488557,
+        "SEA_upper_kJ_kg": 6.164391032724895
+      },
+      {
+        "configuration": "24",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.374194207772895,
+        "SEA_lower_kJ_kg": 5.346991577372518,
+        "SEA_upper_kJ_kg": 5.401396838173272
+      },
+      {
+        "configuration": "25",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.987406965408081,
+        "SEA_lower_kJ_kg": 6.961015106976926,
+        "SEA_upper_kJ_kg": 7.0137988238392355
+      },
+      {
+        "configuration": "26",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 8.047172566969866,
+        "SEA_lower_kJ_kg": 8.035143720727046,
+        "SEA_upper_kJ_kg": 8.059201413212687
+      },
+      {
+        "configuration": "27",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.798442806070049,
+        "SEA_lower_kJ_kg": 6.764296519938862,
+        "SEA_upper_kJ_kg": 6.832589092201236
+      },
+      {
+        "configuration": "28",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.798088442995017,
+        "SEA_lower_kJ_kg": 5.775234609004209,
+        "SEA_upper_kJ_kg": 5.820942276985824
+      },
+      {
+        "configuration": "29",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.57683105687537,
+        "SEA_lower_kJ_kg": 5.546128148462045,
+        "SEA_upper_kJ_kg": 5.607533965288694
+      },
+      {
+        "configuration": "30",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.224672879581169,
+        "SEA_lower_kJ_kg": 6.201684786079818,
+        "SEA_upper_kJ_kg": 6.247660973082519
+      },
+      {
+        "configuration": "31",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.512470705157287,
+        "SEA_lower_kJ_kg": 6.482517393386136,
+        "SEA_upper_kJ_kg": 6.542424016928438
+      },
+      {
+        "configuration": "32",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.927826385523139,
+        "SEA_lower_kJ_kg": 6.907436672025328,
+        "SEA_upper_kJ_kg": 6.94821609902095
+      },
+      {
+        "configuration": "33",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.474293510702606,
+        "SEA_lower_kJ_kg": 6.454880128569943,
+        "SEA_upper_kJ_kg": 6.493706892835268
+      },
+      {
+        "configuration": "34",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.673144627832937,
+        "SEA_lower_kJ_kg": 4.653628793591596,
+        "SEA_upper_kJ_kg": 4.6926604620742784
+      },
+      {
+        "configuration": "35",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 8.01528794705695,
+        "SEA_lower_kJ_kg": 8.004966727721682,
+        "SEA_upper_kJ_kg": 8.025609166392217
+      },
+      {
+        "configuration": "36",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.090641899790714,
+        "SEA_lower_kJ_kg": 5.062468568338665,
+        "SEA_upper_kJ_kg": 5.118815231242762
+      },
+      {
+        "configuration": "37",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 5.853153324209996,
+        "SEA_lower_kJ_kg": 5.8221777225419995,
+        "SEA_upper_kJ_kg": 5.884128925877992
+      },
+      {
+        "configuration": "38",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 4.936781644107563,
+        "SEA_lower_kJ_kg": 4.918187098132449,
+        "SEA_upper_kJ_kg": 4.955376190082676
+      },
+      {
+        "configuration": "39",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 6.336843769872317,
+        "SEA_lower_kJ_kg": 6.309268620280388,
+        "SEA_upper_kJ_kg": 6.364418919464246
+      },
+      {
+        "configuration": "40",
+        "stroke_mm": 20.0,
+        "specimens": 1,
+        "SEA_kJ_kg": 7.608957972924166,
+        "SEA_lower_kJ_kg": 7.590388900697974,
+        "SEA_upper_kJ_kg": 7.627527045150359
+      },
+      {
+        "configuration": "N-SCMC",
+        "stroke_mm": 20.0,
+        "specimens": 3,
+        "SEA_kJ_kg": 5.802207148659899,
+        "SEA_lower_kJ_kg": 5.774028916204723,
+        "SEA_upper_kJ_kg": 5.830385381115074
+      },
+      {
+        "configuration": "STWC",
+        "stroke_mm": 20.0,
+        "specimens": 3,
+        "SEA_kJ_kg": 5.766019607841123,
+        "SEA_lower_kJ_kg": 5.725718382981724,
+        "SEA_upper_kJ_kg": 5.806320832700522
+      }
+    ],
+    "consumer_read_dense_references": false,
+    "leader": "26",
+    "challengers": [],
+    "request_configurations": [],
+    "winner_separated": true,
+    "leader_lower_kJ_kg": 8.035143720727046,
+    "largest_other_upper_kJ_kg": 8.025609166392217,
+    "separation_margin_kJ_kg": 0.009534554334829082
+  }
+]

@@ -1,7 +1,7 @@
 {
   "source_doi": "10.5281/zenodo.10829958",
   "source_xlsx_sha256": "26065e56a3923add82c988876037fa5e50991eecc5c2e8c2ad636b3e2b430673",
-  "workflow_branch_metrics_sha256": "b6392754cf40d4590bcb738b103f29954bd0f413b94d9788ffc42ab55b681942",
+  "workflow_branch_metrics_sha256": "447f2e8fe6719857ab089c42766b02434e187f7ae037c663e908bc2815f50b5f",
   "source_points": 125157,
   "exact_monotone_branches": 2971,
   "exact_zero_displacement_events": 1984,
@@ -35,7 +35,7 @@
       "0.75": 5.0,
       "0.9": 9.0,
       "0.95": 14.0,
-      "0.99": 33.30000000000018,
+      "0.99": 34.0,
       "1.0": 129.0
     },
     "excursion_mm": {
@@ -76,18 +76,18 @@
     "sum_absolute_work_of_runs_at_most_0_1_mm_J": 232.4747340549967,
     "interpretation": "Runs ignore zero steps for diagnostic counting; they are not replacements for strict F(x) branches."
   },
-  "sum_retained_branch_nodes": 13886,
+  "sum_retained_branch_nodes": 13890,
   "reference_signed_path_work_J": 92033.957666125,
-  "reconstructed_signed_path_work_J": 91965.42908509,
-  "signed_terminal_reference_minus_reconstruction_J": 68.5285810350001,
-  "maximum_continuous_chronological_error_J": 68.7197146269448,
-  "sum_branch_window_errors_J": 104.47783323401322,
+  "reconstructed_signed_path_work_J": 91965.42782858999,
+  "signed_terminal_reference_minus_reconstruction_J": 68.52983753500011,
+  "maximum_continuous_chronological_error_J": 68.72097112694482,
+  "sum_branch_window_errors_J": 104.47778885906526,
   "composed_chronological_error_metadata": {
-    "signed_terminal_error_J": 68.52858103500027,
-    "minimum_error_J": -0.22595376891982144,
-    "maximum_error_J": 68.71971462694495,
-    "prefix_error_J": 68.71971462694495,
-    "window_error_J": 68.94566839586477,
+    "signed_terminal_error_J": 68.52983753500018,
+    "minimum_error_J": -0.22469726891981667,
+    "maximum_error_J": 68.72097112694489,
+    "prefix_error_J": 68.72097112694489,
+    "window_error_J": 68.9456683958647,
     "reads_reference_values": false,
     "source_fields": [
       "signed_terminal_error",
@@ -99,21 +99,21 @@
     "zero_displacement_events": "zero-work contribution",
     "independently_matches_full_reference_residual_extrema": true
   },
-  "terminal_error_percent_of_absolute_net_reference_work": 0.0744601044797006,
-  "maximum_error_percent_of_absolute_net_reference_work": 0.0746677817292633,
-  "bound_percent_of_absolute_net_reference_work": 0.11352096104899816,
+  "terminal_error_percent_of_absolute_net_reference_work": 0.07446146973664693,
+  "maximum_error_percent_of_absolute_net_reference_work": 0.07466914698620962,
+  "bound_percent_of_absolute_net_reference_work": 0.11352091283315578,
   "sum_absolute_directed_reference_branch_work_J": 152336.218511145,
   "allocated_sum_branch_tolerances_J": 152.336218511145,
   "branches_unmet_tolerance_at_cap": 1,
   "monotonicity": {
     "tolerance_J": 1e-12,
     "positive_error_increments": 64112,
-    "negative_error_increments": 54868,
-    "near_zero_error_increments": 6176,
-    "sum_positive_increments_J": 142.110031826303,
-    "sum_negative_increments_J": -73.58145079130287,
-    "positive_terminal_branch_errors": 1014,
-    "negative_terminal_branch_errors": 899,
+    "negative_error_increments": 54865,
+    "near_zero_error_increments": 6179,
+    "sum_positive_increments_J": 142.11025145591788,
+    "sum_negative_increments_J": -73.58041392091775,
+    "positive_terminal_branch_errors": 1015,
+    "negative_terminal_branch_errors": 898,
     "chronological_error_is_monotone": false
   },
   "deadband_diagnostic": {
@@ -155,7 +155,7 @@
     "saved_payload_checks": 2971,
     "every_nonzero_chronological_edge_covered_once": true,
     "all_zero_steps_remain_zero_work_events": true,
-    "max_independent_prefix_window_difference_J": 0.0,
+    "max_independent_prefix_window_difference_J": 1.84297022087776e-14,
     "archived_chronological_arrays_reproduced": true
   },
   "interpretation": "A signed reference-relative F dx path integral. The positive net reconstruction deficit is observed in this record, not asserted for every curve or interpreted as measurement uncertainty."

@@ -1,0 +1,53 @@
+{
+  "schema": "workcert.article-publication-snapshot/1",
+  "metadata": {
+    "name": "WorkCert",
+    "version": "0.3.0",
+    "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+    "authors": [
+      "Saisai Hou",
+      "Yunzhi Zhu",
+      "Sen Zhang"
+    ],
+    "affiliation": "Department of Public Basic Courses, Nanjing University of Industry Technology, Nanjing, China",
+    "corresponding_author": "Sen Zhang",
+    "email": "szhang@niit.edu.cn",
+    "license": "MIT",
+    "credit": {
+      "Saisai Hou": "Conceptualization, Methodology, Software, Formal analysis, Visualization, Writing – original draft",
+      "Yunzhi Zhu": "Methodology, Validation, Data curation, Writing – review & editing",
+      "Sen Zhang": "Conceptualization, Supervision, Resources, Writing – review & editing, Project administration"
+    },
+    "ai_disclosure": "OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.",
+    "funding": "This work was supported by the General Program of Natural Science Research (Basic Science) in Higher Education Institutions of Jiangsu Province (Grant No. 25KJD110002).",
+    "repository_url": "https://github.com/changs1723/WorkCert",
+    "permanent_code_url": null,
+    "documentation_url": null,
+    "archive_doi": null,
+    "archive_doi_url": null,
+    "public_release_published": false
+  },
+  "verification": {
+    "status": "PASS",
+    "version": "0.3.0",
+    "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "tests_passed": 81,
+    "new_numeric_test_methods": 14,
+    "installation_statement": "Both distributions passed all 81 tests in separate Windows environments with Python 3.10/3.12/3.14 and NumPy 2.2.6/2.3.5/2.5.4, respectively. The 3.12 environments reused base-runtime dependencies.",
+    "remote_ci_statement": "",
+    "scope": "Actual local installation results; no 0.3.0 remote CI or new human-review claim"
+  },
+  "software_fingerprints": {
+    "software/src/workcert/__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "software/src/workcert/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "software/src/workcert/cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "software/src/workcert/core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "software/src/workcert/interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "software/src/workcert/preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "software/src/workcert/selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d"
+  },
+  "build_epoch": 1793750400,
+  "publication_state": "Local major-revision candidate; no public 0.3.0 release or DOI has been asserted",
+  "article_date": "4 November 2026",
+  "audit_directory": "qa/round6"
+}

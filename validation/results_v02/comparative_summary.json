@@ -3,44 +3,44 @@
     "records": 70,
     "at33": {
       "work": {
-        "prefix_error_percent": 0.16773010265800664,
-        "window_error_percent": 0.20653947040489334,
-        "serialized_bytes": 1712.0,
-        "eta_percent": 0.7049462861460388
+        "prefix_error_percent": 0.16773010265800692,
+        "window_error_percent": 0.20653947040489365,
+        "serialized_bytes": 1712.5,
+        "eta_percent": 0.7049462861460394
       },
       "vertical": {
-        "prefix_error_percent": 0.2044078683680262,
+        "prefix_error_percent": 0.2044078683680265,
         "window_error_percent": 0.23877854145220484,
-        "serialized_bytes": 1714.5,
+        "serialized_bytes": 1715.0,
         "eta_percent": 0.7375544338650466
       },
       "uniform_peak": {
-        "prefix_error_percent": 0.22894518815131032,
-        "window_error_percent": 0.3435878495380287,
-        "serialized_bytes": 1689.0,
-        "eta_percent": 1.3894766819960367
+        "prefix_error_percent": 0.22894518815131049,
+        "window_error_percent": 0.3435878495380289,
+        "serialized_bytes": 1688.5,
+        "eta_percent": 1.389476681996036
       },
       "uniform": {
-        "prefix_error_percent": 0.2311564459559292,
+        "prefix_error_percent": 0.23115644595592913,
         "window_error_percent": 0.36366227345354146,
-        "serialized_bytes": 1680.0,
+        "serialized_bytes": 1679.0,
         "eta_percent": 1.4732057861940135
       },
       "rdp": {
-        "prefix_error_percent": 0.2430272916777002,
-        "window_error_percent": 0.28118912030610854,
-        "serialized_bytes": 1498.5,
-        "eta_percent": 0.8838826956362027
+        "prefix_error_percent": 0.24302729167770043,
+        "window_error_percent": 0.2811891203061084,
+        "serialized_bytes": 1498.0,
+        "eta_percent": 0.8838826956362031
       },
       "vw": {
-        "prefix_error_percent": 0.15493721730602955,
-        "window_error_percent": 0.1872286256712364,
+        "prefix_error_percent": 0.1549372173060296,
+        "window_error_percent": 0.18722862567123635,
         "serialized_bytes": 1497.0,
-        "eta_percent": 0.7581559763308102
+        "eta_percent": 0.7581559763308106
       },
       "work_only": {
-        "prefix_error_percent": 0.36359302768899526,
-        "window_error_percent": 0.44809164402353496,
+        "prefix_error_percent": 0.3635930276889953,
+        "window_error_percent": 0.44809164402353463,
         "serialized_bytes": 1242.0
       }
     },
@@ -95,37 +95,37 @@
         "lower_prefix_error": 45,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 0.821434217374821
+        "median_prefix_error_ratio": 0.8214342173748204
       },
       "work_vs_rdp": {
         "lower_prefix_error": 49,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 0.6080801080873228
+        "median_prefix_error_ratio": 0.608080108087323
       },
       "work_vs_vw": {
         "lower_prefix_error": 33,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 1.019792077196825
+        "median_prefix_error_ratio": 1.019792077196826
       },
       "vertical_vs_rdp": {
         "lower_prefix_error": 47,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 0.7125077085906182
+        "median_prefix_error_ratio": 0.712507708590618
       },
       "vertical_vs_vw": {
         "lower_prefix_error": 27,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 1.2356139501329721
+        "median_prefix_error_ratio": 1.2356139501329735
       },
       "work_vs_uniform_peak": {
         "lower_prefix_error": 53,
         "equal_within_1e_12_percent": 0,
         "records": 70,
-        "median_prefix_error_ratio": 0.6595437093958392
+        "median_prefix_error_ratio": 0.6595437093958383
       }
     }
   },
@@ -133,44 +133,44 @@
     "records": 23,
     "at33": {
       "work": {
-        "prefix_error_percent": 0.09417683857158259,
-        "window_error_percent": 0.13841299703580656,
+        "prefix_error_percent": 0.09417683857158268,
+        "window_error_percent": 0.1384129970358064,
         "serialized_bytes": 1975.0,
-        "eta_percent": 0.4977438591277403
+        "eta_percent": 0.49774385912773994
       },
       "vertical": {
-        "prefix_error_percent": 0.09919487999569858,
-        "window_error_percent": 0.1325890694534061,
-        "serialized_bytes": 1981.0,
-        "eta_percent": 0.5586618516241855
+        "prefix_error_percent": 0.09919487999569855,
+        "window_error_percent": 0.13258906945340565,
+        "serialized_bytes": 1980.0,
+        "eta_percent": 0.558661851624185
       },
       "uniform_peak": {
-        "prefix_error_percent": 0.20588572826049803,
-        "window_error_percent": 0.2801415250525834,
-        "serialized_bytes": 1948.0,
-        "eta_percent": 1.231228961623943
+        "prefix_error_percent": 0.20588572826049806,
+        "window_error_percent": 0.28014152505258316,
+        "serialized_bytes": 1946.0,
+        "eta_percent": 1.2312289616239422
       },
       "uniform": {
-        "prefix_error_percent": 0.20588572826049803,
-        "window_error_percent": 0.2801415250525834,
-        "serialized_bytes": 1900.0,
-        "eta_percent": 1.092352499614481
+        "prefix_error_percent": 0.20588572826049806,
+        "window_error_percent": 0.28014152505258316,
+        "serialized_bytes": 1901.0,
+        "eta_percent": 1.0923524996144818
       },
       "rdp": {
-        "prefix_error_percent": 0.1344066738897335,
-        "window_error_percent": 0.183355509918768,
-        "serialized_bytes": 1743.0,
-        "eta_percent": 0.5874424796873962
+        "prefix_error_percent": 0.13440667388973357,
+        "window_error_percent": 0.18335550991876753,
+        "serialized_bytes": 1744.0,
+        "eta_percent": 0.5874424796873967
       },
       "vw": {
-        "prefix_error_percent": 0.10752860572033937,
-        "window_error_percent": 0.14370729527876358,
-        "serialized_bytes": 1755.0,
-        "eta_percent": 0.49695711379568375
+        "prefix_error_percent": 0.10752860572033941,
+        "window_error_percent": 0.14370729527876386,
+        "serialized_bytes": 1756.0,
+        "eta_percent": 0.49695711379568336
       },
       "work_only": {
         "prefix_error_percent": 0.22423947521672205,
-        "window_error_percent": 0.28138977087063594,
+        "window_error_percent": 0.2813897708706367,
         "serialized_bytes": 1457.0
       }
     },
@@ -225,37 +225,37 @@
         "lower_prefix_error": 14,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.8442210020184729
+        "median_prefix_error_ratio": 0.8442210020184707
       },
       "work_vs_rdp": {
         "lower_prefix_error": 14,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.5273521474660716
+        "median_prefix_error_ratio": 0.5273521474660726
       },
       "work_vs_vw": {
         "lower_prefix_error": 12,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.9750148021192622
+        "median_prefix_error_ratio": 0.9750148021192615
       },
       "vertical_vs_rdp": {
         "lower_prefix_error": 16,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.6550071346607125
+        "median_prefix_error_ratio": 0.6550071346607176
       },
       "vertical_vs_vw": {
         "lower_prefix_error": 12,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.9573452512419949
+        "median_prefix_error_ratio": 0.9573452512419958
       },
       "work_vs_uniform_peak": {
         "lower_prefix_error": 21,
         "equal_within_1e_12_percent": 0,
         "records": 23,
-        "median_prefix_error_ratio": 0.43628970462380867
+        "median_prefix_error_ratio": 0.4362897046238081
       }
     }
   },
@@ -263,44 +263,44 @@
     "records": 1,
     "at33": {
       "work": {
-        "prefix_error_percent": 0.4044658951202327,
-        "window_error_percent": 0.4834545672980567,
-        "serialized_bytes": 2003.0,
-        "eta_percent": 1.766796612708998
+        "prefix_error_percent": 0.4044658951202336,
+        "window_error_percent": 0.48345456729805775,
+        "serialized_bytes": 1997.0,
+        "eta_percent": 1.7667966127090025
       },
       "vertical": {
-        "prefix_error_percent": 0.7175645257422195,
-        "window_error_percent": 1.1461073671628086,
-        "serialized_bytes": 1996.0,
-        "eta_percent": 2.9174912045624533
+        "prefix_error_percent": 0.7175645257422206,
+        "window_error_percent": 1.146107367162811,
+        "serialized_bytes": 1994.0,
+        "eta_percent": 2.9174912045624595
       },
       "uniform_peak": {
-        "prefix_error_percent": 0.45938503078033116,
-        "window_error_percent": 0.8859269027563141,
-        "serialized_bytes": 1978.0,
-        "eta_percent": 4.0585073150332445
+        "prefix_error_percent": 0.4593850307803316,
+        "window_error_percent": 0.8859269027563159,
+        "serialized_bytes": 1976.0,
+        "eta_percent": 4.058507315033253
       },
       "uniform": {
-        "prefix_error_percent": 0.45938503078033116,
-        "window_error_percent": 0.8859269027563141,
-        "serialized_bytes": 1974.0,
-        "eta_percent": 4.0585073150332445
+        "prefix_error_percent": 0.4593850307803316,
+        "window_error_percent": 0.8859269027563159,
+        "serialized_bytes": 1972.0,
+        "eta_percent": 4.058507315033253
       },
       "rdp": {
-        "prefix_error_percent": 1.098104804153221,
-        "window_error_percent": 1.177093476331045,
-        "serialized_bytes": 1752.0,
-        "eta_percent": 2.3993295954110105
+        "prefix_error_percent": 1.0981048041532246,
+        "window_error_percent": 1.1770934763310488,
+        "serialized_bytes": 1753.0,
+        "eta_percent": 2.399329595411016
       },
       "vw": {
-        "prefix_error_percent": 0.5284611270444538,
-        "window_error_percent": 0.6630439210226168,
+        "prefix_error_percent": 0.5284611270444542,
+        "window_error_percent": 0.6630439210226187,
         "serialized_bytes": 1794.0,
-        "eta_percent": 2.1437290681265346
+        "eta_percent": 2.1437290681265395
       },
       "work_only": {
-        "prefix_error_percent": 0.47349546193090136,
-        "window_error_percent": 0.7785080887845794,
+        "prefix_error_percent": 0.4734954619309024,
+        "window_error_percent": 0.7785080887845811,
         "serialized_bytes": 1437.0
       }
     },
@@ -355,37 +355,37 @@
         "lower_prefix_error": 1,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 0.5636648421295208
+        "median_prefix_error_ratio": 0.5636648421295213
       },
       "work_vs_rdp": {
         "lower_prefix_error": 1,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 0.3683308675005092
+        "median_prefix_error_ratio": 0.36833086750050886
       },
       "work_vs_vw": {
         "lower_prefix_error": 1,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 0.7653654628909143
+        "median_prefix_error_ratio": 0.7653654628909154
       },
       "vertical_vs_rdp": {
         "lower_prefix_error": 1,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 0.6534572319766448
+        "median_prefix_error_ratio": 0.6534572319766437
       },
       "vertical_vs_vw": {
         "lower_prefix_error": 0,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 1.3578378598164298
+        "median_prefix_error_ratio": 1.3578378598164307
       },
       "work_vs_uniform_peak": {
         "lower_prefix_error": 1,
         "equal_within_1e_12_percent": 0,
         "records": 1,
-        "median_prefix_error_ratio": 0.8804507505026655
+        "median_prefix_error_ratio": 0.8804507505026667
       }
     }
   },
@@ -393,44 +393,44 @@
     "records": 46,
     "at33": {
       "work": {
-        "prefix_error_percent": 0.20934083164707418,
-        "window_error_percent": 0.27546490519015027,
-        "serialized_bytes": 1709.5,
-        "eta_percent": 0.8339254165253005
+        "prefix_error_percent": 0.20934083164707395,
+        "window_error_percent": 0.27546490519015043,
+        "serialized_bytes": 1710.0,
+        "eta_percent": 0.8339254165252994
       },
       "vertical": {
-        "prefix_error_percent": 0.25807894037840967,
-        "window_error_percent": 0.32168372564647435,
-        "serialized_bytes": 1712.0,
-        "eta_percent": 0.9112682038692694
+        "prefix_error_percent": 0.25807894037840984,
+        "window_error_percent": 0.32168372564647457,
+        "serialized_bytes": 1712.5,
+        "eta_percent": 0.9112682038692684
       },
       "uniform_peak": {
-        "prefix_error_percent": 0.24334207737037783,
+        "prefix_error_percent": 0.24334207737037772,
         "window_error_percent": 0.35733320293099236,
         "serialized_bytes": 1685.0,
         "eta_percent": 1.4934525638908043
       },
       "uniform": {
-        "prefix_error_percent": 0.24581653977286197,
-        "window_error_percent": 0.3824222236382406,
-        "serialized_bytes": 1637.5,
-        "eta_percent": 1.5319925569672568
+        "prefix_error_percent": 0.24581653977286191,
+        "window_error_percent": 0.382422223638241,
+        "serialized_bytes": 1637.0,
+        "eta_percent": 1.5319925569672557
       },
       "rdp": {
-        "prefix_error_percent": 0.29543979736193976,
-        "window_error_percent": 0.34666600772844136,
-        "serialized_bytes": 1488.0,
-        "eta_percent": 0.9858078498452575
+        "prefix_error_percent": 0.29543979736193904,
+        "window_error_percent": 0.34666600772844114,
+        "serialized_bytes": 1488.5,
+        "eta_percent": 0.985807849845257
       },
       "vw": {
-        "prefix_error_percent": 0.19209269255438072,
-        "window_error_percent": 0.2641032839787809,
-        "serialized_bytes": 1495.0,
-        "eta_percent": 0.8661088655708649
+        "prefix_error_percent": 0.19209269255438055,
+        "window_error_percent": 0.2641032839787806,
+        "serialized_bytes": 1496.0,
+        "eta_percent": 0.866108865570864
       },
       "work_only": {
-        "prefix_error_percent": 0.3894404677521438,
-        "window_error_percent": 0.5043540620303884,
+        "prefix_error_percent": 0.3894404677521437,
+        "window_error_percent": 0.5043540620303888,
         "serialized_bytes": 1239.0
       }
     },
@@ -485,42 +485,42 @@
         "lower_prefix_error": 30,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 0.8065007766789024
+        "median_prefix_error_ratio": 0.8065007766789025
       },
       "work_vs_rdp": {
         "lower_prefix_error": 34,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 0.6213070754159051
+        "median_prefix_error_ratio": 0.6213070754159055
       },
       "work_vs_vw": {
         "lower_prefix_error": 20,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 1.0791122472819694
+        "median_prefix_error_ratio": 1.0791122472819683
       },
       "vertical_vs_rdp": {
         "lower_prefix_error": 30,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 0.7913251879304763
+        "median_prefix_error_ratio": 0.7913251879304761
       },
       "vertical_vs_vw": {
         "lower_prefix_error": 15,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 1.32458825491912
+        "median_prefix_error_ratio": 1.3245882549191208
       },
       "work_vs_uniform_peak": {
         "lower_prefix_error": 31,
         "equal_within_1e_12_percent": 0,
         "records": 46,
-        "median_prefix_error_ratio": 0.727337253521462
+        "median_prefix_error_ratio": 0.7273372535214615
       }
     }
   },
-  "core_sha256": "6a0aa9b2623e7b5f1d6c8e53ca093442e05aa36e3e91357a0d72dc770d921aed",
-  "protocol_sha256": "4a007dcc22492ed92761857a1af073d8e647edccb109b6a0bed993d91165c4ed",
+  "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "protocol_sha256": "608da31dba8ef5fda95fc2a8155bc3d2aba312217a7d14fa6ceea1e774504ab3",
   "python": "3.12.14",
   "numpy": "2.3.5",
   "fixed_force_cases": 2100,

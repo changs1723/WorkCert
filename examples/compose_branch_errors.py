@@ -10,6 +10,9 @@ Example:
 
 The pure function uses the standard library only. It combines producer-supplied
 errors; their validity relative to the reference is checked at construction.
+The composition identities hold in real arithmetic. This example evaluates
+them with sequential binary floating-point operations; the returned metadata
+does not include a bound for arithmetic rounding.
 """
 import argparse
 import json
@@ -19,13 +22,15 @@ from pathlib import Path
 
 
 def compose_branch_errors(records, *, source_points=None):
-    """Return exact prefix/window errors from ordered, directed error summaries.
+    """Compute prefix/window errors from ordered, directed error summaries.
 
     Record fields are direction (+1/-1/0), terminal, minimum and maximum.
     A direction-zero record must have kind='zero_work_event' and zero errors.
     Optional source_start/source_end fields identify chronological vertex
     indices; if source_points is supplied, their complete edge coverage is
-    required. All errors must use one common work unit.
+    required. All errors must use one common work unit. Each supplied interval
+    must contain zero and its terminal error; these ordering conditions are
+    checked directly, without a unit-dependent numerical tolerance.
     """
     d = lo = hi = 0.
     previous_end = 0
@@ -41,8 +46,7 @@ def compose_branch_errors(records, *, source_points=None):
         if any(isinstance(v, bool) or not isinstance(v, Real) or not math.isfinite(v) for v in values):
             raise ValueError('Error summaries must be finite real numbers')
         bd, bl, bh = map(float, values)
-        slack = 32 * math.ulp(max(1., abs(bd), abs(bl), abs(bh)))
-        if bl > min(0., bd) + slack or bh < max(0., bd) - slack or bl > bh:
+        if not bl <= min(0., bd) <= max(0., bd) <= bh:
             raise ValueError('Extrema must contain the initial and terminal error')
         if source_points is not None:
             first, last = record['source_start'], record['source_end']

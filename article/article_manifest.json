@@ -1,0 +1,123 @@
+{
+  "schema": "workcert.article-snapshot/1",
+  "software_version": "0.3.0",
+  "title": "WorkCert: Reconstruction error metadata for force–displacement tables",
+  "authors": [
+    "Saisai Hou",
+    "Yunzhi Zhu",
+    "Sen Zhang"
+  ],
+  "publication_status": "local review candidate",
+  "software_runtime_tree_sha256": "fc42ecd6d8b3cbd61493dabeb40540635a1530e546250c30afc6e67c6df6fa83",
+  "software_runtime_files": {
+    "software/src/workcert/__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "software/src/workcert/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "software/src/workcert/cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "software/src/workcert/core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "software/src/workcert/interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "software/src/workcert/preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "software/src/workcert/selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d"
+  },
+  "pinned_publication_snapshot": {
+    "path": "article_inputs/publication_snapshot.json",
+    "sha256": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a"
+  },
+  "scientific_inputs": {
+    "article_inputs/publication_snapshot.json": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a",
+    "data/prepared/PLA_STWC-1.csv": "02db23d79dc95f8511446e424a89d5918c05207f3cb6302aefff77ac997b4464",
+    "references/additions.bib": "6d622a3db8ae14b1274ecb6b8a49b7041e033b028b90c84e61abb68c2c2bef0e",
+    "references/original_sources.bib": "e7bee4b0b0af163d79943b09897a5ff91c1487d389595871206cd928b3f58f2d",
+    "validation/connector_results/verification.json": "ff277aa20d1c133d089eeb00731d83181865c0d6437d71ee8bd785092c7e569d",
+    "validation/cyclic_round2_results/branch_diagnostics.csv": "bc584d9adbe81badd226f3f775585c3c5b1bea1d784a903ee2b36b4bc642b4be",
+    "validation/cyclic_round2_results/deadband_sensitivity.csv": "0856c0a9f2083a533f648ef29ecced2834611b5f05a897f33591701928054639",
+    "validation/cyclic_round2_results/summary.json": "4d6e65945524e6895fe3723538b7fe584dbd8699462b3f396b6251b5846a741d",
+    "validation/decision_results/configuration_queries.csv": "38fe9589775fbc032181979f8ddc97b96e329552a9f873d29e8f9f8aabb6d792",
+    "validation/decision_results/mass_rounding.json": "1df0ce704e606b7f83357585083589967b863c1f48c0e5f15b66f5b85d3649eb",
+    "validation/decision_results/query_difficulty.csv": "3bb2d4caa023ec9c4889792e28c7b58dbe2714527ac49dfc5e5cabd441483b96",
+    "validation/decision_results/refinement_steps.csv": "9274afa84ea0e59cda4f7a8ebbf6679e7d80f810b96c9e65991f9fc335aa9fd9",
+    "validation/decision_results/summary.json": "824820aa0184902471a4d2d8ed79bb29fe68cc223c0658138e9d36ca46c9f475",
+    "validation/decision_results/tables/initial/STWC-1.json": "2d9f9ca49d842f56b7d83604d2857e91140a5d8467a5e716ab3304b592b9d28c",
+    "validation/decision_results/weighting_sensitivity.csv": "ecd9a97273bbe665bf6fa6a8a755c23d6f5c2d601b052f17cae0b598fa8dbdf7",
+    "validation/numerical_stability_results.json": "f08596bdfee2e864087fb91b388ecb7e56b44a6a39786da0ca0a8c6a7e424139",
+    "validation/results/scaling/headline_repeats.json": "b1d5ce87fdeec7deb8aa392010fb1ccd0f7795a57c9b76224de78952046e5986",
+    "validation/results/scaling/measurements.json": "1d555a7b98bc0db6eadc84f91e5fe96816881c2124b65fb19ce9f12fadedf43e",
+    "validation/results_v02/comparative_summary.json": "c689caebb0d695aaf3cd8fd59bfaf565fa5241f037c2544d1b749e72d1a0d7d5",
+    "validation/results_v02/dp_summary.json": "722e4db85b42c3502d6798dd717034137f372dd68743826d52c28daad238f4dd",
+    "validation/results_v02/optimality_gaps.csv": "06371b721c6fcfee8cd9019c85c481737d0eb427a2a64e581968194896708ad5",
+    "validation/results_v02/stopping_metrics.csv": "a419d7aab1bd848a7e23da4d5d93e622bf53b2ed9438da6429c2858b5ce405b2",
+    "validation/workflow_results/cyclic_path/chronological_path.npz": "192ee99f39d6b3cc8f3647d1f7ba5423f47ad6940a5abb19a501c72b710b6ffe",
+    "validation/workflow_results/summary_all.json": "6875849f7b3c1123e02501e3bebfdec1fdc8c67c4c8f6b0b31b5d4ec7953ca1c",
+    "validation/workflow_results_round2/repeat_scatter.csv": "93654fcb40fcd58c94cb094ffc7f60c3e37fc9a879a7cd9ac2d8e37066a08fec",
+    "validation/workflow_results_round2/summary.json": "d4afb5ca4658d42744678d5d6e957f1b1efa8e79d64debf5ee8dcfe3f9c58cff"
+  },
+  "article_build_programs": {
+    "authoring/collect_values.py": "20af50308aeb9e4f456490b07ac10284d34ea842249e68b862b996552076c555",
+    "authoring/build_manuscript.py": "5536e4c830a56f671349a014e8efacad0c00c9259d6cdc00604388ff3ef11631",
+    "authoring/build_figures.py": "a4d66fc154db61f0f42fc431a544c83a8401f21c51943237eb81096558fcfa98",
+    "authoring/build_documents_v03.py": "8dd9598af690e2d0190d01f1e1f89f28f1e96a97f9f37434fb19bee95b5bc309"
+  },
+  "scientific_fingerprints": {
+    "path": "article_inputs/scientific_fingerprints.json",
+    "sha256": "986f0281b29274b014d10789a80c49352e8b1623a60d0138f1959dbd255cc9f1"
+  },
+  "build_environment": {
+    "SOURCE_DATE_EPOCH": "1793750400",
+    "FORCE_SOURCE_DATE": "1",
+    "pdf_dates_and_trailer_ids_suppressed": true
+  },
+  "frozen_files": {
+    "cover_letter.pdf": {
+      "bytes": 50782,
+      "sha256": "d6ca152e85b0feea81ffa4189f8d521716eb603d1fc92bc6ce5b1477dc7937bc"
+    },
+    "cover_letter.tex": {
+      "bytes": 2483,
+      "sha256": "706c6eeba504d72bf3a11585b33864214b575f6515f9f792c77fb3bce81f7d16"
+    },
+    "elsarticle-num.bst": {
+      "bytes": 29462,
+      "sha256": "08d06d24a533fbe0c6e29d5bd5e7134781ab41a3c6640d73ad63112d4851b301"
+    },
+    "elsarticle.cls": {
+      "bytes": 45216,
+      "sha256": "ba7a1f25626a79fb39b53888dd826c4ae14d20db5429e236abdaaaf2fdf897ab"
+    },
+    "figures/fig01_numerics.pdf": {
+      "bytes": 48355,
+      "sha256": "259034fec6d36d9d6e732bfd5f77068402f9cd96a48bac93ece149a3d6f304a5"
+    },
+    "figures/fig02_decisions.pdf": {
+      "bytes": 66178,
+      "sha256": "f47c761375dcc70f82e2084dd00b80eb75bfd1b1fb16b349d61e5be790e03bed"
+    },
+    "figures/fig03_cyclic.pdf": {
+      "bytes": 127146,
+      "sha256": "d0997035a68f7ca4d3462b56a6d7176d8e79b909736c7056e7c464c02013b531"
+    },
+    "figures/fig04_selectors.pdf": {
+      "bytes": 62425,
+      "sha256": "a2bf899a1f4809f81fa7f9227b601f012f34f13e8f70e71332ce9d6de2187e75"
+    },
+    "figures/fig05_scaling.pdf": {
+      "bytes": 49121,
+      "sha256": "4c777b832e5c607ef93a7fd53c1eaf1a87e6bb01c3148bb8806e3300b3e85b32"
+    },
+    "main.pdf": {
+      "bytes": 778205,
+      "sha256": "1679d4e7dc1f08807fc097b58dd0d258d1af54bba4f59fb01c2d3566238b54ce"
+    },
+    "main.tex": {
+      "bytes": 22921,
+      "sha256": "599a13492c37b4a9cfcaff6dffb8ff7bbd1e7fbabf69b16f55814f06388815a5"
+    },
+    "README.txt": {
+      "bytes": 1011,
+      "sha256": "96240e4ddfd0da4a8c43b3f7855252a2a4104f23f83de0d711f4bc421c630b80"
+    },
+    "references.bib": {
+      "bytes": 6533,
+      "sha256": "f6f282d6fb190cc10ac2cc0c2afc0040cef453de2f10579f61ab9b37f677b253"
+    }
+  },
+  "identity_scope": "The PDF hash identifies this article object. Software and source-data hashes bind its analysis; the manifest excludes itself."
+}

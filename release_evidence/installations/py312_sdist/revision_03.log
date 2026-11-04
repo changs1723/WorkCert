@@ -1,0 +1,19 @@
+test_branch_reference_retains_endpoint_mean_corrections (test_numerical_stability.NumericalStabilityTests.test_branch_reference_retains_endpoint_mean_corrections) ... ok
+test_compensated_full_window_keeps_small_signed_component (test_numerical_stability.NumericalStabilityTests.test_compensated_full_window_keeps_small_signed_component) ... ok
+test_constant_family_sizes_force_coordinate_scales_and_shift (test_numerical_stability.NumericalStabilityTests.test_constant_family_sizes_force_coordinate_scales_and_shift) ... ok
+test_directed_branch_uses_local_window (test_numerical_stability.NumericalStabilityTests.test_directed_branch_uses_local_window) ... ok
+test_exact_dyadic_affine_family_has_zero_error (test_numerical_stability.NumericalStabilityTests.test_exact_dyadic_affine_family_has_zero_error) ... ok
+test_internal_checks_have_no_unit_sized_floor (test_numerical_stability.NumericalStabilityTests.test_internal_checks_have_no_unit_sized_floor) ... ok
+test_local_ulp_verification_accepts_last_bits_rejects_material_change (test_numerical_stability.NumericalStabilityTests.test_local_ulp_verification_accepts_last_bits_rejects_material_change) ... ok
+test_nondyadic_affine_samples_use_actual_binary_inputs (test_numerical_stability.NumericalStabilityTests.test_nondyadic_affine_samples_use_actual_binary_inputs) ... ok
+test_overflow_api_exception_and_cli_exit_protocol (test_numerical_stability.NumericalStabilityTests.test_overflow_api_exception_and_cli_exit_protocol) ... ok
+test_random_local_windows_against_fraction_oracle (test_numerical_stability.NumericalStabilityTests.test_random_local_windows_against_fraction_oracle) ... ok
+test_review_large_prefix_short_window_and_broadcast (test_numerical_stability.NumericalStabilityTests.test_review_large_prefix_short_window_and_broadcast) ... ok
+test_review_long_constant_all_constructors_and_roundtrip (test_numerical_stability.NumericalStabilityTests.test_review_long_constant_all_constructors_and_roundtrip) ... ok
+test_source_baseline_cannot_excuse_zeroed_nonzero_error (test_numerical_stability.NumericalStabilityTests.test_source_baseline_cannot_excuse_zeroed_nonzero_error) ... ok
+test_three_scale_cancellation_all_permutations_and_interior_windows (test_numerical_stability.NumericalStabilityTests.test_three_scale_cancellation_all_permutations_and_interior_windows) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 7.272s
+
+OK

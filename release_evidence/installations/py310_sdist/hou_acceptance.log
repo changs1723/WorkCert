@@ -1,0 +1,33 @@
+test_negative_nonuniform_triangle (test_hou_analytic.HouFormulaTests) ... ok
+test_nonzero_chord_multiple_retained_segments (test_hou_analytic.HouFormulaTests) ... ok
+test_positive_triangle (test_hou_analytic.HouFormulaTests) ... ok
+test_required_interior_extremum (test_hou_analytic.HouFormulaTests) ... ok
+test_required_window_prefix_separation (test_hou_analytic.HouFormulaTests) ... ok
+test_shifted_affine_line (test_hou_analytic.HouFormulaTests) ... ok
+test_absolute_peak_is_not_signed_maximum (test_hou_analytic.HouPeakTests) ... ok
+test_all_negative_signed_maximum (test_hou_analytic.HouPeakTests) ... ok
+test_cfe_consumer_postpeak_and_prepeak (test_hou_analytic.HouPeakTests) ... ok
+test_mixed_force_global_signed_peak_retained (test_hou_analytic.HouPeakTests) ... ok
+test_signed_global_peak_omitted (test_hou_analytic.HouPeakTests) ... ok
+test_piecewise_queries_at_endpoints_nodes_and_interior (test_hou_analytic.HouWorkTests) ... ok
+test_window_queries_zero_length_nonnode_and_multisegment (test_hou_analytic.HouWorkTests) ... ok
+test_composer_rejects_missing_duplicate_or_reordered_edges (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_cyclic_edges_are_covered_once (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_descending_error_and_chronological_composition (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_illegal_source_arrays_and_indices_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_out_of_domain_nonfinite_and_reversed_queries_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_pure_dwell_and_strict_duplicate_policy (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_saved_checksum_corruption_and_truncation_are_rejected (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_saved_response_roundtrip_against_analytic_values (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_self_consistent_digest_does_not_allow_invalid_metadata (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_signed_branch_and_interior_work (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_source_mutation_at_discarded_point_is_rejected (test_hou_cycles_io.HouCyclesAndPersistence) ... ok
+test_specimen05_nominal_and_archived_endpoint (test_hou_paper.HouPaperAcceptance) ... ok
+test_stwc1_table2_full_precision_and_printed (test_hou_paper.HouPaperAcceptance) ... ok
+test_triplicate_arithmetic_means_and_sample_sd (test_hou_paper.HouPaperAcceptance) ... ok
+test_triplicate_mean_intervals_average_endpoints (test_hou_paper.HouPaperAcceptance) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.899s
+
+OK

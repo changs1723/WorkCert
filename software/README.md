@@ -1,4 +1,4 @@
-# WorkCert 0.2.0
+# WorkCert 0.3.0
 
 WorkCert stores a selected-node piecewise-linear force-displacement table with
 analytical reconstruction error metadata. Saved responses support force,
@@ -20,7 +20,7 @@ python -m workcert --version
 ```
 
 From this source directory use `python -m pip install .`; from an archived wheel
-use `python -m pip install workcert-0.2.0-py3-none-any.whl`.
+use `python -m pip install workcert-0.3.0-py3-none-any.whl`.
 
 ## A response table with a stated error budget
 
@@ -137,7 +137,7 @@ assert work == path.reference_work == 1.0
 
 Each branch has ascending query coordinates, chronological `start_x`, `end_x`,
 `direction`, and original `source_indices`. Turning nodes are shared. Directed
-work is `response.work(end_x)-response.work(start_x)`, so unloading preserves the
+work uses a signed local `window_work` query, so unloading preserves the
 sign of F dx. Equal-displacement pairs remain explicit zero-work `events`,
 including force jumps. `duplicate_policy="error"` rejects these pairs instead.
 The extractor applies no noise threshold, smoothing or contact alignment;
@@ -175,28 +175,46 @@ scientific plotting code. The 15-job GitHub Actions matrix targets Windows,
 Linux and macOS with Python 3.10-3.14. A workflow file is a test specification;
 completed runs and local installation evidence are recorded separately.
 
-The current complete-repository suite contains 67 tests: the original 39
-package tests plus 28 independent acceptance tests. On 2026-11-03 all 67 passed
-on Windows with Python 3.12.14, NumPy 2.3.5 and installed WorkCert 0.2.0;
-the new tests recorded 759 individual comparisons. Earlier six-environment
-installation evidence applies only to the original 39 tests. The new tests
-also exercise archived research data and consumer examples, so they require
-the complete repository rather than only an installed wheel or extracted sdist.
+The complete-repository suite contains 81 test methods: 39 original package
+checks, 28 author-confirmed mathematical acceptance tests and 14 additional
+strict-review numerical-stability regressions. The latter were developed
+with AI assistance; no additional human verification is asserted. Tests
+using research inputs require the complete repository, rather than the
+wheel or sdist alone. Current installation and platform results are recorded
+with their actual runtime hashes, separately from preserved 0.2.0 logs.
 
 From the repository root, run:
 
 ```text
-python validation/run_hou_acceptance.py --phase all --output validation/hou_acceptance_run
+python validation/run_installed_suite.py --output validation/current_acceptance
 ```
 
-Original-suite and new-suite logs are separate. Each new run needs a fresh
-output directory. Inputs, mathematical derivations and recorded results are
-in `validation/hou_acceptance`. Saisai Hou wrote and executed the additional
-tests with Codex assistance and manually verified them, as confirmed by the
-author on 2026-11-03. The complete repository records this confirmation in
-`validation/author_verification_2026-11-03.json`, separately from the unchanged
-automated run logs. The historical local logs are separate from current
-results in GitHub Actions.
+Use a fresh output directory. Historical derivations and the authors'
+confirmation for the 28 earlier tests remain under `validation/hou_acceptance`
+and `validation/author_verification_2026-11-03.json`. Those facts do not
+constitute manual verification of the newly revised runtime.
+
+## Reconstruction, arithmetic and verification
+
+Error metadata describe exact-real PL reconstruction quantities evaluated
+in float64; they do not include floating-point query error. Compensated
+pairwise accumulation and direct local-window integration avoid serial-sum
+drift and cancellation between large prefixes. Multiplication and returned
+values still round. When severe internal cancellation is detected from the
+absolute original-component sum, a query uses an O(m) `math.fsum` fallback
+over its m retained segments; ordinary cached queries take O(log K) work.
+Use `window_work(a,b)`, rather than subtracting two
+large `work` results, for local intervals.
+
+Reference verification checks source hashes and retained nodes exactly.
+Numerical fields use a local 16-ULP comparison budget; zero matches zero
+exactly. The allowance is a file-consistency policy, not a forward-error
+theorem, and has no source-force or one-unit floor. See the API for its
+precision scope. Reproduce the stability examples with:
+
+```text
+python software/examples/numerical_stability_probe.py --output stability.json
+```
 
 ## License, citation and migration
 
@@ -207,10 +225,10 @@ their own licenses and attribution. See `CITATION.cff`.
 Version 0.2.0 requires an explicit selector, labels unassigned units as
 `unspecified`, and defaults peak retention to absolute force. To reproduce a
 0.1.0 call, supply `method="work", peak_mode="positive", x_unit="mm",
-force_unit="kN"`. Stored schema-1.0 responses remain readable.
+force_unit="kN"`. Schema-1.0 responses use the same file format. Older metadata that fail the stronger numerical checks require regeneration from the trusted full reference.
 
 ## Use of AI
 
-OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript. Sen Zhang reviewed the full manuscript.
+OpenAI Codex (OpenAI; local CLI version 0.166.0-alpha.5.1) assisted with research planning, literature and public-data collection, implementation and debugging, numerical analysis and verification, figure preparation, drafting, language editing and typesetting. The authors are responsible for the research design, interpretation, software, results and final manuscript.
 
 Detailed signatures are in [the API reference](docs/API.md).

@@ -1,0 +1,21 @@
+{
+  "validation/numerical_stability_results.json": "f08596bdfee2e864087fb91b388ecb7e56b44a6a39786da0ca0a8c6a7e424139",
+  "article_inputs/publication_snapshot.json": "aec6eeb4d5c9ff6baa971beff96b2b66cf4e064d91c96afe0f3c17e445da029a",
+  "validation/decision_results/summary.json": "824820aa0184902471a4d2d8ed79bb29fe68cc223c0658138e9d36ca46c9f475",
+  "data/prepared/PLA_STWC-1.csv": "02db23d79dc95f8511446e424a89d5918c05207f3cb6302aefff77ac997b4464",
+  "validation/decision_results/tables/initial/STWC-1.json": "2d9f9ca49d842f56b7d83604d2857e91140a5d8467a5e716ab3304b592b9d28c",
+  "validation/decision_results/configuration_queries.csv": "38fe9589775fbc032181979f8ddc97b96e329552a9f873d29e8f9f8aabb6d792",
+  "validation/decision_results/refinement_steps.csv": "9274afa84ea0e59cda4f7a8ebbf6679e7d80f810b96c9e65991f9fc335aa9fd9",
+  "validation/decision_results/query_difficulty.csv": "3bb2d4caa023ec9c4889792e28c7b58dbe2714527ac49dfc5e5cabd441483b96",
+  "validation/workflow_results_round2/repeat_scatter.csv": "93654fcb40fcd58c94cb094ffc7f60c3e37fc9a879a7cd9ac2d8e37066a08fec",
+  "validation/workflow_results/cyclic_path/chronological_path.npz": "192ee99f39d6b3cc8f3647d1f7ba5423f47ad6940a5abb19a501c72b710b6ffe",
+  "validation/cyclic_round2_results/summary.json": "4d6e65945524e6895fe3723538b7fe584dbd8699462b3f396b6251b5846a741d",
+  "validation/cyclic_round2_results/branch_diagnostics.csv": "bc584d9adbe81badd226f3f775585c3c5b1bea1d784a903ee2b36b4bc642b4be",
+  "validation/cyclic_round2_results/deadband_sensitivity.csv": "0856c0a9f2083a533f648ef29ecced2834611b5f05a897f33591701928054639",
+  "validation/results_v02/comparative_summary.json": "c689caebb0d695aaf3cd8fd59bfaf565fa5241f037c2544d1b749e72d1a0d7d5",
+  "validation/results_v02/optimality_gaps.csv": "06371b721c6fcfee8cd9019c85c481737d0eb427a2a64e581968194896708ad5",
+  "validation/decision_results/weighting_sensitivity.csv": "ecd9a97273bbe665bf6fa6a8a755c23d6f5c2d601b052f17cae0b598fa8dbdf7",
+  "validation/results_v02/stopping_metrics.csv": "a419d7aab1bd848a7e23da4d5d93e622bf53b2ed9438da6429c2858b5ce405b2",
+  "validation/results/scaling/measurements.json": "1d555a7b98bc0db6eadc84f91e5fe96816881c2124b65fb19ce9f12fadedf43e",
+  "validation/results/scaling/headline_repeats.json": "b1d5ce87fdeec7deb8aa392010fb1ccd0f7795a57c9b76224de78952046e5986"
+}

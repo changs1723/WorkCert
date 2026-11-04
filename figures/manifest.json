@@ -1,0 +1,77 @@
+[
+  {
+    "file": "figures/fig01_numerics.pdf",
+    "bytes": 48355,
+    "sha256": "259034fec6d36d9d6e732bfd5f77068402f9cd96a48bac93ece149a3d6f304a5"
+  },
+  {
+    "file": "figures/fig01_numerics.png",
+    "bytes": 67654,
+    "sha256": "7715ead80187854758b99c6800344921ff7cd4ed8c1d7ce37b2b21aee2a4a853"
+  },
+  {
+    "file": "figures/fig01_numerics.tiff",
+    "bytes": 567100,
+    "sha256": "6d86151841f903b7d67dddccae11073b5f69ff518816f11c1633e0aa58a7332f"
+  },
+  {
+    "file": "figures/fig02_decisions.pdf",
+    "bytes": 66178,
+    "sha256": "f47c761375dcc70f82e2084dd00b80eb75bfd1b1fb16b349d61e5be790e03bed"
+  },
+  {
+    "file": "figures/fig02_decisions.png",
+    "bytes": 187783,
+    "sha256": "cd883f93e6e133c34f8161d657e472554a445fbba597200ec7de69366cc74231"
+  },
+  {
+    "file": "figures/fig02_decisions.tiff",
+    "bytes": 1849664,
+    "sha256": "d98798a3b5a6ff0deedb73f949bdfd837619e68ed4b4c8f3a850072ff9e1c5b2"
+  },
+  {
+    "file": "figures/fig03_cyclic.pdf",
+    "bytes": 127146,
+    "sha256": "d0997035a68f7ca4d3462b56a6d7176d8e79b909736c7056e7c464c02013b531"
+  },
+  {
+    "file": "figures/fig03_cyclic.png",
+    "bytes": 172107,
+    "sha256": "1cf33660dbbcaf5b498aa6301d8c2585a28d194d113bdd4924b1ebc6fdc46cee"
+  },
+  {
+    "file": "figures/fig03_cyclic.tiff",
+    "bytes": 1314300,
+    "sha256": "cf45299d5b8db6931bb976da8db965860cf8683c2dd4355dc4e3808323ac5097"
+  },
+  {
+    "file": "figures/fig04_selectors.pdf",
+    "bytes": 62425,
+    "sha256": "a2bf899a1f4809f81fa7f9227b601f012f34f13e8f70e71332ce9d6de2187e75"
+  },
+  {
+    "file": "figures/fig04_selectors.png",
+    "bytes": 111735,
+    "sha256": "c79b269c64ba404aec8820a66a9cc500088fec33f98213b1053394085af82b34"
+  },
+  {
+    "file": "figures/fig04_selectors.tiff",
+    "bytes": 1558024,
+    "sha256": "a4791aa98a99624f313792f197c35959f3c5df7d5921e9c934d7296f4a9594c1"
+  },
+  {
+    "file": "figures/fig05_scaling.pdf",
+    "bytes": 49121,
+    "sha256": "4c777b832e5c607ef93a7fd53c1eaf1a87e6bb01c3148bb8806e3300b3e85b32"
+  },
+  {
+    "file": "figures/fig05_scaling.png",
+    "bytes": 78905,
+    "sha256": "a609616aa7b24293a5c91ffa49cd4fa7d285c2d4a377b8beae24ae235a62ffef"
+  },
+  {
+    "file": "figures/fig05_scaling.tiff",
+    "bytes": 670814,
+    "sha256": "3a4efcb74f248b26275ce655356a80760eded8a2993b223e4c4b272092338ff2"
+  }
+]

@@ -1,0 +1,458 @@
+{
+  "status": "PASS",
+  "version": "0.3.0",
+  "date": "2026-11-03",
+  "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+  "runtime_fingerprints": {
+    "cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+    "__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
+  },
+  "scope": "Six actual fresh Windows installations; no remote-CI result inferred",
+  "artifacts": [
+    {
+      "name": "workcert-0.3.0-py3-none-any.whl",
+      "bytes": 24906,
+      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082"
+    },
+    {
+      "name": "workcert-0.3.0.tar.gz",
+      "bytes": 56741,
+      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b"
+    }
+  ],
+  "installations": [
+    {
+      "kind": "wheel",
+      "artifact": "workcert-0.3.0-py3-none-any.whl",
+      "bytes": 24906,
+      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+      "numpy": "2.2.6",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; cached dependencies independently installed",
+      "evidence": "release_evidence/installations/py310_wheel",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2712,
+          "sha256": "dddc59dc9f310a02ace1c0170fadf02c053eac339353b115427b358fed1c1240"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117995,
+          "sha256": "ea79ecdfcaa9cd0311549c00c71fe6eb36fd50d8c3a1a3b8a1acb0c8d00e91b5"
+        },
+        "results.jsonl": {
+          "bytes": 204262,
+          "sha256": "837e926d22c25476cb8cf650358c68aa3af3387317546c6b9d308beda19a6240"
+        },
+        "baseline.log": {
+          "bytes": 3418,
+          "sha256": "0d400228fc6741f577ab6806f98c8aa6f285600edb523f446932850af36b70de"
+        },
+        "hou_acceptance.log": {
+          "bytes": 2669,
+          "sha256": "6611ea349741ced3a2675e9bc9afa4e9ca4dc4195dc83c59653cd9546c8b6e11"
+        },
+        "revision_03.log": {
+          "bytes": 1695,
+          "sha256": "774f3314ea6bb8d8ad5839475515dec541c3d7c70f386e99b6da5800e4545811"
+        }
+      }
+    },
+    {
+      "kind": "sdist",
+      "artifact": "workcert-0.3.0.tar.gz",
+      "bytes": 56741,
+      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+      "numpy": "2.2.6",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; cached dependencies independently installed",
+      "evidence": "release_evidence/installations/py310_sdist",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2719,
+          "sha256": "15c89659a5b4626b105ad9ae56dc2f2ab5685e7dac9f6152548f49937e6ec2fd"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117995,
+          "sha256": "ea79ecdfcaa9cd0311549c00c71fe6eb36fd50d8c3a1a3b8a1acb0c8d00e91b5"
+        },
+        "results.jsonl": {
+          "bytes": 204262,
+          "sha256": "837e926d22c25476cb8cf650358c68aa3af3387317546c6b9d308beda19a6240"
+        },
+        "baseline.log": {
+          "bytes": 3418,
+          "sha256": "0109e49b7d78bf4b6d4cbcc9e57d0795633c066b30767273d9d57491b1f96ebb"
+        },
+        "hou_acceptance.log": {
+          "bytes": 2669,
+          "sha256": "048b0f27153fa9096726532ad7b71d79651da0f08c3579d4502ac80f1461bf0d"
+        },
+        "revision_03.log": {
+          "bytes": 1695,
+          "sha256": "5ab3215616329bba71502a84c1de941719dba869a3d60688090d0bf1df703bad"
+        }
+      }
+    },
+    {
+      "kind": "wheel",
+      "artifact": "workcert-0.3.0-py3-none-any.whl",
+      "bytes": 24906,
+      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.3.5",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; base-runtime NumPy and build dependencies reused through system-site-packages",
+      "evidence": "release_evidence/installations/py312_wheel",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2697,
+          "sha256": "70aea7602e4fdf6a2ab865237bd0913f758ee02cb564cf1bc4f94c3a3154cd48"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117996,
+          "sha256": "cc4bdedcb386df62fdb9ae55fa22c97782a9c22e27e27ad50e2ee89360050b47"
+        },
+        "results.jsonl": {
+          "bytes": 204263,
+          "sha256": "863577c153b005ab5207c123bcb36c3f5f70374b79d7ee585fb65d1337af4c9f"
+        },
+        "baseline.log": {
+          "bytes": 5141,
+          "sha256": "9aba7b9a4eff629aa25f7dff84ca34d39261839ddedb0a8824519bd3447f3ca2"
+        },
+        "hou_acceptance.log": {
+          "bytes": 3924,
+          "sha256": "89d6bf4f3f4b82872e2d7961577b905a08ef27f4900439e9b862a2d58aa77c7d"
+        },
+        "revision_03.log": {
+          "bytes": 2460,
+          "sha256": "16519052e1d094d4900b72454b29c5c3f1ae809b72d4507770d0f1f61fee229e"
+        }
+      }
+    },
+    {
+      "kind": "sdist",
+      "artifact": "workcert-0.3.0.tar.gz",
+      "bytes": 56741,
+      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.3.5",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; base-runtime NumPy and build dependencies reused through system-site-packages",
+      "evidence": "release_evidence/installations/py312_sdist",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2697,
+          "sha256": "ad16f8fbe7f549788e212163217c22dda029efbd89ea00a42b52b409b163a4f8"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117996,
+          "sha256": "cc4bdedcb386df62fdb9ae55fa22c97782a9c22e27e27ad50e2ee89360050b47"
+        },
+        "results.jsonl": {
+          "bytes": 204263,
+          "sha256": "863577c153b005ab5207c123bcb36c3f5f70374b79d7ee585fb65d1337af4c9f"
+        },
+        "baseline.log": {
+          "bytes": 5141,
+          "sha256": "6dfcc87f0b44e04b0712a38042f19cd09dc1684c1502041daec51ea2655da0e4"
+        },
+        "hou_acceptance.log": {
+          "bytes": 3924,
+          "sha256": "e4a793ad55bad0ec7e5a726700a2cd91dc43facfa0d1e0c43f243eab3d061368"
+        },
+        "revision_03.log": {
+          "bytes": 2460,
+          "sha256": "74c53c09fbf71e2830766276ef4c6c235d371338d9bccd8c105d261802378d43"
+        }
+      }
+    },
+    {
+      "kind": "wheel",
+      "artifact": "workcert-0.3.0-py3-none-any.whl",
+      "bytes": 24906,
+      "sha256": "a999a8407bf3c2e30786db19335c599dff9eecb47cd5e6787ef9c9936610a082",
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.4",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; cached dependencies independently installed",
+      "evidence": "release_evidence/installations/py314_wheel",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2712,
+          "sha256": "3eed21af71dafeda60b9f7fc5ff6b0439330bbbd973e3ed50bc44cc92d39fac5"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117996,
+          "sha256": "cc4bdedcb386df62fdb9ae55fa22c97782a9c22e27e27ad50e2ee89360050b47"
+        },
+        "results.jsonl": {
+          "bytes": 204263,
+          "sha256": "863577c153b005ab5207c123bcb36c3f5f70374b79d7ee585fb65d1337af4c9f"
+        },
+        "baseline.log": {
+          "bytes": 5141,
+          "sha256": "b3f48aecf7233635deadb6f27438cfca75e1b17e3c83628a7912ee03526637ec"
+        },
+        "hou_acceptance.log": {
+          "bytes": 3924,
+          "sha256": "a7e7967b675936b2fc6ad46ff3f3e3bda7e28271276e1103f7a67252d1aaf12e"
+        },
+        "revision_03.log": {
+          "bytes": 2460,
+          "sha256": "71838f055b9e64c9563b8c3b09a5bb5cbba2b1863fd858bd145e16f8d506ecb2"
+        }
+      }
+    },
+    {
+      "kind": "sdist",
+      "artifact": "workcert-0.3.0.tar.gz",
+      "bytes": 56741,
+      "sha256": "e4ee77c03b4b26e9bbb38695c18ce51a0010d0215aa0c1d1fe6adf1979e25d1b",
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.4",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "tests_passed": 81,
+      "phases": {
+        "baseline": {
+          "tests_run": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "hou_acceptance": {
+          "tests_run": 28,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        },
+        "revision_03": {
+          "tests_run": 14,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "status": "PASS"
+        }
+      },
+      "additional_checks": 759,
+      "core_sha256": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+      "dependency_isolation": "Fresh environment; cached dependencies independently installed",
+      "evidence": "release_evidence/installations/py314_sdist",
+      "evidence_files": {
+        "summary.json": {
+          "bytes": 624,
+          "sha256": "0b06a0ee672c932abf167c9ed4d5e37fbcec5b8d9947b1c30811c565138874a7"
+        },
+        "environment.json": {
+          "bytes": 2712,
+          "sha256": "424ce5a415ae35fd8bd3f5bca9780d57531147240bb6601005f4c38de912356b"
+        },
+        "cases.csv": {
+          "bytes": 8195,
+          "sha256": "c8a976783b348a0ddf0daca25d61774f705ffcdbcaf30f233336d292d96b74b8"
+        },
+        "results.csv": {
+          "bytes": 117996,
+          "sha256": "cc4bdedcb386df62fdb9ae55fa22c97782a9c22e27e27ad50e2ee89360050b47"
+        },
+        "results.jsonl": {
+          "bytes": 204263,
+          "sha256": "863577c153b005ab5207c123bcb36c3f5f70374b79d7ee585fb65d1337af4c9f"
+        },
+        "baseline.log": {
+          "bytes": 5141,
+          "sha256": "5d7b1cef4ffcf0da30a01a16135c184a1cb247fda8a93712846d24cf749bbe8c"
+        },
+        "hou_acceptance.log": {
+          "bytes": 3924,
+          "sha256": "475dd5929ef3dc8c78a20ca0f40cbf7a920be677c4ccbf643a4a1e5383ade45e"
+        },
+        "revision_03.log": {
+          "bytes": 2460,
+          "sha256": "d400d2d06fb7dc86ae2f04caa9b439c4f17ad4d7256724d9a3f5c2b60f8be33e"
+        }
+      }
+    }
+  ],
+  "original_internal_record_sha256": "77ed84ef0cdb5cca2bd0dcefa6cd127516c5a9bca86aab0171c90ab97a2c36b5",
+  "evidence_path_policy": "Evidence entries resolve within this source archive. Original environment import paths are observations of the tested installation and are not archive navigation links."
+}

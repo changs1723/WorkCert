@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "date": "2026-11-04",
+  "scope": "Standalone directed-error summary consumer; separate from the 81 installed-package tests",
+  "source_file": "examples/compose_branch_errors.py",
+  "source_sha256": "c96fa4d3f836acc4d4a6d7b5396a7d960e9c4f88017c7db0171ee1cfcadf713a",
+  "previous_source_sha256": "d3587a82126c046bbb84b7f805d4d5c492dd6b9e2b6956f7504f5ef007eceeec",
+  "test_file": "validation/test_branch_summary_validation.py",
+  "test_sha256": "17b5b5bd4897ac3bc995323b11d66bdb8376e97d2e25af5cac6d766e0aead854",
+  "test_methods": 12,
+  "runtime_executions": [
+    {
+      "runtime": "py310",
+      "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+      "methods_passed": 12,
+      "exit_code": 0,
+      "log": "release_evidence/branch_summaries/branch_summary_py310.log",
+      "log_sha256": "f6b5bd56663661fd5ffcf679707dc8de1503da9d1440347b12f7ccc7e2202d6e"
+    },
+    {
+      "runtime": "py312",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "methods_passed": 12,
+      "exit_code": 0,
+      "log": "release_evidence/branch_summaries/branch_summary_py312.log",
+      "log_sha256": "01b23b275b102b80ca0c321360d0c97ed2bff711aace1d5fc815f72aabe81b41"
+    },
+    {
+      "runtime": "py314",
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+      "methods_passed": 12,
+      "exit_code": 0,
+      "log": "release_evidence/branch_summaries/branch_summary_py314.log",
+      "log_sha256": "7eb6dfdd474898db3f0e7c317302a9f8ccbd76abd21801010bd8303665adf9d7"
+    }
+  ],
+  "validation_rule": "minimum <= min(0, terminal) <= max(0, terminal) <= maximum",
+  "roundoff_tolerance_in_validation": null,
+  "reason": "The supplied extrema must contain the exactly known initial zero and the supplied terminal. Strict ordering has no physical-unit scale or allowance from an unrelated field. All 4,955 archived records already satisfy this invariant.",
+  "reviewed_unit_conversion_controls": [
+    {
+      "unit": "J",
+      "terminal": 1e-12,
+      "rejected": true,
+      "message": "Extrema must contain the initial and terminal error"
+    },
+    {
+      "unit": "kJ",
+      "terminal": 1e-15,
+      "rejected": true,
+      "message": "Extrema must contain the initial and terminal error"
+    }
+  ],
+  "scale_controls": [
+    "1e-300",
+    "1e-200",
+    "1e-100",
+    "1e-15",
+    "1e-12",
+    "1e-3",
+    "1",
+    "1e3",
+    "1e12",
+    "1e100",
+    "1e200",
+    "1e300"
+  ],
+  "additional_controls": [
+    "positive and negative invalid zero envelopes",
+    "initial-zero containment",
+    "one-ULP terminal violations",
+    "unrelated large extrema",
+    "valid scaled summaries",
+    "descending terminal shifts",
+    "signed zero and subnormals",
+    "overflow rejection",
+    "nonfinite and Boolean input",
+    "zero-work event coverage",
+    "sequential cancellation"
+  ],
+  "archived_manifest": "validation/cyclic_round2_results/branch_error_manifest.json",
+  "archived_manifest_sha256": "4a38469a6e55d8e5831ea4ea2c6a6a968a3d06ba0cd6725b70d14fef643bc808",
+  "archived_records": 4955,
+  "archived_branches": 2971,
+  "archived_zero_work_events": 1984,
+  "archived_summary_identical_before_and_after": true,
+  "archived_result": {
+    "signed_terminal_error": 68.52983753500018,
+    "minimum_cumulative_error": -0.22469726891981667,
+    "maximum_cumulative_error": 68.72097112694489,
+    "prefix": 68.72097112694489,
+    "window": 68.9456683958647,
+    "branches": 2971,
+    "zero_work_events": 1984
+  },
+  "floating_point_semantics": {
+    "identities": "Exact in real arithmetic",
+    "implementation": "Sequential Python binary floating-point operations",
+    "arithmetic_rounding_bound_included": false,
+    "cancellation_control": {
+      "terminals": [
+        1e+16,
+        1.0,
+        -1e+16
+      ],
+      "exact_terminal_from_fraction": "1",
+      "returned_terminal": 0.0
+    }
+  },
+  "scientific_data_or_result_files_modified_by_this_check": false,
+  "original_internal_record_sha256": "65fbbbc4c56e6a3817a4e52dc95691eeb8dee358e2f02a44cf5cdb078bdb4164"
+}

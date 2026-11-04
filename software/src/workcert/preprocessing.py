@@ -1,7 +1,9 @@
 """Chronological branch extraction without folding a cyclic response."""
 from dataclasses import dataclass
 import numpy as np
-from .core import _reference_hash
+from .core import _reference_hash, _area_components
+import math
+import itertools
 
 
 def _immutable(values, dtype=float):
@@ -35,7 +37,10 @@ class MonotoneBranch:
             raise ValueError("The response domain does not match this branch")
         if response.certificate.reference_sha256 != self.reference_sha256:
             raise ValueError("The response source does not match this branch")
-        return response.work(self.end_x if q is None else q) - response.work(self.start_x)
+        end = self.end_x if q is None else q
+        if self.direction > 0:
+            return response.window_work(self.start_x, end)
+        return -response.window_work(end, self.start_x)
 
 
 @dataclass(frozen=True)
@@ -69,8 +74,9 @@ def split_monotone_branches(displacement, force, *, duplicate_policy="split"):
     with np.errstate(over="raise", invalid="raise"):
         try:
             dx = np.diff(x)
-            reference_work = float(np.sum(dx * (0.5 * f[:-1] + 0.5 * f[1:])))
-        except FloatingPointError as error:
+            high, low = _area_components(x, f)
+            reference_work = math.fsum(itertools.chain(high, low))
+        except (FloatingPointError, OverflowError) as error:
             raise ValueError("The path exceeds float64 limits") from error
     if duplicate_policy == "error" and np.any(dx == 0):
         raise ValueError("Equal displacement samples require duplicate_policy='split'")
