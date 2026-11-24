@@ -1,0 +1,8 @@
+# R1 validation and figure/document utilities; recorded Python version: 3.12.14.
+# WorkCert 0.3.0 itself is unchanged and is included in the fixed original archive.
+numpy==2.3.5
+openpyxl==3.1.5
+matplotlib==3.10.7
+python-docx==1.2.0
+pypdf==6.21.4
+Pillow==13.0.0

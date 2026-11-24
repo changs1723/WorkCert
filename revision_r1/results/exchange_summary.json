@@ -1,0 +1,818 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-23T13:44:13.336778+00:00",
+  "software_version": "0.3.0",
+  "runtime_modified": false,
+  "runtime_sha256": {
+    "software/src/workcert/__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "software/src/workcert/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "software/src/workcert/cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "software/src/workcert/core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "software/src/workcert/interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "software/src/workcert/preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "software/src/workcert/selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d"
+  },
+  "script_sha256": "3f02c13da75b07c7ace813db717edac0099c2ca575c477e1243d62d961c0ad70",
+  "hardware": {
+    "captured_utc": "2026-11-23T13:43:06.523214+00:00",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz",
+    "logical_processors": 8,
+    "physical_memory_bytes": 16843448320,
+    "physical_memory_GiB": 15.686683654785156,
+    "memory_source": "Windows GlobalMemoryStatusEx: total physical memory available to OS",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5"
+  },
+  "protocol": {
+    "workers": 3,
+    "processes": "new sequential Python process for each repetition",
+    "per_process_load_and_query_repeats": 5,
+    "warmups": 1,
+    "query_batch_size": 10000,
+    "query_seed": 20261123,
+    "query_locations": "uniform random prefixes and independent sorted uniform window endpoints",
+    "timing": "perf_counter_ns; milliseconds per complete operation or vectorized batch; median of five per worker, then median of three worker medians",
+    "loading": "warm file cache; read UTF-8 JSON, parse, validate checksum/schema/invariants and construct integration caches; OS cold-cache effects not measured",
+    "size": "actual file stat after deterministic compact JSON save; no ZIP compression",
+    "reduced": "work-priority, fixed 33 nodes, endpoints and absolute peak retained",
+    "dense_schema": "all source nodes in the same WorkCert schema via from_indices, including units, source identity, certificate, payload checksum and method metadata",
+    "dense_minimal": "x, force, units and reference hash in compact JSON, without indices, error metadata, checksum verification or integration caches",
+    "fallback_counter": "untimed wrapper implements exact runtime predicate and delegates unchanged call; absent during timing",
+    "fallback_diagnostic": "private method bypass only in explicitly labelled ablation; not an alternative public implementation"
+  },
+  "cohorts": {
+    "ALL": {
+      "curves": 70,
+      "metrics": {
+        "reference_points": {
+          "median": 1000.0,
+          "minimum": 892,
+          "maximum": 7817
+        },
+        "retained_points": {
+          "median": 33.0,
+          "minimum": 33,
+          "maximum": 33
+        },
+        "reduced_json_bytes": {
+          "median": 1712.5,
+          "minimum": 1697,
+          "maximum": 2059
+        },
+        "dense_schema_json_bytes": {
+          "median": 20401.0,
+          "minimum": 20341,
+          "maximum": 232124
+        },
+        "dense_minimal_json_bytes": {
+          "median": 16027.5,
+          "minimum": 15970,
+          "maximum": 193661
+        },
+        "reduced_fixed_fields_and_empty_arrays_bytes": {
+          "median": 1066.0,
+          "minimum": 1051,
+          "maximum": 1082
+        },
+        "reduced_window_error_J": {
+          "median": 0.9816256937045533,
+          "minimum": 0.03791086223110713,
+          "maximum": 6.266092757095722
+        },
+        "reduced_observed_queries": {
+          "median": 20000.0,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "reduced_fallback_queries": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "reduced_fallback_leaf_segments": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_observed_queries": {
+          "median": 20000.0,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "full_schema_fallback_queries": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_fallback_leaf_segments": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "prefix_sample_error_J": {
+          "median": 0.7730992864615374,
+          "minimum": 0.026784974355763325,
+          "maximum": 6.266081276399973
+        },
+        "window_sample_error_J": {
+          "median": 0.9757956420566245,
+          "minimum": 0.03775063725576899,
+          "maximum": 6.2413471158752145
+        },
+        "reduced_load_median_ms": {
+          "median": 0.7576499999999999,
+          "minimum": 0.6282,
+          "maximum": 1.4111
+        },
+        "full_schema_load_median_ms": {
+          "median": 3.10105,
+          "minimum": 2.2451,
+          "maximum": 17.2983
+        },
+        "raw_dense_load_median_ms": {
+          "median": 0.58885,
+          "minimum": 0.4609,
+          "maximum": 4.1529
+        },
+        "reduced_prefix_10000_median_ms": {
+          "median": 2.83185,
+          "minimum": 2.2074,
+          "maximum": 4.3089
+        },
+        "reduced_window_10000_median_ms": {
+          "median": 3.42695,
+          "minimum": 2.5736,
+          "maximum": 6.5455
+        },
+        "full_schema_prefix_10000_median_ms": {
+          "median": 5.1057500000000005,
+          "minimum": 4.0295,
+          "maximum": 12.2105
+        },
+        "full_schema_window_10000_median_ms": {
+          "median": 5.9764,
+          "minimum": 4.8714,
+          "maximum": 9.4042
+        },
+        "dense_to_reduced_load_time_ratio": {
+          "median": 3.8466456035218903,
+          "minimum": 1.7859117000921265,
+          "maximum": 17.286199660237838
+        },
+        "dense_to_reduced_prefix_10000_time_ratio": {
+          "median": 1.7854334218849734,
+          "minimum": 1.1665119240257846,
+          "maximum": 2.950892965030571
+        },
+        "dense_to_reduced_window_10000_time_ratio": {
+          "median": 1.7369845503640167,
+          "minimum": 1.1531851431006321,
+          "maximum": 3.008381710260257
+        },
+        "minimal_dense_to_reduced_byte_ratio": {
+          "median": 9.38446021624924,
+          "minimum": 9.327495621716288,
+          "maximum": 96.97596394591888
+        }
+      }
+    },
+    "CX_steel": {
+      "curves": 23,
+      "metrics": {
+        "reference_points": {
+          "median": 958,
+          "minimum": 892,
+          "maximum": 3350
+        },
+        "retained_points": {
+          "median": 33,
+          "minimum": 33,
+          "maximum": 33
+        },
+        "reduced_json_bytes": {
+          "median": 1975,
+          "minimum": 1926,
+          "maximum": 2059
+        },
+        "dense_schema_json_bytes": {
+          "median": 27007,
+          "minimum": 24365,
+          "maximum": 96254
+        },
+        "dense_minimal_json_bytes": {
+          "median": 22828,
+          "minimum": 20411,
+          "maximum": 80137
+        },
+        "reduced_fixed_fields_and_empty_arrays_bytes": {
+          "median": 1076,
+          "minimum": 1051,
+          "maximum": 1082
+        },
+        "reduced_window_error_J": {
+          "median": 0.9925752599949519,
+          "minimum": 0.03791086223110713,
+          "maximum": 6.266092757095722
+        },
+        "reduced_observed_queries": {
+          "median": 20000,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "reduced_fallback_queries": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "reduced_fallback_leaf_segments": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_observed_queries": {
+          "median": 20000,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "full_schema_fallback_queries": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_fallback_leaf_segments": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "prefix_sample_error_J": {
+          "median": 0.872438147418336,
+          "minimum": 0.026784974355763325,
+          "maximum": 6.266081276399973
+        },
+        "window_sample_error_J": {
+          "median": 0.9919358022286247,
+          "minimum": 0.03775063725576899,
+          "maximum": 6.2413471158752145
+        },
+        "reduced_load_median_ms": {
+          "median": 0.7681,
+          "minimum": 0.6574,
+          "maximum": 1.4111
+        },
+        "full_schema_load_median_ms": {
+          "median": 3.4862,
+          "minimum": 2.5201,
+          "maximum": 8.4803
+        },
+        "raw_dense_load_median_ms": {
+          "median": 0.8062,
+          "minimum": 0.5071,
+          "maximum": 2.3456
+        },
+        "reduced_prefix_10000_median_ms": {
+          "median": 2.8173,
+          "minimum": 2.3201,
+          "maximum": 4.1411
+        },
+        "reduced_window_10000_median_ms": {
+          "median": 3.1123,
+          "minimum": 2.5736,
+          "maximum": 4.9349
+        },
+        "full_schema_prefix_10000_median_ms": {
+          "median": 4.8936,
+          "minimum": 4.0295,
+          "maximum": 6.6162
+        },
+        "full_schema_window_10000_median_ms": {
+          "median": 5.8355,
+          "minimum": 4.8908,
+          "maximum": 9.2243
+        },
+        "dense_to_reduced_load_time_ratio": {
+          "median": 4.251864002385924,
+          "minimum": 1.7859117000921265,
+          "maximum": 10.808031639793125
+        },
+        "dense_to_reduced_prefix_10000_time_ratio": {
+          "median": 1.7293991416309011,
+          "minimum": 1.2478809978025163,
+          "maximum": 2.4227835007111764
+        },
+        "dense_to_reduced_window_10000_time_ratio": {
+          "median": 1.8160943247052352,
+          "minimum": 1.2454450353064248,
+          "maximum": 3.008381710260257
+        },
+        "minimal_dense_to_reduced_byte_ratio": {
+          "median": 11.58661216147164,
+          "minimum": 10.210605302651325,
+          "maximum": 39.88477157360406
+        }
+      }
+    },
+    "EDAH": {
+      "curves": 1,
+      "metrics": {
+        "reference_points": {
+          "median": 7817,
+          "minimum": 7817,
+          "maximum": 7817
+        },
+        "retained_points": {
+          "median": 33,
+          "minimum": 33,
+          "maximum": 33
+        },
+        "reduced_json_bytes": {
+          "median": 1997,
+          "minimum": 1997,
+          "maximum": 1997
+        },
+        "dense_schema_json_bytes": {
+          "median": 232124,
+          "minimum": 232124,
+          "maximum": 232124
+        },
+        "dense_minimal_json_bytes": {
+          "median": 193661,
+          "minimum": 193661,
+          "maximum": 193661
+        },
+        "reduced_fixed_fields_and_empty_arrays_bytes": {
+          "median": 1066,
+          "minimum": 1066,
+          "maximum": 1066
+        },
+        "reduced_window_error_J": {
+          "median": 1.2539462615973485,
+          "minimum": 1.2539462615973485,
+          "maximum": 1.2539462615973485
+        },
+        "reduced_observed_queries": {
+          "median": 20000,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "reduced_fallback_queries": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "reduced_fallback_leaf_segments": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_observed_queries": {
+          "median": 20000,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "full_schema_fallback_queries": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_fallback_leaf_segments": {
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "prefix_sample_error_J": {
+          "median": 1.0490716474652295,
+          "minimum": 1.0490716474652295,
+          "maximum": 1.0490716474652295
+        },
+        "window_sample_error_J": {
+          "median": 1.250604952862247,
+          "minimum": 1.250604952862247,
+          "maximum": 1.250604952862247
+        },
+        "reduced_load_median_ms": {
+          "median": 1.0007,
+          "minimum": 1.0007,
+          "maximum": 1.0007
+        },
+        "full_schema_load_median_ms": {
+          "median": 17.2983,
+          "minimum": 17.2983,
+          "maximum": 17.2983
+        },
+        "raw_dense_load_median_ms": {
+          "median": 4.1529,
+          "minimum": 4.1529,
+          "maximum": 4.1529
+        },
+        "reduced_prefix_10000_median_ms": {
+          "median": 4.1379,
+          "minimum": 4.1379,
+          "maximum": 4.1379
+        },
+        "reduced_window_10000_median_ms": {
+          "median": 6.5455,
+          "minimum": 6.5455,
+          "maximum": 6.5455
+        },
+        "full_schema_prefix_10000_median_ms": {
+          "median": 12.2105,
+          "minimum": 12.2105,
+          "maximum": 12.2105
+        },
+        "full_schema_window_10000_median_ms": {
+          "median": 8.636,
+          "minimum": 8.636,
+          "maximum": 8.636
+        },
+        "dense_to_reduced_load_time_ratio": {
+          "median": 17.286199660237838,
+          "minimum": 17.286199660237838,
+          "maximum": 17.286199660237838
+        },
+        "dense_to_reduced_prefix_10000_time_ratio": {
+          "median": 2.950892965030571,
+          "minimum": 2.950892965030571,
+          "maximum": 2.950892965030571
+        },
+        "dense_to_reduced_window_10000_time_ratio": {
+          "median": 1.3193797265296767,
+          "minimum": 1.3193797265296767,
+          "maximum": 1.3193797265296767
+        },
+        "minimal_dense_to_reduced_byte_ratio": {
+          "median": 96.97596394591888,
+          "minimum": 96.97596394591888,
+          "maximum": 96.97596394591888
+        }
+      }
+    },
+    "PLA_plus": {
+      "curves": 46,
+      "metrics": {
+        "reference_points": {
+          "median": 1000.0,
+          "minimum": 1000,
+          "maximum": 1000
+        },
+        "retained_points": {
+          "median": 33.0,
+          "minimum": 33,
+          "maximum": 33
+        },
+        "reduced_json_bytes": {
+          "median": 1710.0,
+          "minimum": 1697,
+          "maximum": 1716
+        },
+        "dense_schema_json_bytes": {
+          "median": 20381.5,
+          "minimum": 20341,
+          "maximum": 20430
+        },
+        "dense_minimal_json_bytes": {
+          "median": 16008.0,
+          "minimum": 15970,
+          "maximum": 16057
+        },
+        "reduced_fixed_fields_and_empty_arrays_bytes": {
+          "median": 1064.0,
+          "minimum": 1058,
+          "maximum": 1069
+        },
+        "reduced_window_error_J": {
+          "median": 0.9653012152991195,
+          "minimum": 0.4206661139929011,
+          "maximum": 3.321019069472692
+        },
+        "reduced_observed_queries": {
+          "median": 20000.0,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "reduced_fallback_queries": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "reduced_fallback_leaf_segments": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_observed_queries": {
+          "median": 20000.0,
+          "minimum": 20000,
+          "maximum": 20000
+        },
+        "full_schema_fallback_queries": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "full_schema_fallback_leaf_segments": {
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "prefix_sample_error_J": {
+          "median": 0.7569267705008258,
+          "minimum": 0.23539380485624406,
+          "maximum": 2.678441965042907
+        },
+        "window_sample_error_J": {
+          "median": 0.9525729557724247,
+          "minimum": 0.4114675103615184,
+          "maximum": 3.3028600389351936
+        },
+        "reduced_load_median_ms": {
+          "median": 0.7457499999999999,
+          "minimum": 0.6282,
+          "maximum": 1.3148
+        },
+        "full_schema_load_median_ms": {
+          "median": 2.92835,
+          "minimum": 2.2451,
+          "maximum": 4.1272
+        },
+        "raw_dense_load_median_ms": {
+          "median": 0.52415,
+          "minimum": 0.4609,
+          "maximum": 1.0059
+        },
+        "reduced_prefix_10000_median_ms": {
+          "median": 2.8029,
+          "minimum": 2.2074,
+          "maximum": 4.3089
+        },
+        "reduced_window_10000_median_ms": {
+          "median": 3.6244,
+          "minimum": 2.8195,
+          "maximum": 4.7969
+        },
+        "full_schema_prefix_10000_median_ms": {
+          "median": 5.2075,
+          "minimum": 4.0523,
+          "maximum": 8.479
+        },
+        "full_schema_window_10000_median_ms": {
+          "median": 6.0763,
+          "minimum": 4.8714,
+          "maximum": 9.4042
+        },
+        "dense_to_reduced_load_time_ratio": {
+          "median": 3.4736965135550926,
+          "minimum": 2.0811289038308414,
+          "maximum": 6.125259720985456
+        },
+        "dense_to_reduced_prefix_10000_time_ratio": {
+          "median": 1.8131720390430348,
+          "minimum": 1.1665119240257846,
+          "maximum": 2.6469099958523437
+        },
+        "dense_to_reduced_window_10000_time_ratio": {
+          "median": 1.647831704207786,
+          "minimum": 1.1531851431006321,
+          "maximum": 2.7845320226216206
+        },
+        "minimal_dense_to_reduced_byte_ratio": {
+          "median": 9.365947102294827,
+          "minimum": 9.327495621716288,
+          "maximum": 9.431764705882353
+        }
+      }
+    }
+  },
+  "natural_fallback": {
+    "reduced": {
+      "query_locations": 1400000,
+      "fallback_queries": 0
+    },
+    "full_schema": {
+      "query_locations": 1400000,
+      "fallback_queries": 0
+    }
+  },
+  "synthetic": {
+    "curve": "synthetic_positive_100001",
+    "reference_points": 100001,
+    "retained_points": 111,
+    "dataset": "synthetic",
+    "window_error_fraction": 0.0007770459238052843,
+    "reduced_json_bytes": 5424,
+    "reduced_json_sha256": "ccee172aa5c673fa76c3087df54db7c7107c83c3d85f2f9fdd10cf6dd9bcc608",
+    "reduced_load_median_ms": {
+      "median": 1.5371,
+      "minimum": 1.4914,
+      "maximum": 2.2282
+    },
+    "reduced_prefix_median_ms": {
+      "median": 2.8742,
+      "minimum": 2.7953,
+      "maximum": 3.0943
+    },
+    "reduced_window_median_ms": {
+      "median": 5.8129,
+      "minimum": 4.4672,
+      "maximum": 5.8466
+    },
+    "reduced_observed_queries": 20000,
+    "reduced_fallback_queries": 0,
+    "full_schema_json_bytes": 3904273,
+    "full_schema_json_sha256": "08e2b30ce63f19db7569496d441ff8ce68afcb5cc24e2db403e2f1c5a70909ea",
+    "full_schema_load_median_ms": {
+      "median": 292.2804,
+      "minimum": 243.4215,
+      "maximum": 339.8171
+    },
+    "full_schema_prefix_median_ms": {
+      "median": 8.4651,
+      "minimum": 7.018,
+      "maximum": 9.0432
+    },
+    "full_schema_window_median_ms": {
+      "median": 10.0718,
+      "minimum": 9.1712,
+      "maximum": 11.0476
+    },
+    "full_schema_observed_queries": 20000,
+    "full_schema_fallback_queries": 0
+  },
+  "fallback_stress": [
+    {
+      "retained_points": 33,
+      "queries_in_batch": 256,
+      "fallback_queries": 256,
+      "summed_leaf_segments": 7680,
+      "expected_work_J": 2e-100,
+      "actual_work_J": 2e-100,
+      "diagnostic_fallback_bypassed_work_J": 0.0,
+      "reconstruction_window_error_J": 0.0,
+      "scope": "synthetic ill-conditioned arithmetic stress case, not physical measurements",
+      "enabled_median_ms": {
+        "median": 1.7527,
+        "minimum": 1.6908,
+        "maximum": 1.7581
+      },
+      "diagnostic_bypassed_median_ms": {
+        "median": 0.333,
+        "minimum": 0.3284,
+        "maximum": 0.3348
+      }
+    },
+    {
+      "retained_points": 1001,
+      "queries_in_batch": 256,
+      "fallback_queries": 256,
+      "summed_leaf_segments": 255488,
+      "expected_work_J": 2e-100,
+      "actual_work_J": 2e-100,
+      "diagnostic_fallback_bypassed_work_J": 0.0,
+      "reconstruction_window_error_J": 0.0,
+      "scope": "synthetic ill-conditioned arithmetic stress case, not physical measurements",
+      "enabled_median_ms": {
+        "median": 24.8925,
+        "minimum": 22.3289,
+        "maximum": 30.6815
+      },
+      "diagnostic_bypassed_median_ms": {
+        "median": 0.578,
+        "minimum": 0.5703,
+        "maximum": 1.08
+      }
+    },
+    {
+      "retained_points": 100001,
+      "queries_in_batch": 256,
+      "fallback_queries": 256,
+      "summed_leaf_segments": 25599488,
+      "expected_work_J": 2e-100,
+      "actual_work_J": 2e-100,
+      "diagnostic_fallback_bypassed_work_J": 0.0,
+      "reconstruction_window_error_J": 0.0,
+      "scope": "synthetic ill-conditioned arithmetic stress case, not physical measurements",
+      "enabled_median_ms": {
+        "median": 2277.8331,
+        "minimum": 2029.4864,
+        "maximum": 2294.6463
+      },
+      "diagnostic_bypassed_median_ms": {
+        "median": 0.8999,
+        "minimum": 0.8885,
+        "maximum": 1.2344
+      }
+    }
+  ],
+  "representative_curves": [
+    {
+      "curve": "EDAH",
+      "dataset": "EDAH",
+      "reference_points": 7817,
+      "retained_points": 33,
+      "prepared_sha256": "b6a7287dcd8b28829b7459dbe8eab62a6711e6a35bb228850e3f023982d3f63c",
+      "reference_sha256": "7b5bb30df0fd92f54c056861287ff87a0fdb2d5a32897536df293926e2312e1a",
+      "reduced_json_bytes": 1997,
+      "dense_schema_json_bytes": 232124,
+      "dense_minimal_json_bytes": 193661,
+      "reduced_fixed_fields_and_empty_arrays_bytes": 1066,
+      "reduced_json_sha256": "7a5eeec6f551147b091a3bf52dcdbf1c97c87b5d3de5ed2e33c883ce97a44f7d",
+      "dense_schema_json_sha256": "ac2a692af62f43b529558452eb32fe482a349b40d3b9e6d71f947464e3cf7e20",
+      "dense_minimal_json_sha256": "1fbbc56e38a233a445e68d351b3fda4c99ef417a0669ce6afc899028da28d187",
+      "reduced_window_error_J": 1.2539462615973485,
+      "reduced_observed_queries": 20000,
+      "reduced_fallback_queries": 0,
+      "reduced_fallback_leaf_segments": 0,
+      "full_schema_observed_queries": 20000,
+      "full_schema_fallback_queries": 0,
+      "full_schema_fallback_leaf_segments": 0,
+      "prefix_sample_error_J": 1.0490716474652295,
+      "window_sample_error_J": 1.250604952862247,
+      "query_reconstruction_checks": "PASS",
+      "reduced_load_median_ms": 1.0007,
+      "reduced_load_process_min_ms": 0.6553,
+      "reduced_load_process_max_ms": 1.2739,
+      "full_schema_load_median_ms": 17.2983,
+      "full_schema_load_process_min_ms": 15.6376,
+      "full_schema_load_process_max_ms": 20.2729,
+      "raw_dense_load_median_ms": 4.1529,
+      "raw_dense_load_process_min_ms": 4.1295,
+      "raw_dense_load_process_max_ms": 7.072,
+      "reduced_prefix_10000_median_ms": 4.1379,
+      "reduced_prefix_10000_process_min_ms": 3.6699,
+      "reduced_prefix_10000_process_max_ms": 4.6227,
+      "reduced_window_10000_median_ms": 6.5455,
+      "reduced_window_10000_process_min_ms": 3.4747,
+      "reduced_window_10000_process_max_ms": 10.7758,
+      "full_schema_prefix_10000_median_ms": 12.2105,
+      "full_schema_prefix_10000_process_min_ms": 5.5329,
+      "full_schema_prefix_10000_process_max_ms": 12.3585,
+      "full_schema_window_10000_median_ms": 8.636,
+      "full_schema_window_10000_process_min_ms": 6.5269,
+      "full_schema_window_10000_process_max_ms": 17.3693,
+      "dense_to_reduced_load_time_ratio": 17.286199660237838,
+      "dense_to_reduced_prefix_10000_time_ratio": 2.950892965030571,
+      "dense_to_reduced_window_10000_time_ratio": 1.3193797265296767,
+      "minimal_dense_to_reduced_byte_ratio": 96.97596394591888
+    },
+    {
+      "curve": "PLA_STWC-1",
+      "dataset": "PLA_plus",
+      "reference_points": 1000,
+      "retained_points": 33,
+      "prepared_sha256": "02db23d79dc95f8511446e424a89d5918c05207f3cb6302aefff77ac997b4464",
+      "reference_sha256": "acfa2befc112e62b1e5df2348e8be1a8cf7b57487a8b6728425bbb9038c72775",
+      "reduced_json_bytes": 1710,
+      "dense_schema_json_bytes": 20375,
+      "dense_minimal_json_bytes": 16003,
+      "reduced_fixed_fields_and_empty_arrays_bytes": 1064,
+      "reduced_json_sha256": "70eaa87473717e218229207ed7059b06fa0f70613b02a5792499c58c3ed71b54",
+      "dense_schema_json_sha256": "84197096f437500ef1e3c96597a2616a6da82ca38b853ccb4ad25a4a1d0ec3b2",
+      "dense_minimal_json_sha256": "1c3c76b57959f4860f96406be1da8980ed43d267dcfe2efaa84fda5e93975e7d",
+      "reduced_window_error_J": 0.6589729198775578,
+      "reduced_observed_queries": 20000,
+      "reduced_fallback_queries": 0,
+      "reduced_fallback_leaf_segments": 0,
+      "full_schema_observed_queries": 20000,
+      "full_schema_fallback_queries": 0,
+      "full_schema_fallback_leaf_segments": 0,
+      "prefix_sample_error_J": 0.5754417391703157,
+      "window_sample_error_J": 0.6556148894853209,
+      "query_reconstruction_checks": "PASS",
+      "reduced_load_median_ms": 0.7639,
+      "reduced_load_process_min_ms": 0.7322,
+      "reduced_load_process_max_ms": 0.9516,
+      "full_schema_load_median_ms": 3.5382,
+      "full_schema_load_process_min_ms": 2.4545,
+      "full_schema_load_process_max_ms": 4.219,
+      "raw_dense_load_median_ms": 0.5136,
+      "raw_dense_load_process_min_ms": 0.4817,
+      "raw_dense_load_process_max_ms": 0.5324,
+      "reduced_prefix_10000_median_ms": 3.4995,
+      "reduced_prefix_10000_process_min_ms": 3.3979,
+      "reduced_prefix_10000_process_max_ms": 3.7927,
+      "reduced_window_10000_median_ms": 4.4936,
+      "reduced_window_10000_process_min_ms": 3.9818,
+      "reduced_window_10000_process_max_ms": 4.88,
+      "full_schema_prefix_10000_median_ms": 5.3086,
+      "full_schema_prefix_10000_process_min_ms": 3.7987,
+      "full_schema_prefix_10000_process_max_ms": 5.5613,
+      "full_schema_window_10000_median_ms": 5.7597,
+      "full_schema_window_10000_process_min_ms": 4.7845,
+      "full_schema_window_10000_process_max_ms": 6.6827,
+      "dense_to_reduced_load_time_ratio": 4.631758083518784,
+      "dense_to_reduced_prefix_10000_time_ratio": 1.516959565652236,
+      "dense_to_reduced_window_10000_time_ratio": 1.281756275591953,
+      "minimal_dense_to_reduced_byte_ratio": 9.358479532163743
+    }
+  ],
+  "case_rows_file": "exchange_per_curve.csv",
+  "all_timing_samples_file": "exchange_individual_timings.csv",
+  "timing_samples": 7440,
+  "source_records": 70,
+  "cautions": [
+    "These small files are already inexpensive to exchange in full.",
+    "The minimal dense JSON load performs less validation and supplies no queries.",
+    "Fallback stress cases deliberately use nonphysical dynamic ranges.",
+    "Timing results characterize this host and workload, not universal speedups."
+  ]
+}

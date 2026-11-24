@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "software_runtime_version": "0.3.0",
+  "runtime_modified": false,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_points": 125157,
+  "monotone_branches": 2971,
+  "zero_work_events": 1984,
+  "archived_path_sha256": "192ee99f39d6b3cc8f3647d1f7ba5423f47ad6940a5abb19a501c72b710b6ffe",
+  "source_table_hash_checks": 2971,
+  "source_reference_verifications": 2971,
+  "original_failure_rejected_in_strict_mode": true,
+  "before": {
+    "tolerance_met": false,
+    "valid_for_downstream_use": false,
+    "failed_branch_ids": [
+      2533
+    ],
+    "retained_nodes": 13890,
+    "error_summary_J": {
+      "signed_terminal_error": 68.52983753500018,
+      "minimum_cumulative_error": -0.22469726891981667,
+      "maximum_cumulative_error": 68.72097112694489,
+      "prefix": 68.72097112694489,
+      "window": 68.9456683958647,
+      "branches": 2971,
+      "zero_work_events": 1984
+    }
+  },
+  "repair": [
+    {
+      "branch_id": 2533,
+      "source_nodes": 1663,
+      "old_cap": 129,
+      "new_cap": 257,
+      "old_nodes": 129,
+      "new_nodes": 153,
+      "requested_window_error_J": 0.08719373627500035,
+      "old_window_error_J": 0.1542233705008432,
+      "new_window_error_J": 0.08202523180793483,
+      "new_tolerance_met": true,
+      "replacement_table": "revision_r1/results/cyclic_branch_2533_recovered.json",
+      "replacement_sha256": "9dd0ee72de4476e73b4952e746ce7e379212549cda7f0151ad4e49720a1b3ff7",
+      "source_reference_verified": true
+    }
+  ],
+  "after": {
+    "tolerance_met": true,
+    "valid_for_downstream_use": true,
+    "failed_branch_ids": [],
+    "retained_nodes": 13914,
+    "additional_nodes": 24,
+    "error_summary_J": {
+      "signed_terminal_error": 68.48811692500018,
+      "minimum_cumulative_error": -0.22469726891981667,
+      "maximum_cumulative_error": 68.67925051694489,
+      "prefix": 68.67925051694489,
+      "window": 68.9039477858647,
+      "branches": 2971,
+      "zero_work_events": 1984
+    },
+    "reference_signed_path_work_J": 92033.957666125,
+    "reconstructed_signed_path_work_J": 91965.4695492,
+    "sum_branch_window_errors_J": 104.4055907203723,
+    "independent_chronological_residual_summary_J": {
+      "signed_terminal_error": 68.48811692500021,
+      "minimum_cumulative_error": -0.22469726891982306,
+      "maximum_cumulative_error": 68.67925051694495,
+      "prefix": 68.67925051694495,
+      "window": 68.90394778586477
+    },
+    "independent_summary_absolute_differences_J": {
+      "signed_terminal_error": 2.842170943040401e-14,
+      "minimum_cumulative_error": 6.38378239159465e-15,
+      "maximum_cumulative_error": 5.684341886080802e-14,
+      "prefix": 5.684341886080802e-14,
+      "window": 7.105427357601002e-14
+    },
+    "independent_comparison_tolerance_J": 1e-08
+  },
+  "interpretation": "Acceptance establishes every prescribed local branch budget. It does not establish a prescribed global relative path tolerance. Signed chronological work is not automatically closed-cycle dissipation.",
+  "float_semantics": "The branch composition identity is exact in real arithmetic; this example uses sequential float64 operations and does not enclose rounding error."
+}

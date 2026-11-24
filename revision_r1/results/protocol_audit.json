@@ -1,0 +1,339 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "openpyxl": "3.1.5",
+  "script_sha256": "ea4a983d6898d396363f7b77d0a66bf1cb2428a9bef53cf8282a706095d564a0",
+  "workbook": {
+    "reference_source": "Original XLSX workbooks, not the prepared CSV or WorkCert queries",
+    "arithmetic": "Fraction arithmetic on exact binary input values, then rounded once per indicator",
+    "original_acceptance": "Published value in [reduced lower - 1e-9, reduced upper + 1e-9] at reported stroke",
+    "acceptance_slack": {
+      "EA_J": {
+        "value": 1e-09,
+        "unit": "J"
+      },
+      "SEA_kJ_kg": {
+        "value": 1e-09,
+        "unit": "kJ/kg"
+      },
+      "MCF_kN": {
+        "value": 1e-09,
+        "unit": "kN"
+      },
+      "PCF_kN": {
+        "value": 1e-09,
+        "unit": "kN"
+      },
+      "CFE": {
+        "value": 1e-09,
+        "unit": "dimensionless"
+      }
+    },
+    "original_coverage": {
+      "EA_J": {
+        "count": 45,
+        "total": 46,
+        "uncovered": [
+          "05"
+        ]
+      },
+      "SEA_kJ_kg": {
+        "count": 45,
+        "total": 46,
+        "uncovered": [
+          "05"
+        ]
+      },
+      "MCF_kN": {
+        "count": 45,
+        "total": 46,
+        "uncovered": [
+          "05"
+        ]
+      },
+      "PCF_kN": {
+        "count": 46,
+        "total": 46,
+        "uncovered": []
+      },
+      "CFE": {
+        "count": 45,
+        "total": 46,
+        "uncovered": [
+          "05"
+        ]
+      }
+    },
+    "original_coverage_is_point_estimate_equality": false,
+    "nominal_endpoint_EA_mismatches": [
+      {
+        "specimen": "STWC-1",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.005,
+        "endpoint_offset_mm": 0.005000000000002558
+      },
+      {
+        "specimen": "STWC-2",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.009,
+        "endpoint_offset_mm": 0.009000000000000341
+      },
+      {
+        "specimen": "STWC-3",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.004,
+        "endpoint_offset_mm": 0.003999999999997783
+      },
+      {
+        "specimen": "05",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.009,
+        "endpoint_offset_mm": 0.009000000000000341
+      },
+      {
+        "specimen": "11",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.007,
+        "endpoint_offset_mm": 0.006999999999997897
+      },
+      {
+        "specimen": "14",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.005,
+        "endpoint_offset_mm": 0.005000000000002558
+      },
+      {
+        "specimen": "15",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.007,
+        "endpoint_offset_mm": 0.006999999999997897
+      },
+      {
+        "specimen": "28",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.005,
+        "endpoint_offset_mm": 0.005000000000002558
+      },
+      {
+        "specimen": "32",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.006,
+        "endpoint_offset_mm": 0.006000000000000227
+      },
+      {
+        "specimen": "34",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.005,
+        "endpoint_offset_mm": 0.005000000000002558
+      },
+      {
+        "specimen": "35",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.009,
+        "endpoint_offset_mm": 0.009000000000000341
+      },
+      {
+        "specimen": "37",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.006,
+        "endpoint_offset_mm": 0.006000000000000227
+      },
+      {
+        "specimen": "38",
+        "reported_stroke_mm": 50.0,
+        "actual_endpoint_mm": 50.005,
+        "endpoint_offset_mm": 0.005000000000002558
+      }
+    ],
+    "endpoint_alignment_changes_original_archived_results": false,
+    "aligned_metrics": {
+      "EA_J": {
+        "unit": "J",
+        "cases": 46,
+        "maximum_absolute_difference": 2.7256419343757443e-10,
+        "maximum_absolute_difference_specimen": "01",
+        "maximum_relative_difference": 5.713727401352794e-13,
+        "median_absolute_difference": 2.5579538487363607e-13,
+        "exact_float_matches": 5,
+        "within_1e_minus_9_native_unit": 46,
+        "aligned_reduced_interval_coverage": 46
+      },
+      "SEA_kJ_kg": {
+        "unit": "kJ/kg",
+        "cases": 46,
+        "maximum_absolute_difference": 9.666933920016163e-12,
+        "maximum_absolute_difference_specimen": "01",
+        "maximum_relative_difference": 5.714635997211716e-13,
+        "median_absolute_difference": 1.0658141036401503e-14,
+        "exact_float_matches": 4,
+        "within_1e_minus_9_native_unit": 46,
+        "aligned_reduced_interval_coverage": 46
+      },
+      "MCF_kN": {
+        "unit": "kN",
+        "cases": 46,
+        "maximum_absolute_difference": 5.792699653284217e-12,
+        "maximum_absolute_difference_specimen": "01",
+        "maximum_relative_difference": 5.713721182684415e-13,
+        "median_absolute_difference": 5.773159728050814e-15,
+        "exact_float_matches": 3,
+        "within_1e_minus_9_native_unit": 46,
+        "aligned_reduced_interval_coverage": 46
+      },
+      "PCF_kN": {
+        "unit": "kN",
+        "cases": 46,
+        "maximum_absolute_difference": 0.0,
+        "maximum_absolute_difference_specimen": "STWC-1",
+        "maximum_relative_difference": 0.0,
+        "median_absolute_difference": 0.0,
+        "exact_float_matches": 46,
+        "within_1e_minus_9_native_unit": 46,
+        "aligned_reduced_interval_coverage": 46
+      },
+      "CFE": {
+        "unit": "dimensionless",
+        "cases": 46,
+        "maximum_absolute_difference": 3.6637359812630166e-13,
+        "maximum_absolute_difference_specimen": "01",
+        "maximum_relative_difference": 5.713837152301335e-13,
+        "median_absolute_difference": 4.440892098500626e-16,
+        "exact_float_matches": 2,
+        "within_1e_minus_9_native_unit": 46,
+        "aligned_reduced_interval_coverage": 46
+      }
+    },
+    "integration_endpoint_rule": "For reported 50mm and raw endpoint in (50,50.01]mm, integrate to raw endpoint (13 records); otherwise keep reported stroke (33 records). The rule is not extended to later raw samples of other curves.",
+    "denominator_convention": "MCF retains workbook reported stroke for all 46 records; CFE=MCF/PCF; SEA=EA/mass",
+    "aligned_interval_calculation": "Integrate retained tables independently at aligned cutoff and reuse saved prefix-error budget. Retained global peak gives exact peak bounds when reached; eleven unchanged earlier queries retain their archived prefix-peak bounds.",
+    "maximum_published_MCF_minus_published_EA_over_reported_stroke_kN": 1.7763568394002505e-15,
+    "mass_workbook_sha256": "cc6a44f86b48d56b0281c1044bff414b89b22b5d234b357127fc0deb89791644"
+  },
+  "stopping": {
+    "cases": 560,
+    "expected_full_factorial_cases": 560,
+    "missing_cases": 0,
+    "curves": 70,
+    "cohorts": {
+      "CX_steel": 23,
+      "EDAH": 1,
+      "PLA_plus": 46
+    },
+    "point_cap": "n, the complete original reference length, for each case",
+    "anchors": "both endpoints and first index of absolute maximum force",
+    "tolerance": "0.01 times absolute terminal reference work; all 70 reference works are nonzero",
+    "failures": 0,
+    "failed_cases_excluded": 0,
+    "independent_scalar_field_checks": 3360,
+    "maximum_field_relative_difference": 2.6980745702742154e-16,
+    "scalar_comparison_tolerance": {
+      "relative": 3e-11,
+      "absolute": 1e-12
+    },
+    "groups": {
+      "work": {
+        "eta": {
+          "cases": 70,
+          "median_nodes": 27.0,
+          "minimum_nodes": 9,
+          "maximum_nodes": 51,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "xi": {
+          "cases": 70,
+          "median_nodes": 19.0,
+          "minimum_nodes": 6,
+          "maximum_nodes": 33,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "prefix": {
+          "cases": 70,
+          "median_nodes": 12.5,
+          "minimum_nodes": 6,
+          "maximum_nodes": 23,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "window": {
+          "cases": 70,
+          "median_nodes": 14.0,
+          "minimum_nodes": 6,
+          "maximum_nodes": 27,
+          "failures": 0,
+          "at_point_cap": 0
+        }
+      },
+      "vertical": {
+        "eta": {
+          "cases": 70,
+          "median_nodes": 28.0,
+          "minimum_nodes": 9,
+          "maximum_nodes": 63,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "xi": {
+          "cases": 70,
+          "median_nodes": 20.0,
+          "minimum_nodes": 7,
+          "maximum_nodes": 43,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "prefix": {
+          "cases": 70,
+          "median_nodes": 14.0,
+          "minimum_nodes": 7,
+          "maximum_nodes": 27,
+          "failures": 0,
+          "at_point_cap": 0
+        },
+        "window": {
+          "cases": 70,
+          "median_nodes": 15.0,
+          "minimum_nodes": 7,
+          "maximum_nodes": 36,
+          "failures": 0,
+          "at_point_cap": 0
+        }
+      }
+    },
+    "interpretation": "27 versus 14 compares eta and window stopping of the same work-priority selector on all 70 curves, not competing selectors. Prefix cases are separate tasks."
+  },
+  "dp_scope": {
+    "eligibility_ceiling": 1000,
+    "eligible_references": 58,
+    "eligible_cohorts": {
+      "CX_steel": 12,
+      "PLA_plus": 46
+    },
+    "excluded_references": 12,
+    "solutions": 580,
+    "budgets": [
+      9,
+      17,
+      33,
+      65,
+      129
+    ],
+    "exclusion_criterion": "Original reference length only, before computing errors; no downsampling or error-based selection",
+    "ceiling_is": "A documented computational ceiling for benchmark controls, not a package input-size or numerical-accuracy limit",
+    "edge_precomputation": "O(n^3) time for all intervals scanned over their contained source cells; O(n^2) storage",
+    "DP": "O(K*n^2) time and O(K*n) state storage in addition to the edge matrices",
+    "total_complexity": "O(n^3 + K*n^2) time; O(n^2 + K*n) storage",
+    "two_float64_edge_matrices_bytes_at_n1000": 16000000,
+    "objectives": [
+      "continuous absolute-area residual eta",
+      "maximum vertical residual delta"
+    ],
+    "not_optimized": [
+      "prefix work error",
+      "window work error"
+    ],
+    "budget_129_history": "Added during internal revision on 2026-11-02; not described as preregistered",
+    "source_script_sha256": "26f144f29478dd6e32cac42024efa9e6c7ff961605699ebba7bcdbf3523cc15c",
+    "protocol_sha256": "608da31dba8ef5fda95fc2a8155bc3d2aba312217a7d14fa6ceea1e774504ab3"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "status": "GENERATED",
+  "generator": "revision_r1/build_revision_figures.py",
+  "generator_sha256": "4ea8f034fd460c12f92be4514f70ca7683d1e878196d1587a80d977a4c4b53d0",
+  "matplotlib": "3.10.7",
+  "numpy": "2.3.5",
+  "source_files": {
+    "revision_r1/results/exchange_per_curve.csv": "7d306f6d524fece1013f2142359e8b5d5e61e4e391e02d13a2adf750bb1e05dc",
+    "revision_r1/results/exchange_summary.json": "f791198dbf3220b5c0f057cebbeedbb594445a6c60e851a36a22584b1f7cb886",
+    "validation/results/scaling/headline_repeats.json": "b1d5ce87fdeec7deb8aa392010fb1ccd0f7795a57c9b76224de78952046e5986"
+  },
+  "outputs": [
+    {
+      "file": "revision_r1/figures/fig01_architecture.pdf",
+      "bytes": 23491,
+      "sha256": "0f112e56b300bdf02ff30e24e0b6e294435eb8bcd336343ea7fe34d46f52bd85"
+    },
+    {
+      "file": "revision_r1/figures/fig01_architecture.svg",
+      "bytes": 14604,
+      "sha256": "51042e17e5194273ca775df555d47c2ad563003385613bd88830f62d01c9d8b4"
+    },
+    {
+      "file": "revision_r1/figures/fig01_architecture.png",
+      "bytes": 167830,
+      "sha256": "4eb72755dda75e1913d9a173d4f2d088b29b332cfc9b9d21edea692c9065f5dd"
+    },
+    {
+      "file": "revision_r1/figures/fig01_architecture.tiff",
+      "bytes": 402012,
+      "sha256": "3b90db00818fc4004ca459db2c1ce6078d140d70f337b179fa3973dfc1f9d455"
+    },
+    {
+      "file": "revision_r1/figures/fig05_exchange_scale.pdf",
+      "bytes": 35498,
+      "sha256": "ecc262ec7b7f5f19c6b8614c6b9a28299278cf21eb35d5a35e5b7a955cb6df62"
+    },
+    {
+      "file": "revision_r1/figures/fig05_exchange_scale.svg",
+      "bytes": 98553,
+      "sha256": "3b2528cd22b47a465d8e40193fc13f6e7adba2434265bc9255920043a6932a73"
+    },
+    {
+      "file": "revision_r1/figures/fig05_exchange_scale.png",
+      "bytes": 224773,
+      "sha256": "ad503ce6ef5636bc8f2ce314092de9975a600dbb3fea22422a705911a9e8f0b1"
+    },
+    {
+      "file": "revision_r1/figures/fig05_exchange_scale.tiff",
+      "bytes": 455942,
+      "sha256": "6178e3f4637f4e0dedee98deebb5b190f5ae707f4bf1058de67d3da5ee9df0d5"
+    }
+  ],
+  "captions": {
+    "fig01_architecture": "WorkCert exchange workflow. The producer selects nodes and evaluates reconstruction errors against the full numerical reference. The consumer validates the exchanged file, applies an explicit application-level tolerance policy and evaluates reusable queries without that reference. Unmet branch budgets or unresolved comparisons request source-side refinement. OpenAI Codex assisted with the archived figure code.",
+    "fig05_exchange_scale": "Exchange measurements and numerical cost. (a) Actual uncompressed JSON sizes for 70 references; reduced and full-node WorkCert files include their error, identity and checksum metadata, whereas minimal dense JSON contains coordinates, units and source identity only. Points show individual references; boxes show medians and interquartile ranges with 1.5-IQR whiskers. (b) Median and interquartile range across reference-specific timings; loads include file validation and cache construction, and each query batch contains 10,000 locations. Loading and ordinary queries use three independent processes with five measurements after warm-up per process. No fallback occurred at the 1.4 million tested query locations per representation. (c) A synthetic signed stress fixture uses three measurements after warm-up per process and triggers fallback for every query; the diagnostic bypass is faster but loses the small integral. Bars show minimum and maximum process medians. (d) Previously archived three-process construction timings for one million synthetic samples under the same interval-error target; symbols show individual processes. OpenAI Codex assisted with the archived plotting code."
+  },
+  "architecture_semantics": "Source-free consumer validates file consistency and local acceptance policy; producer computes reference errors."
+}

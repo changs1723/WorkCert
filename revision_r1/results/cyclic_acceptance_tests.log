@@ -1,0 +1,30 @@
+test_accepts_verified_budget (__main__.CheckedPathTests.test_accepts_verified_budget) ... ok
+test_actual_error_rejects_even_if_flag_true (__main__.CheckedPathTests.test_actual_error_rejects_even_if_flag_true) ... ok
+test_descending_summary_preserves_chronological_extrema (__main__.CheckedPathTests.test_descending_summary_preserves_chronological_extrema) ... ok
+test_diagnostic_status_propagates_failure (__main__.CheckedPathTests.test_diagnostic_status_propagates_failure) ... ok
+test_eta_cannot_understate_known_window_error (__main__.CheckedPathTests.test_eta_cannot_understate_known_window_error) ... ok
+test_exact_budget_equality_passes (__main__.CheckedPathTests.test_exact_budget_equality_passes) ... ok
+test_flag_false_rejects_even_when_error_within_budget (__main__.CheckedPathTests.test_flag_false_rejects_even_when_error_within_budget) ... ok
+test_input_not_modified (__main__.CheckedPathTests.test_input_not_modified) ... ok
+test_invalid_stopping_measure_rejects (__main__.CheckedPathTests.test_invalid_stopping_measure_rejects) ... ok
+test_metric_must_match_extrema (__main__.CheckedPathTests.test_metric_must_match_extrema) ... ok
+test_missing_branch_cannot_be_silently_skipped (__main__.CheckedPathTests.test_missing_branch_cannot_be_silently_skipped) ... ok
+test_missing_flag_rejects (__main__.CheckedPathTests.test_missing_flag_rejects) ... ok
+test_missing_relative_flag_rejects (__main__.CheckedPathTests.test_missing_relative_flag_rejects) ... ok
+test_missing_tolerance_rejects (__main__.CheckedPathTests.test_missing_tolerance_rejects) ... ok
+test_near_zero_nonzero_error_does_not_get_a_floor (__main__.CheckedPathTests.test_near_zero_nonzero_error_does_not_get_a_floor) ... ok
+test_none_flag_rejects (__main__.CheckedPathTests.test_none_flag_rejects) ... ok
+test_nonfinite_or_negative_budget_rejects (__main__.CheckedPathTests.test_nonfinite_or_negative_budget_rejects) ... ok
+test_relative_metric_computed_from_reference (__main__.CheckedPathTests.test_relative_metric_computed_from_reference) ... ok
+test_sequential_float_semantics_are_not_claimed_exact (__main__.CheckedPathTests.test_sequential_float_semantics_are_not_claimed_exact) ... ok
+test_string_flag_is_not_truthy_success (__main__.CheckedPathTests.test_string_flag_is_not_truthy_success) ... ok
+test_unit_mismatch_rejects (__main__.CheckedPathTests.test_unit_mismatch_rejects) ... ok
+test_xi_cannot_understate_known_window_error (__main__.CheckedPathTests.test_xi_cannot_understate_known_window_error) ... ok
+test_zero_budget_exact_representation_passes (__main__.CheckedPathTests.test_zero_budget_exact_representation_passes) ... ok
+test_zero_reference_requires_absolute_policy (__main__.CheckedPathTests.test_zero_reference_requires_absolute_policy) ... ok
+test_zero_work_event_keeps_coverage (__main__.CheckedPathTests.test_zero_work_event_keeps_coverage) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.002s
+
+OK

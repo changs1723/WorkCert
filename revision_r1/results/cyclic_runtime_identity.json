@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "runtime_modules_byte_identical_to_submitted_archive": {
+    "software/src/workcert/cli.py": "0e918ea0365666b65db2c89b04958cc6ca3764d8ce752cfe704921f507131b8a",
+    "software/src/workcert/core.py": "1d80b499bc490954baf894aa2c05f012c3e55788672f7aeb2b16d7b263c845c9",
+    "software/src/workcert/interop.py": "33adf55b76764c53d8230cf4878a659c31cfacf4586b48830bdb87010997faff",
+    "software/src/workcert/preprocessing.py": "44e4407e43a51d0238386443bd8182249be3863a189f62f68c5f1e83cc42d0be",
+    "software/src/workcert/selectors.py": "e4864291af3905669ea90fc327263679d233b810c81de4989d4765db4a4cee7d",
+    "software/src/workcert/__init__.py": "90ed24ea117f6637fe56c3c9bcbcebdbc3d6f2718be57628dd6cc431d16d81e9",
+    "software/src/workcert/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7"
+  },
+  "tests": 25,
+  "test_exit_code": 0,
+  "test_provenance": "AI-assisted tests authored and executed during R1; no new human execution is asserted.",
+  "gate_source_sha256": "95d4f96a9691393316b5dc3679938f9a04b16701fff874a26a52a1c5677d1ffa",
+  "test_source_sha256": "a8bc111b1a261058d2faacee29c8a332e2054b53d671a54ff9ef62c5d66b6e47",
+  "full_real_demonstration_rerun_after_hardening": true
+}
